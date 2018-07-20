@@ -30,5 +30,24 @@ namespace DAL
             _Conexion.Close();
             return Resultado;
         }
+
+        public List<Inventario> MostrarInventario()
+        {
+            IDbConnection _Conexion = DBConexion.Conexion();
+            _Conexion.Open();
+            SqlCommand _comando = new SqlCommand("Consultar_Productos", _Conexion as SqlConnection);
+            _comando.CommandType = CommandType.StoredProcedure;
+            IDataReader _reader = _comando.ExecuteReader();
+            List<Inventario> Lista = new List<Inventario>();
+            while (_reader.Read())
+            {
+                Inventario _inventario = new Inventario();
+                _inventario.IdProducto = _reader.GetInt32(0);
+                _inventario.NombreProducto = _reader.GetString(1);
+
+
+            }
+        }
+
     }
 }
