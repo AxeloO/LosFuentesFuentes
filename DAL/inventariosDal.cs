@@ -44,9 +44,18 @@ namespace DAL
                 Inventario _inventario = new Inventario();
                 _inventario.IdProducto = _reader.GetInt32(0);
                 _inventario.NombreProducto = _reader.GetString(1);
-
-
+                _inventario.GrupoPerteneciente = _reader.GetString(2);
+                _inventario.Cantidad = _reader.GetInt32(3);
+                _inventario.Presentacion = _reader.GetString(4);
+                _inventario.CostoUnitario = _reader.GetDecimal(5);
+                _inventario.PorcentajeGananciaContado = _reader.GetDecimal(6);
+                _inventario.PrecioContado = _reader.GetDecimal(7);
+                _inventario.PorcentajeGananciaCredito = _reader.GetDecimal(8);
+                _inventario.PrecioACredito = _reader.GetDecimal(9);
+                
             }
+            _Conexion.Close();
+            return Lista;
         }
 
     }
