@@ -10,23 +10,27 @@ using EN;
 
 namespace DAL
 {
-    class inventariosDal
+    public class inventariosDal
     {
         public int AgregarProducto(Inventario PEntidad)
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
+          
             SqlCommand _comando = new SqlCommand("Agregar_Producto", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@NombreProducto", PEntidad.NombreProducto));
-            _comando.Parameters.Add(new SqlParameter("@GrupoPerteneciente", PEntidad.GrupoPerteneciente));
-            _comando.Parameters.Add(new SqlParameter("@Cantidad", PEntidad.Cantidad));
-            _comando.Parameters.Add(new SqlParameter("@ConstoUnitario", PEntidad.CostoUnitario));
+            _comando.Parameters.Add(new SqlParameter("@GrupoPertenenciente", PEntidad.GrupoPerteneciente));
+            _comando.Parameters.Add(new SqlParameter("@Catidad", PEntidad.Cantidad));
+            _comando.Parameters.Add(new SqlParameter("@CostoUnitario", PEntidad.CostoUnitario));
             _comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaContado",PEntidad.PorcentajeGananciaContado));
             _comando.Parameters.Add(new SqlParameter("@PrecioContado",PEntidad.PrecioContado));
-            _comando.Parameters.Add(new SqlParameter("@PorcentajeGanaciaCredito", PEntidad.PorcentajeGananciaCredito));
+            _comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaCredito", PEntidad.PorcentajeGananciaCredito));
             _comando.Parameters.Add(new SqlParameter("@PrecioACredito", PEntidad.PrecioACredito));
+            _comando.Parameters.Add(new SqlParameter("@Presentacion", PEntidad.Presentacion));           
+                   
             int Resultado = _comando.ExecuteNonQuery();
+
             _Conexion.Close();
             return Resultado;
         }
@@ -85,7 +89,7 @@ namespace DAL
             _Conexion.Close();
             return Lista;
         }
-
+        
         public int ModificarProducto(Inventario PEntidad)
         {
             IDbConnection _conexion = DBConexion.Conexion();

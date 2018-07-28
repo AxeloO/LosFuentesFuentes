@@ -11,7 +11,7 @@ namespace DAL
 {
    public static class DBConexion
     {
-        public static string CadenaDeConexion = @"Data Source=.;Initial Catalog=DBFuentes;Integrated Security Info=True";
+        public static string CadenaDeConexion = @"Data Source=DESKTOP-QMNNJTQ\SQLEXPRESS;Initial Catalog=DBFuentes;Integrated Security=True";
 
         public static IDbConnection Conexion()
         {

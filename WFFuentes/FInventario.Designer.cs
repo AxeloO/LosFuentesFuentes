@@ -44,15 +44,15 @@
             this.presentacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.preciContado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.precioCredito = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtPrecioCredito = new System.Windows.Forms.TextBox();
+            this.txtPrecioDeContado = new System.Windows.Forms.TextBox();
+            this.txtPorcentajePrecioCredito = new System.Windows.Forms.TextBox();
+            this.txtPorcentajeDeContado = new System.Windows.Forms.TextBox();
+            this.txtCostoUnitario = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtGrupoPerteneciente = new System.Windows.Forms.TextBox();
+            this.txtNombreDelProducto = new System.Windows.Forms.TextBox();
+            this.cbPresentacion = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -134,6 +134,7 @@
             this.button1.TabIndex = 48;
             this.button1.Text = "Guardar ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // listView1
             // 
@@ -187,69 +188,70 @@
             this.precioCredito.Text = "Precio Crédito";
             this.precioCredito.Width = 95;
             // 
-            // textBox8
+            // txtPrecioCredito
             // 
-            this.textBox8.Location = new System.Drawing.Point(537, 217);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 46;
+            this.txtPrecioCredito.Location = new System.Drawing.Point(537, 217);
+            this.txtPrecioCredito.Name = "txtPrecioCredito";
+            this.txtPrecioCredito.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecioCredito.TabIndex = 46;
             // 
-            // textBox7
+            // txtPrecioDeContado
             // 
-            this.textBox7.Location = new System.Drawing.Point(537, 182);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 45;
+            this.txtPrecioDeContado.Location = new System.Drawing.Point(537, 182);
+            this.txtPrecioDeContado.Name = "txtPrecioDeContado";
+            this.txtPrecioDeContado.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecioDeContado.TabIndex = 45;
             // 
-            // textBox6
+            // txtPorcentajePrecioCredito
             // 
-            this.textBox6.Location = new System.Drawing.Point(364, 217);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(38, 20);
-            this.textBox6.TabIndex = 44;
+            this.txtPorcentajePrecioCredito.Location = new System.Drawing.Point(364, 217);
+            this.txtPorcentajePrecioCredito.Name = "txtPorcentajePrecioCredito";
+            this.txtPorcentajePrecioCredito.Size = new System.Drawing.Size(38, 20);
+            this.txtPorcentajePrecioCredito.TabIndex = 44;
             // 
-            // textBox5
+            // txtPorcentajeDeContado
             // 
-            this.textBox5.Location = new System.Drawing.Point(364, 182);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(38, 20);
-            this.textBox5.TabIndex = 43;
+            this.txtPorcentajeDeContado.Location = new System.Drawing.Point(364, 182);
+            this.txtPorcentajeDeContado.Name = "txtPorcentajeDeContado";
+            this.txtPorcentajeDeContado.Size = new System.Drawing.Size(38, 20);
+            this.txtPorcentajeDeContado.TabIndex = 43;
             // 
-            // textBox4
+            // txtCostoUnitario
             // 
-            this.textBox4.Location = new System.Drawing.Point(651, 130);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 42;
+            this.txtCostoUnitario.Location = new System.Drawing.Point(651, 130);
+            this.txtCostoUnitario.Name = "txtCostoUnitario";
+            this.txtCostoUnitario.Size = new System.Drawing.Size(100, 20);
+            this.txtCostoUnitario.TabIndex = 42;
             // 
-            // textBox3
+            // txtCantidad
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(76, 20);
-            this.textBox3.TabIndex = 41;
+            this.txtCantidad.Location = new System.Drawing.Point(123, 130);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(76, 20);
+            this.txtCantidad.TabIndex = 41;
             // 
-            // textBox2
+            // txtGrupoPerteneciente
             // 
-            this.textBox2.Location = new System.Drawing.Point(583, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 20);
-            this.textBox2.TabIndex = 40;
+            this.txtGrupoPerteneciente.Location = new System.Drawing.Point(583, 78);
+            this.txtGrupoPerteneciente.Name = "txtGrupoPerteneciente";
+            this.txtGrupoPerteneciente.Size = new System.Drawing.Size(210, 20);
+            this.txtGrupoPerteneciente.TabIndex = 40;
             // 
-            // textBox1
+            // txtNombreDelProducto
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 20);
-            this.textBox1.TabIndex = 39;
+            this.txtNombreDelProducto.Location = new System.Drawing.Point(169, 78);
+            this.txtNombreDelProducto.Name = "txtNombreDelProducto";
+            this.txtNombreDelProducto.Size = new System.Drawing.Size(215, 20);
+            this.txtNombreDelProducto.TabIndex = 39;
             // 
-            // comboBox1
+            // cbPresentacion
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(365, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 21);
-            this.comboBox1.TabIndex = 38;
+            this.cbPresentacion.FormattingEnabled = true;
+            this.cbPresentacion.Location = new System.Drawing.Point(365, 130);
+            this.cbPresentacion.Name = "cbPresentacion";
+            this.cbPresentacion.Size = new System.Drawing.Size(156, 21);
+            this.cbPresentacion.TabIndex = 38;
+            
             // 
             // label10
             // 
@@ -356,15 +358,15 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtPrecioCredito);
+            this.Controls.Add(this.txtPrecioDeContado);
+            this.Controls.Add(this.txtPorcentajePrecioCredito);
+            this.Controls.Add(this.txtPorcentajeDeContado);
+            this.Controls.Add(this.txtCostoUnitario);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.txtGrupoPerteneciente);
+            this.Controls.Add(this.txtNombreDelProducto);
+            this.Controls.Add(this.cbPresentacion);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -400,15 +402,15 @@
         private System.Windows.Forms.ColumnHeader presentacion;
         private System.Windows.Forms.ColumnHeader preciContado;
         private System.Windows.Forms.ColumnHeader precioCredito;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtPrecioCredito;
+        private System.Windows.Forms.TextBox txtPrecioDeContado;
+        private System.Windows.Forms.TextBox txtPorcentajePrecioCredito;
+        private System.Windows.Forms.TextBox txtPorcentajeDeContado;
+        private System.Windows.Forms.TextBox txtCostoUnitario;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtGrupoPerteneciente;
+        private System.Windows.Forms.TextBox txtNombreDelProducto;
+        private System.Windows.Forms.ComboBox cbPresentacion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
