@@ -57,6 +57,12 @@
     <Compile Include="FAgregarUsuarios.Designer.cs">
       <DependentUpon>FAgregarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="FConsultaAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsultaAlmacen.Designer.cs">
+      <DependentUpon>FConsultaAlmacen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCuentasCobrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FAgregarUsuarios.resx">
       <DependentUpon>FAgregarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConsultaAlmacen.resx">
+      <DependentUpon>FConsultaAlmacen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCuentasCobrar.resx">
       <DependentUpon>FCuentasCobrar.cs</DependentUpon>

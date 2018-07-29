@@ -28,22 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.idProducto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nombreProducto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.grupoP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.presentacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.preciContado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.precioCredito = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtPrecioCredito = new System.Windows.Forms.TextBox();
             this.txtPrecioDeContado = new System.Windows.Forms.TextBox();
             this.txtPorcentajePrecioCredito = new System.Windows.Forms.TextBox();
@@ -65,52 +52,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(801, 470);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 55;
-            this.button6.Text = "Imprimir";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(676, 470);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 54;
-            this.button5.Text = "Acttualizar";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(183, 317);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(399, 20);
-            this.textBox9.TabIndex = 53;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(52, 320);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 13);
-            this.label11.TabIndex = 52;
-            this.label11.Text = "Busqueda por nombre";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(615, 314);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 51;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(504, 261);
+            this.button3.Location = new System.Drawing.Point(710, 292);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(91, 27);
             this.button3.TabIndex = 50;
@@ -119,7 +63,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(346, 261);
+            this.button2.Location = new System.Drawing.Point(552, 292);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 49;
@@ -128,65 +72,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(183, 261);
+            this.button1.Location = new System.Drawing.Point(389, 292);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 48;
             this.button1.Text = "Guardar ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.idProducto,
-            this.nombreProducto,
-            this.grupoP,
-            this.cantidad,
-            this.presentacion,
-            this.preciContado,
-            this.precioCredito});
-            this.listView1.Location = new System.Drawing.Point(60, 355);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(830, 93);
-            this.listView1.TabIndex = 47;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // idProducto
-            // 
-            this.idProducto.Text = "Id Producto";
-            this.idProducto.Width = 77;
-            // 
-            // nombreProducto
-            // 
-            this.nombreProducto.Text = "Nombre del producto";
-            this.nombreProducto.Width = 184;
-            // 
-            // grupoP
-            // 
-            this.grupoP.Text = "Grupo perteneciente";
-            this.grupoP.Width = 142;
-            // 
-            // cantidad
-            // 
-            this.cantidad.Text = "Existencia";
-            this.cantidad.Width = 108;
-            // 
-            // presentacion
-            // 
-            this.presentacion.Text = "Presentación";
-            this.presentacion.Width = 105;
-            // 
-            // preciContado
-            // 
-            this.preciContado.Text = "Precio Contado";
-            this.preciContado.Width = 107;
-            // 
-            // precioCredito
-            // 
-            this.precioCredito.Text = "Precio Crédito";
-            this.precioCredito.Width = 95;
             // 
             // txtPrecioCredito
             // 
@@ -251,7 +143,6 @@
             this.cbPresentacion.Name = "cbPresentacion";
             this.cbPresentacion.Size = new System.Drawing.Size(156, 21);
             this.cbPresentacion.TabIndex = 38;
-            
             // 
             // label10
             // 
@@ -348,16 +239,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(928, 512);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.button4);
+            this.ClientSize = new System.Drawing.Size(856, 340);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtPrecioCredito);
             this.Controls.Add(this.txtPrecioDeContado);
             this.Controls.Add(this.txtPorcentajePrecioCredito);
@@ -385,23 +270,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader idProducto;
-        private System.Windows.Forms.ColumnHeader nombreProducto;
-        private System.Windows.Forms.ColumnHeader grupoP;
-        private System.Windows.Forms.ColumnHeader cantidad;
-        private System.Windows.Forms.ColumnHeader presentacion;
-        private System.Windows.Forms.ColumnHeader preciContado;
-        private System.Windows.Forms.ColumnHeader precioCredito;
         private System.Windows.Forms.TextBox txtPrecioCredito;
         private System.Windows.Forms.TextBox txtPrecioDeContado;
         private System.Windows.Forms.TextBox txtPorcentajePrecioCredito;
