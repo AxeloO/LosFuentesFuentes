@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Imprimir = new System.Windows.Forms.Button();
-            this.Actualizar = new System.Windows.Forms.Button();
+            this.bImprimir = new System.Windows.Forms.Button();
+            this.bActualizar = new System.Windows.Forms.Button();
             this.txtBusquedaProducto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.Buscar = new System.Windows.Forms.Button();
+            this.bBuscar = new System.Windows.Forms.Button();
             this.tabVerProducto = new System.Windows.Forms.ListView();
             this.idProducto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nombreProducto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,23 +44,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Imprimir
+            // bImprimir
             // 
-            this.Imprimir.Location = new System.Drawing.Point(792, 329);
-            this.Imprimir.Name = "Imprimir";
-            this.Imprimir.Size = new System.Drawing.Size(75, 23);
-            this.Imprimir.TabIndex = 61;
-            this.Imprimir.Text = "Imprimir";
-            this.Imprimir.UseVisualStyleBackColor = true;
+            this.bImprimir.Location = new System.Drawing.Point(792, 329);
+            this.bImprimir.Name = "bImprimir";
+            this.bImprimir.Size = new System.Drawing.Size(75, 23);
+            this.bImprimir.TabIndex = 61;
+            this.bImprimir.Text = "Imprimir";
+            this.bImprimir.UseVisualStyleBackColor = true;
             // 
-            // Actualizar
+            // bActualizar
             // 
-            this.Actualizar.Location = new System.Drawing.Point(667, 329);
-            this.Actualizar.Name = "Actualizar";
-            this.Actualizar.Size = new System.Drawing.Size(75, 23);
-            this.Actualizar.TabIndex = 60;
-            this.Actualizar.Text = "Actualizar";
-            this.Actualizar.UseVisualStyleBackColor = true;
+            this.bActualizar.Location = new System.Drawing.Point(667, 329);
+            this.bActualizar.Name = "bActualizar";
+            this.bActualizar.Size = new System.Drawing.Size(75, 23);
+            this.bActualizar.TabIndex = 60;
+            this.bActualizar.Text = "Actualizar";
+            this.bActualizar.UseVisualStyleBackColor = true;
             // 
             // txtBusquedaProducto
             // 
@@ -78,14 +78,14 @@
             this.label11.TabIndex = 58;
             this.label11.Text = "Busqueda por nombre";
             // 
-            // Buscar
+            // bBuscar
             // 
-            this.Buscar.Location = new System.Drawing.Point(591, 96);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(75, 23);
-            this.Buscar.TabIndex = 57;
-            this.Buscar.Text = "Buscar";
-            this.Buscar.UseVisualStyleBackColor = true;
+            this.bBuscar.Location = new System.Drawing.Point(591, 96);
+            this.bBuscar.Name = "bBuscar";
+            this.bBuscar.Size = new System.Drawing.Size(75, 23);
+            this.bBuscar.TabIndex = 57;
+            this.bBuscar.Text = "Buscar";
+            this.bBuscar.UseVisualStyleBackColor = true;
             // 
             // tabVerProducto
             // 
@@ -157,11 +157,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(881, 364);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Imprimir);
-            this.Controls.Add(this.Actualizar);
+            this.Controls.Add(this.bImprimir);
+            this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.txtBusquedaProducto);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.Buscar);
+            this.Controls.Add(this.bBuscar);
             this.Controls.Add(this.tabVerProducto);
             this.Name = "FConsultaAlmacen";
             this.Text = "FConsultaAlmacen";
@@ -172,11 +172,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Imprimir;
-        private System.Windows.Forms.Button Actualizar;
+        private System.Windows.Forms.Button bImprimir;
+        private System.Windows.Forms.Button bActualizar;
         private System.Windows.Forms.TextBox txtBusquedaProducto;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button Buscar;
+        private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.ListView tabVerProducto;
         private System.Windows.Forms.ColumnHeader idProducto;
         private System.Windows.Forms.ColumnHeader nombreProducto;

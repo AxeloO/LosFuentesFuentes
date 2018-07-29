@@ -28,74 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bEliminar = new System.Windows.Forms.Button();
+            this.bModificar = new System.Windows.Forms.Button();
+            this.bAgregar = new System.Windows.Forms.Button();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button3
+            // bEliminar
             // 
-            this.button3.Location = new System.Drawing.Point(536, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bEliminar.Location = new System.Drawing.Point(536, 150);
+            this.bEliminar.Name = "bEliminar";
+            this.bEliminar.Size = new System.Drawing.Size(75, 23);
+            this.bEliminar.TabIndex = 22;
+            this.bEliminar.Text = "Eliminar";
+            this.bEliminar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // bModificar
             // 
-            this.button2.Location = new System.Drawing.Point(536, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bModificar.Location = new System.Drawing.Point(536, 99);
+            this.bModificar.Name = "bModificar";
+            this.bModificar.Size = new System.Drawing.Size(75, 23);
+            this.bModificar.TabIndex = 21;
+            this.bModificar.Text = "Modificar";
+            this.bModificar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // bAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(536, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Agregar ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bAgregar.Location = new System.Drawing.Point(536, 52);
+            this.bAgregar.Name = "bAgregar";
+            this.bAgregar.Size = new System.Drawing.Size(75, 23);
+            this.bAgregar.TabIndex = 20;
+            this.bAgregar.Text = "Agregar ";
+            this.bAgregar.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtContraseña
             // 
-            this.textBox3.Location = new System.Drawing.Point(215, 150);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 20);
-            this.textBox3.TabIndex = 19;
+            this.txtContraseña.Location = new System.Drawing.Point(215, 150);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(216, 20);
+            this.txtContraseña.TabIndex = 19;
             // 
-            // comboBox1
+            // cbTipoUsuario
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(215, 200);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 18;
+            this.cbTipoUsuario.FormattingEnabled = true;
+            this.cbTipoUsuario.Location = new System.Drawing.Point(215, 200);
+            this.cbTipoUsuario.Name = "cbTipoUsuario";
+            this.cbTipoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cbTipoUsuario.TabIndex = 18;
             // 
-            // textBox2
+            // txtNombreUsuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(215, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 20);
-            this.textBox2.TabIndex = 17;
+            this.txtNombreUsuario.Location = new System.Drawing.Point(215, 106);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(216, 20);
+            this.txtNombreUsuario.TabIndex = 17;
             // 
-            // textBox1
+            // txtNombreEmpleado
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 16;
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(215, 60);
+            this.txtNombreEmpleado.Name = "txtNombreEmpleado";
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(216, 20);
+            this.txtNombreEmpleado.TabIndex = 16;
             // 
             // label4
             // 
@@ -139,13 +139,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(735, 297);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.bEliminar);
+            this.Controls.Add(this.bModificar);
+            this.Controls.Add(this.bAgregar);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.cbTipoUsuario);
+            this.Controls.Add(this.txtNombreUsuario);
+            this.Controls.Add(this.txtNombreEmpleado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -159,13 +159,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button bEliminar;
+        private System.Windows.Forms.Button bModificar;
+        private System.Windows.Forms.Button bAgregar;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.ComboBox cbTipoUsuario;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
+        private System.Windows.Forms.TextBox txtNombreEmpleado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

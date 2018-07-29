@@ -63,6 +63,18 @@
     <Compile Include="FConsultaAlmacen.Designer.cs">
       <DependentUpon>FConsultaAlmacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsultaClientes.Designer.cs">
+      <DependentUpon>FConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FConsultaCuentasCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsultaCuentasCobrar.Designer.cs">
+      <DependentUpon>FConsultaCuentasCobrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCuentasCobrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FConsultaAlmacen.resx">
       <DependentUpon>FConsultaAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConsultaClientes.resx">
+      <DependentUpon>FConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConsultaCuentasCobrar.resx">
+      <DependentUpon>FConsultaCuentasCobrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCuentasCobrar.resx">
       <DependentUpon>FCuentasCobrar.cs</DependentUpon>
