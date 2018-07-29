@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BSalir = new System.Windows.Forms.Button();
+            this.BEntrar = new System.Windows.Forms.Button();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // BSalir
             // 
-            this.button2.Location = new System.Drawing.Point(240, 235);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BSalir.Location = new System.Drawing.Point(240, 235);
+            this.BSalir.Name = "BSalir";
+            this.BSalir.Size = new System.Drawing.Size(75, 23);
+            this.BSalir.TabIndex = 13;
+            this.BSalir.Text = "Salir";
+            this.BSalir.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BEntrar
             // 
-            this.button1.Location = new System.Drawing.Point(113, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BEntrar.Location = new System.Drawing.Point(113, 235);
+            this.BEntrar.Name = "BEntrar";
+            this.BEntrar.Size = new System.Drawing.Size(75, 23);
+            this.BEntrar.TabIndex = 12;
+            this.BEntrar.Text = "Entrar";
+            this.BEntrar.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtContraseña
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtContraseña.Location = new System.Drawing.Point(166, 149);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(180, 20);
+            this.txtContraseña.TabIndex = 11;
             // 
-            // textBox1
+            // txtNombreUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtNombreUsuario.Location = new System.Drawing.Point(166, 96);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(180, 20);
+            this.txtNombreUsuario.TabIndex = 10;
             // 
             // label3
             // 
@@ -103,10 +103,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(411, 306);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BSalir);
+            this.Controls.Add(this.BEntrar);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -121,10 +121,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BSalir;
+        private System.Windows.Forms.Button BEntrar;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
