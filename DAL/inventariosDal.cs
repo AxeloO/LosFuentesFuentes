@@ -56,7 +56,7 @@ namespace DAL
                 _inventario.PrecioContado = _reader.GetDecimal(7);
                 _inventario.PorcentajeGananciaCredito = _reader.GetDecimal(8);
                 _inventario.PrecioACredito = _reader.GetDecimal(9);
-                
+                Lista.Add(_inventario);
             }
             _Conexion.Close();
             return Lista;
@@ -74,7 +74,7 @@ namespace DAL
             while (_reader.Read())
             {
                 Inventario _inventario = new Inventario();
-                _inventario.IdProducto = _reader.GetInt32(0);
+                _inventario.IdProducto = _reader.GetInt64(0);
                 _inventario.NombreProducto = _reader.GetString(1);
                 _inventario.GrupoPerteneciente = _reader.GetString(2);
                 _inventario.Cantidad = _reader.GetInt32(3);
@@ -85,8 +85,11 @@ namespace DAL
                 _inventario.PorcentajeGananciaCredito = _reader.GetDecimal(8);
                 _inventario.PrecioACredito = _reader.GetDecimal(9);
 
-            }
+                Lista.Add(_inventario);
+                                
+            }            
             _Conexion.Close();
+            
             return Lista;
         }
         

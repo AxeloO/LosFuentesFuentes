@@ -45,6 +45,7 @@
             this.BSalir.TabIndex = 13;
             this.BSalir.Text = "Salir";
             this.BSalir.UseVisualStyleBackColor = true;
+            this.BSalir.Click += new System.EventHandler(this.BSalir_Click);
             // 
             // BEntrar
             // 
@@ -54,6 +55,7 @@
             this.BEntrar.TabIndex = 12;
             this.BEntrar.Text = "Entrar";
             this.BEntrar.UseVisualStyleBackColor = true;
+            this.BEntrar.Click += new System.EventHandler(this.BEntrar_Click);
             // 
             // txtContraseña
             // 
@@ -90,10 +92,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(124, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 22);
+            this.label1.Size = new System.Drawing.Size(122, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Iniciar Sesion";
             // 

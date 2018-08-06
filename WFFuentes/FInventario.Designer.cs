@@ -50,29 +50,33 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btLimpiar = new System.Windows.Forms.Button();
+            this.btConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(710, 292);
+            this.button3.Location = new System.Drawing.Point(711, 292);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 27);
+            this.button3.Size = new System.Drawing.Size(82, 23);
             this.button3.TabIndex = 50;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(552, 292);
+            this.button2.Location = new System.Drawing.Point(549, 292);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 49;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(389, 292);
+            this.button1.Location = new System.Drawing.Point(256, 292);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 48;
@@ -234,12 +238,34 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Agregar Productos";
             // 
+            // btLimpiar
+            // 
+            this.btLimpiar.Location = new System.Drawing.Point(88, 292);
+            this.btLimpiar.Name = "btLimpiar";
+            this.btLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btLimpiar.TabIndex = 51;
+            this.btLimpiar.Text = "Limpiar ";
+            this.btLimpiar.UseVisualStyleBackColor = true;
+            this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
+            // 
+            // btConsulta
+            // 
+            this.btConsulta.Location = new System.Drawing.Point(400, 292);
+            this.btConsulta.Name = "btConsulta";
+            this.btConsulta.Size = new System.Drawing.Size(75, 23);
+            this.btConsulta.TabIndex = 52;
+            this.btConsulta.Text = "Consultar";
+            this.btConsulta.UseVisualStyleBackColor = true;
+            this.btConsulta.Click += new System.EventHandler(this.btConsulta_Click);
+            // 
             // FInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(856, 340);
+            this.Controls.Add(this.btConsulta);
+            this.Controls.Add(this.btLimpiar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -292,5 +318,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btLimpiar;
+        private System.Windows.Forms.Button btConsulta;
     }
 }

@@ -16,7 +16,9 @@ namespace WFFuentes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FLogin());
             Application.Run(new FInventario());
+            Application.Run(new FConsultaAlmacen());
         }
     }
 }
