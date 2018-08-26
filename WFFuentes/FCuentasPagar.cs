@@ -16,5 +16,10 @@ namespace WFFuentes
         {
             InitializeComponent();
         }
+
+        private void FCuentasPagar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

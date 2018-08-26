@@ -18,7 +18,7 @@ namespace WFFuentes
         Inventario _en = new Inventario();
         InventarioBL _inventarioBl = new InventarioBL();
 
-        
+
         public FInventario()
         {
             InitializeComponent();
@@ -35,39 +35,39 @@ namespace WFFuentes
                 cbPresentacion.Items.Add(new { Text = "Liquidos", Value = "Liquidos" });
 
                 if (txtNombreDelProducto.Text == "" || txtCantidad.Text == "" || txtCostoUnitario.Text == "" || txtGrupoPerteneciente.Text == "" || txtPorcentajeDeContado.Text == "" || txtPorcentajePrecioCredito.Text == "" || txtPrecioCredito.Text == "" || txtPrecioDeContado.Text == "" || cbPresentacion.Text == "")
-            {
-                MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-
-               
-
-            else
-            {
-                _en.Cantidad = int.Parse(txtCantidad.Text);
-                _en.CostoUnitario = int.Parse(txtCostoUnitario.Text);
-                _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
-                _en.NombreProducto = txtNombreDelProducto.Text;
-                _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
-                _en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);
-                _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
-                    _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
-                _en.Presentacion = cbPresentacion.Text;
-
-                int Resultado = _inventarioBl.AgregarProductos(_en);
-
-                if (Resultado == 1)
                 {
-                    MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
 
+
+
+                else
+                {
+                    _en.Cantidad = int.Parse(txtCantidad.Text);
+                    _en.CostoUnitario = int.Parse(txtCostoUnitario.Text);
+                    _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
+                    _en.NombreProducto = txtNombreDelProducto.Text;
+                    _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
+                    _en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);
+                    _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
+                    _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
+                    _en.Presentacion = cbPresentacion.Text;
+
+                    int Resultado = _inventarioBl.AgregarProductos(_en);
+
+                    if (Resultado == 1)
+                    {
+                        MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+
+                }
             }
-        }
-            
+
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Producto" , "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al Agregar el Producto", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }
@@ -88,16 +88,78 @@ namespace WFFuentes
 
         }
 
-        private void btConsulta_Click(object sender, EventArgs e)
+        private void dgInventario_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            FConsultaAlmacen _fConsultaAlmacen = new FConsultaAlmacen();
-            this.Close();
-            _fConsultaAlmacen.ShowDialog();
+            
+            try
+            {
+
+                _en = dgInventario.DataSource as Inventario;
+                
+
+                if (_en != null)
+                {
+
+                    // txtNombreDelProducto.Text = dgInventario.DataSource as Inventario;
+
+                    txtNombreDelProducto.Text = _en.NombreProducto;
+                    txtCantidad.Text = Convert.ToString(_en.Cantidad);
+                    txtGrupoPerteneciente.Text = _en.GrupoPerteneciente;
+                    txtCostoUnitario.Text = Convert.ToString(_en.CostoUnitario);
+                    txtPorcentajeDeContado.Text = Convert.ToString(_en.PorcentajeGananciaContado);
+                    txtPorcentajePrecioCredito.Text = Convert.ToString(_en.PorcentajeGananciaCredito);
+                    txtPrecioDeContado.Text = Convert.ToString(_en.PrecioContado);
+                    txtPrecioCredito.Text = Convert.ToString(_en.PrecioACredito);
+                    cbPresentacion.Text = Convert.ToString(_en.Presentacion);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btConsulta_Click(object sender, EventArgs e)
         {
-            if (txtNombreDelProducto.Text != "")
+            if (!(txtNombreDelProducto.Text == ""))
+            {
+                _en.NombreProducto = txtNombreDelProducto.Text;
+                dgInventario.DataSource = _inventarioBl.MostrarInventarioPorNombre(_en);
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (txtNombreDelProducto.Text != "" && txtGrupoPerteneciente.Text != "")
+            {
+                DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?","Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (r == DialogResult.OK)
+                {
+                    _inventarioBl.EliminarProducto(_en);
+                    dgInventario.Refresh();
+                    dgInventario.DataSource = _inventarioBl.MostrarInventario();
+                }
+                if (r==DialogResult.Cancel)
+                {
+                    
+                }
+
+            }
+
+            if (_inventarioBl.ModificarProducto(_en) > 0)
+            {
+
+            }
+        }
+        
+        private void btModificar_Click(object sender, EventArgs e)
+        {
+            if (txtNombreDelProducto.Text != "" && txtGrupoPerteneciente.Text != "")
             {
                 _en.NombreProducto = txtNombreDelProducto.Text;
                 _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
@@ -111,7 +173,9 @@ namespace WFFuentes
 
                 if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
-                    MessageBox.Show("Se modifico correctamente","Exito",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Se modifico correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    dgInventario.Refresh();
+                    dgInventario.DataSource = _inventarioBl.MostrarInventario();
                 }
 
                 else
@@ -120,18 +184,12 @@ namespace WFFuentes
                 }
 
             }
-                else
-                {
+            else
+            {
                 MessageBox.Show("Seleccione un Registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (_inventarioBl.ModificarProducto(_en) > 0)
-            {
-               
-            }
-        }
+        
     }
 }

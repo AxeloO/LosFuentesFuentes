@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtPrecioCredito = new System.Windows.Forms.TextBox();
             this.txtPrecioDeContado = new System.Windows.Forms.TextBox();
@@ -52,6 +52,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btLimpiar = new System.Windows.Forms.Button();
             this.btConsulta = new System.Windows.Forms.Button();
+            this.dgInventario = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -64,15 +66,15 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btModificar
             // 
-            this.button2.Location = new System.Drawing.Point(549, 292);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 49;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btModificar.Location = new System.Drawing.Point(549, 292);
+            this.btModificar.Name = "btModificar";
+            this.btModificar.Size = new System.Drawing.Size(75, 23);
+            this.btModificar.TabIndex = 49;
+            this.btModificar.Text = "Modificar";
+            this.btModificar.UseVisualStyleBackColor = true;
+            this.btModificar.Click += new System.EventHandler(this.btModificar_Click);
             // 
             // button1
             // 
@@ -258,16 +260,27 @@
             this.btConsulta.UseVisualStyleBackColor = true;
             this.btConsulta.Click += new System.EventHandler(this.btConsulta_Click);
             // 
+            // dgInventario
+            // 
+            this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgInventario.Location = new System.Drawing.Point(12, 352);
+            this.dgInventario.Name = "dgInventario";
+            this.dgInventario.Size = new System.Drawing.Size(881, 211);
+            this.dgInventario.TabIndex = 53;          
+            this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
+            // 
             // FInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(856, 340);
+            this.ClientSize = new System.Drawing.Size(936, 599);
+            this.Controls.Add(this.dgInventario);
             this.Controls.Add(this.btConsulta);
             this.Controls.Add(this.btLimpiar);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btModificar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPrecioCredito);
             this.Controls.Add(this.txtPrecioDeContado);
@@ -290,6 +303,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FInventario";
             this.Text = "FInventario";
+            ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +311,7 @@
 
         #endregion
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btModificar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtPrecioCredito;
         private System.Windows.Forms.TextBox txtPrecioDeContado;
@@ -320,5 +334,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btLimpiar;
         private System.Windows.Forms.Button btConsulta;
+        private System.Windows.Forms.DataGridView dgInventario;
     }
 }
