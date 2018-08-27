@@ -267,7 +267,7 @@
             this.dgInventario.Location = new System.Drawing.Point(12, 352);
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.Size = new System.Drawing.Size(881, 211);
-            this.dgInventario.TabIndex = 53;          
+            this.dgInventario.TabIndex = 53;
             this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
             // 
             // FInventario
@@ -303,6 +303,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FInventario";
             this.Text = "FInventario";
+            this.Load += new System.EventHandler(this.FInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

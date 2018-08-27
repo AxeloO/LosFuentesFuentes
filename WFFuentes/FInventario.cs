@@ -190,6 +190,9 @@ namespace WFFuentes
             }
         }
 
-        
+        private void FInventario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
