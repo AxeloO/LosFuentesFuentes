@@ -51,6 +51,8 @@
             this.listaDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorPagarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +84,9 @@
             // 
             // procesosToolStripMenuItem
             // 
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ventasToolStripMenuItem,
+            this.devolucionesToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 28);
             this.procesosToolStripMenuItem.Text = "Procesos";
@@ -89,7 +94,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WFFuentes.Properties.Resources.LosFuentes;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(564, 389);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -247,6 +252,18 @@
             this.cuentasPorPagarToolStripMenuItem1.Size = new System.Drawing.Size(275, 28);
             this.cuentasPorPagarToolStripMenuItem1.Text = "Cuentas por Pagar";
             // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem.Text = "Ventas";
+            // 
+            // devolucionesToolStripMenuItem
+            // 
+            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devolucionesToolStripMenuItem.Text = "Devoluciones";
+            // 
             // FMenuClientes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -293,5 +310,7 @@
         private System.Windows.Forms.ToolStripMenuItem modificarRegistroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarRegistroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarRegistroToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem devolucionesToolStripMenuItem;
     }
 }
