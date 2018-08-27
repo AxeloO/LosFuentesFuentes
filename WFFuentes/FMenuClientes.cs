@@ -54,6 +54,7 @@ namespace WFFuentes
         {
             Form _fEliminar = new FModificarCliente();
             _fEliminar.Show();
+            this.Close();
 
         }
 
@@ -61,6 +62,7 @@ namespace WFFuentes
         {
             Form _fModificar = new FModificarCliente();
             _fModificar.Show();
+            this.Close();
 
         }
         private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
