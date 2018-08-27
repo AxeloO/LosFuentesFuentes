@@ -35,11 +35,12 @@ namespace WFFuentes
 
         private void bAgregar_Click(object sender, EventArgs e)
         {
+            int respuestaTipoEmpleado = 0;
             try
             {
-                
 
-                if (txtNombreEmpleado.Text == "" || txtNombreUsuario.Text == "" || txtContraseña.Text == "" || cbTipoUsuario.Text == "" )
+
+                if (txtNombreEmpleado.Text.Trim() == "" || txtNombreUsuario.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || cbTipoUsuario.Text.Trim() == "" )
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -49,14 +50,38 @@ namespace WFFuentes
                     _enUsuario.fcNombreCompleto = txtNombreEmpleado.Text;
                     _enUsuario.fcNombreUsuario = txtNombreUsuario.Text;
                     _enUsuario.fcPassword = txtContraseña.Text;
-                    _enUsuario.fiIdUsuario = int.Parse(cbTipoUsuario.Text);
-                   
+                    //string strTipoUsuario = cbTipoUsuario.SelectedValue.ToString();
+                    string strTipoUsuario = cbTipoUsuario.Text.ToString();
 
-                    int Resultado = _usuariosBL.AgregarUsuario(_enUsuario);
-
-                    if (Resultado == 1)
+                    if (strTipoUsuario.Equals("Administrador"))
                     {
-                        MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        respuestaTipoEmpleado = 420;
+
+                        _enUsuario.fiPuestoUsuario = respuestaTipoEmpleado;
+
+                        int Resultado = _usuariosBL.AgregarUsuario(_enUsuario);
+
+                        if (Resultado == 1)
+                        {
+                            MessageBox.Show("Se Agrego El Nuevo Usuario Tipo Administrador", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                    }
+                   else if (strTipoUsuario.Equals("Empleado"))
+                    {
+                        respuestaTipoEmpleado = 720;
+
+                        _enUsuario.fiPuestoUsuario = respuestaTipoEmpleado;
+
+                        int Resultado = _usuariosBL.AgregarUsuario(_enUsuario);
+
+                        if (Resultado == 1)
+                        {
+                            MessageBox.Show("Se Agrego El Nuevo Usuario Tipo Empleado", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al Agregar el Producto", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
 
                 }
@@ -65,8 +90,17 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Producto", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al Agregar el Producto", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
+
+        private void btConsultarUsuarios_Click(object sender, EventArgs e)
+        {
+
+            dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();
+                      
+        }
+
+       
     }
 }

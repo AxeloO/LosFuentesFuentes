@@ -53,13 +53,16 @@ namespace WFFuentes
                         this.Close();
                         _fmenuClientes.ShowDialog();
 
-                    }
-                        else if (strPuesto.Equals("720"))
+                        }
+
+                   
+                        if (strPuesto.Equals("720"))
                         {
                             FInventario _fInventario = new FInventario();
                             this.Close();
                             _fInventario.ShowDialog();
                         }
+
                         else
                         {
                             MessageBox.Show("el Puesto es incorrecto");
@@ -68,15 +71,14 @@ namespace WFFuentes
                                             
                     
                 }
-                else
-                {
-                    MessageBox.Show("Usuario o Contrasena Incorrecta");
-                }
+
                
+
+
             }
+            MessageBox.Show("Usuario o Contrasena Incorrecta");
 
             
-
         }
 
         private void BSalir_Click(object sender, EventArgs e)

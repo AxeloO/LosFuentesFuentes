@@ -23,10 +23,10 @@ namespace BL
 
             SqlCommand _comando = new SqlCommand("Agregar_Usuario", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.Add(new SqlParameter("@NombreProducto", PEntidad.fcNombreCompleto));
-            _comando.Parameters.Add(new SqlParameter("@GrupoPertenenciente", PEntidad.fcNombreUsuario));
-            _comando.Parameters.Add(new SqlParameter("@Catidad", PEntidad.fiPuestoUsuario));
-            _comando.Parameters.Add(new SqlParameter("@Catidad", PEntidad.fcPassword));
+            _comando.Parameters.Add(new SqlParameter("@fcNombreCompleto", PEntidad.fcNombreCompleto));
+            _comando.Parameters.Add(new SqlParameter("@fcNombreUsuario", PEntidad.fcNombreUsuario));
+            _comando.Parameters.Add(new SqlParameter("@fiPuestoUsuario", PEntidad.fiPuestoUsuario));
+            _comando.Parameters.Add(new SqlParameter("@fcPassword", PEntidad.fcPassword));
 
 
             int Resultado = _comando.ExecuteNonQuery();
