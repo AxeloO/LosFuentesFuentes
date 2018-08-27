@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EN;
 using BL;
-
+using System.Runtime.InteropServices;
 
 namespace WFFuentes
 {
@@ -190,6 +190,18 @@ namespace WFFuentes
             }
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wnsg, int wparam, int lparam);
+
+        private void FCuentasCobrar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         
+        }
+
     }
 }

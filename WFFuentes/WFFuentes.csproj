@@ -99,6 +99,18 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FMenuClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuClientes.Designer.cs">
+      <DependentUpon>FMenuClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FModificarCliente.Designer.cs">
+      <DependentUpon>FModificarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FAgregarCliente.resx">
@@ -128,6 +140,12 @@
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FMenuClientes.resx">
+      <DependentUpon>FMenuClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModificarCliente.resx">
+      <DependentUpon>FModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -136,6 +154,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -159,6 +178,48 @@
       <Project>{ae59b198-1ed7-455f-b18d-a998a326593b}</Project>
       <Name>EN</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2018-08-26 at 6.33.04 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LosFuentes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Edit-Male-User_49585.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\im5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-de-la-búsqueda-355819.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_delete_deleteusers_delete_male_user_maleclient_2348.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedores-icono-png-3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

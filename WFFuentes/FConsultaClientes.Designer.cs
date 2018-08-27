@@ -139,10 +139,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(412, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 24);
+            this.label1.Size = new System.Drawing.Size(199, 25);
             this.label1.TabIndex = 49;
             this.label1.Text = "Cartera de clientes ";
             // 
@@ -160,6 +160,7 @@
             this.Controls.Add(this.label8);
             this.Name = "FConsultaClientes";
             this.Text = "FConsultaClientes";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaClientes_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

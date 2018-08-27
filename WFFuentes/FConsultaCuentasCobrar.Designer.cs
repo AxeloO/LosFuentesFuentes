@@ -91,7 +91,7 @@
             this.Total});
             this.lvListadoCuentasCobrar.Location = new System.Drawing.Point(54, 164);
             this.lvListadoCuentasCobrar.Name = "lvListadoCuentasCobrar";
-            this.lvListadoCuentasCobrar.Size = new System.Drawing.Size(880, 97);
+            this.lvListadoCuentasCobrar.Size = new System.Drawing.Size(872, 97);
             this.lvListadoCuentasCobrar.TabIndex = 40;
             this.lvListadoCuentasCobrar.UseCompatibleStateImageBehavior = false;
             this.lvListadoCuentasCobrar.View = System.Windows.Forms.View.Details;
@@ -138,10 +138,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(427, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 24);
+            this.label1.Size = new System.Drawing.Size(196, 25);
             this.label1.TabIndex = 45;
             this.label1.Text = "Cuentas por cobrar";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -160,6 +160,7 @@
             this.Controls.Add(this.lvListadoCuentasCobrar);
             this.Name = "FConsultaCuentasCobrar";
             this.Text = "FConsultaCuentasCobrar";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaCuentasCobrar_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

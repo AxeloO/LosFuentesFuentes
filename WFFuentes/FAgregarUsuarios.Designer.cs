@@ -152,6 +152,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FAgregarUsuarios";
             this.Text = "FAgregarUsuarios";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FAgregarUsuarios_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

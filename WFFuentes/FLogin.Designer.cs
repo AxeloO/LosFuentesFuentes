@@ -117,6 +117,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLogin";
             this.Text = "FLogin";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FLogin_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

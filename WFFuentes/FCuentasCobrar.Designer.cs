@@ -180,10 +180,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(218, 29);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 24);
+            this.label7.Size = new System.Drawing.Size(153, 25);
             this.label7.TabIndex = 42;
             this.label7.Text = "Nuevo Cliente ";
             // 
@@ -212,6 +212,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FCuentasCobrar";
             this.Text = "FCuentasCobrar";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FCuentasCobrar_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

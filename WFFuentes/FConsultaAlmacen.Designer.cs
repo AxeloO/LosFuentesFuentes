@@ -100,7 +100,6 @@
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.Size = new System.Drawing.Size(836, 150);
             this.dgInventario.TabIndex = 63;
-            
             // 
             // FConsultaAlmacen
             // 
@@ -117,6 +116,7 @@
             this.Controls.Add(this.bBuscar);
             this.Name = "FConsultaAlmacen";
             this.Text = "FConsultaAlmacen";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaAlmacen_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

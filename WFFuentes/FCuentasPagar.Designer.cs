@@ -250,6 +250,7 @@
             this.Name = "FCuentasPagar";
             this.Text = "FCuentasPagar";
             this.Load += new System.EventHandler(this.FCuentasPagar_Load);
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
