@@ -46,35 +46,45 @@ namespace WFFuentes
             Form _fAgregar = new FAgregarCliente();
             _fAgregar.Show();
             this.Close();
-
-
         }
 
         private void eliminarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form _fEliminar = new FModificarCliente();
+            Form _fEliminar = new FEliminarCliente();
             _fEliminar.Show();
-
+            this.Close();
         }
 
         private void modificarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fModificar = new FModificarCliente();
             _fModificar.Show();
-
+            this.Close();
         }
         private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
         {
-
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form _fUsuarios = new FAgregarUsuarios();
+            _fUsuarios.Show();
+            this.Close();
+        }
+
+        private void agregarNuevoRegistroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form _fProveedores = new FAgregarProveedores();
+            _fProveedores.Show();
+            this.Close();
         }
     }
 }

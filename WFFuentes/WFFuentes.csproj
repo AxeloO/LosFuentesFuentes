@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FAgregarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAgregarProveedores.Designer.cs">
+      <DependentUpon>FAgregarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FConsultaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsultaProveedor.Designer.cs">
+      <DependentUpon>FConsultaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEliminarCliente.Designer.cs">
+      <DependentUpon>FEliminarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +131,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FAgregarProveedores.resx">
+      <DependentUpon>FAgregarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConsultaProveedor.resx">
+      <DependentUpon>FConsultaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEliminarCliente.resx">
+      <DependentUpon>FEliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FAgregarCliente.resx">
       <DependentUpon>FAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
