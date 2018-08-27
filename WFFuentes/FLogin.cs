@@ -49,10 +49,11 @@ namespace WFFuentes
                                         
                         if (strPuesto.Equals("420")) 
                         {
-                            FInventario _fInventario = new FInventario();
-                            this.Close();
-                            _fInventario.ShowDialog();
-                        }
+                         FMenuClientes _fmenuClientes = new FMenuClientes();
+                        this.Close();
+                        _fmenuClientes.ShowDialog();
+
+                    }
                         else if (strPuesto.Equals("720"))
                         {
                             FInventario _fInventario = new FInventario();

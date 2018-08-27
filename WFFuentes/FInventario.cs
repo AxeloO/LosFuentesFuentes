@@ -39,9 +39,6 @@ namespace WFFuentes
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
-
-
-
                 else
                 {
                     _en.Cantidad = int.Parse(txtCantidad.Text);

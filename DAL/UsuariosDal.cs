@@ -12,6 +12,23 @@ namespace DAL
 {
    public class UsuariosDal
     {
+        public int AgregarUsuario(EnUsuario PEntidad)
+        {
+            IDbConnection _Conexion = DBConexion.Conexion();
+            _Conexion.Open();
+
+            SqlCommand _comando = new SqlCommand("Agregar_Ventas", _Conexion as SqlConnection);
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.Add(new SqlParameter("@fiIdUsuario", PEntidad.fiIdUsuario));
+            _comando.Parameters.Add(new SqlParameter("@fcNombreCompleto", PEntidad.fcNombreCompleto));
+            _comando.Parameters.Add(new SqlParameter("@fcNombreUsuario", PEntidad.fcNombreUsuario));
+            _comando.Parameters.Add(new SqlParameter("@fiPuestoUsuario", PEntidad.fiPuestoUsuario));
+            _comando.Parameters.Add(new SqlParameter("@fcPassword", PEntidad.fcPassword));
+            int Resultado = _comando.ExecuteNonQuery();
+
+            _Conexion.Close();
+            return Resultado;
+        }
 
         public List<EnUsuario> ListaDeUsuarios()
         {
@@ -41,5 +58,20 @@ namespace DAL
             return Lista;
         }
 
+        public int EliminarUsuario(EnUsuario PEntidad)
+        {
+            IDbConnection _Conexion = DBConexion.Conexion();
+            _Conexion.Open();
+            SqlCommand _comando = new SqlCommand("Eliminar_Usuario", _Conexion as SqlConnection);
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.Add(new SqlParameter("@fiIdUsuario", PEntidad.fiIdUsuario));
+            int Resultado = _comando.ExecuteNonQuery();
+            _Conexion.Close();
+            return Resultado;
+
+        }
+
     }
+
+  
 }

@@ -34,5 +34,14 @@ namespace WFFuentes
             _fPrincipal.Show();
             this.Close();
         }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Programacion OP
+
+
     }
 }

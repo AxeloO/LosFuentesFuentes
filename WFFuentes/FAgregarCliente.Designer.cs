@@ -55,6 +55,7 @@
             this.bAgregar.TabIndex = 38;
             this.bAgregar.Text = "Agregar ";
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // txtLimiteCredito
             // 

@@ -303,7 +303,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FInventario";
             this.Text = "FInventario";
-            
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
