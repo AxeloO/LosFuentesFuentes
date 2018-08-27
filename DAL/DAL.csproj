@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientesDal.cs" />
-    <Compile Include="CuentasPorCobrarDal.cs" />
     <Compile Include="DBConexion.cs" />
     <Compile Include="devolucionesDal.cs" />
     <Compile Include="inventariosDal.cs" />

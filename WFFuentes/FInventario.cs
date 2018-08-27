@@ -190,7 +190,7 @@ namespace WFFuentes
             }
         }
 
-<<<<<<< HEAD
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -204,11 +204,6 @@ namespace WFFuentes
         
         }
 
-=======
-        private void FInventario_Load(object sender, EventArgs e)
-        {
 
-        }
->>>>>>> e2c99d9e4c43973897caf9351ce72a723b21835d
     }
 }
