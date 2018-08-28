@@ -52,14 +52,14 @@ namespace WFFuentes
         {
             Form _fEliminar = new FEliminarCliente();
             _fEliminar.Show();
-            this.Close();
+
         }
 
         private void modificarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fModificar = new FModificarCliente();
             _fModificar.Show();
-            this.Close();
+
         }
         private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
         {
