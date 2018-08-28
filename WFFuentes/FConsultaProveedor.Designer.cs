@@ -42,6 +42,7 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bRegresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bActualizar
@@ -146,12 +147,23 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "Proveedores";
             // 
+            // bRegresar
+            // 
+            this.bRegresar.Location = new System.Drawing.Point(735, 373);
+            this.bRegresar.Name = "bRegresar";
+            this.bRegresar.Size = new System.Drawing.Size(75, 23);
+            this.bRegresar.TabIndex = 50;
+            this.bRegresar.Text = "Regresar";
+            this.bRegresar.UseVisualStyleBackColor = true;
+            this.bRegresar.Click += new System.EventHandler(this.bRegresar_Click);
+            // 
             // FConsultaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(971, 414);
+            this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.lvListaClientes);
@@ -183,5 +195,6 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button bRegresar;
     }
 }

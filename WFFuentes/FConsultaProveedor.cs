@@ -26,5 +26,12 @@ namespace WFFuentes
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void bRegresar_Click(object sender, EventArgs e)
+        {
+            FMenuClientes _fPrincipal = new FMenuClientes();
+            _fPrincipal.Show();
+            this.Close();
+        }
     }
 }

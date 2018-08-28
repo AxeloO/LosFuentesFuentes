@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDevoluciones.Designer.cs">
+      <DependentUpon>FDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEliminarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEliminarProveedor.Designer.cs">
+      <DependentUpon>FEliminarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAgregarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,8 +141,20 @@
     <Compile Include="FModificarCliente.Designer.cs">
       <DependentUpon>FModificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVentas.Designer.cs">
+      <DependentUpon>FVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FDevoluciones.resx">
+      <DependentUpon>FDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEliminarProveedor.resx">
+      <DependentUpon>FEliminarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FAgregarProveedores.resx">
       <DependentUpon>FAgregarProveedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FModificarCliente.resx">
       <DependentUpon>FModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVentas.resx">
+      <DependentUpon>FVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

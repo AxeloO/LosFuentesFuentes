@@ -39,6 +39,7 @@ namespace WFFuentes
         {
             FMenuClientes _fAdmon = new FMenuClientes();
             _fAdmon.ShowDialog();
+            this.Close();
         }
 
         private void agregarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,13 +53,15 @@ namespace WFFuentes
         {
             Form _fEliminar = new FEliminarCliente();
             _fEliminar.Show();
-
+            this.Close();
+                
         }
 
         private void modificarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fModificar = new FModificarCliente();
             _fModificar.Show();
+            this.Close();
 
         }
         private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
@@ -84,6 +87,48 @@ namespace WFFuentes
         {
             Form _fProveedores = new FAgregarProveedores();
             _fProveedores.Show();
+            this.Close();
+        }
+
+        private void modificarRegistroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form _fProveedores = new FConsultaProveedor();
+            _fProveedores.Show();
+            this.Close();
+        }
+
+        private void consultarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form _fProveedores = new FEliminarProveedor();
+            _fProveedores.Show();
+            this.Close();
+        }
+
+        private void agregarNuevoRegistroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form _fAgregar = new FInventario();
+            _fAgregar.Show();
+            this.Close();
+        }
+
+        private void modificarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form _fAgregar = new FInventario();
+            _fAgregar.Show();
+            this.Close();
+        }
+
+        private void eliminarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form _fAgregar = new FInventario();
+            _fAgregar.Show();
+            this.Close();
+        }
+
+        private void cuentasPorPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form _fCuentasPagar = new FCuentasPagar();
+            _fCuentasPagar.Show();
             this.Close();
         }
     }
