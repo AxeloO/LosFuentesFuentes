@@ -12,7 +12,7 @@ namespace DAL
 {
     public class ClientesDal
     {
-        public int AgregarCLiente(EnCliente PEntidad)
+        public int AgregarCliente(EnCliente PEntidad)
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
@@ -88,7 +88,7 @@ namespace DAL
             return Lista;
         }
 
-        public int ModificarProducto(EnCliente PEntidad)
+        public int ModificarCliente(EnCliente PEntidad)
         {
             IDbConnection _conexion = DBConexion.Conexion();
             _conexion.Open();
@@ -109,7 +109,7 @@ namespace DAL
 
         }
 
-        public int EliminarProducto(EnCliente PEntidad)
+        public int EliminarCliente(EnCliente PEntidad)
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();

@@ -12,7 +12,7 @@ namespace DAL
 {
     public class devolucionesDal
     {
-        public int AgregarProducto(EnDevolucion PEntidad)
+        public int AgregarDevolucion(EnDevolucion PEntidad)
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();

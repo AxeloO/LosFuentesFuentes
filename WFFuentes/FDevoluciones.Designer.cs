@@ -117,6 +117,7 @@
             this.bAgregar.TabIndex = 8;
             this.bAgregar.Text = "Generar Devolución";
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // bConsulta
             // 
@@ -126,6 +127,7 @@
             this.bConsulta.TabIndex = 9;
             this.bConsulta.Text = "Consultar";
             this.bConsulta.UseVisualStyleBackColor = true;
+            this.bConsulta.Click += new System.EventHandler(this.bConsulta_Click);
             // 
             // bLimpiar
             // 

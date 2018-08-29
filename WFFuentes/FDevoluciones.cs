@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BL;
+using EN;
+
 
 namespace WFFuentes
 {
-    public partial class FDevoluciones : Form
+    public partial class FDevoluciones : Form 
     {
+        DevolucionesBL _bldevolucion = new DevolucionesBL();
+        EnDevolucion _enDevolucion = new EnDevolucion();
+
         public FDevoluciones()
         {
             InitializeComponent();
@@ -47,6 +53,54 @@ namespace WFFuentes
             txtNombreProducto.Text = string.Empty;
             txtCantidad.Text = string.Empty;
             txtCausaDevolucion.Text = string.Empty;          
+        }
+
+        private void bConsulta_Click(object sender, EventArgs e)
+        {
+            dGDevoluciones.DataSource = _bldevolucion.ListaDevoluciones();
+        }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {//Trim sirve para borrar espacios si es que existen 
+
+
+                String strfolioNota = txtFolioNota.Text.ToString().Trim();
+                String strNombreProducto = txtNombreProducto.Text.ToString().Trim();
+                String strCantidad = txtCantidad.Text.ToString().Trim();
+                String strCausaD = txtCausaDevolucion.Text.ToString().Trim();
+
+
+                if (strfolioNota.Equals("") || strNombreProducto.Equals("")  || txtCantidad.Equals("") || strCausaD.Equals(""))
+                {
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else
+                {
+                    _enDevolucion.fiFolioVenta = int.Parse(txtFolioNota.Text);
+                    _enDevolucion.fcNombreProductoDevolucion = txtNombreProducto.Text;
+                    _enDevolucion.fiCantidadDevolucion = int.Parse(txtCantidad.Text);
+                    _enDevolucion.fcCausaDevolucion = txtCausaDevolucion.Text;
+                   
+
+                    int Resultado = _bldevolucion.AgregarDevolucion(_enDevolucion);
+
+                    if (Resultado == 1)
+                    {
+                        MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+
+                }
+            }
+
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hubo un error al Agregar el Producto", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+
         }
     }
 }
