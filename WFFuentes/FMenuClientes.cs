@@ -131,5 +131,13 @@ namespace WFFuentes
             _fCuentasPagar.Show();
             this.Close();
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FVentas fVentas = new FVentas();
+            fVentas.ShowDialog();
+            this.Close();
+
+        }
     }
 }

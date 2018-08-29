@@ -43,6 +43,7 @@
     <Compile Include="InventarioBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuariosBL.cs" />
+    <Compile Include="VentasBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

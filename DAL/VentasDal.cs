@@ -12,7 +12,7 @@ namespace DAL
 {
     public class VentasDal
     {
-        public int AgregarProducto(EnVentas PEntidad)
+        public int AgregarVenta(EnVentas PEntidad)
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
@@ -66,11 +66,11 @@ namespace DAL
             return Lista;
         }
 
-        public List<EnVentas> MostrarEnVentasPorNombre(EnVentas PEntidad)
+        public List<EnVentas> MostrarEnVentasPorDia(EnVentas PEntidad)
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-            SqlCommand _comando = new SqlCommand("Consultar_Venta_Por_Fecha", _Conexion as SqlConnection);
+            SqlCommand _comando = new SqlCommand("Consultar_Venta_Por_Dia", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@FDtFechaSalida", PEntidad.fDtFechaSalida));
             IDataReader _reader = _comando.ExecuteReader();
@@ -99,6 +99,7 @@ namespace DAL
 
             return Lista;
         }
+                
     }
 
 }

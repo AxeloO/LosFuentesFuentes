@@ -46,7 +46,7 @@ namespace DAL
             while (_reader.Read())
             {
                 Inventario _inventario = new Inventario();
-                _inventario.IdProducto = _reader.GetInt32(0);
+                _inventario.IdProducto = _reader.GetInt64(0);
                 _inventario.NombreProducto = _reader.GetString(1);
                 _inventario.GrupoPerteneciente = _reader.GetString(2);
                 _inventario.Cantidad = _reader.GetInt32(3);
