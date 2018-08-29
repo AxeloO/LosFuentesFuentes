@@ -81,7 +81,7 @@ namespace WFFuentes
                     }
                     else
                     {
-                        MessageBox.Show("Hubo un error al Agregar el Producto", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Hubo un error al Agregar el Usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
 
                 }
@@ -90,7 +90,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Producto", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al Agregar el Usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -101,6 +101,24 @@ namespace WFFuentes
                       
         }
 
-       
+        private void bEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bRegresar_Click(object sender, EventArgs e)
+        {
+            FMenuClientes _fPrincipal = new FMenuClientes();
+            _fPrincipal.Show();
+            this.Close();
+        }
+
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombreEmpleado.Text = string.Empty;
+            txtNombreUsuario.Text = string.Empty;
+            txtContraseña.Text = string.Empty;
+            
+        }
     }
 }

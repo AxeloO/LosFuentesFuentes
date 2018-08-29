@@ -131,5 +131,63 @@ namespace WFFuentes
             _fCuentasPagar.Show();
             this.Close();
         }
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bClientes_Click(object sender, EventArgs e)
+        {
+            Form _fAgregar = new FAgregarCliente();
+            _fAgregar.Show();
+            this.Close();
+        }
+
+        private void bProveedor_Click(object sender, EventArgs e)
+        {
+            Form _fAgregar = new FAgregarProveedores();
+            _fAgregar.Show();
+            this.Close();
+        }
+
+        private void bSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bUsuarios_Click(object sender, EventArgs e)
+        {
+            Form _fAgregar = new FAgregarUsuarios();
+            _fAgregar.Show();
+            this.Close();
+        }
+
+        private void bProductos_Click(object sender, EventArgs e)
+        {
+            Form _fAgregar = new FInventario();
+            _fAgregar.Show();
+            this.Close();
+        }
+
+        private void bCompras_Click(object sender, EventArgs e)
+        {
+            Form _fAgregar = new FCuentasPagar();
+            _fAgregar.Show();
+            this.Close();
+        }
+
+        private void MenuPrincipal_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

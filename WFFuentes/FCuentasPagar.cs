@@ -34,5 +34,23 @@ namespace WFFuentes
             SendMessage(this.Handle, 0x112, 0xf012, 0);
 
         }
+
+        private void bActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bRegresar_Click(object sender, EventArgs e)
+        {
+            FMenuClientes _fPrincipal = new FMenuClientes();
+            _fPrincipal.Show();
+            this.Close();
+        }
+
+        private void FCuentasPagar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

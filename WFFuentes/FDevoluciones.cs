@@ -31,11 +31,22 @@ namespace WFFuentes
 
         private void bRegresar_Click(object sender, EventArgs e)
         {
-            FMenuClientes _fPrincipal = new FMenuClientes();
+            FMenuEmpleado _fPrincipal = new FMenuEmpleado();
             _fPrincipal.Show();
             this.Close();
         }
 
-       
+        private void FDevoluciones_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            txtFolioNota.Text = string.Empty;
+            txtNombreProducto.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            txtCausaDevolucion.Text = string.Empty;          
+        }
     }
 }

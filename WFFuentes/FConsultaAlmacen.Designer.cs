@@ -35,6 +35,7 @@
             this.bBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgInventario = new System.Windows.Forms.DataGridView();
+            this.bRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,18 +96,30 @@
             // 
             // dgInventario
             // 
+            this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgInventario.Location = new System.Drawing.Point(31, 148);
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.Size = new System.Drawing.Size(836, 150);
             this.dgInventario.TabIndex = 63;
             // 
+            // bRegresar
+            // 
+            this.bRegresar.Location = new System.Drawing.Point(542, 329);
+            this.bRegresar.Name = "bRegresar";
+            this.bRegresar.Size = new System.Drawing.Size(75, 23);
+            this.bRegresar.TabIndex = 64;
+            this.bRegresar.Text = "Regresar";
+            this.bRegresar.UseVisualStyleBackColor = true;
+            this.bRegresar.Click += new System.EventHandler(this.bRegresar_Click);
+            // 
             // FConsultaAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(881, 364);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(881, 407);
+            this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.dgInventario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bImprimir);
@@ -114,6 +127,7 @@
             this.Controls.Add(this.txtBusquedaProducto);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bBuscar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FConsultaAlmacen";
             this.Text = "FConsultaAlmacen";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaAlmacen_MouseDown);
@@ -132,5 +146,6 @@
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgInventario;
+        private System.Windows.Forms.Button bRegresar;
     }
 }

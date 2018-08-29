@@ -40,6 +40,18 @@ namespace WFFuentes
 
         }
 
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombreCompleto.Text = string.Empty;
+            txtDomicilio.Text = string.Empty;
+            txtTelefono.Text = string.Empty;
+            txtRFC.Text = string.Empty;
+            txtTipoCredito.Text = string.Empty;
+            txtGarantia.Text = string.Empty;
+            txtLimiteCredito.Text = string.Empty;
+         
+        }
+
         // Programacion OP
 
 

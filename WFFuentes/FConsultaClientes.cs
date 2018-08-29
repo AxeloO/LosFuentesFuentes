@@ -29,7 +29,7 @@ namespace WFFuentes
 
         private void bRegresar_Click(object sender, EventArgs e)
         {
-            FMenuClientes _fPrincipal = new FMenuClientes();
+            FMenuEmpleado _fPrincipal = new FMenuEmpleado();
             _fPrincipal.Show();
             this.Close();
         }

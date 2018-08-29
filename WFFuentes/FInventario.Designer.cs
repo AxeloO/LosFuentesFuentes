@@ -53,6 +53,7 @@
             this.btLimpiar = new System.Windows.Forms.Button();
             this.btConsulta = new System.Windows.Forms.Button();
             this.dgInventario = new System.Windows.Forms.DataGridView();
+            this.bRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -234,9 +235,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(360, 29);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(372, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(182, 27);
             this.label1.TabIndex = 28;
             this.label1.Text = "Agregar Productos";
             // 
@@ -264,18 +267,29 @@
             // 
             this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgInventario.Location = new System.Drawing.Point(12, 352);
+            this.dgInventario.Location = new System.Drawing.Point(823, 26);
             this.dgInventario.Name = "dgInventario";
-            this.dgInventario.Size = new System.Drawing.Size(881, 211);
+            this.dgInventario.Size = new System.Drawing.Size(346, 304);
             this.dgInventario.TabIndex = 53;
             this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
+            // 
+            // bRegresar
+            // 
+            this.bRegresar.Location = new System.Drawing.Point(1017, 366);
+            this.bRegresar.Name = "bRegresar";
+            this.bRegresar.Size = new System.Drawing.Size(75, 23);
+            this.bRegresar.TabIndex = 54;
+            this.bRegresar.Text = "Regresar";
+            this.bRegresar.UseVisualStyleBackColor = true;
+            this.bRegresar.Click += new System.EventHandler(this.bRegresar_Click);
             // 
             // FInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(936, 599);
+            this.ClientSize = new System.Drawing.Size(1181, 413);
+            this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.dgInventario);
             this.Controls.Add(this.btConsulta);
             this.Controls.Add(this.btLimpiar);
@@ -301,8 +315,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FInventario";
             this.Text = "FInventario";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FInventario_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -335,5 +351,6 @@
         private System.Windows.Forms.Button btLimpiar;
         private System.Windows.Forms.Button btConsulta;
         private System.Windows.Forms.DataGridView dgInventario;
+        private System.Windows.Forms.Button bRegresar;
     }
 }

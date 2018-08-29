@@ -135,6 +135,12 @@
     <Compile Include="FMenuClientes.Designer.cs">
       <DependentUpon>FMenuClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FMenuEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuEmpleado.Designer.cs">
+      <DependentUpon>FMenuEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMenuClientes.resx">
       <DependentUpon>FMenuClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuEmpleado.resx">
+      <DependentUpon>FMenuEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FModificarCliente.resx">
       <DependentUpon>FModificarCliente.cs</DependentUpon>
@@ -274,6 +283,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\proveedores-icono-png-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono_producto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono_producto21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-compras-sl-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-compras-sl-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-compras-sl-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devolucion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_131533544-stock-photo-clients-group-icon-white-square.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

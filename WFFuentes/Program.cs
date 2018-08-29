@@ -16,11 +16,13 @@ namespace WFFuentes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FLogin _fLogin = new FLogin();
-            _fLogin.Show();
-           // FMenuClientes _fPrincipal = new FMenuClientes();
-           //_fPrincipal.Show();
+            //FLogin _fLogin = new FLogin();
+            //_fLogin.Show();
+            FMenuClientes _fPrincipal = new FMenuClientes();
+           _fPrincipal.Show();
 
+            //FMenuEmpleado _fPrincipal = new FMenuEmpleado();
+            //_fPrincipal.Show();
             Application.Run();
             
         }

@@ -44,5 +44,12 @@ namespace WFFuentes
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void bRegresar_Click(object sender, EventArgs e)
+        {
+            FMenuEmpleado _fPrincipal = new FMenuEmpleado();
+            _fPrincipal.Show();
+            this.Close();
+        }
     }
 }
