@@ -93,6 +93,7 @@
             this.bProductos.Size = new System.Drawing.Size(103, 92);
             this.bProductos.TabIndex = 8;
             this.bProductos.Text = "Productos";
+            this.bProductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bProductos.UseVisualStyleBackColor = true;
             this.bProductos.Click += new System.EventHandler(this.bProductos_Click);
             // 

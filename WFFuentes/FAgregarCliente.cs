@@ -62,13 +62,13 @@ namespace WFFuentes
                 }
                 else
                 {
-                     _enCliente.FcNombreCompleto= strNombreCliente;
-                     _enCliente.FcDomicilio= strDomicilio;
+                     _enCliente.FcNombreCompleto= txtNombreCompleto.Text;
+                     _enCliente.FcDomicilio= txtDomicilio.Text;
                      _enCliente.FiTelefono = int.Parse(txtTelefono.Text);
                      _enCliente.FcRFC = txtRFC.Text;
                      _enCliente.FcTipoCredito = txtTipoCredito.Text;
                      _enCliente.FcTipoGarantia = txtGarantia.Text;
-                     _enCliente.FdLimiteCredito = decimal.Parse(strLimiteCredito);
+                     _enCliente.FdLimiteCredito = decimal.Parse(txtLimiteCredito.Text);
 
 
                     int Resultado = _clientesBL.AgregarClientes(_enCliente);
@@ -82,7 +82,7 @@ namespace WFFuentes
             }
 
             catch (Exception)
-            {
+             {
 
                 MessageBox.Show("Hubo un error al Agregar el Cliente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }

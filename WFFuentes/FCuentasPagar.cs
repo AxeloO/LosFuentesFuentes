@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using BL;
+using EN;
 
 namespace WFFuentes
 {
     public partial class FCuentasPagar : Form
     {
+        EnCuentasPorPagar _enCuentas = new EnCuentasPorPagar();
+        CuentasPorPagarBL _cuentasBL = new CuentasPorPagarBL();
+
         public FCuentasPagar()
         {
             InitializeComponent();
@@ -37,7 +41,7 @@ namespace WFFuentes
 
         private void bActualizar_Click(object sender, EventArgs e)
         {
-
+            dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorPagar();
         }
 
         private void bRegresar_Click(object sender, EventArgs e)
@@ -51,6 +55,51 @@ namespace WFFuentes
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {//Trim sirve para borrar espacios si es que existen 
+
+       
+                string strNombreProveedor = txtNombreProveedor.Text.ToString().Trim();
+                string strFactura = txtNoFactura.Text.ToString().Trim();
+                string strFechaAdquisicion = txtFechaAdquisicion.Text.ToString().Trim();
+                string strProductoAdquirido = txtProductoAdquirido.Text.ToString().Trim();
+                string strTotalAPagar = txtMontoPagar.Text.ToString().Trim();
+              
+
+
+                if (txtNombreProveedor.Text ==("") || txtNoFactura.Text ==("") || txtFechaAdquisicion.Text ==("") || txtProductoAdquirido.Text == ("") || txtMontoPagar.Text == (""))
+                {
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else
+                {
+                    _enCuentas.FcNombreProveedor = txtNombreProveedor.Text;
+                    _enCuentas.FiNoFactura = int.Parse(txtNoFactura.Text);
+                    _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
+                    _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
+                    _enCuentas.FdTotalAPagar = int.Parse(txtMontoPagar.Text);
+                   
+
+                    int Resultado = _cuentasBL.AgregarCuentasPorPagar(_enCuentas);
+
+                    if (Resultado == 1)
+                    {
+                        MessageBox.Show("Se Agrego El Nuevo Registro Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+
+                }
+            }
+
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hubo un error al Agregar el Registro", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
     }
 }

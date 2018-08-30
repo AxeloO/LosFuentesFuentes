@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BL;
+using EN;
 
 namespace WFFuentes
 {
     public partial class FConsultaClientes : Form
     {
+
+        EnCliente _enCliente = new EnCliente();
+        ClientesBL _clientesBL = new ClientesBL();
+
         public FConsultaClientes()
         {
             InitializeComponent();
@@ -32,6 +38,22 @@ namespace WFFuentes
             FMenuEmpleado _fPrincipal = new FMenuEmpleado();
             _fPrincipal.Show();
             this.Close();
+        }
+
+        private void bActualizar_Click(object sender, EventArgs e)
+        {
+            dGClientes.DataSource = _clientesBL.MostrarClientes();
+        }
+
+        private void bBusqueda_Click(object sender, EventArgs e)
+        {
+            if (!(txtBusqueda.Text == ""))
+            {
+                _enCliente.FcNombreCompleto = txtBusqueda.Text;
+                dGClientes.DataSource = _clientesBL.MostrarClientePorNombre(_enCliente);
+
+
+            }
         }
     }
 }

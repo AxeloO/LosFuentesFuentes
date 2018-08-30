@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientesDal.cs" />
+    <Compile Include="CuentasPorPagarDal.cs" />
     <Compile Include="DBConexion.cs" />
     <Compile Include="devolucionesDal.cs" />
     <Compile Include="inventariosDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedoresDAL.cs" />
     <Compile Include="UsuariosDal.cs" />
     <Compile Include="VentasDal.cs" />
   </ItemGroup>

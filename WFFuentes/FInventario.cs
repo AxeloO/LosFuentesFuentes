@@ -125,11 +125,11 @@ namespace WFFuentes
 
         private void btConsulta_Click(object sender, EventArgs e)
         {
-            if (!(txtNombreDelProducto.Text == ""))
+            //if (!(txtNombreDelProducto.Text == ""))
             {
-                _en.NombreProducto = txtNombreDelProducto.Text;
-                dgInventario.DataSource = _inventarioBl.MostrarInventarioPorNombre(_en);
-
+               
+                dgInventario.DataSource = _inventarioBl.MostrarInventario();
+                
             }
         }
 

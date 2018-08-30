@@ -9,7 +9,7 @@ namespace EN
    public class EnDevolucion
     {
         public int fiFolioVenta { get; set; }
-        public int fiIdDevolucion { get; set; }
+        public long fiIdDevolucion { get; set; }
         public string fcNombreProductoDevolucion { get; set; }
         public int fiCantidadDevolucion { get; set; }
         public string fcCausaDevolucion { get; set; }

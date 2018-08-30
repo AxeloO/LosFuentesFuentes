@@ -19,11 +19,11 @@ namespace DAL
 
             SqlCommand _comando = new SqlCommand("Agregar_Devoluciones", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.Add(new SqlParameter("@fiFolioVenta", PEntidad.fiFolioVenta));
-            _comando.Parameters.Add(new SqlParameter("@fiIdDevolucion", PEntidad.fiIdDevolucion));
-            _comando.Parameters.Add(new SqlParameter("@fcNombreProductoDevolucion", PEntidad.fcNombreProductoDevolucion));
-            _comando.Parameters.Add(new SqlParameter("@fiCantidadDevolucion", PEntidad.fiCantidadDevolucion));
-            _comando.Parameters.Add(new SqlParameter("@fcCausaDevolucion", PEntidad.fcCausaDevolucion));
+            _comando.Parameters.Add(new SqlParameter("@FiFolioVenta", PEntidad.fiFolioVenta));
+            //_comando.Parameters.Add(new SqlParameter("@FiIdDevolucion", PEntidad.fiIdDevolucion));
+            _comando.Parameters.Add(new SqlParameter("@FcNombreProductoDevolucion", PEntidad.fcNombreProductoDevolucion));
+            _comando.Parameters.Add(new SqlParameter("@FiCantidadDevolucion", PEntidad.fiCantidadDevolucion));
+            _comando.Parameters.Add(new SqlParameter("@FcCausaDevolucion", PEntidad.fcCausaDevolucion));
 
 
             int Resultado = _comando.ExecuteNonQuery();
@@ -36,7 +36,7 @@ namespace DAL
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-            SqlCommand _comando = new SqlCommand("Consultar_Devoluciones_Por_fiIDevolucion", _Conexion as SqlConnection);
+            SqlCommand _comando = new SqlCommand("Consulta_Devoluciones", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             IDataReader _reader = _comando.ExecuteReader();
             List<EnDevolucion> Lista = new List<EnDevolucion>();
@@ -44,7 +44,7 @@ namespace DAL
             {
                 EnDevolucion _EnDevolucion = new EnDevolucion();
                 _EnDevolucion.fiFolioVenta = _reader.GetInt32(0);
-                _EnDevolucion.fiIdDevolucion = _reader.GetInt32(1);
+                _EnDevolucion.fiIdDevolucion = _reader.GetInt64(1);
                 _EnDevolucion.fcNombreProductoDevolucion = _reader.GetString(2);
                 _EnDevolucion.fiCantidadDevolucion = _reader.GetInt32(3);
                 _EnDevolucion.fcCausaDevolucion = _reader.GetString(4);

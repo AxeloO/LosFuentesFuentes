@@ -178,7 +178,7 @@
             this.dgProductos.Size = new System.Drawing.Size(502, 112);
             this.dgProductos.TabIndex = 12;
             this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVentas_CellContentClick);
-            this.dgProductos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgProductos_RowHeaderMouseClick);
+        //    this.dgProductos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgProductos_RowHeaderMouseClick);
             // 
             // FdFechaSalida
             // 

@@ -181,7 +181,7 @@
             // 
             this.bGuardar.BackColor = System.Drawing.Color.Teal;
             this.bGuardar.FlatAppearance.BorderSize = 0;
-            this.bGuardar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bGuardar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bGuardar.Location = new System.Drawing.Point(528, 105);
             this.bGuardar.Margin = new System.Windows.Forms.Padding(0);
@@ -190,11 +190,12 @@
             this.bGuardar.TabIndex = 15;
             this.bGuardar.Text = "Guardar";
             this.bGuardar.UseVisualStyleBackColor = false;
+            this.bGuardar.Click += new System.EventHandler(this.bGuardar_Click_1);
             // 
             // bRegresar
             // 
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
-            this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bRegresar.Location = new System.Drawing.Point(899, 296);
             this.bRegresar.Name = "bRegresar";
@@ -217,7 +218,7 @@
             // 
             this.bModificar.BackColor = System.Drawing.Color.Teal;
             this.bModificar.FlatAppearance.BorderSize = 0;
-            this.bModificar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bModificar.Location = new System.Drawing.Point(528, 151);
             this.bModificar.Margin = new System.Windows.Forms.Padding(0);
@@ -231,7 +232,7 @@
             // 
             this.bEliminar.BackColor = System.Drawing.Color.Teal;
             this.bEliminar.FlatAppearance.BorderSize = 0;
-            this.bEliminar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEliminar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bEliminar.Location = new System.Drawing.Point(528, 193);
             this.bEliminar.Margin = new System.Windows.Forms.Padding(0);
@@ -245,7 +246,7 @@
             // 
             this.bConsulta.BackColor = System.Drawing.Color.Teal;
             this.bConsulta.FlatAppearance.BorderSize = 0;
-            this.bConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bConsulta.Location = new System.Drawing.Point(528, 231);
             this.bConsulta.Margin = new System.Windows.Forms.Padding(0);
@@ -254,6 +255,7 @@
             this.bConsulta.TabIndex = 20;
             this.bConsulta.Text = "Consultar";
             this.bConsulta.UseVisualStyleBackColor = false;
+            this.bConsulta.Click += new System.EventHandler(this.bConsulta_Click);
             // 
             // label9
             // 
@@ -270,7 +272,7 @@
             // 
             this.bLimpiar.BackColor = System.Drawing.Color.Teal;
             this.bLimpiar.FlatAppearance.BorderSize = 0;
-            this.bLimpiar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bLimpiar.Location = new System.Drawing.Point(528, 266);
             this.bLimpiar.Margin = new System.Windows.Forms.Padding(0);

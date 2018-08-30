@@ -66,10 +66,10 @@ namespace WFFuentes
             {//Trim sirve para borrar espacios si es que existen 
 
 
-                String strfolioNota = txtFolioNota.Text.ToString().Trim();
-                String strNombreProducto = txtNombreProducto.Text.ToString().Trim();
-                String strCantidad = txtCantidad.Text.ToString().Trim();
-                String strCausaD = txtCausaDevolucion.Text.ToString().Trim();
+                string strfolioNota = txtFolioNota.Text.ToString().Trim();
+                string strNombreProducto = txtNombreProducto.Text.ToString().Trim();
+                string strCantidad = txtCantidad.Text.ToString().Trim();
+                string strCausaD = txtCausaDevolucion.Text.ToString().Trim();
 
 
                 if (strfolioNota.Equals("") || strNombreProducto.Equals("")  || txtCantidad.Equals("") || strCausaD.Equals(""))

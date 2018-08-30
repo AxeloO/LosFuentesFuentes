@@ -29,20 +29,13 @@
         private void InitializeComponent()
         {
             this.bActualizar = new System.Windows.Forms.Button();
-            this.lvListaClientes = new System.Windows.Forms.ListView();
-            this.IdCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NombreCompleto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Domicilio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Teléfono = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.RFC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TipoCredito = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Garantia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.LimiteCredito = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bBusqueda = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bRegresar = new System.Windows.Forms.Button();
+            this.dGClientes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dGClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // bActualizar
@@ -53,64 +46,7 @@
             this.bActualizar.TabIndex = 48;
             this.bActualizar.Text = "Actualizar";
             this.bActualizar.UseVisualStyleBackColor = true;
-            // 
-            // lvListaClientes
-            // 
-            this.lvListaClientes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.IdCliente,
-            this.NombreCompleto,
-            this.Domicilio,
-            this.Teléfono,
-            this.RFC,
-            this.TipoCredito,
-            this.Garantia,
-            this.LimiteCredito});
-            this.lvListaClientes.Location = new System.Drawing.Point(13, 152);
-            this.lvListaClientes.Name = "lvListaClientes";
-            this.lvListaClientes.Size = new System.Drawing.Size(919, 197);
-            this.lvListaClientes.TabIndex = 47;
-            this.lvListaClientes.UseCompatibleStateImageBehavior = false;
-            this.lvListaClientes.View = System.Windows.Forms.View.Details;
-            // 
-            // IdCliente
-            // 
-            this.IdCliente.Text = "IdCliente";
-            this.IdCliente.Width = 55;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.Text = "Nombre Completo ";
-            this.NombreCompleto.Width = 168;
-            // 
-            // Domicilio
-            // 
-            this.Domicilio.Text = "Domicilio";
-            this.Domicilio.Width = 127;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.Text = "Teléfono";
-            this.Teléfono.Width = 111;
-            // 
-            // RFC
-            // 
-            this.RFC.Text = "RFC";
-            this.RFC.Width = 102;
-            // 
-            // TipoCredito
-            // 
-            this.TipoCredito.Text = "Tipo de Crédito";
-            this.TipoCredito.Width = 128;
-            // 
-            // Garantia
-            // 
-            this.Garantia.Text = "Garantía";
-            this.Garantia.Width = 118;
-            // 
-            // LimiteCredito
-            // 
-            this.LimiteCredito.Text = "Límite de Crédito";
-            this.LimiteCredito.Width = 106;
+            this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
             // 
             // bBusqueda
             // 
@@ -120,6 +56,7 @@
             this.bBusqueda.TabIndex = 46;
             this.bBusqueda.Text = "Buscar";
             this.bBusqueda.UseVisualStyleBackColor = true;
+            this.bBusqueda.Click += new System.EventHandler(this.bBusqueda_Click);
             // 
             // txtBusqueda
             // 
@@ -157,16 +94,25 @@
             this.bRegresar.UseVisualStyleBackColor = true;
             this.bRegresar.Click += new System.EventHandler(this.bRegresar_Click);
             // 
+            // dGClientes
+            // 
+            this.dGClientes.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGClientes.Location = new System.Drawing.Point(49, 162);
+            this.dGClientes.Name = "dGClientes";
+            this.dGClientes.Size = new System.Drawing.Size(849, 150);
+            this.dGClientes.TabIndex = 51;
+            // 
             // FConsultaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(971, 414);
+            this.Controls.Add(this.dGClientes);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bActualizar);
-            this.Controls.Add(this.lvListaClientes);
             this.Controls.Add(this.bBusqueda);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.label8);
@@ -174,6 +120,7 @@
             this.Name = "FConsultaClientes";
             this.Text = "FConsultaClientes";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaClientes_MouseDown);
+            ((System.ComponentModel.ISupportInitialize)(this.dGClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,19 +129,11 @@
         #endregion
 
         private System.Windows.Forms.Button bActualizar;
-        private System.Windows.Forms.ListView lvListaClientes;
-        private System.Windows.Forms.ColumnHeader IdCliente;
-        private System.Windows.Forms.ColumnHeader NombreCompleto;
-        private System.Windows.Forms.ColumnHeader Domicilio;
-        private System.Windows.Forms.ColumnHeader Teléfono;
-        private System.Windows.Forms.ColumnHeader RFC;
-        private System.Windows.Forms.ColumnHeader TipoCredito;
-        private System.Windows.Forms.ColumnHeader Garantia;
-        private System.Windows.Forms.ColumnHeader LimiteCredito;
         private System.Windows.Forms.Button bBusqueda;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bRegresar;
+        private System.Windows.Forms.DataGridView dGClientes;
     }
 }

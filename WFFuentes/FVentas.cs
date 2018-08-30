@@ -126,21 +126,21 @@ namespace WFFuentes
             dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
 
-        private void dgProductos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            string strNombreDeProducto = string.Empty;
-            int iCantidad = 0;
-            decimal dPrecioUnitario = 0;
-            decimal dImporte = 0;
+        //private void dgProductos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        //{
+      //      string strNombreDeProducto = string.Empty;
+    //        int iCantidad = 0;
+  //          decimal dPrecioUnitario = 0;
+//            decimal dImporte = 0;
 
-            if (dgProductos != null)
-            {
+            //if (dgProductos != null)
+            //{
                 
-                strNombreDeProducto = dgProductos.SelectedRows[0].ToString();
+              //  strNombreDeProducto = dgProductos.ro;
 
-            }
+            //}
 
-            iCantidad = int.Parse(FcCantidad.Text);
-        }
+          //  iCantidad = int.Parse(FcCantidad.Text);
+        //}
     }
 }

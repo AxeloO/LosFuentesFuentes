@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-
 using EN;
 
 namespace DAL
@@ -19,13 +18,14 @@ namespace DAL
 
             SqlCommand _comando = new SqlCommand("Agregar_Cliente", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.Add(new SqlParameter("@NombreProducto", PEntidad.FcNombreCompleto));
-            _comando.Parameters.Add(new SqlParameter("@GrupoPertenenciente", PEntidad.FcDomicilio));
-            _comando.Parameters.Add(new SqlParameter("@Catidad", PEntidad.FiTelefono));
-            _comando.Parameters.Add(new SqlParameter("@CostoUnitario", PEntidad.FcRFC));
-            _comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaContado", PEntidad.FcTipoCredito));
-            _comando.Parameters.Add(new SqlParameter("@PrecioContado", PEntidad.FcTipoGarantia));
-            _comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaCredito", PEntidad.FdLimiteCredito));
+            _comando.Parameters.Add(new SqlParameter("@FcNombreCompleto", PEntidad.FcNombreCompleto));
+            _comando.Parameters.Add(new SqlParameter("@FcDomicilio", PEntidad.FcDomicilio));
+            _comando.Parameters.Add(new SqlParameter("@FiTelefono", PEntidad.FiTelefono));
+            _comando.Parameters.Add(new SqlParameter("@FcRFC", PEntidad.FcRFC));
+            _comando.Parameters.Add(new SqlParameter("@FcTipoCredito", PEntidad.FcTipoCredito));
+            _comando.Parameters.Add(new SqlParameter("@FcTipoGarantia", PEntidad.FcTipoGarantia));
+            _comando.Parameters.Add(new SqlParameter("@FdLimiteCredito", PEntidad.FdLimiteCredito));
+            //_comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaCredito", PEntidad.FdLimiteCredito));
             
             int Resultado = _comando.ExecuteNonQuery();
 

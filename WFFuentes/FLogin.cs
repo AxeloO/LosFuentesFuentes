@@ -58,7 +58,7 @@ namespace WFFuentes
                    
                         if (strPuesto.Equals("720"))
                         {
-                            FInventario _fInventario = new FInventario();
+                            FMenuEmpleado _fInventario = new FMenuEmpleado();
                             this.Close();
                             _fInventario.ShowDialog();
                         }

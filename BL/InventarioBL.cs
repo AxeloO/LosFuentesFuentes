@@ -18,7 +18,7 @@ namespace BL
         }
         public List<Inventario> MostrarInventario()
         {
-            return _dal.MostrarInventario();
+          return _dal.MostrarInventario();
         }
         public List<Inventario> MostrarInventarioPorNombre(Inventario PEntidad)
         {

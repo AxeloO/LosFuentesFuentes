@@ -41,8 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnCliente.cs" />
-    <Compile Include="EnCuentasPorCobrar.cs" />
+    <Compile Include="EnCuentasPorPagar.cs" />
     <Compile Include="EnDevolucion.cs" />
+    <Compile Include="EnProveedores.cs" />
     <Compile Include="EnUsuario.cs" />
     <Compile Include="EnVentas.cs" />
     <Compile Include="Inventario.cs" />

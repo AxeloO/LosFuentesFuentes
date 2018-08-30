@@ -255,7 +255,7 @@
             // 
             // btConsulta
             // 
-            this.btConsulta.Location = new System.Drawing.Point(400, 292);
+            this.btConsulta.Location = new System.Drawing.Point(408, 292);
             this.btConsulta.Name = "btConsulta";
             this.btConsulta.Size = new System.Drawing.Size(75, 23);
             this.btConsulta.TabIndex = 52;
