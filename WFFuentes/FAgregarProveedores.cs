@@ -61,7 +61,7 @@ namespace WFFuentes
         private void bGuardar_Click_1(object sender, EventArgs e)
         {
             try
-            {//Trim sirve para borrar espacios si es que existen 
+            {//Trim sirve para borrar espacios si es que existen hOLA ZURY
 
 
                 string strNombreProveedor = txtNombreCompleto.Text.ToString().Trim();
