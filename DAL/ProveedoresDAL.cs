@@ -48,7 +48,7 @@ namespace DAL
                 _EnProveedor.FiIdProveedor = _reader.GetInt64(0);
                 _EnProveedor.FcNombreProveedor = _reader.GetString(1);
                 _EnProveedor.FcDomicilio = _reader.GetString(2);
-                _EnProveedor.FiTelefono = _reader.GetInt32(3);
+                _EnProveedor.FiTelefono = _reader.GetString(3);
                 _EnProveedor.FcRFC = _reader.GetString(4);
                 _EnProveedor.FcCuentaBancaria = _reader.GetString(5);
                 _EnProveedor.FcProductosSurtidos = _reader.GetString(6);
@@ -75,7 +75,7 @@ namespace DAL
                 _EnProveedores.FiIdProveedor = _reader.GetInt64(0);
                 _EnProveedores.FcNombreProveedor = _reader.GetString(1);
                 _EnProveedores.FcDomicilio = _reader.GetString(2);
-                _EnProveedores.FiTelefono = _reader.GetInt32(3);
+                _EnProveedores.FiTelefono = _reader.GetString(3);
                 _EnProveedores.FcRFC = _reader.GetString(4);
                 _EnProveedores.FcCuentaBancaria = _reader.GetString(5);
                 _EnProveedores.FcProductosSurtidos = _reader.GetString(6);

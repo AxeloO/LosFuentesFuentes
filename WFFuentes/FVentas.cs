@@ -53,11 +53,6 @@ namespace WFFuentes
 
             try
             {
-
-
-
-
-
                 if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || FcCantidad.Text == "" || FcConcepto.Text == "" || FdPrecioUnitario.Text == "" || FdImporte.Text == "")
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -65,9 +60,6 @@ namespace WFFuentes
                 }
                 else
                 {
-
-
-
                     _enVentas.fDtFechaSalida = FdFechaSalida.Text;
                     _enVentas.fcNombreCliente = FcNombreCliente.Text;
                     _enVentas.fcDomicilio = FcDomicilio.Text;
@@ -79,11 +71,7 @@ namespace WFFuentes
                     _enVentas.fdPrecioUnitario = decimal.Parse(FdPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(FdImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
-
-
-                    
-
-
+                
                     int Resultado = _ventasBL.AgregarVenta(_enVentas);
 
                     if (Resultado == 1)
@@ -99,10 +87,7 @@ namespace WFFuentes
 
                 MessageBox.Show("Hubo un error al Agregar el Producto", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-
-
-
-
+ 
         }
 
         private void btConsultarVentas_Click(object sender, EventArgs e)
@@ -126,21 +111,37 @@ namespace WFFuentes
             dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
 
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            FdFechaSalida.Text = string.Empty;
+            FcNombreCliente.Text = string.Empty;
+            FcDomicilio.Text = string.Empty;
+            FcCiudad.Text = string.Empty;
+            FcTelefono.Text = string.Empty;
+            FdFechaPago.Text = string.Empty;
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void dgProductos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         //{
-      //      string strNombreDeProducto = string.Empty;
-    //        int iCantidad = 0;
-  //          decimal dPrecioUnitario = 0;
-//            decimal dImporte = 0;
+        //      string strNombreDeProducto = string.Empty;
+        //        int iCantidad = 0;
+        //          decimal dPrecioUnitario = 0;
+        //            decimal dImporte = 0;
 
-            //if (dgProductos != null)
-            //{
-                
-              //  strNombreDeProducto = dgProductos.ro;
+        //if (dgProductos != null)
+        //{
 
-            //}
+        //  strNombreDeProducto = dgProductos.ro;
 
-          //  iCantidad = int.Parse(FcCantidad.Text);
+        //}
+
+        //  iCantidad = int.Parse(FcCantidad.Text);
         //}
     }
 }

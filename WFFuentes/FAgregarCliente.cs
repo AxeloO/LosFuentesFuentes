@@ -44,8 +44,6 @@ namespace WFFuentes
         {
             try
             {//Trim sirve para borrar espacios si es que existen 
-
-
                 String strNombreCliente = txtNombreCompleto.Text.ToString().Trim();
                 String strDomicilio = txtDomicilio.Text.ToString().Trim();
                 String strTelefono = txtTelefono.Text.ToString().Trim();
@@ -53,7 +51,6 @@ namespace WFFuentes
                 String strTipoCredito = txtTipoCredito.Text.ToString().Trim();
                 String strGarantia = txtGarantia.Text.ToString().Trim();
                 String strLimiteCredito = txtLimiteCredito.Text.ToString().Trim();
-
 
                 if (strNombreCliente.Equals("") || strDomicilio.Equals("") || strTelefono.Equals("") || strRFC.Equals("") || strTipoCredito.Equals("") || strGarantia.Equals("") || strLimiteCredito.Equals(""))
                 {
@@ -64,12 +61,11 @@ namespace WFFuentes
                 {
                      _enCliente.FcNombreCompleto= txtNombreCompleto.Text;
                      _enCliente.FcDomicilio= txtDomicilio.Text;
-                     _enCliente.FiTelefono = int.Parse(txtTelefono.Text);
+                     _enCliente.FiTelefono = txtTelefono.Text;
                      _enCliente.FcRFC = txtRFC.Text;
                      _enCliente.FcTipoCredito = txtTipoCredito.Text;
                      _enCliente.FcTipoGarantia = txtGarantia.Text;
                      _enCliente.FdLimiteCredito = decimal.Parse(txtLimiteCredito.Text);
-
 
                     int Resultado = _clientesBL.AgregarClientes(_enCliente);
 
@@ -85,6 +81,7 @@ namespace WFFuentes
              {
 
                 MessageBox.Show("Hubo un error al Agregar el Cliente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
             }
         }
 
@@ -103,6 +100,16 @@ namespace WFFuentes
         private void bConsultar_Click(object sender, EventArgs e)
         {
             dGClientes.DataSource = _clientesBL.MostrarClientes();
+        }
+
+        private void bEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+            //if(txtId txtNombreCompleto.Text !="")
         }
 
         // Programacion OP

@@ -38,12 +38,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgUsuarios = new System.Windows.Forms.DataGridView();
             this.btConsultarUsuarios = new System.Windows.Forms.Button();
             this.bRegresar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.bLimpiar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
+            this.dgUsuarios = new System.Windows.Forms.DataGridView();
+            this.bModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +78,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(136, 166);
+            this.txtContraseña.Location = new System.Drawing.Point(136, 201);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(216, 20);
             this.txtContraseña.TabIndex = 19;
@@ -83,21 +86,21 @@
             // cbTipoUsuario
             // 
             this.cbTipoUsuario.FormattingEnabled = true;
-            this.cbTipoUsuario.Location = new System.Drawing.Point(136, 216);
+            this.cbTipoUsuario.Location = new System.Drawing.Point(136, 251);
             this.cbTipoUsuario.Name = "cbTipoUsuario";
             this.cbTipoUsuario.Size = new System.Drawing.Size(121, 21);
             this.cbTipoUsuario.TabIndex = 18;
             // 
             // txtNombreUsuario
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(136, 122);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(136, 157);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(216, 20);
             this.txtNombreUsuario.TabIndex = 17;
             // 
             // txtNombreEmpleado
             // 
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(136, 76);
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(136, 111);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
             this.txtNombreEmpleado.Size = new System.Drawing.Size(216, 20);
             this.txtNombreEmpleado.TabIndex = 16;
@@ -105,7 +108,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 216);
+            this.label4.Location = new System.Drawing.Point(12, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 15;
@@ -114,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 169);
+            this.label3.Location = new System.Drawing.Point(12, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 14;
@@ -123,7 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 125);
+            this.label2.Location = new System.Drawing.Point(12, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 13;
@@ -132,20 +135,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 83);
+            this.label1.Location = new System.Drawing.Point(12, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Nombre Empleado";
-            // 
-            // dgUsuarios
-            // 
-            this.dgUsuarios.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUsuarios.Location = new System.Drawing.Point(534, 76);
-            this.dgUsuarios.Name = "dgUsuarios";
-            this.dgUsuarios.Size = new System.Drawing.Size(510, 217);
-            this.dgUsuarios.TabIndex = 23;
             // 
             // btConsultarUsuarios
             // 
@@ -207,18 +201,58 @@
             this.bLimpiar.UseVisualStyleBackColor = false;
             this.bLimpiar.Click += new System.EventHandler(this.bLimpiar_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 76);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 13);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "ID ";
+            // 
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.Enabled = false;
+            this.txtIdUsuario.Location = new System.Drawing.Point(50, 69);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(44, 20);
+            this.txtIdUsuario.TabIndex = 30;
+            // 
+            // dgUsuarios
+            // 
+            this.dgUsuarios.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUsuarios.Location = new System.Drawing.Point(528, 64);
+            this.dgUsuarios.Name = "dgUsuarios";
+            this.dgUsuarios.Size = new System.Drawing.Size(516, 176);
+            this.dgUsuarios.TabIndex = 31;
+            this.dgUsuarios.SelectionChanged += new System.EventHandler(this.dgUsuarios_SelectionChanged);
+            // 
+            // bModificar
+            // 
+            this.bModificar.Location = new System.Drawing.Point(415, 297);
+            this.bModificar.Name = "bModificar";
+            this.bModificar.Size = new System.Drawing.Size(75, 23);
+            this.bModificar.TabIndex = 32;
+            this.bModificar.Text = "Modificar";
+            this.bModificar.UseVisualStyleBackColor = true;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
+            // 
             // FAgregarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1056, 370);
+            this.Controls.Add(this.bModificar);
+            this.Controls.Add(this.dgUsuarios);
+            this.Controls.Add(this.txtIdUsuario);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.bLimpiar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.btConsultarUsuarios);
-            this.Controls.Add(this.dgUsuarios);
             this.Controls.Add(this.bEliminar);
             this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.txtContraseña);
@@ -251,11 +285,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgUsuarios;
         private System.Windows.Forms.Button btConsultarUsuarios;
         private System.Windows.Forms.Button bRegresar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button bLimpiar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtIdUsuario;
+        private System.Windows.Forms.DataGridView dgUsuarios;
+        private System.Windows.Forms.Button bModificar;
     }
 }

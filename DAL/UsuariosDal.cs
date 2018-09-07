@@ -5,19 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-
 using EN;
 
 namespace DAL
 {
    public class UsuariosDal
     {
-        public int AgregarUsuario(EnUsuario PEntidad)
-        {
+        public int AgregarUsuario(EnUsuario PEntidad)//Hacer uso de la entidad de negocio que se llama EnUsuario creando un parametro PEntidad
+        {//Establece la conexion con la conexion a la base de datos
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-
-            SqlCommand _comando = new SqlCommand("Agregar_Ventas", _Conexion as SqlConnection);
+            //Llamada de procesos almacenados creados en el sql server
+            SqlCommand _comando = new SqlCommand("Agregar_Usuario", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@fiIdUsuario", PEntidad.fiIdUsuario));
             _comando.Parameters.Add(new SqlParameter("@fcNombreCompleto", PEntidad.fcNombreCompleto));
@@ -30,21 +29,18 @@ namespace DAL
             return Resultado;
         }
 
-        public List<EnUsuario> ListaDeUsuarios()
+        public List<EnUsuario> ListaDeUsuarios()//Mostrar Usuarios
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-            SqlCommand _comando = new SqlCommand("Consultar_Usuarios", _Conexion as SqlConnection);
+            SqlCommand _comando = new SqlCommand("Consultar_Usuarios", _Conexion as SqlConnection);//Lamada de procedimieno almacenado
             _comando.CommandType = CommandType.StoredProcedure;
-            IDataReader _reader = _comando.ExecuteReader();
-
-
+            IDataReader _reader = _comando.ExecuteReader();//lee los resultados que nos va a mostrar
+            //Creacion de lista que nos mostrara los resultados de la consulta
             List<EnUsuario> Lista = new List<EnUsuario>();
             while (_reader.Read())
             {
                 EnUsuario _EnUsuario = new EnUsuario();
-
-
 
                 _EnUsuario.fiIdUsuario = _reader.GetInt64(0);
                 _EnUsuario.fcNombreCompleto = _reader.GetString(1);
@@ -54,9 +50,11 @@ namespace DAL
                
                 Lista.Add(_EnUsuario);
             }
-            _Conexion.Close();
+            _Conexion.Close();//Cierra la conexion con la base de datos
             return Lista;
         }
+
+
 
         public int EliminarUsuario(EnUsuario PEntidad)
         {
