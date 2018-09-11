@@ -56,7 +56,7 @@ namespace WFFuentes
                         }
 
                    
-                        if (strPuesto.Equals("720"))
+                         if (strPuesto.Equals("720"))
                         {
                             FMenuEmpleado _fInventario = new FMenuEmpleado();
                             this.Close();
@@ -70,14 +70,13 @@ namespace WFFuentes
                         }
                                             
                     
-                }
-
-               
-
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o Contrasena Incorrecta");
+                    }
 
             }
-            MessageBox.Show("Usuario o Contrasena Incorrecta");
-
             
         }
 
