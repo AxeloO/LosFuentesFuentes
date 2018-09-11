@@ -45,14 +45,14 @@ namespace WFFuentes
         private void agregarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FAgregarCliente();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void eliminarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fEliminar = new FEliminarCliente();
-            _fEliminar.Show();
+            _fEliminar.ShowDialog();
             this.Close();
                 
         }
@@ -60,7 +60,7 @@ namespace WFFuentes
         private void modificarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fModificar = new FModificarCliente();
-            _fModificar.Show();
+            _fModificar.ShowDialog();
             this.Close();
 
         }
@@ -79,56 +79,56 @@ namespace WFFuentes
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fUsuarios = new FAgregarUsuarios();
-            _fUsuarios.Show();
+            _fUsuarios.ShowDialog();
             this.Close();
         }
 
         private void agregarNuevoRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fProveedores = new FAgregarProveedores();
-            _fProveedores.Show();
+            _fProveedores.ShowDialog();
             this.Close();
         }
 
         private void modificarRegistroToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form _fProveedores = new FConsultaProveedor();
-            _fProveedores.Show();
+            _fProveedores.ShowDialog();
             this.Close();
         }
 
         private void consultarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fProveedores = new FEliminarProveedor();
-            _fProveedores.Show();
+            _fProveedores.ShowDialog();
             this.Close();
         }
 
         private void agregarNuevoRegistroToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FInventario();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void modificarProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FInventario();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void eliminarProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FInventario();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void cuentasPorPagarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form _fCuentasPagar = new FCuentasPagar();
-            _fCuentasPagar.Show();
+            _fCuentasPagar.ShowDialog();
             this.Close();
         }
 
@@ -141,14 +141,14 @@ namespace WFFuentes
         private void bClientes_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FAgregarCliente();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void bProveedor_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FAgregarProveedores();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 
@@ -164,21 +164,21 @@ namespace WFFuentes
         private void bUsuarios_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FAgregarUsuarios();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void bProductos_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FInventario();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void bCompras_Click(object sender, EventArgs e)
         {
             Form _fAgregar = new FCuentasPagar();
-            _fAgregar.Show();
+            _fAgregar.ShowDialog();
             this.Close();
         }
 

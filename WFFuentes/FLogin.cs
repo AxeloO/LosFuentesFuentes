@@ -22,64 +22,92 @@ namespace WFFuentes
         public FLogin()
         {
             InitializeComponent();
-            
+
         }
-       
+
 
         private void BEntrar_Click(object sender, EventArgs e)
         {
-           
-
-            List<EnUsuario> ListaDeUsuarios = new List<EnUsuario>();
-            
+            string strNuevoPuestoRol = string.Empty;
+            string strValidacionPuesto = string.Empty;
             string strResUsuario = txtNombreUsuario.Text.ToString().Trim();
             string strResPassword = txtContraseña.Text.ToString().Trim();
-            
-            foreach (EnUsuario Usuario in _usuarioBl.ListaDeUsuarios())
+
+            try
             {
-               string strUsuarios = Usuario.fcNombreUsuario.ToString().Trim();
-               string strPassword  = Usuario.fcPassword.ToString().Trim();
-               string strPuesto = Usuario.fiPuestoUsuario.ToString();
+                if (!strResPassword.Equals("") || !strResUsuario.Equals(""))
+                {
 
-              
-               
-                    if (strUsuarios.Equals(strResUsuario) && strPassword.Equals(strResPassword))
+                    List<EnUsuario> ListaDeUsuarios = new List<EnUsuario>();
+
+                   
+
+                    foreach (EnUsuario Usuario in _usuarioBl.ListaDeUsuarios())
                     {
+                        string strUsuarios = Usuario.fcNombreUsuario.ToString().Trim();
+                        string strPassword = Usuario.fcPassword.ToString().Trim();
+                        string strPuesto = Usuario.fiPuestoUsuario.ToString();
 
-                                        
-                        if (strPuesto.Equals("420")) 
+
+                        if (strUsuarios.Equals(strResUsuario) && strPassword.Equals(strResPassword))
                         {
-                         FMenuClientes _fmenuClientes = new FMenuClientes();
-                        this.Close();
-                        _fmenuClientes.ShowDialog();
+
+
+                            if (strPuesto.Equals("420"))
+                            {
+                                strNuevoPuestoRol = "420";
+                                strValidacionPuesto = "Valido";
+
+                            }
+
+                            if (strPuesto.Equals("720"))
+                            {
+                                strNuevoPuestoRol = "720";
+                                strValidacionPuesto = "Valido";
+                            }
 
                         }
 
-                   
-                        if (strPuesto.Equals("720"))
+                    }
+
+                    if (strValidacionPuesto.Equals("Valido"))
+                    {
+                        if (strNuevoPuestoRol.Equals("420"))
+                        {
+                            FMenuClientes _fmenuClientes = new FMenuClientes();
+                            this.Close();
+                            _fmenuClientes.ShowDialog();
+                        }
+
+                        if (strNuevoPuestoRol.Equals("720"))
                         {
                             FMenuEmpleado _fInventario = new FMenuEmpleado();
                             this.Close();
                             _fInventario.ShowDialog();
-                        }
-
-                        else
-                        {
-                            MessageBox.Show("el Puesto es incorrecto");
 
                         }
-                                            
-                    
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o Contrasena Incorrecta");
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Debes llenar todos los campos");
 
-               
-
-
+                }
             }
-            MessageBox.Show("Usuario o Contrasena Incorrecta");
 
-            
+
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
+
 
         private void BSalir_Click(object sender, EventArgs e)
         {

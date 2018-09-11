@@ -243,8 +243,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 27);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Agregar Productos";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Agregar Productos";            
             // 
             // btLimpiar
             // 
@@ -274,6 +273,7 @@
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.Size = new System.Drawing.Size(346, 304);
             this.dgInventario.TabIndex = 53;
+           
             this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
             // 
             // bRegresar
