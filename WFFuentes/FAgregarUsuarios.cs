@@ -63,6 +63,7 @@ namespace WFFuentes
                         if (Resultado == 1)
                         {
                             MessageBox.Show("Se Agrego El Nuevo Usuario Tipo Administrador", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            Limpiar();
                         }
                     }
                    else if (strTipoUsuario.Equals("Empleado"))
@@ -81,6 +82,7 @@ namespace WFFuentes
                     else
                     {
                         MessageBox.Show("Hubo un error al Agregar el Usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
                     }
 
                 }
@@ -95,9 +97,7 @@ namespace WFFuentes
 
         private void btConsultarUsuarios_Click(object sender, EventArgs e)
         {
-
-            dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();
-                      
+            dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();                      
         }
 
         private void bEliminar_Click(object sender, EventArgs e)
@@ -119,24 +119,29 @@ namespace WFFuentes
             }
         }
 
-            private void bRegresar_Click(object sender, EventArgs e)
+        private void bRegresar_Click(object sender, EventArgs e)
         {
             FMenuClientes _fPrincipal = new FMenuClientes();
             _fPrincipal.Show();
             this.Close();
         }
 
-        private void bLimpiar_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
             txtNombreEmpleado.Text = string.Empty;
             txtNombreUsuario.Text = string.Empty;
             txtContraseña.Text = string.Empty;
-            
+            txtNombreEmpleado.Focus();
+        }
+
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
 
         private void dgUsuarios_SelectionChanged(object sender, EventArgs e)
         {
-           // _enUsuario = dgUsuarios.SelectItem as FAgregarCliente;
+           //_enUsuario = dgUsuarios.DataSource as FAgregarCliente;
             if (_enUsuario != null)
             {
                 txtIdUsuario.Text = Convert.ToString(_enUsuario.fiIdUsuario);
@@ -148,14 +153,6 @@ namespace WFFuentes
             }
         }
 
-        private void bModificar_Click(object sender, EventArgs e)
-        {
-            
-                //if(_usuariosBL.EliminarUsuario(_enUsuario)>0)
-                //{
 
-                //}
-            
-        }
     }
 }

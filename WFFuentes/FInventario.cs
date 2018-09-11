@@ -35,14 +35,11 @@ namespace WFFuentes
             {
                 cbPresentacion.DisplayMember = "Text";
                 cbPresentacion.ValueMember = "Value";
-
-
                 cbPresentacion.Items.Add(new { Text = "Liquidos", Value = "Liquidos" });
 
                 if (txtNombreDelProducto.Text == "" || txtCantidad.Text == "" || txtCostoUnitario.Text == "" || txtGrupoPerteneciente.Text == "" || txtPorcentajeDeContado.Text == "" || txtPorcentajePrecioCredito.Text == "" || txtPrecioCredito.Text == "" || txtPrecioDeContado.Text == "" || cbPresentacion.Text == "")
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                 }
                 else
                 {
@@ -61,6 +58,7 @@ namespace WFFuentes
                     if (Resultado == 1)
                     {
                         MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        //Limpiar();
                     }
 
                 }
@@ -73,8 +71,7 @@ namespace WFFuentes
             }
 
         }
-
-        private void btLimpiar_Click(object sender, EventArgs e)
+       /** private void Limpiar()
         {
             txtCantidad.Text = string.Empty;
             txtCostoUnitario.Text = string.Empty;
@@ -85,25 +82,33 @@ namespace WFFuentes
             txtPrecioCredito.Text = string.Empty;
             txtPrecioDeContado.Text = string.Empty;
             cbPresentacion.Text = string.Empty;
+            txtNombreDelProducto.Focus();
+        }**/
 
+        private void btLimpiar_Click(object sender, EventArgs e)
+        {
+            //Limpiar();
+            txtCantidad.Text = string.Empty;
+            txtCostoUnitario.Text = string.Empty;
+            txtGrupoPerteneciente.Text = string.Empty;
+            txtNombreDelProducto.Text = string.Empty;
+            txtPorcentajeDeContado.Text = string.Empty;
+            txtPorcentajePrecioCredito.Text = string.Empty;
+            txtPrecioCredito.Text = string.Empty;
+            txtPrecioDeContado.Text = string.Empty;
+            cbPresentacion.Text = string.Empty;
             txtNombreDelProducto.Focus();
 
         }
 
         private void dgInventario_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            
+        {           
             try
             {
-
-                _en = dgInventario.DataSource as Inventario;
-                
-
+                _en = dgInventario.DataSource as Inventario;              
                 if (_en != null)
                 {
-
                     // txtNombreDelProducto.Text = dgInventario.DataSource as Inventario;
-
                     txtNombreDelProducto.Text = _en.NombreProducto;
                     txtCantidad.Text = Convert.ToString(_en.Cantidad);
                     txtGrupoPerteneciente.Text = _en.GrupoPerteneciente;
@@ -113,7 +118,6 @@ namespace WFFuentes
                     txtPrecioDeContado.Text = Convert.ToString(_en.PrecioContado);
                     txtPrecioCredito.Text = Convert.ToString(_en.PrecioACredito);
                     cbPresentacion.Text = Convert.ToString(_en.Presentacion);
-
                 }
             }
             catch (Exception ex)

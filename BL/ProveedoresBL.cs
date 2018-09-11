@@ -22,7 +22,7 @@ namespace BL
         {
             return _ProveedorDal.MostrarEnProveedores();
         }
-        public List<EnProveedores> MostrarClientePorNombre(EnProveedores _enProveedor)
+        public List<EnProveedores> MostrarProveedorPorNombre(EnProveedores _enProveedor)
         {
             return _ProveedorDal.MostrarEnProveedorPorNombre(_enProveedor);
         }

@@ -31,7 +31,6 @@ namespace DAL
             _comando.Parameters.Add(new SqlParameter("@Presentacion", PEntidad.Presentacion));           
                    
             int Resultado = _comando.ExecuteNonQuery();
-
             _Conexion.Close();
             return Resultado;
         }
@@ -89,8 +88,7 @@ namespace DAL
                 Lista.Add(_inventario);
                                 
             }            
-            _Conexion.Close();
-            
+            _Conexion.Close();           
             return Lista;
         }
         
@@ -121,11 +119,10 @@ namespace DAL
             _Conexion.Open();
             SqlCommand _comando = new SqlCommand("Eliminar_Producto", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.Add(new SqlParameter("@IdProducto", PEntidad.IdProducto));
+            _comando.Parameters.Remove(new SqlParameter("@IdProducto", PEntidad.IdProducto));
             int Resultado = _comando.ExecuteNonQuery();
             _Conexion.Close();
             return Resultado;
-      
         }
 
     }

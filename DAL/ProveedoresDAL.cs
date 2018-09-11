@@ -63,9 +63,9 @@ namespace DAL
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-            SqlCommand _comando = new SqlCommand("Consultar_Prveedor_Por_Nombre", _Conexion as SqlConnection);
+            SqlCommand _comando = new SqlCommand("Consultar_Proveedor_Por_Nombre", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.Add(new SqlParameter("@FcNombreCompleto", PEntidad.FcNombreProveedor));
+            _comando.Parameters.Add(new SqlParameter("@FcNombreProveedor", PEntidad.FcNombreProveedor));
             IDataReader _reader = _comando.ExecuteReader();
             List<EnProveedores> Lista = new List<EnProveedores>();
             while (_reader.Read())
