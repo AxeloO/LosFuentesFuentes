@@ -136,7 +136,7 @@ namespace WFFuentes
         private void button3_Click(object sender, EventArgs e)
         {
 
-            if (txtNombreDelProducto.Text != "" && txtGrupoPerteneciente.Text != "")
+            if (txtIdProducto.Text !="" && txtNombreDelProducto.Text != "" && txtGrupoPerteneciente.Text != "")
             {
                 DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?","Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
@@ -153,7 +153,7 @@ namespace WFFuentes
 
             }
 
-            if (_inventarioBl.ModificarProducto(_en) > 0)
+            if (_inventarioBl.EliminarProducto(_en) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
             {
 
             }
@@ -211,6 +211,13 @@ namespace WFFuentes
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+<<<<<<< HEAD
        
+=======
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 7a8c2bdede60e728b95beda4c466d2d9a6fd308d
     }
 }

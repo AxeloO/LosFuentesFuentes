@@ -54,7 +54,8 @@ namespace WFFuentes
 
         private void bActualizar_Click(object sender, EventArgs e)
         {
-            //dgInventario.DataSource = _bl.MostrarInventario(_en);
+            dgInventario.DataSource = _bl.MostrarInventario();
+
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 using EN;
 using BL;
 namespace WFFuentes
@@ -38,8 +39,6 @@ namespace WFFuentes
             int respuestaTipoEmpleado = 0;
             try
             {
-
-
                 if (txtNombreEmpleado.Text.Trim() == "" || txtNombreUsuario.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || cbTipoUsuario.Text.Trim() == "" )
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -103,10 +102,24 @@ namespace WFFuentes
 
         private void bEliminar_Click(object sender, EventArgs e)
         {
+            if (txtIdUsuario.Text != "" && txtNombreEmpleado.Text != "" && txtNombreUsuario.Text != "" && txtContraseña.Text != "" && cbTipoUsuario.Text != "")
+            {
+                DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
+                if (r == DialogResult.OK)
+                {
+                    _usuariosBL.EliminarUsuario(_enUsuario);
+                    dgUsuarios.Refresh();
+                    dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();
+                }
+                if (r == DialogResult.Cancel)
+                {
+
+                }
+            }
         }
 
-        private void bRegresar_Click(object sender, EventArgs e)
+            private void bRegresar_Click(object sender, EventArgs e)
         {
             FMenuClientes _fPrincipal = new FMenuClientes();
             _fPrincipal.Show();
@@ -118,6 +131,30 @@ namespace WFFuentes
             txtNombreEmpleado.Text = string.Empty;
             txtNombreUsuario.Text = string.Empty;
             txtContraseña.Text = string.Empty;
+            
+        }
+
+        private void dgUsuarios_SelectionChanged(object sender, EventArgs e)
+        {
+           // _enUsuario = dgUsuarios.SelectItem as FAgregarCliente;
+            if (_enUsuario != null)
+            {
+                txtIdUsuario.Text = Convert.ToString(_enUsuario.fiIdUsuario);
+                txtNombreEmpleado.Text = _enUsuario.fcNombreCompleto;
+                txtNombreUsuario.Text = _enUsuario.fcNombreUsuario;
+                txtContraseña.Text = _enUsuario.fcPassword;
+                cbTipoUsuario.Text = Convert.ToString(_enUsuario.fiPuestoUsuario);
+                               
+            }
+        }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+            
+                //if(_usuariosBL.EliminarUsuario(_enUsuario)>0)
+                //{
+
+                //}
             
         }
     }

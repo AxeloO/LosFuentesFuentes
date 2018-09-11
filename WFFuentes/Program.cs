@@ -18,8 +18,8 @@ namespace WFFuentes
             Application.SetCompatibleTextRenderingDefault(false);
             FLogin _fLogin = new FLogin();
             _fLogin.Show();
-           // FMenuClientes _fPrincipal = new FMenuClientes();
-            //_fPrincipal.Show();
+            //FMenuClientes _fPrincipal = new FMenuClientes();
+           //_fPrincipal.Show();
 
             //FMenuEmpleado _fPrincipal = new FMenuEmpleado();
             //_fPrincipal.Show();

@@ -154,7 +154,11 @@ namespace WFFuentes
 
         private void bSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form _Login = new FLogin();
+            _Login.Show();
+            this.Close();
+
+            //Application.Exit();
         }
 
         private void bUsuarios_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace EN
         public long FiIdCliente { get; set; }
         public string FcNombreCompleto { get; set; }
         public string FcDomicilio { get; set; }
-        public int FiTelefono { get; set; }
+        public string FiTelefono { get; set; }
         public string FcRFC { get; set; }
         public string FcTipoCredito { get; set; }
         public string FcTipoGarantia { get; set; }

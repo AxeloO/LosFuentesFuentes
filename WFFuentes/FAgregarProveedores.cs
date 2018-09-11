@@ -63,7 +63,6 @@ namespace WFFuentes
             try
             {//Trim sirve para borrar espacios si es que existen hOLA ZURY
 
-
                 string strNombreProveedor = txtNombreCompleto.Text.ToString().Trim();
                 string strDomicilio = txtDomicilio.Text.ToString().Trim();
                 string strTelefono = txtTelefono.Text.ToString().Trim();
@@ -71,7 +70,6 @@ namespace WFFuentes
                 string strCuentaBancaria = txtCuentaBancaria.Text.ToString().Trim();
                 string strProductoSurtir = txtProductoSurtir.Text.ToString().Trim();
                 string strLimiteCredito = txtLimiteCredito.Text.ToString().Trim();
-
 
                 if (strNombreProveedor.Equals("") || strDomicilio.Equals("") || strTelefono.Equals("") || strRFC.Equals("") || strCuentaBancaria.Equals("") || strProductoSurtir.Equals("") || strLimiteCredito.Equals(""))
                 {
@@ -82,7 +80,7 @@ namespace WFFuentes
                 {
                     _enProveedores.FcNombreProveedor = txtNombreCompleto.Text;
                     _enProveedores.FcDomicilio = txtDomicilio.Text;
-                    _enProveedores.FiTelefono = int.Parse(txtTelefono.Text);
+                    _enProveedores.FiTelefono = txtTelefono.Text;
                     _enProveedores.FcRFC = txtRFC.Text;
                     _enProveedores.FcCuentaBancaria = txtCuentaBancaria.Text;
                     _enProveedores.FcProductosSurtidos = txtProductoSurtir.Text;

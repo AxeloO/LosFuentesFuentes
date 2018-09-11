@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EN
 {
     public class EnUsuario
-    {
+    {//Recibe los parametros de la base de datos
         public long  fiIdUsuario { get; set; }
         public string fcNombreCompleto { get; set; }
         public string fcNombreUsuario { get; set; }

@@ -47,7 +47,7 @@ namespace DAL
                 _EnCliente.FiIdCliente = _reader.GetInt64(0);
                 _EnCliente.FcNombreCompleto = _reader.GetString(1);
                 _EnCliente.FcDomicilio = _reader.GetString(2);
-                _EnCliente.FiTelefono = _reader.GetInt32(3);
+                _EnCliente.FiTelefono = _reader.GetString(3);
                 _EnCliente.FcRFC = _reader.GetString(4);
                 _EnCliente.FcTipoCredito = _reader.GetString(5);
                 _EnCliente.FcTipoGarantia = _reader.GetString(6);
@@ -74,7 +74,7 @@ namespace DAL
                 _EnCliente.FiIdCliente = _reader.GetInt64(0);
                 _EnCliente.FcNombreCompleto = _reader.GetString(1);
                 _EnCliente.FcDomicilio = _reader.GetString(2);
-                _EnCliente.FiTelefono = _reader.GetInt32(3);
+                _EnCliente.FiTelefono = _reader.GetString(3);
                 _EnCliente.FcRFC = _reader.GetString(4);
                 _EnCliente.FcTipoCredito = _reader.GetString(5);
                 _EnCliente.FcTipoGarantia = _reader.GetString(6);

@@ -203,6 +203,7 @@
             this.bModificar.TabIndex = 43;
             this.bModificar.Text = "Modificar";
             this.bModificar.UseVisualStyleBackColor = true;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
             // 
             // bEliminar
             // 
@@ -212,6 +213,7 @@
             this.bEliminar.TabIndex = 44;
             this.bEliminar.Text = "Eliminar";
             this.bEliminar.UseVisualStyleBackColor = true;
+            this.bEliminar.Click += new System.EventHandler(this.bEliminar_Click);
             // 
             // bConsultar
             // 

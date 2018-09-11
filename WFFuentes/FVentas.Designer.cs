@@ -178,7 +178,6 @@
             this.dgProductos.Size = new System.Drawing.Size(502, 112);
             this.dgProductos.TabIndex = 12;
             this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVentas_CellContentClick);
-        //    this.dgProductos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgProductos_RowHeaderMouseClick);
             // 
             // FdFechaSalida
             // 
@@ -288,6 +287,7 @@
             this.bLimpiar.TabIndex = 26;
             this.bLimpiar.Text = "Limpiar";
             this.bLimpiar.UseVisualStyleBackColor = true;
+            this.bLimpiar.Click += new System.EventHandler(this.bLimpiar_Click);
             // 
             // bRegresar
             // 
@@ -383,6 +383,7 @@
             this.button1.TabIndex = 35;
             this.button1.Text = "Agregar Producto";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label16
             // 
@@ -437,6 +438,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FVentas";
             this.Text = "FVentas";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FVentas_MouseDown);
