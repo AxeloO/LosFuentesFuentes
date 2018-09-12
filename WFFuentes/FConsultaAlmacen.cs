@@ -57,5 +57,10 @@ namespace WFFuentes
             dgInventario.DataSource = _bl.MostrarInventario();
 
         }
+
+        private void bImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
