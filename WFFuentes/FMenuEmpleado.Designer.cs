@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenuEmpleado));
             this.pMenu = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pLogo = new System.Windows.Forms.PictureBox();
             this.bConsultaCliente = new System.Windows.Forms.Button();
             this.bDevolucion = new System.Windows.Forms.Button();
             this.bConsultaAlmacen = new System.Windows.Forms.Button();
             this.bVentas = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pLogo = new System.Windows.Forms.PictureBox();
             this.bSalir = new System.Windows.Forms.Button();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pLogo)).BeginInit();
@@ -53,30 +53,6 @@
             this.pMenu.Name = "pMenu";
             this.pMenu.Size = new System.Drawing.Size(200, 539);
             this.pMenu.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(334, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 29);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Los Fuentes Fuentes S. P. R. de R. L. ";
-            // 
-            // pLogo
-            // 
-            this.pLogo.Image = global::WFFuentes.Properties.Resources.LosFuentes;
-            this.pLogo.InitialImage = global::WFFuentes.Properties.Resources.LosFuentes;
-            this.pLogo.Location = new System.Drawing.Point(275, 91);
-            this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(614, 394);
-            this.pLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pLogo.TabIndex = 6;
-            this.pLogo.TabStop = false;
-         
             // 
             // bConsultaCliente
             // 
@@ -124,6 +100,29 @@
             this.bVentas.UseVisualStyleBackColor = true;
             this.bVentas.Click += new System.EventHandler(this.bVentas_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(334, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(418, 29);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Los Fuentes Fuentes S. P. R. de R. L. ";
+            // 
+            // pLogo
+            // 
+            this.pLogo.Image = global::WFFuentes.Properties.Resources.LosFuentes;
+            this.pLogo.InitialImage = global::WFFuentes.Properties.Resources.LosFuentes;
+            this.pLogo.Location = new System.Drawing.Point(275, 91);
+            this.pLogo.Name = "pLogo";
+            this.pLogo.Size = new System.Drawing.Size(614, 394);
+            this.pLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pLogo.TabIndex = 6;
+            this.pLogo.TabStop = false;
+            // 
             // bSalir
             // 
             this.bSalir.Location = new System.Drawing.Point(833, 504);
@@ -145,6 +144,7 @@
             this.Controls.Add(this.pMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FMenuEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMenuEmpleado";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FMenuEmpleado_MouseDown);
             this.pMenu.ResumeLayout(false);

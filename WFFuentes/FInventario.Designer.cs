@@ -238,12 +238,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(360, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 27);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Agregar Productos";            
+            this.label1.Text = "Agregar Productos";
             // 
             // btLimpiar
             // 
@@ -273,7 +273,6 @@
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.Size = new System.Drawing.Size(346, 304);
             this.dgInventario.TabIndex = 53;
-           
             this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
             // 
             // bRegresar
@@ -306,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1181, 413);
             this.Controls.Add(this.txtIdProducto);
             this.Controls.Add(this.label11);

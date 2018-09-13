@@ -15,7 +15,6 @@ namespace DAL
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-
             SqlCommand _comando = new SqlCommand("Agregar_Cliente", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@FcNombreCompleto", PEntidad.FcNombreCompleto));
@@ -25,10 +24,8 @@ namespace DAL
             _comando.Parameters.Add(new SqlParameter("@FcTipoCredito", PEntidad.FcTipoCredito));
             _comando.Parameters.Add(new SqlParameter("@FcTipoGarantia", PEntidad.FcTipoGarantia));
             _comando.Parameters.Add(new SqlParameter("@FdLimiteCredito", PEntidad.FdLimiteCredito));
-            //_comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaCredito", PEntidad.FdLimiteCredito));
-            
+            //_comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaCredito", PEntidad.FdLimiteCredito));          
             int Resultado = _comando.ExecuteNonQuery();
-
             _Conexion.Close();
             return Resultado;
         }
@@ -70,7 +67,6 @@ namespace DAL
             while (_reader.Read())
             {
                 EnCliente _EnCliente = new EnCliente();
-
                 _EnCliente.FiIdCliente = _reader.GetInt64(0);
                 _EnCliente.FcNombreCompleto = _reader.GetString(1);
                 _EnCliente.FcDomicilio = _reader.GetString(2);
@@ -79,12 +75,10 @@ namespace DAL
                 _EnCliente.FcTipoCredito = _reader.GetString(5);
                 _EnCliente.FcTipoGarantia = _reader.GetString(6);
                 _EnCliente.FdLimiteCredito = _reader.GetDecimal(7);
-
                 Lista.Add(_EnCliente);
 
             }
             _Conexion.Close();
-
             return Lista;
         }
 
@@ -101,12 +95,10 @@ namespace DAL
             _comando.Parameters.Add(new SqlParameter("@FcRFC", PEntidad.FcRFC));
             _comando.Parameters.Add(new SqlParameter("@FcTipoCredito", PEntidad.FcTipoCredito));
             _comando.Parameters.Add(new SqlParameter("@FcTipoGarantia", PEntidad.FcTipoGarantia));
-            _comando.Parameters.Add(new SqlParameter("@FdLimiteCredito", PEntidad.FdLimiteCredito));
-            
+            _comando.Parameters.Add(new SqlParameter("@FdLimiteCredito", PEntidad.FdLimiteCredito));            
             int Resultado = _comando.ExecuteNonQuery();
             _conexion.Close();
             return Resultado;
-
         }
 
         public int EliminarCliente(EnCliente PEntidad)
@@ -119,7 +111,6 @@ namespace DAL
             int Resultado = _comando.ExecuteNonQuery();
             _Conexion.Close();
             return Resultado;
-
         }
     }
 }

@@ -41,7 +41,7 @@ namespace WFFuentes
             this.Close();
         }
 
-        private void bLimpiar_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
             txtNombreCompleto.Text = string.Empty;
             txtDomicilio.Text = string.Empty;
@@ -50,19 +50,18 @@ namespace WFFuentes
             txtCuentaBancaria.Text = string.Empty;
             txtProductoSurtir.Text = string.Empty;
             txtLimiteCredito.Text = string.Empty;
-            
+            txtNombreCompleto.Focus();
         }
 
-        private void bGuardar_Click(object sender, EventArgs e)
+        private void bLimpiar_Click(object sender, EventArgs e)
         {
-           
+            Limpiar();           
         }
 
         private void bGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {//Trim sirve para borrar espacios si es que existen hOLA ZURY
-
                 string strNombreProveedor = txtNombreCompleto.Text.ToString().Trim();
                 string strDomicilio = txtDomicilio.Text.ToString().Trim();
                 string strTelefono = txtTelefono.Text.ToString().Trim();
@@ -85,30 +84,34 @@ namespace WFFuentes
                     _enProveedores.FcCuentaBancaria = txtCuentaBancaria.Text;
                     _enProveedores.FcProductosSurtidos = txtProductoSurtir.Text;
                     _enProveedores.FdLimiteCredito = decimal.Parse(txtLimiteCredito.Text);
-
-
                     int Resultado = proveedoresBL.AgregarProveedor(_enProveedores);
-
                     if (Resultado == 1)
                     {
                         MessageBox.Show("Se Agrego El Nuevo Proveedor Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
+                    
                     }
-
                 }
             }
 
             catch (Exception)
             {
-
                 MessageBox.Show("Hubo un error al Agregar el Proveedor", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
         private void bConsulta_Click(object sender, EventArgs e)
         {
-
-
             dGProveedores.DataSource = proveedoresBL.MostrarProveedor();
+        }
+
+        private void bBusqueda_Click(object sender, EventArgs e)
+        {
+            if (!(txtBusqueda.Text == ""))
+            {
+                _enProveedores.FcNombreProveedor = txtBusqueda.Text;
+                dGProveedores.DataSource = proveedoresBL.MostrarProveedorPorNombre(_enProveedores);
+            }
         }
     }
 }

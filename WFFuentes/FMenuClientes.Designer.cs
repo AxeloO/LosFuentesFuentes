@@ -178,6 +178,7 @@
             this.Controls.Add(this.MenuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FMenuClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMenuClientes";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FMenuClientes_MouseDown);
             this.MenuPrincipal.ResumeLayout(false);

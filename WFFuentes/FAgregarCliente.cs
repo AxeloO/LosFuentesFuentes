@@ -72,7 +72,8 @@ namespace WFFuentes
                     if (Resultado == 1)
                     {
                         MessageBox.Show("Se Agrego El Nuevo Cliente Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    }
+                        Limpiar();
+                    } 
 
                 }
             }
@@ -80,12 +81,11 @@ namespace WFFuentes
             catch (Exception)
              {
 
-                MessageBox.Show("Hubo un error al Agregar el Cliente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al Agregar el Cliente", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
         }
-
-        private void bLimpiar_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
             txtNombreCompleto.Text = string.Empty;
             txtDomicilio.Text = string.Empty;
@@ -94,7 +94,13 @@ namespace WFFuentes
             txtTipoCredito.Text = string.Empty;
             txtGarantia.Text = string.Empty;
             txtLimiteCredito.Text = string.Empty;
-         
+            txtNombreCompleto.Focus();//Posiciona en el textbox principal
+
+        }
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+
         }
 
         private void bConsultar_Click(object sender, EventArgs e)
@@ -104,16 +110,81 @@ namespace WFFuentes
 
         private void bEliminar_Click(object sender, EventArgs e)
         {
+            if (txtID.Text != "" && txtNombreCompleto.Text != "" && txtDomicilio.Text != "" && txtTelefono.Text != "" && txtRFC.Text != "" && txtTipoCredito.Text != "" && txtGarantia.Text != "" && txtLimiteCredito.Text != "")
+            {
+                DialogResult r = MessageBox.Show("¡Estas seguro de eliminar el registro?", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                if(r==DialogResult.OK)
+                {
+                    _clientesBL.EliminarCliente(_enCliente);
+                    dGClientes.Refresh();
+                    dGClientes.DataSource = _clientesBL.MostrarClientes();
+                }
+                if (r == DialogResult.Cancel)
+                {
 
-        }
+                }
+
+            }
+
+            if (_clientesBL.EliminarCliente(_enCliente) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
+            {
+
+            }
+
+        } 
 
         private void bModificar_Click(object sender, EventArgs e)
         {
-            //if(txtId txtNombreCompleto.Text !="")
+            if(txtID.Text !="" && txtNombreCompleto.Text !="" && txtDomicilio.Text !="" && txtTelefono.Text !="" && txtRFC.Text !="" && txtTipoCredito.Text !="" && txtGarantia.Text !="" && txtLimiteCredito.Text !="")
+            {
+                _enCliente.FcNombreCompleto = txtNombreCompleto.Text;
+                _enCliente.FcDomicilio = txtDomicilio.Text;
+                _enCliente.FiTelefono = txtTelefono.Text;
+                _enCliente.FcRFC = txtRFC.Text;
+                _enCliente.FcTipoCredito = txtTipoCredito.Text;
+                _enCliente.FcTipoGarantia = txtGarantia.Text;
+                _enCliente.FdLimiteCredito = Convert.ToInt64(txtLimiteCredito.Text);
+                if (_clientesBL.ModificarCliente(_enCliente) > 0)
+                {
+                    MessageBox.Show("El registro se modificó correctamente.!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo realizar la acción solicitada", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                }
+            }
+                else
+                 {
+                MessageBox.Show("Seleccione un registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
+        
+
+        private void dGClientes_SelectionChanged(object sender, EventArgs e)
+        {
+            _enCliente = dGClientes.DataSource as EnCliente;
+            if (_enCliente !=null)
+            {
+                txtNombreCompleto.Text = _enCliente.FcNombreCompleto;
+            }
+        }
+
+        private void bBusqueda_Click(object sender, EventArgs e)
+        {
+            if (!(txtBusqueda.Text == ""))
+            {
+                _enCliente.FcNombreCompleto = txtBusqueda.Text;
+                dGClientes.DataSource = _clientesBL.MostrarClientePorNombre(_enCliente);
+            }
+        }
+
+        
 
         // Programacion OP
 
 
     }
 }
+

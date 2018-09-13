@@ -40,65 +40,76 @@
             // 
             // bActualizar
             // 
-            this.bActualizar.Location = new System.Drawing.Point(857, 373);
+            this.bActualizar.BackColor = System.Drawing.Color.Teal;
+            this.bActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bActualizar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bActualizar.Location = new System.Drawing.Point(797, 339);
             this.bActualizar.Name = "bActualizar";
-            this.bActualizar.Size = new System.Drawing.Size(75, 23);
+            this.bActualizar.Size = new System.Drawing.Size(75, 31);
             this.bActualizar.TabIndex = 48;
             this.bActualizar.Text = "Actualizar";
-            this.bActualizar.UseVisualStyleBackColor = true;
+            this.bActualizar.UseVisualStyleBackColor = false;
             this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
             // 
             // bBusqueda
             // 
-            this.bBusqueda.Location = new System.Drawing.Point(605, 101);
+            this.bBusqueda.BackColor = System.Drawing.Color.Teal;
+            this.bBusqueda.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBusqueda.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bBusqueda.Location = new System.Drawing.Point(645, 111);
             this.bBusqueda.Name = "bBusqueda";
-            this.bBusqueda.Size = new System.Drawing.Size(75, 23);
+            this.bBusqueda.Size = new System.Drawing.Size(75, 27);
             this.bBusqueda.TabIndex = 46;
             this.bBusqueda.Text = "Buscar";
-            this.bBusqueda.UseVisualStyleBackColor = true;
+            this.bBusqueda.UseVisualStyleBackColor = false;
             this.bBusqueda.Click += new System.EventHandler(this.bBusqueda_Click);
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(162, 104);
+            this.txtBusqueda.Location = new System.Drawing.Point(208, 115);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(356, 20);
+            this.txtBusqueda.Size = new System.Drawing.Size(376, 20);
             this.txtBusqueda.TabIndex = 45;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 104);
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(58, 115);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 13);
+            this.label8.Size = new System.Drawing.Size(140, 18);
             this.label8.TabIndex = 44;
             this.label8.Text = "Busqueda por Nombre";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(412, 40);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(323, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 25);
+            this.label1.Size = new System.Drawing.Size(200, 27);
             this.label1.TabIndex = 49;
             this.label1.Text = "Cartera de clientes ";
             // 
             // bRegresar
             // 
-            this.bRegresar.Location = new System.Drawing.Point(757, 373);
+            this.bRegresar.BackColor = System.Drawing.Color.Teal;
+            this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bRegresar.Location = new System.Drawing.Point(691, 339);
             this.bRegresar.Name = "bRegresar";
-            this.bRegresar.Size = new System.Drawing.Size(75, 23);
+            this.bRegresar.Size = new System.Drawing.Size(81, 31);
             this.bRegresar.TabIndex = 50;
             this.bRegresar.Text = "Regresar";
-            this.bRegresar.UseVisualStyleBackColor = true;
+            this.bRegresar.UseVisualStyleBackColor = false;
             this.bRegresar.Click += new System.EventHandler(this.bRegresar_Click);
             // 
             // dGClientes
             // 
             this.dGClientes.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGClientes.Location = new System.Drawing.Point(49, 162);
+            this.dGClientes.Location = new System.Drawing.Point(23, 166);
             this.dGClientes.Name = "dGClientes";
             this.dGClientes.Size = new System.Drawing.Size(849, 150);
             this.dGClientes.TabIndex = 51;
@@ -107,8 +118,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(971, 414);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(903, 382);
             this.Controls.Add(this.dGClientes);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.label1);
