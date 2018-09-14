@@ -71,19 +71,19 @@ namespace WFFuentes
             }
 
         }
-       /** private void Limpiar()
-        {
-            txtCantidad.Text = string.Empty;
-            txtCostoUnitario.Text = string.Empty;
-            txtGrupoPerteneciente.Text = string.Empty;
-            txtNombreDelProducto.Text = string.Empty;
-            txtPorcentajeDeContado.Text = string.Empty;
-            txtPorcentajePrecioCredito.Text = string.Empty;
-            txtPrecioCredito.Text = string.Empty;
-            txtPrecioDeContado.Text = string.Empty;
-            cbPresentacion.Text = string.Empty;
-            txtNombreDelProducto.Focus();
-        }**/
+        /** private void Limpiar()
+         {
+             txtCantidad.Text = string.Empty;
+             txtCostoUnitario.Text = string.Empty;
+             txtGrupoPerteneciente.Text = string.Empty;
+             txtNombreDelProducto.Text = string.Empty;
+             txtPorcentajeDeContado.Text = string.Empty;
+             txtPorcentajePrecioCredito.Text = string.Empty;
+             txtPrecioCredito.Text = string.Empty;
+             txtPrecioDeContado.Text = string.Empty;
+             cbPresentacion.Text = string.Empty;
+             txtNombreDelProducto.Focus();
+         }**/
 
         private void btLimpiar_Click(object sender, EventArgs e)
         {
@@ -102,10 +102,10 @@ namespace WFFuentes
         }
 
         private void dgInventario_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {           
+        {
             try
             {
-                _en = dgInventario.DataSource as Inventario;              
+                _en = dgInventario.DataSource as Inventario;
                 if (_en != null)
                 {
                     // txtNombreDelProducto.Text = dgInventario.DataSource as Inventario;
@@ -131,38 +131,51 @@ namespace WFFuentes
         {
             //if (!(txtNombreDelProducto.Text == ""))
             {
-               
+
                 dgInventario.DataSource = _inventarioBl.MostrarInventario();
-                
+
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            if (txtIdProducto.Text !="" && txtNombreDelProducto.Text != "" && txtGrupoPerteneciente.Text != "")
-            {
-                DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?","Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                if (r == DialogResult.OK)
+            try
+            {                
+                string strIdProducto = txtIdProducto.Text.ToString().Trim();
+                if (strIdProducto != "" && txtNombreDelProducto.Text != "")
                 {
-                    _inventarioBl.EliminarProducto(_en);
-                    dgInventario.Refresh();
-                    dgInventario.DataSource = _inventarioBl.MostrarInventario();
-                }
-                if (r==DialogResult.Cancel)
-                {
-                    
+                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (r == DialogResult.OK)
+                    {
+                        long longIdProducto = long.Parse(strIdProducto);
+
+                        _en.IdProducto = longIdProducto;
+
+                        _inventarioBl.EliminarProducto(_en);
+                        dgInventario.Refresh();
+                        dgInventario.DataSource = _inventarioBl.MostrarInventario();
+                    }
+                    if (r == DialogResult.Cancel)
+                    {
+
+                    }
+
                 }
 
+                if (_inventarioBl.EliminarProducto(_en) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
+                {
+
+                }
             }
 
-            if (_inventarioBl.EliminarProducto(_en) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
+            catch (Exception)
             {
 
+                throw;
             }
         }
-        
+
         private void btModificar_Click(object sender, EventArgs e)
         {
             if (txtNombreDelProducto.Text != "" && txtGrupoPerteneciente.Text != "")
@@ -199,7 +212,7 @@ namespace WFFuentes
         private void FCuentasCobrar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);       
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void bRegresar_Click(object sender, EventArgs e)
