@@ -355,12 +355,15 @@
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(404, 552);
+            this.bAgregar.BackColor = System.Drawing.Color.Teal;
+            this.bAgregar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bAgregar.Location = new System.Drawing.Point(440, 530);
             this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(123, 23);
+            this.bAgregar.Size = new System.Drawing.Size(100, 33);
             this.bAgregar.TabIndex = 31;
-            this.bAgregar.Text = "Seleccionar Producto";
-            this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Text = "Seleccionar ";
+            this.bAgregar.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 

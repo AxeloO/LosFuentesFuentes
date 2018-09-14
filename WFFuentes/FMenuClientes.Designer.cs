@@ -149,12 +149,15 @@
             // 
             // bSalir
             // 
+            this.bSalir.BackColor = System.Drawing.Color.Teal;
+            this.bSalir.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSalir.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bSalir.Location = new System.Drawing.Point(573, 566);
             this.bSalir.Name = "bSalir";
-            this.bSalir.Size = new System.Drawing.Size(75, 23);
+            this.bSalir.Size = new System.Drawing.Size(87, 31);
             this.bSalir.TabIndex = 5;
             this.bSalir.Text = "Salir";
-            this.bSalir.UseVisualStyleBackColor = true;
+            this.bSalir.UseVisualStyleBackColor = false;
             this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
             // 
             // pLogo
