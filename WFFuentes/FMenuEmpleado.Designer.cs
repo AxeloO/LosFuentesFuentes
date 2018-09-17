@@ -51,7 +51,7 @@
             this.pMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pMenu.Location = new System.Drawing.Point(0, 0);
             this.pMenu.Name = "pMenu";
-            this.pMenu.Size = new System.Drawing.Size(200, 539);
+            this.pMenu.Size = new System.Drawing.Size(200, 560);
             this.pMenu.TabIndex = 0;
             // 
             // bConsultaCliente
@@ -59,7 +59,7 @@
             this.bConsultaCliente.BackgroundImage = global::WFFuentes.Properties.Resources.depositphotos_131533544_stock_photo_clients_group_icon_white_square;
             this.bConsultaCliente.FlatAppearance.BorderSize = 0;
             this.bConsultaCliente.Image = global::WFFuentes.Properties.Resources.depositphotos_131533544_stock_photo_clients_group_icon_white_square;
-            this.bConsultaCliente.Location = new System.Drawing.Point(40, 397);
+            this.bConsultaCliente.Location = new System.Drawing.Point(41, 416);
             this.bConsultaCliente.Name = "bConsultaCliente";
             this.bConsultaCliente.Size = new System.Drawing.Size(100, 104);
             this.bConsultaCliente.TabIndex = 3;
@@ -70,9 +70,9 @@
             // 
             this.bDevolucion.FlatAppearance.BorderSize = 0;
             this.bDevolucion.Image = global::WFFuentes.Properties.Resources.devolucion;
-            this.bDevolucion.Location = new System.Drawing.Point(40, 287);
+            this.bDevolucion.Location = new System.Drawing.Point(41, 287);
             this.bDevolucion.Name = "bDevolucion";
-            this.bDevolucion.Size = new System.Drawing.Size(100, 87);
+            this.bDevolucion.Size = new System.Drawing.Size(100, 95);
             this.bDevolucion.TabIndex = 2;
             this.bDevolucion.UseVisualStyleBackColor = true;
             this.bDevolucion.Click += new System.EventHandler(this.bDevolucion_Click);
@@ -82,7 +82,7 @@
             this.bConsultaAlmacen.BackgroundImage = global::WFFuentes.Properties.Resources.images;
             this.bConsultaAlmacen.FlatAppearance.BorderSize = 0;
             this.bConsultaAlmacen.Image = global::WFFuentes.Properties.Resources.images;
-            this.bConsultaAlmacen.Location = new System.Drawing.Point(40, 162);
+            this.bConsultaAlmacen.Location = new System.Drawing.Point(41, 162);
             this.bConsultaAlmacen.Name = "bConsultaAlmacen";
             this.bConsultaAlmacen.Size = new System.Drawing.Size(100, 87);
             this.bConsultaAlmacen.TabIndex = 1;
@@ -93,7 +93,7 @@
             // 
             this.bVentas.FlatAppearance.BorderSize = 0;
             this.bVentas.Image = ((System.Drawing.Image)(resources.GetObject("bVentas.Image")));
-            this.bVentas.Location = new System.Drawing.Point(40, 38);
+            this.bVentas.Location = new System.Drawing.Point(41, 38);
             this.bVentas.Name = "bVentas";
             this.bVentas.Size = new System.Drawing.Size(100, 87);
             this.bVentas.TabIndex = 0;
@@ -125,19 +125,22 @@
             // 
             // bSalir
             // 
-            this.bSalir.Location = new System.Drawing.Point(833, 504);
+            this.bSalir.BackColor = System.Drawing.Color.Teal;
+            this.bSalir.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSalir.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bSalir.Location = new System.Drawing.Point(833, 500);
             this.bSalir.Name = "bSalir";
-            this.bSalir.Size = new System.Drawing.Size(75, 23);
+            this.bSalir.Size = new System.Drawing.Size(79, 27);
             this.bSalir.TabIndex = 7;
             this.bSalir.Text = "Salir";
-            this.bSalir.UseVisualStyleBackColor = true;
+            this.bSalir.UseVisualStyleBackColor = false;
             this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
             // 
             // FMenuEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 539);
+            this.ClientSize = new System.Drawing.Size(941, 560);
             this.Controls.Add(this.bSalir);
             this.Controls.Add(this.pLogo);
             this.Controls.Add(this.label1);

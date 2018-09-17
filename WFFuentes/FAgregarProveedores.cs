@@ -113,5 +113,46 @@ namespace WFFuentes
                 dGProveedores.DataSource = proveedoresBL.MostrarProveedorPorNombre(_enProveedores);
             }
         }
+
+        private void bEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string strIdProveedor = txtID.Text.ToString().Trim();
+                if (strIdProveedor != "" && txtNombreCompleto.Text != "")
+                {
+                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (r == DialogResult.OK)
+                    {
+                        long longIdProveedor = long.Parse(strIdProveedor);
+
+                        _enProveedores.FiIdProveedor = longIdProveedor;
+
+                        proveedoresBL.EliminarProducto(_enProveedores);
+                        dGProveedores.Refresh();
+                        dGProveedores.DataSource = proveedoresBL.MostrarProveedor();
+                    }
+                    if (r == DialogResult.Cancel)
+                    {
+
+                    }
+
+                }
+
+                if (proveedoresBL.EliminarProducto(_enProveedores) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
+                {
+
+                }
+            }
+
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+               
     }
 }

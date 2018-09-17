@@ -25,7 +25,6 @@ namespace WFFuentes
 
         }
 
-
         private void BEntrar_Click(object sender, EventArgs e)
         {
             string strNuevoPuestoRol = string.Empty;

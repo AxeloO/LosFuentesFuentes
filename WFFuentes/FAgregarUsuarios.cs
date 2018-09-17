@@ -102,20 +102,40 @@ namespace WFFuentes
 
         private void bEliminar_Click(object sender, EventArgs e)
         {
-            if (txtIdUsuario.Text != "" && txtNombreEmpleado.Text != "" && txtNombreUsuario.Text != "" && txtContraseña.Text != "" && cbTipoUsuario.Text != "")
+            try
             {
-                DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                if (r == DialogResult.OK)
+                string strIdUsuario = txtIdUsuario.Text.ToString().Trim();
+                if (strIdUsuario != "" && txtNombreUsuario.Text != "")
                 {
-                    _usuariosBL.EliminarUsuario(_enUsuario);
-                    dgUsuarios.Refresh();
-                    dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();
+                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (r == DialogResult.OK)
+                    {
+                        long longIdUsuario = long.Parse(strIdUsuario);
+
+                        _enUsuario.fiIdUsuario = longIdUsuario;
+
+                        _usuariosBL.EliminarUsuario(_enUsuario);
+                        dgUsuarios.Refresh();
+                        dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();
+                    }
+                    if (r == DialogResult.Cancel)
+                    {
+
+                    }
+
                 }
-                if (r == DialogResult.Cancel)
+
+                if (_usuariosBL.EliminarUsuario(_enUsuario) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
 
                 }
+            }
+
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 

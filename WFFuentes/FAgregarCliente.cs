@@ -110,28 +110,39 @@ namespace WFFuentes
 
         private void bEliminar_Click(object sender, EventArgs e)
         {
-            if (txtID.Text != "" && txtNombreCompleto.Text != "" && txtDomicilio.Text != "" && txtTelefono.Text != "" && txtRFC.Text != "" && txtTipoCredito.Text != "" && txtGarantia.Text != "" && txtLimiteCredito.Text != "")
+            try
             {
-                DialogResult r = MessageBox.Show("¡Estas seguro de eliminar el registro?", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                if(r==DialogResult.OK)
+                string strIdCliente = txtID.Text.ToString().Trim();
+                if (strIdCliente != "" && txtNombreCompleto.Text != "")
                 {
-                    _clientesBL.EliminarCliente(_enCliente);
-                    dGClientes.Refresh();
-                    dGClientes.DataSource = _clientesBL.MostrarClientes();
+                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (r == DialogResult.OK)
+                    {
+                        long longIdClientes = long.Parse(strIdCliente);
+
+                        _enCliente.FiIdCliente = longIdClientes;
+
+                        _clientesBL.EliminarCliente(_enCliente);
+                        dGClientes.Refresh();
+                        dGClientes.DataSource = _clientesBL.MostrarClientes();
+                    }
+                    if (r == DialogResult.Cancel)
+                    {
+
+                    }
                 }
-                if (r == DialogResult.Cancel)
+                if (_clientesBL.EliminarCliente(_enCliente) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
 
                 }
-
             }
-
-            if (_clientesBL.EliminarCliente(_enCliente) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
+            catch (Exception)
             {
 
+                throw;
             }
-
-        } 
+        }
 
         private void bModificar_Click(object sender, EventArgs e)
         {
