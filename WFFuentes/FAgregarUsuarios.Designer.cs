@@ -84,11 +84,16 @@
             // 
             // cbTipoUsuario
             // 
+            this.cbTipoUsuario.DisplayMember = "Administrador, Empleado";
             this.cbTipoUsuario.FormattingEnabled = true;
+            this.cbTipoUsuario.Items.AddRange(new object[] {
+            "Administrador",
+            "Empleado"});
             this.cbTipoUsuario.Location = new System.Drawing.Point(154, 274);
             this.cbTipoUsuario.Name = "cbTipoUsuario";
             this.cbTipoUsuario.Size = new System.Drawing.Size(121, 21);
             this.cbTipoUsuario.TabIndex = 18;
+            this.cbTipoUsuario.ValueMember = "Administrador, Empleado";
             // 
             // txtNombreUsuario
             // 
@@ -235,11 +240,11 @@
             // 
             // dgUsuarios
             // 
-            this.dgUsuarios.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgUsuarios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgUsuarios.Location = new System.Drawing.Point(564, 87);
             this.dgUsuarios.Name = "dgUsuarios";
-            this.dgUsuarios.Size = new System.Drawing.Size(520, 150);
+            this.dgUsuarios.Size = new System.Drawing.Size(543, 150);
             this.dgUsuarios.TabIndex = 31;
             // 
             // FAgregarUsuarios
