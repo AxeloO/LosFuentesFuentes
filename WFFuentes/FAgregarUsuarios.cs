@@ -17,8 +17,9 @@ namespace WFFuentes
     public partial class FAgregarUsuarios : Form
     {
         EnUsuario _enUsuario = new EnUsuario();
-        UsuariosBL _usuariosBL = new UsuariosBL();        
-        
+        UsuariosBL _usuariosBL = new UsuariosBL();
+  
+
         public FAgregarUsuarios()
         {
             InitializeComponent();
@@ -151,7 +152,9 @@ namespace WFFuentes
             txtNombreEmpleado.Text = string.Empty;
             txtNombreUsuario.Text = string.Empty;
             txtContraseña.Text = string.Empty;
+            cbTipoUsuario.Text = string.Empty;
             txtNombreEmpleado.Focus();
+            
         }
 
         private void bLimpiar_Click(object sender, EventArgs e)
@@ -173,6 +176,6 @@ namespace WFFuentes
             }
         }
 
-
+      
     }
 }

@@ -148,6 +148,11 @@
             // cbPresentacion
             // 
             this.cbPresentacion.FormattingEnabled = true;
+            this.cbPresentacion.Items.AddRange(new object[] {
+            "Kilogramos",
+            "Litros",
+            "Toneladas",
+            "Bultos"});
             this.cbPresentacion.Location = new System.Drawing.Point(362, 166);
             this.cbPresentacion.Name = "cbPresentacion";
             this.cbPresentacion.Size = new System.Drawing.Size(156, 21);
