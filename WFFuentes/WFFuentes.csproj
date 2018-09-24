@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FConsultaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsultaVentas.Designer.cs">
+      <DependentUpon>FConsultaVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDevoluciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FConsultaVentas.resx">
+      <DependentUpon>FConsultaVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDevoluciones.resx">
       <DependentUpon>FDevoluciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +349,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\depositphotos_131533544-stock-photo-clients-group-icon-white-square.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CVentas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CVentas1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

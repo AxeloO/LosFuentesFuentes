@@ -191,11 +191,18 @@ namespace WFFuentes
             }
         }
 
-        
-
+        private void dGClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dGClientes.Rows[e.RowIndex].Cells["FiIdCliente"].Value.ToString();
+            txtNombreCompleto.Text = dGClientes.Rows[e.RowIndex].Cells["FcNombreCompleto"].Value.ToString();
+            txtDomicilio.Text = dGClientes.Rows[e.RowIndex].Cells["FcDomicilio"].Value.ToString();
+            txtTelefono.Text = dGClientes.Rows[e.RowIndex].Cells["FiTelefono"].Value.ToString();
+            txtRFC.Text = dGClientes.Rows[e.RowIndex].Cells["FcRFC"].Value.ToString();
+            txtTipoCredito.Text = dGClientes.Rows[e.RowIndex].Cells["FcTipoCredito"].Value.ToString();
+            txtGarantia.Text = dGClientes.Rows[e.RowIndex].Cells["FcTipoGarantia"].Value.ToString();
+            txtLimiteCredito.Text = dGClientes.Rows[e.RowIndex].Cells["FdLimiteCredito"].Value.ToString();            
+        }
         // Programacion OP
-
-
     }
 }
 

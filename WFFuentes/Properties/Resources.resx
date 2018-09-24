@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="depositphotos_131533544-stock-photo-clients-group-icon-white-square" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\depositphotos_131533544-stock-photo-clients-group-icon-white-square.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete_delete_deleteusers_delete_male_user_maleclient_2348" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_delete_deleteusers_delete_male_user_maleclient_2348.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +175,8 @@
   <data name="Icono_producto21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icono_producto21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clientes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clientes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono-compras-sl-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-compras-sl-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clientes11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clientes11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +199,8 @@
   <data name="proveedor4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\proveedor3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icono-compras-sl-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-compras-sl-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="proveedor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proveedor1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carrito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carrito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +208,11 @@
   <data name="im5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\im5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="proveedor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\proveedor1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CVentas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clientes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clientes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icono_producto2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icono_producto2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +223,7 @@
   <data name="salir1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salir1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="depositphotos_131533544-stock-photo-clients-group-icon-white-square" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\depositphotos_131533544-stock-photo-clients-group-icon-white-square.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CVentas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CVentas1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

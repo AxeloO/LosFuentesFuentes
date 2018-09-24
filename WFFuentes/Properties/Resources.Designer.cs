@@ -103,6 +103,26 @@ namespace WFFuentes.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CVentas {
+            get {
+                object obj = ResourceManager.GetObject("CVentas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CVentas1 {
+            get {
+                object obj = ResourceManager.GetObject("CVentas1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_delete_deleteusers_delete_male_user_maleclient_2348 {
             get {
                 object obj = ResourceManager.GetObject("delete_delete_deleteusers_delete_male_user_maleclient_2348", resourceCulture);

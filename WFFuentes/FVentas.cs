@@ -53,7 +53,7 @@ namespace WFFuentes
 
             try
             {
-                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || FcCantidad.Text == "" || FcConcepto.Text == "" || FdPrecioUnitario.Text == "" || FdImporte.Text == "")
+                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -66,10 +66,10 @@ namespace WFFuentes
                     _enVentas.fcCiudad = FcCiudad.Text;
                     _enVentas.fcTelefono = FcTelefono.Text;
                     _enVentas.fcFechaPago = FdFechaPago.Text;
-                    _enVentas.fiCantidad = int.Parse(FcCantidad.Text);
+                    _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
                     _enVentas.fcConcepto = FcConcepto.Text;
-                    _enVentas.fdPrecioUnitario = decimal.Parse(FdPrecioUnitario.Text);
-                    _enVentas.fdImporte = decimal.Parse(FdImporte.Text);
+                    _enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
+                    _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
                 
                     int Resultado = _ventasBL.AgregarVenta(_enVentas);
@@ -99,12 +99,6 @@ namespace WFFuentes
         {
 
         }
-
-        private void dGVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
        
         private void bBusqueda_Click(object sender, EventArgs e)
         {
@@ -125,6 +119,15 @@ namespace WFFuentes
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {//Los campos seran de inventario o de ventas.!?
+            txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();
+            txtCantidad.Text = dgProductos.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
+            txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado o PrecioACredito"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta 
+            txtImporte.Text = dgProductos.Rows[e.RowIndex].Cells["fdImporte"].Value.ToString();//Duda sobre ese campo
+            
         }
 
         //private void dgProductos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

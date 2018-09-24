@@ -193,5 +193,12 @@ namespace WFFuentes
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void bVentas_Click(object sender, EventArgs e)
+        {
+            Form _fVentas = new FConsultaVentas();
+            _fVentas.ShowDialog();
+            this.Close();
+        }
     }
 }

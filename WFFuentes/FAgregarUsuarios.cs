@@ -176,6 +176,13 @@ namespace WFFuentes
             }
         }
 
-      
+        private void dgUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fiIdUsuario"].Value.ToString();
+            txtNombreEmpleado.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcNombreCompleto"].Value.ToString();
+            txtNombreUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcNombreUsuario"].Value.ToString();
+            txtContraseña.Text = dgUsuarios.Rows[e.RowIndex].Cells["fiPuestoUsuario"].Value.ToString();
+            cbTipoUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcPassword"].Value.ToString();           
+        }
     }
 }

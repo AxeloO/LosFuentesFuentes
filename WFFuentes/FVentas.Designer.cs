@@ -46,10 +46,10 @@
             this.FcCiudad = new System.Windows.Forms.TextBox();
             this.FcTelefono = new System.Windows.Forms.TextBox();
             this.FdFechaPago = new System.Windows.Forms.TextBox();
-            this.FcCantidad = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.FcConcepto = new System.Windows.Forms.TextBox();
-            this.FdPrecioUnitario = new System.Windows.Forms.TextBox();
-            this.FdImporte = new System.Windows.Forms.TextBox();
+            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
+            this.txtImporte = new System.Windows.Forms.TextBox();
             this.FdTotal = new System.Windows.Forms.TextBox();
             this.bPrintVenta = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
@@ -59,7 +59,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.dgTotalProductos = new System.Windows.Forms.DataGridView();
             this.bAgregar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -187,7 +187,7 @@
             this.dgProductos.Name = "dgProductos";
             this.dgProductos.Size = new System.Drawing.Size(502, 112);
             this.dgProductos.TabIndex = 12;
-            this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVentas_CellContentClick);
+            this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
             // 
             // FdFechaSalida
             // 
@@ -231,12 +231,12 @@
             this.FdFechaPago.Size = new System.Drawing.Size(206, 20);
             this.FdFechaPago.TabIndex = 18;
             // 
-            // FcCantidad
+            // txtCantidad
             // 
-            this.FcCantidad.Location = new System.Drawing.Point(736, 154);
-            this.FcCantidad.Name = "FcCantidad";
-            this.FcCantidad.Size = new System.Drawing.Size(206, 20);
-            this.FcCantidad.TabIndex = 19;
+            this.txtCantidad.Location = new System.Drawing.Point(736, 154);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(206, 20);
+            this.txtCantidad.TabIndex = 19;
             // 
             // FcConcepto
             // 
@@ -246,21 +246,21 @@
             this.FcConcepto.TabIndex = 20;
             this.FcConcepto.TextChanged += new System.EventHandler(this.FcConcepto_TextChanged);
             // 
-            // FdPrecioUnitario
+            // txtPrecioUnitario
             // 
-            this.FdPrecioUnitario.Enabled = false;
-            this.FdPrecioUnitario.Location = new System.Drawing.Point(736, 199);
-            this.FdPrecioUnitario.Name = "FdPrecioUnitario";
-            this.FdPrecioUnitario.Size = new System.Drawing.Size(206, 20);
-            this.FdPrecioUnitario.TabIndex = 21;
+            this.txtPrecioUnitario.Enabled = false;
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(736, 199);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(206, 20);
+            this.txtPrecioUnitario.TabIndex = 21;
             // 
-            // FdImporte
+            // txtImporte
             // 
-            this.FdImporte.Enabled = false;
-            this.FdImporte.Location = new System.Drawing.Point(736, 233);
-            this.FdImporte.Name = "FdImporte";
-            this.FdImporte.Size = new System.Drawing.Size(206, 20);
-            this.FdImporte.TabIndex = 22;
+            this.txtImporte.Enabled = false;
+            this.txtImporte.Location = new System.Drawing.Point(736, 233);
+            this.txtImporte.Name = "txtImporte";
+            this.txtImporte.Size = new System.Drawing.Size(206, 20);
+            this.txtImporte.TabIndex = 22;
             // 
             // FdTotal
             // 
@@ -365,15 +365,15 @@
             this.bAgregar.Text = "Seleccionar ";
             this.bAgregar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.AcceptsTab = true;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(736, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
-            this.textBox1.TabIndex = 34;
+            this.txtNombre.AcceptsReturn = true;
+            this.txtNombre.AcceptsTab = true;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(736, 115);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(206, 20);
+            this.txtNombre.TabIndex = 34;
             // 
             // label14
             // 
@@ -436,7 +436,7 @@
             this.ClientSize = new System.Drawing.Size(1330, 585);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.bAgregar);
@@ -448,10 +448,10 @@
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.bPrintVenta);
             this.Controls.Add(this.FdTotal);
-            this.Controls.Add(this.FdImporte);
-            this.Controls.Add(this.FdPrecioUnitario);
+            this.Controls.Add(this.txtImporte);
+            this.Controls.Add(this.txtPrecioUnitario);
             this.Controls.Add(this.FcConcepto);
-            this.Controls.Add(this.FcCantidad);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.FdFechaPago);
             this.Controls.Add(this.FcTelefono);
             this.Controls.Add(this.FcCiudad);
@@ -502,10 +502,10 @@
         private System.Windows.Forms.TextBox FcCiudad;
         private System.Windows.Forms.TextBox FcTelefono;
         private System.Windows.Forms.TextBox FdFechaPago;
-        private System.Windows.Forms.TextBox FcCantidad;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox FcConcepto;
-        private System.Windows.Forms.TextBox FdPrecioUnitario;
-        private System.Windows.Forms.TextBox FdImporte;
+        private System.Windows.Forms.TextBox txtPrecioUnitario;
+        private System.Windows.Forms.TextBox txtImporte;
         private System.Windows.Forms.TextBox FdTotal;
         private System.Windows.Forms.Button bPrintVenta;
         private System.Windows.Forms.Button bCancelar;
@@ -515,7 +515,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dgTotalProductos;
         private System.Windows.Forms.Button bAgregar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;

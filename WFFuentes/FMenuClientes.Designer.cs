@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.MenuPrincipal = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bSalir = new System.Windows.Forms.Button();
+            this.pLogo = new System.Windows.Forms.PictureBox();
+            this.bVentas = new System.Windows.Forms.Button();
             this.bClientes = new System.Windows.Forms.Button();
             this.bCompras = new System.Windows.Forms.Button();
             this.bProductos = new System.Windows.Forms.Button();
             this.bUsuarios = new System.Windows.Forms.Button();
             this.bProveedor = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.bSalir = new System.Windows.Forms.Button();
-            this.pLogo = new System.Windows.Forms.PictureBox();
             this.MenuPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pLogo)).BeginInit();
@@ -46,6 +47,7 @@
             // MenuPrincipal
             // 
             this.MenuPrincipal.BackColor = System.Drawing.Color.Teal;
+            this.MenuPrincipal.Controls.Add(this.bVentas);
             this.MenuPrincipal.Controls.Add(this.bClientes);
             this.MenuPrincipal.Controls.Add(this.bCompras);
             this.MenuPrincipal.Controls.Add(this.bProductos);
@@ -54,9 +56,72 @@
             this.MenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.MenuPrincipal.Name = "MenuPrincipal";
-            this.MenuPrincipal.Size = new System.Drawing.Size(163, 620);
+            this.MenuPrincipal.Size = new System.Drawing.Size(163, 772);
             this.MenuPrincipal.TabIndex = 6;
             this.MenuPrincipal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuPrincipal_MouseDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(128, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(418, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Los Fuentes Fuentes S. P. R. de R. L. ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.bSalir);
+            this.panel1.Controls.Add(this.pLogo);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(163, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(713, 772);
+            this.panel1.TabIndex = 7;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // bSalir
+            // 
+            this.bSalir.BackColor = System.Drawing.Color.Teal;
+            this.bSalir.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSalir.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bSalir.Location = new System.Drawing.Point(573, 649);
+            this.bSalir.Name = "bSalir";
+            this.bSalir.Size = new System.Drawing.Size(87, 31);
+            this.bSalir.TabIndex = 5;
+            this.bSalir.Text = "Salir";
+            this.bSalir.UseVisualStyleBackColor = false;
+            this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
+            // 
+            // pLogo
+            // 
+            this.pLogo.Image = global::WFFuentes.Properties.Resources.LosFuentes;
+            this.pLogo.InitialImage = global::WFFuentes.Properties.Resources.LosFuentes;
+            this.pLogo.Location = new System.Drawing.Point(49, 134);
+            this.pLogo.Name = "pLogo";
+            this.pLogo.Size = new System.Drawing.Size(611, 453);
+            this.pLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pLogo.TabIndex = 2;
+            this.pLogo.TabStop = false;
+            this.pLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // bVentas
+            // 
+            this.bVentas.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bVentas.Image = global::WFFuentes.Properties.Resources.CVentas1;
+            this.bVentas.Location = new System.Drawing.Point(31, 616);
+            this.bVentas.Name = "bVentas";
+            this.bVentas.Size = new System.Drawing.Size(103, 92);
+            this.bVentas.TabIndex = 10;
+            this.bVentas.UseVisualStyleBackColor = true;
+            this.bVentas.Click += new System.EventHandler(this.bVentas_Click);
             // 
             // bClientes
             // 
@@ -121,62 +186,11 @@
             this.bProveedor.UseVisualStyleBackColor = true;
             this.bProveedor.Click += new System.EventHandler(this.bProveedor_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(128, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 29);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Los Fuentes Fuentes S. P. R. de R. L. ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.bSalir);
-            this.panel1.Controls.Add(this.pLogo);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(163, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(713, 620);
-            this.panel1.TabIndex = 7;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // bSalir
-            // 
-            this.bSalir.BackColor = System.Drawing.Color.Teal;
-            this.bSalir.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSalir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bSalir.Location = new System.Drawing.Point(573, 566);
-            this.bSalir.Name = "bSalir";
-            this.bSalir.Size = new System.Drawing.Size(87, 31);
-            this.bSalir.TabIndex = 5;
-            this.bSalir.Text = "Salir";
-            this.bSalir.UseVisualStyleBackColor = false;
-            this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
-            // 
-            // pLogo
-            // 
-            this.pLogo.Image = global::WFFuentes.Properties.Resources.LosFuentes;
-            this.pLogo.InitialImage = global::WFFuentes.Properties.Resources.LosFuentes;
-            this.pLogo.Location = new System.Drawing.Point(49, 134);
-            this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(603, 394);
-            this.pLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pLogo.TabIndex = 2;
-            this.pLogo.TabStop = false;
-            this.pLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
             // FMenuClientes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(876, 620);
+            this.ClientSize = new System.Drawing.Size(876, 772);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -203,5 +217,6 @@
         private System.Windows.Forms.Button bClientes;
         private System.Windows.Forms.Button bCompras;
         private System.Windows.Forms.Button bSalir;
+        private System.Windows.Forms.Button bVentas;
     }
 }

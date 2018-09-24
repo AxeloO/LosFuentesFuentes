@@ -153,6 +153,18 @@ namespace WFFuentes
             }
 
         }
-               
+
+        private void dGProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dGProveedores.Rows[e.RowIndex].Cells["FiIdProveedor"].Value.ToString();
+            txtNombreCompleto.Text = dGProveedores.Rows[e.RowIndex].Cells["FcNombreProveedor"].Value.ToString();
+            txtDomicilio.Text = dGProveedores.Rows[e.RowIndex].Cells["FcDomicilio"].Value.ToString();
+            txtTelefono.Text = dGProveedores.Rows[e.RowIndex].Cells["FiTelefono"].Value.ToString();
+            txtRFC.Text = dGProveedores.Rows[e.RowIndex].Cells["FcRFC"].Value.ToString();
+            txtCuentaBancaria.Text = dGProveedores.Rows[e.RowIndex].Cells["FcCuentaBancaria"].Value.ToString();
+            txtProductoSurtir.Text = dGProveedores.Rows[e.RowIndex].Cells["FcProductosSurtidos"].Value.ToString();
+            txtLimiteCredito.Text = dGProveedores.Rows[e.RowIndex].Cells["FdLimiteCredito"].Value.ToString();
+           
+        }
     }
 }

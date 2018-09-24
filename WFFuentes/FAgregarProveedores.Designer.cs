@@ -226,6 +226,7 @@
             this.dGProveedores.Name = "dGProveedores";
             this.dGProveedores.Size = new System.Drawing.Size(558, 169);
             this.dGProveedores.TabIndex = 17;
+            this.dGProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGProveedores_CellClick);
             // 
             // bModificar
             // 
