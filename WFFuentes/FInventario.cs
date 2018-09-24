@@ -236,9 +236,17 @@ namespace WFFuentes
 
         private void dgInventario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(dgInventario.CurrentCell.Value.ToString());
-            MessageBox.Show(dgInventario.CurrentRow.Index.ToString());
-            MessageBox.Show(dgInventario.Rows[e.RowIndex].Cells["IdProducto"].Value.ToString());
+            
+            txtIdProducto.Text = dgInventario.Rows[e.RowIndex].Cells["IdProducto"].Value.ToString();
+            txtNombreDelProducto.Text = dgInventario.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();
+            txtGrupoPerteneciente.Text = dgInventario.Rows[e.RowIndex].Cells["GrupoPerteneciente"].Value.ToString();
+            txtPorcentajeDeContado.Text = dgInventario.Rows[e.RowIndex].Cells["PorcentajeGananciaContado"].Value.ToString();
+            txtPorcentajePrecioCredito.Text = dgInventario.Rows[e.RowIndex].Cells["PorcentajeGananciaCredito"].Value.ToString();
+            txtPrecioCredito.Text = dgInventario.Rows[e.RowIndex].Cells["PrecioACredito"].Value.ToString();
+            txtPrecioDeContado.Text = dgInventario.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();
+            txtCantidad.Text = dgInventario.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
+            txtCostoUnitario.Text = dgInventario.Rows[e.RowIndex].Cells["CostoUnitario"].Value.ToString();
+            cbPresentacion.Text = dgInventario.Rows[e.RowIndex].Cells["Presentacion"].Value.ToString();            
         }
     }
 }
