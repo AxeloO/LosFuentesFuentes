@@ -148,11 +148,11 @@ namespace WFFuentes
 
                     if (r == DialogResult.OK)
                     {
-                        long longIdProducto = long.Parse(strIdProducto);
+                        //long longIdProducto = long.Parse(strIdProducto);
 
-                        _en.IdProducto = longIdProducto;
+                        //_en.IdProducto = longIdProducto;
 
-                        _inventarioBl.EliminarProducto(_en);
+                        _inventarioBl.EliminarProducto(strIdProducto);
                         dgInventario.Refresh();
                         dgInventario.DataSource = _inventarioBl.MostrarInventario();
                     }
@@ -163,7 +163,7 @@ namespace WFFuentes
 
                 }
 
-                if (_inventarioBl.EliminarProducto(_en) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
+                if (_inventarioBl.EliminarProducto(strIdProducto) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
 
                 }
@@ -234,5 +234,11 @@ namespace WFFuentes
 
         }
 
+        private void dgInventario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show(dgInventario.CurrentCell.Value.ToString());
+            MessageBox.Show(dgInventario.CurrentRow.Index.ToString());
+            MessageBox.Show(dgInventario.Rows[e.RowIndex].Cells["IdProducto"].Value.ToString());
+        }
     }
 }

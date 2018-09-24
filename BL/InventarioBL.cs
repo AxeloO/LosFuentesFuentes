@@ -28,9 +28,9 @@ namespace BL
         {
             return _dal.ModificarProducto(PEntidad);
         }
-        public int EliminarProducto(Inventario PEntidad)
+        public int EliminarProducto(string IdProducto)
         {
-            return _dal.EliminarProducto(PEntidad);
+            return _dal.EliminarProducto(IdProducto);
         }
 
     }

@@ -273,6 +273,7 @@
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.Size = new System.Drawing.Size(346, 304);
             this.dgInventario.TabIndex = 53;
+            this.dgInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_CellClick);
             this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
             // 
             // bRegresar
