@@ -89,7 +89,7 @@ namespace WFFuentes
                     }
                     else
                     {
-                        MessageBox.Show("Usuario o Contrasena Incorrecta");
+                        MessageBox.Show("Usuario o Contraseña Incorrecta");
                     }
                 }
                 else

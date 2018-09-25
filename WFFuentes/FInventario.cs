@@ -39,7 +39,7 @@ namespace WFFuentes
 
                 if (txtNombreDelProducto.Text == "" || txtCantidad.Text == "" || txtCostoUnitario.Text == "" || txtGrupoPerteneciente.Text == "" || txtPorcentajeDeContado.Text == "" || txtPorcentajePrecioCredito.Text == "" || txtPrecioCredito.Text == "" || txtPrecioDeContado.Text == "" || cbPresentacion.Text == "")
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -57,8 +57,8 @@ namespace WFFuentes
 
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        //Limpiar();
+                        MessageBox.Show("Se agrego el nuevo producto correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
                     }
 
                 }
@@ -67,12 +67,13 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Producto", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el producto", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }
-        /** private void Limpiar()
+         private void Limpiar()
          {
+            txtIdProducto.Text = string.Empty;
              txtCantidad.Text = string.Empty;
              txtCostoUnitario.Text = string.Empty;
              txtGrupoPerteneciente.Text = string.Empty;
@@ -83,22 +84,11 @@ namespace WFFuentes
              txtPrecioDeContado.Text = string.Empty;
              cbPresentacion.Text = string.Empty;
              txtNombreDelProducto.Focus();
-         }**/
+         }
 
         private void btLimpiar_Click(object sender, EventArgs e)
         {
-            //Limpiar();
-            txtCantidad.Text = string.Empty;
-            txtCostoUnitario.Text = string.Empty;
-            txtGrupoPerteneciente.Text = string.Empty;
-            txtNombreDelProducto.Text = string.Empty;
-            txtPorcentajeDeContado.Text = string.Empty;
-            txtPorcentajePrecioCredito.Text = string.Empty;
-            txtPrecioCredito.Text = string.Empty;
-            txtPrecioDeContado.Text = string.Empty;
-            cbPresentacion.Text = string.Empty;
-            txtNombreDelProducto.Focus();
-
+            Limpiar();
         }
 
         private void dgInventario_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -192,20 +182,20 @@ namespace WFFuentes
 
                 if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
-                    MessageBox.Show("Se modifico correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     dgInventario.Refresh();
                     dgInventario.DataSource = _inventarioBl.MostrarInventario();
                 }
 
                 else
                 {
-                    MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
             {
-                MessageBox.Show("Seleccione un Registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 

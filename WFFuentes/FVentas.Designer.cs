@@ -58,12 +58,12 @@
             this.bBusqueda = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.dgTotalProductos = new System.Windows.Forms.DataGridView();
-            this.bAgregar = new System.Windows.Forms.Button();
+            this.bSeleccionar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bAgregar = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).BeginInit();
@@ -353,17 +353,17 @@
             this.dgTotalProductos.Size = new System.Drawing.Size(317, 234);
             this.dgTotalProductos.TabIndex = 30;
             // 
-            // bAgregar
+            // bSeleccionar
             // 
-            this.bAgregar.BackColor = System.Drawing.Color.Teal;
-            this.bAgregar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bAgregar.Location = new System.Drawing.Point(440, 530);
-            this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(100, 33);
-            this.bAgregar.TabIndex = 31;
-            this.bAgregar.Text = "Seleccionar ";
-            this.bAgregar.UseVisualStyleBackColor = false;
+            this.bSeleccionar.BackColor = System.Drawing.Color.Teal;
+            this.bSeleccionar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSeleccionar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bSeleccionar.Location = new System.Drawing.Point(440, 530);
+            this.bSeleccionar.Name = "bSeleccionar";
+            this.bSeleccionar.Size = new System.Drawing.Size(100, 33);
+            this.bSeleccionar.TabIndex = 31;
+            this.bSeleccionar.Text = "Seleccionar ";
+            this.bSeleccionar.UseVisualStyleBackColor = false;
             // 
             // txtNombre
             // 
@@ -405,18 +405,18 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "Total a Pagar";
             // 
-            // button1
+            // bAgregar
             // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(784, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 32);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Agregar Producto";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bAgregar.BackColor = System.Drawing.Color.Teal;
+            this.bAgregar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bAgregar.Location = new System.Drawing.Point(784, 288);
+            this.bAgregar.Name = "bAgregar";
+            this.bAgregar.Size = new System.Drawing.Size(123, 32);
+            this.bAgregar.TabIndex = 35;
+            this.bAgregar.Text = "Agregar Producto";
+            this.bAgregar.UseVisualStyleBackColor = false;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // label16
             // 
@@ -435,11 +435,11 @@
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1330, 585);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.bAgregar);
+            this.Controls.Add(this.bSeleccionar);
             this.Controls.Add(this.dgTotalProductos);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.bBusqueda);
@@ -514,12 +514,12 @@
         private System.Windows.Forms.Button bBusqueda;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dgTotalProductos;
-        private System.Windows.Forms.Button bAgregar;
+        private System.Windows.Forms.Button bSeleccionar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bAgregar;
         private System.Windows.Forms.Label label16;
     }
 }

@@ -271,7 +271,6 @@
             this.dGClientes.Size = new System.Drawing.Size(658, 201);
             this.dGClientes.TabIndex = 46;
             this.dGClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGClientes_CellClick);
-            this.dGClientes.SelectionChanged += new System.EventHandler(this.dGClientes_SelectionChanged);
             // 
             // bLimpiar
             // 

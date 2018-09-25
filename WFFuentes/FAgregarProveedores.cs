@@ -43,6 +43,7 @@ namespace WFFuentes
 
         private void Limpiar()
         {
+            txtID.Text = string.Empty;
             txtNombreCompleto.Text = string.Empty;
             txtDomicilio.Text = string.Empty;
             txtTelefono.Text = string.Empty;
@@ -87,7 +88,7 @@ namespace WFFuentes
                     int Resultado = proveedoresBL.AgregarProveedor(_enProveedores);
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se Agrego El Nuevo Proveedor Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo proveedor correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Limpiar();
                     
                     }
@@ -96,7 +97,7 @@ namespace WFFuentes
 
             catch (Exception)
             {
-                MessageBox.Show("Hubo un error al Agregar el Proveedor", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el proveedor", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -132,6 +133,7 @@ namespace WFFuentes
                         proveedoresBL.EliminarProducto(_enProveedores);
                         dGProveedores.Refresh();
                         dGProveedores.DataSource = proveedoresBL.MostrarProveedor();
+                        Limpiar();
                     }
                     if (r == DialogResult.Cancel)
                     {

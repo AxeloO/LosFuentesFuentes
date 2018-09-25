@@ -182,6 +182,7 @@
             this.dGCuentasPagar.Name = "dGCuentasPagar";
             this.dGCuentasPagar.Size = new System.Drawing.Size(506, 182);
             this.dGCuentasPagar.TabIndex = 34;
+            this.dGCuentasPagar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGCuentasPagar_CellClick);
             // 
             // label5
             // 

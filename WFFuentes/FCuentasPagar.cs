@@ -89,7 +89,8 @@ namespace WFFuentes
 
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se Agrego El Nuevo Registro Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo registro correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
                     }
 
                 }
@@ -98,7 +99,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Registro", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el registro", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -120,6 +121,7 @@ namespace WFFuentes
                         _cuentasBL.EliminarCuentas(_enCuentas);
                         dGCuentasPagar.Refresh();
                         dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorPagar();
+                        Limpiar();
                     }
                     if (r == DialogResult.Cancel)
                     {
@@ -140,6 +142,28 @@ namespace WFFuentes
                 throw;
             }
 
+        }
+
+        public void Limpiar()
+        {
+            txtID.Text = string.Empty;
+            txtNoFactura.Text = string.Empty;
+            txtNombreProveedor.Text = string.Empty;
+            txtProductoAdquirido.Text = string.Empty;
+            txtFechaAdquisicion.Text = string.Empty;
+            txtMontoPagar.Text = string.Empty;
+            txtNombreProveedor.Focus();
+        }
+
+        private void dGCuentasPagar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FiIdProveedor"].Value.ToString();
+            txtNombreProveedor.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FcNombreProveedor"].Value.ToString();
+            txtNoFactura.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FiNoFactura"].Value.ToString();
+            txtFechaAdquisicion.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FDtFechaAdquisicion"].Value.ToString();
+            txtProductoAdquirido.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FcProductoAdquirido"].Value.ToString();
+            txtMontoPagar.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FdTotalAPagar"].Value.ToString();
+            
         }
     }
 }

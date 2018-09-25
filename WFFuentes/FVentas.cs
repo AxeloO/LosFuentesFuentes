@@ -105,7 +105,7 @@ namespace WFFuentes
             dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
 
-        private void bLimpiar_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
             FdFechaSalida.Text = string.Empty;
             FcNombreCliente.Text = string.Empty;
@@ -113,22 +113,37 @@ namespace WFFuentes
             FcCiudad.Text = string.Empty;
             FcTelefono.Text = string.Empty;
             FdFechaPago.Text = string.Empty;
-           
+            FdFechaSalida.Focus();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Limpiar_Venta()
         {
+            txtNombre.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            txtPrecioUnitario.Text = string.Empty;
+            txtImporte.Text = string.Empty;
+            txtNombre.Focus();
 
+        }
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+           
         }
 
         private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {//Los campos seran de inventario o de ventas.!?
-            txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();
-            txtCantidad.Text = dgProductos.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
-            txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado o PrecioACredito"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta 
-            txtImporte.Text = dgProductos.Rows[e.RowIndex].Cells["fdImporte"].Value.ToString();//Duda sobre ese campo
-            
+  
+            txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();          
+            txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta 
+                      
         }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            Limpiar_Venta();
+        }
+
 
         //private void dgProductos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         //{

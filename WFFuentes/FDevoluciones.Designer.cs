@@ -43,6 +43,8 @@
             this.dGDevoluciones = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGDevoluciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(21, 103);
+            this.label1.Location = new System.Drawing.Point(24, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 18);
             this.label1.TabIndex = 0;
@@ -62,7 +64,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(21, 159);
+            this.label2.Location = new System.Drawing.Point(24, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 18);
             this.label2.TabIndex = 1;
@@ -73,7 +75,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(24, 212);
+            this.label3.Location = new System.Drawing.Point(24, 238);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 2;
@@ -84,7 +86,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(24, 273);
+            this.label4.Location = new System.Drawing.Point(24, 277);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 18);
             this.label4.TabIndex = 3;
@@ -92,28 +94,28 @@
             // 
             // txtFolioNota
             // 
-            this.txtFolioNota.Location = new System.Drawing.Point(187, 103);
+            this.txtFolioNota.Location = new System.Drawing.Point(190, 146);
             this.txtFolioNota.Name = "txtFolioNota";
             this.txtFolioNota.Size = new System.Drawing.Size(76, 20);
             this.txtFolioNota.TabIndex = 4;
             // 
             // txtNombreProducto
             // 
-            this.txtNombreProducto.Location = new System.Drawing.Point(187, 159);
+            this.txtNombreProducto.Location = new System.Drawing.Point(190, 191);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(237, 20);
             this.txtNombreProducto.TabIndex = 5;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(187, 212);
+            this.txtCantidad.Location = new System.Drawing.Point(187, 238);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(76, 20);
             this.txtCantidad.TabIndex = 6;
             // 
             // txtCausaDevolucion
             // 
-            this.txtCausaDevolucion.Location = new System.Drawing.Point(187, 273);
+            this.txtCausaDevolucion.Location = new System.Drawing.Point(187, 277);
             this.txtCausaDevolucion.Name = "txtCausaDevolucion";
             this.txtCausaDevolucion.Size = new System.Drawing.Size(237, 20);
             this.txtCausaDevolucion.TabIndex = 7;
@@ -178,6 +180,7 @@
             this.dGDevoluciones.Name = "dGDevoluciones";
             this.dGDevoluciones.Size = new System.Drawing.Size(540, 210);
             this.dGDevoluciones.TabIndex = 12;
+            this.dGDevoluciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGDevoluciones_CellClick);
             // 
             // label5
             // 
@@ -201,12 +204,33 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Lista de Devoluciones";
             // 
+            // ID
+            // 
+            this.ID.AutoSize = true;
+            this.ID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ID.Location = new System.Drawing.Point(24, 106);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(24, 18);
+            this.ID.TabIndex = 15;
+            this.ID.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(60, 106);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(58, 20);
+            this.txtID.TabIndex = 16;
+            this.txtID.Visible = false;
+            // 
             // FDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1169, 358);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dGDevoluciones);
@@ -250,5 +274,7 @@
         private System.Windows.Forms.DataGridView dGDevoluciones;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label ID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

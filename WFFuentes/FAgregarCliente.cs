@@ -54,7 +54,7 @@ namespace WFFuentes
 
                 if (strNombreCliente.Equals("") || strDomicilio.Equals("") || strTelefono.Equals("") || strRFC.Equals("") || strTipoCredito.Equals("") || strGarantia.Equals("") || strLimiteCredito.Equals(""))
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar algunos de los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -71,7 +71,7 @@ namespace WFFuentes
 
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se Agrego El Nuevo Cliente Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo cliente correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Limpiar();
                     } 
 
@@ -81,12 +81,13 @@ namespace WFFuentes
             catch (Exception)
              {
 
-                MessageBox.Show("Hubo un error al Agregar el Cliente", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el cliente", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
         }
         private void Limpiar()
         {
+            txtID.Text = string.Empty;
             txtNombreCompleto.Text = string.Empty;
             txtDomicilio.Text = string.Empty;
             txtTelefono.Text = string.Empty;
@@ -126,6 +127,7 @@ namespace WFFuentes
                         _clientesBL.EliminarCliente(_enCliente);
                         dGClientes.Refresh();
                         dGClientes.DataSource = _clientesBL.MostrarClientes();
+                        Limpiar();
                     }
                     if (r == DialogResult.Cancel)
                     {
@@ -172,16 +174,6 @@ namespace WFFuentes
             }
         }
         
-
-        private void dGClientes_SelectionChanged(object sender, EventArgs e)
-        {
-            _enCliente = dGClientes.DataSource as EnCliente;
-            if (_enCliente !=null)
-            {
-                txtNombreCompleto.Text = _enCliente.FcNombreCompleto;
-            }
-        }
-
         private void bBusqueda_Click(object sender, EventArgs e)
         {
             if (!(txtBusqueda.Text == ""))

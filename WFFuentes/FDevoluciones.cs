@@ -47,12 +47,19 @@ namespace WFFuentes
 
         }
 
-        private void bLimpiar_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
+            txtID.Text = string.Empty;
             txtFolioNota.Text = string.Empty;
             txtNombreProducto.Text = string.Empty;
             txtCantidad.Text = string.Empty;
-            txtCausaDevolucion.Text = string.Empty;          
+            txtCausaDevolucion.Text = string.Empty;
+            txtNombreProducto.Focus();
+        }
+
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();      
         }
 
         private void bConsulta_Click(object sender, EventArgs e)
@@ -74,7 +81,7 @@ namespace WFFuentes
 
                 if (strfolioNota.Equals("") || strNombreProducto.Equals("")  || txtCantidad.Equals("") || strCausaD.Equals(""))
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -89,7 +96,9 @@ namespace WFFuentes
 
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo producto correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
+
                     }
 
                 }
@@ -98,9 +107,19 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Producto", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el producto", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
+        }
+
+        private void dGDevoluciones_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiIdDevolucion"].Value.ToString();
+            txtFolioNota.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiFolioVenta"].Value.ToString();
+            txtNombreProducto.Text = dGDevoluciones .Rows[e.RowIndex].Cells["fcNombreProductoDevolucion"].Value.ToString();
+            txtCantidad.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiCantidadDevolucion"].Value.ToString();
+            txtCausaDevolucion.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcCausaDevolucion"].Value.ToString();
+            
         }
     }
 }

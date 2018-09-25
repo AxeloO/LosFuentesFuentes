@@ -81,6 +81,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(216, 20);
             this.txtContraseña.TabIndex = 19;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // cbTipoUsuario
             // 

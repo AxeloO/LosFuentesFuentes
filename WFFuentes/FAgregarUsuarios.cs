@@ -42,7 +42,7 @@ namespace WFFuentes
             {
                 if (txtNombreEmpleado.Text.Trim() == "" || txtNombreUsuario.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || cbTipoUsuario.Text.Trim() == "" )
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -63,7 +63,7 @@ namespace WFFuentes
 
                         if (Resultado == 1)
                         {
-                            MessageBox.Show("Se Agrego El Nuevo Usuario Tipo Administrador", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            MessageBox.Show("Se agregó usuario tipo administrador", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             Limpiar();
                         }
                     }
@@ -77,13 +77,14 @@ namespace WFFuentes
 
                         if (Resultado == 1)
                         {
-                            MessageBox.Show("Se Agrego El Nuevo Usuario Tipo Empleado", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            MessageBox.Show("Se agregó usuario tipo empleado", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            Limpiar();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Hubo un error al Agregar el Usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        Limpiar();
+                        MessageBox.Show("Hubo un error al agregar el usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                      
                     }
 
                 }
@@ -92,7 +93,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -119,6 +120,7 @@ namespace WFFuentes
                         _usuariosBL.EliminarUsuario(_enUsuario);
                         dgUsuarios.Refresh();
                         dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();
+                        Limpiar();
                     }
                     if (r == DialogResult.Cancel)
                     {
@@ -149,6 +151,7 @@ namespace WFFuentes
 
         private void Limpiar()
         {
+            txtIdUsuario.Text = string.Empty;
             txtNombreEmpleado.Text = string.Empty;
             txtNombreUsuario.Text = string.Empty;
             txtContraseña.Text = string.Empty;
@@ -181,8 +184,8 @@ namespace WFFuentes
             txtIdUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fiIdUsuario"].Value.ToString();
             txtNombreEmpleado.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcNombreCompleto"].Value.ToString();
             txtNombreUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcNombreUsuario"].Value.ToString();
-            txtContraseña.Text = dgUsuarios.Rows[e.RowIndex].Cells["fiPuestoUsuario"].Value.ToString();
-            cbTipoUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcPassword"].Value.ToString();           
+            txtContraseña.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcPassword"].Value.ToString();
+            cbTipoUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fiPuestoUsuario"].Value.ToString();           
         }
     }
 }

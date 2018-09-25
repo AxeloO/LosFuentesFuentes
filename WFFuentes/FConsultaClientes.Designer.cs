@@ -79,7 +79,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 18);
             this.label8.TabIndex = 44;
-            this.label8.Text = "Busqueda por Nombre";
+            this.label8.Text = "Búsqueda por Nombre";
             // 
             // label1
             // 
