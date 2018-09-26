@@ -132,7 +132,7 @@ namespace WFFuentes
         }
 
         private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {//Los campos seran de inventario o de ventas.!?
+        {//Los campos seran de inventario o de ventas.!?  Creo que eran de inventario asi que fue de Inventario, Será necesario hacer un if para eso de los precios.!?
   
             txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();          
             txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta 
