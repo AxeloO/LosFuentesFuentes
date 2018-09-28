@@ -148,8 +148,9 @@ namespace WFFuentes
 
         private void bModificar_Click(object sender, EventArgs e)
         {
-            if(txtID.Text !="" && txtNombreCompleto.Text !="" && txtDomicilio.Text !="" && txtTelefono.Text !="" && txtRFC.Text !="" && txtTipoCredito.Text !="" && txtGarantia.Text !="" && txtLimiteCredito.Text !="")
+            if(txtID.Text !="" && txtNombreCompleto.Text !="")
             {
+                _enCliente.FiIdCliente = long.Parse(txtID.Text);
                 _enCliente.FcNombreCompleto = txtNombreCompleto.Text;
                 _enCliente.FcDomicilio = txtDomicilio.Text;
                 _enCliente.FiTelefono = txtTelefono.Text;
@@ -160,6 +161,9 @@ namespace WFFuentes
                 if (_clientesBL.ModificarCliente(_enCliente) > 0)
                 {
                     MessageBox.Show("El registro se modificó correctamente.!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    dGClientes.Refresh();
+                    dGClientes.DataSource = _clientesBL.MostrarClientes();
+                    Limpiar();
 
                 }
                 else

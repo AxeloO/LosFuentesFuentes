@@ -165,5 +165,45 @@ namespace WFFuentes
             txtMontoPagar.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FdTotalAPagar"].Value.ToString();
             
         }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+
+            string strIdCuentasPagar = txtID.Text.ToString().Trim();
+            string strNombreProveedor = txtNombreProveedor.Text.ToString().Trim();
+            string strNoFactura = txtNoFactura.Text.ToString().Trim();
+            string strFechaAdquisicion = txtFechaAdquisicion.Text.ToString().Trim();
+            string strProductoAdquirido = txtProductoAdquirido.Text.ToString().Trim();
+            string strMontoPagar = txtMontoPagar.Text.ToString().Trim();
+            
+            if (strIdCuentasPagar !="" && strNombreProveedor !="")
+            {
+           _enCuentas.FiIdProveedor = long.Parse(txtID.Text);
+           _enCuentas.FcNombreProveedor = txtNombreProveedor.Text;
+           _enCuentas.FiNoFactura = int.Parse(txtNoFactura.Text);
+           _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
+           _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
+           _enCuentas.FdTotalAPagar = decimal.Parse(txtMontoPagar.Text);
+         
+
+           if (_cuentasBL.ModificarCuentas(_enCuentas) > 0)
+               {
+                   MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                   dGCuentasPagar.Refresh();
+                   dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorPagar();
+               Limpiar();
+               }
+
+               else
+               {
+                   MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               }
+
+           }
+           else
+           {
+               MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+           }
+        }
     }
 }

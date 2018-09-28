@@ -241,6 +241,7 @@
             this.bModificar.TabIndex = 18;
             this.bModificar.Text = "Modificar";
             this.bModificar.UseVisualStyleBackColor = false;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
             // 
             // bEliminar
             // 
@@ -296,6 +297,7 @@
             this.bLimpiar.TabIndex = 22;
             this.bLimpiar.Text = "Limpiar";
             this.bLimpiar.UseVisualStyleBackColor = false;
+            this.bLimpiar.Click += new System.EventHandler(this.bLimpiar_Click);
             // 
             // bBusqueda
             // 

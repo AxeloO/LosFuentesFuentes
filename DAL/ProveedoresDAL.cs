@@ -20,7 +20,7 @@ namespace DAL
             SqlCommand _comando = new SqlCommand("Agregar_Proveedor", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@FcNombreProveedor", PEntidad.FcNombreProveedor));
-            _comando.Parameters.Add(new SqlParameter("@FcDireccion", PEntidad.FcDomicilio));
+            _comando.Parameters.Add(new SqlParameter("@FcDireccion", PEntidad.FcDireccion));
             _comando.Parameters.Add(new SqlParameter("@FiTelefono", PEntidad.FiTelefono));
             _comando.Parameters.Add(new SqlParameter("@FcRFC", PEntidad.FcRFC));
             _comando.Parameters.Add(new SqlParameter("@FcCuentaBancaria", PEntidad.FcCuentaBancaria));
@@ -47,7 +47,7 @@ namespace DAL
                 EnProveedores _EnProveedor = new EnProveedores();
                 _EnProveedor.FiIdProveedor = _reader.GetInt64(0);
                 _EnProveedor.FcNombreProveedor = _reader.GetString(1);
-                _EnProveedor.FcDomicilio = _reader.GetString(2);
+                _EnProveedor.FcDireccion = _reader.GetString(2);
                 _EnProveedor.FiTelefono = _reader.GetString(3);
                 _EnProveedor.FcRFC = _reader.GetString(4);
                 _EnProveedor.FcCuentaBancaria = _reader.GetString(5);
@@ -74,7 +74,7 @@ namespace DAL
 
                 _EnProveedores.FiIdProveedor = _reader.GetInt64(0);
                 _EnProveedores.FcNombreProveedor = _reader.GetString(1);
-                _EnProveedores.FcDomicilio = _reader.GetString(2);
+                _EnProveedores.FcDireccion = _reader.GetString(2);
                 _EnProveedores.FiTelefono = _reader.GetString(3);
                 _EnProveedores.FcRFC = _reader.GetString(4);
                 _EnProveedores.FcCuentaBancaria = _reader.GetString(5);
@@ -97,7 +97,7 @@ namespace DAL
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@FiIdProveedor", PEntidad.FiIdProveedor));
             _comando.Parameters.Add(new SqlParameter("@FcNombreProveedor", PEntidad.FcNombreProveedor));
-            _comando.Parameters.Add(new SqlParameter("@FcDomicilio", PEntidad.FcDomicilio));
+            _comando.Parameters.Add(new SqlParameter("@FcDireccion", PEntidad.FcDireccion));
             _comando.Parameters.Add(new SqlParameter("@FiTelefono", PEntidad.FiTelefono));
             _comando.Parameters.Add(new SqlParameter("@FcRFC", PEntidad.FcRFC));
             _comando.Parameters.Add(new SqlParameter("@FcCuentaBancaria", PEntidad.FcCuentaBancaria));

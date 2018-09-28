@@ -26,11 +26,11 @@ namespace BL
         {
             return _ProveedorDal.MostrarEnProveedorPorNombre(_enProveedor);
         }
-        public int ModificarProducto(EnProveedores _enProveedor)
+        public int ModificarProveedor(EnProveedores _enProveedor)
         {
             return _ProveedorDal.ModificarProveedor(_enProveedor);
         }
-        public int EliminarProducto(EnProveedores _enProveedor)
+        public int EliminarProveedor(EnProveedores _enProveedor)
         {
             return _ProveedorDal.EliminarProveedor(_enProveedor);
         }

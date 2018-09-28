@@ -47,6 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.bModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGCuentasPagar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -236,12 +237,26 @@
             this.txtID.Size = new System.Drawing.Size(61, 20);
             this.txtID.TabIndex = 39;
             // 
+            // bModificar
+            // 
+            this.bModificar.BackColor = System.Drawing.Color.Teal;
+            this.bModificar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bModificar.Location = new System.Drawing.Point(390, 291);
+            this.bModificar.Name = "bModificar";
+            this.bModificar.Size = new System.Drawing.Size(100, 33);
+            this.bModificar.TabIndex = 40;
+            this.bModificar.Text = "Modificar";
+            this.bModificar.UseVisualStyleBackColor = false;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
+            // 
             // FCuentasPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1058, 353);
+            this.Controls.Add(this.bModificar);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -293,5 +308,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button bModificar;
     }
 }

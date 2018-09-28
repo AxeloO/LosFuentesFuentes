@@ -10,7 +10,7 @@ namespace EN
     {
         public long FiIdProveedor { get; set; }
         public string FcNombreProveedor { get; set; }
-        public string FcDomicilio { get; set; }
+        public string FcDireccion { get; set; }
         public string FiTelefono { get; set; }
         public string FcRFC { get; set; }
         public string FcCuentaBancaria { get; set; }

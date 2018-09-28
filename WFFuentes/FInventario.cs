@@ -170,6 +170,7 @@ namespace WFFuentes
         {
             if (txtNombreDelProducto.Text != "" && txtGrupoPerteneciente.Text != "")
             {
+                _en.IdProducto = long.Parse(txtIdProducto.Text);
                 _en.NombreProducto = txtNombreDelProducto.Text;
                 _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
                 _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);

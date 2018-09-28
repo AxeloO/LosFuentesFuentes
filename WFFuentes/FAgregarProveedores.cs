@@ -54,10 +54,6 @@ namespace WFFuentes
             txtNombreCompleto.Focus();
         }
 
-        private void bLimpiar_Click(object sender, EventArgs e)
-        {
-            Limpiar();           
-        }
 
         private void bGuardar_Click_1(object sender, EventArgs e)
         {
@@ -79,7 +75,7 @@ namespace WFFuentes
                 else
                 {
                     _enProveedores.FcNombreProveedor = txtNombreCompleto.Text;
-                    _enProveedores.FcDomicilio = txtDomicilio.Text;
+                    _enProveedores.FcDireccion = txtDomicilio.Text;
                     _enProveedores.FiTelefono = txtTelefono.Text;
                     _enProveedores.FcRFC = txtRFC.Text;
                     _enProveedores.FcCuentaBancaria = txtCuentaBancaria.Text;
@@ -130,7 +126,7 @@ namespace WFFuentes
 
                         _enProveedores.FiIdProveedor = longIdProveedor;
 
-                        proveedoresBL.EliminarProducto(_enProveedores);
+                        proveedoresBL.EliminarProveedor(_enProveedores);
                         dGProveedores.Refresh();
                         dGProveedores.DataSource = proveedoresBL.MostrarProveedor();
                         Limpiar();
@@ -142,7 +138,7 @@ namespace WFFuentes
 
                 }
 
-                if (proveedoresBL.EliminarProducto(_enProveedores) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
+                if (proveedoresBL.EliminarProveedor(_enProveedores) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
 
                 }
@@ -160,13 +156,60 @@ namespace WFFuentes
         {
             txtID.Text = dGProveedores.Rows[e.RowIndex].Cells["FiIdProveedor"].Value.ToString();
             txtNombreCompleto.Text = dGProveedores.Rows[e.RowIndex].Cells["FcNombreProveedor"].Value.ToString();
-            txtDomicilio.Text = dGProveedores.Rows[e.RowIndex].Cells["FcDomicilio"].Value.ToString();
+            txtDomicilio.Text = dGProveedores.Rows[e.RowIndex].Cells["FcDireccion"].Value.ToString();
             txtTelefono.Text = dGProveedores.Rows[e.RowIndex].Cells["FiTelefono"].Value.ToString();
             txtRFC.Text = dGProveedores.Rows[e.RowIndex].Cells["FcRFC"].Value.ToString();
             txtCuentaBancaria.Text = dGProveedores.Rows[e.RowIndex].Cells["FcCuentaBancaria"].Value.ToString();
             txtProductoSurtir.Text = dGProveedores.Rows[e.RowIndex].Cells["FcProductosSurtidos"].Value.ToString();
             txtLimiteCredito.Text = dGProveedores.Rows[e.RowIndex].Cells["FdLimiteCredito"].Value.ToString();
            
+        }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+            string strIdProveedor = txtID.Text.ToString().Trim();
+            string strNombreProveedor = txtNombreCompleto.Text.ToString().Trim();
+            string strDomicilio = txtDomicilio.Text.ToString().Trim();
+            string strTelefono = txtTelefono.Text.ToString().Trim();
+            string strRFC = txtRFC.Text.ToString().Trim();
+            string strCuentaBancaria = txtCuentaBancaria.Text.ToString().Trim();
+            string strProductoSurtir = txtProductoSurtir.Text.ToString().Trim();
+            string strLimiteCredito = txtLimiteCredito.Text.ToString().Trim();
+
+            if (strIdProveedor !="" && strNombreProveedor !="")
+                {
+                _enProveedores.FiIdProveedor = long.Parse(txtID.Text);
+                _enProveedores.FcNombreProveedor = txtNombreCompleto.Text;
+                _enProveedores.FcDireccion = txtDomicilio.Text;
+                _enProveedores.FiTelefono = txtTelefono.Text;
+                _enProveedores.FcRFC = txtRFC.Text;
+                _enProveedores.FcCuentaBancaria = txtCuentaBancaria.Text;
+                _enProveedores.FcProductosSurtidos = txtProductoSurtir.Text;
+                _enProveedores.FdLimiteCredito = decimal.Parse(txtLimiteCredito.Text);
+
+                if (proveedoresBL.ModificarProveedor(_enProveedores) > 0)
+                    {
+                        MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        dGProveedores.Refresh();
+                        dGProveedores.DataSource = proveedoresBL.MostrarProveedor();
+                    Limpiar();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+            }
+
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

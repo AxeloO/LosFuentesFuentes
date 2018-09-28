@@ -56,6 +56,7 @@
             this.bRegresar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -274,9 +275,9 @@
             // 
             this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgInventario.Location = new System.Drawing.Point(823, 26);
+            this.dgInventario.Location = new System.Drawing.Point(823, 114);
             this.dgInventario.Name = "dgInventario";
-            this.dgInventario.Size = new System.Drawing.Size(346, 304);
+            this.dgInventario.Size = new System.Drawing.Size(454, 186);
             this.dgInventario.TabIndex = 53;
             this.dgInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_CellClick);
             this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
@@ -307,12 +308,24 @@
             this.txtIdProducto.Size = new System.Drawing.Size(45, 20);
             this.txtIdProducto.TabIndex = 56;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(943, 50);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 27);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Almacen";
+            // 
             // FInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1181, 413);
+            this.ClientSize = new System.Drawing.Size(1289, 413);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.txtIdProducto);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bRegresar);
@@ -380,5 +393,6 @@
         private System.Windows.Forms.Button bRegresar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtIdProducto;
+        private System.Windows.Forms.Label label12;
     }
 }
