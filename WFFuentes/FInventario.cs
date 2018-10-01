@@ -48,7 +48,7 @@ namespace WFFuentes
                     _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
                     _en.NombreProducto = txtNombreDelProducto.Text;
                    // _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
-                    //_en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);
+                    //_en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);sadas
                     _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
                     _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
                     _en.Presentacion = cbPresentacion.Text;
