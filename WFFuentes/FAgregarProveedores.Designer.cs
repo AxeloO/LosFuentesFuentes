@@ -269,7 +269,7 @@
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(75, 32);
             this.bConsulta.TabIndex = 20;
-            this.bConsulta.Text = "Actualizar";
+            this.bConsulta.Text = "Mostrar";
             this.bConsulta.UseVisualStyleBackColor = false;
             this.bConsulta.Click += new System.EventHandler(this.bConsulta_Click);
             // 
@@ -304,7 +304,7 @@
             this.bBusqueda.BackColor = System.Drawing.Color.DarkCyan;
             this.bBusqueda.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBusqueda.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBusqueda.Location = new System.Drawing.Point(1095, 108);
+            this.bBusqueda.Location = new System.Drawing.Point(1101, 108);
             this.bBusqueda.Name = "bBusqueda";
             this.bBusqueda.Size = new System.Drawing.Size(75, 27);
             this.bBusqueda.TabIndex = 23;
@@ -316,17 +316,17 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(621, 116);
+            this.label10.Location = new System.Drawing.Point(614, 113);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 18);
+            this.label10.Size = new System.Drawing.Size(137, 18);
             this.label10.TabIndex = 24;
-            this.label10.Text = "Búsqueda ";
+            this.label10.Text = "Búsqueda por nombre";
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(703, 115);
+            this.txtBusqueda.Location = new System.Drawing.Point(755, 112);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(369, 20);
+            this.txtBusqueda.Size = new System.Drawing.Size(334, 20);
             this.txtBusqueda.TabIndex = 25;
             // 
             // label11
@@ -351,7 +351,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1195, 423);
+            this.ClientSize = new System.Drawing.Size(1216, 423);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtBusqueda);

@@ -113,7 +113,7 @@ namespace DAL
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-            SqlCommand _comando = new SqlCommand("Eliminar_Cuenta", _Conexion as SqlConnection);
+            SqlCommand _comando = new SqlCommand("Eliminar_Cuentas_Por_Pagar", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@FiIdProveedor", PEntidad.FiIdProveedor));
             int Resultado = _comando.ExecuteNonQuery();

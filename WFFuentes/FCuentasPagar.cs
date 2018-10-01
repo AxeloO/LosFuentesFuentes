@@ -205,5 +205,14 @@ namespace WFFuentes
                MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
            }
         }
+
+        private void bBuscar_Click(object sender, EventArgs e)
+        {
+            if (!(txtBusqueda.Text == ""))
+            {
+                _enCuentas.FcNombreProveedor = txtBusqueda.Text;
+                dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorNombre(_enCuentas);
+            }
+        }
     }
 }

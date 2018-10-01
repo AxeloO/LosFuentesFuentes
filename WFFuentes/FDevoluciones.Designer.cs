@@ -129,7 +129,7 @@
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(87, 30);
             this.bAgregar.TabIndex = 8;
-            this.bAgregar.Text = "Agregar";
+            this.bAgregar.Text = "Guardar";
             this.bAgregar.UseVisualStyleBackColor = false;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
@@ -142,7 +142,7 @@
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(87, 31);
             this.bConsulta.TabIndex = 9;
-            this.bConsulta.Text = "Consultar";
+            this.bConsulta.Text = "Mostrar";
             this.bConsulta.UseVisualStyleBackColor = false;
             this.bConsulta.Click += new System.EventHandler(this.bConsulta_Click);
             // 
@@ -221,7 +221,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(58, 20);
             this.txtID.TabIndex = 16;
-            this.txtID.Visible = false;
             // 
             // FDevoluciones
             // 

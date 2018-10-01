@@ -146,6 +146,13 @@ namespace WFFuentes
             Limpiar_Venta();
         }
 
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            Limpiar_Venta();
+        }
+
+
         //private void dgProductos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         //{
         //      string strNombreDeProducto = string.Empty;

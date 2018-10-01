@@ -48,6 +48,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.bModificar = new System.Windows.Forms.Button();
+            this.bBuscar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGCuentasPagar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +59,7 @@
             this.bConsulta.BackColor = System.Drawing.Color.Teal;
             this.bConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsulta.Location = new System.Drawing.Point(390, 230);
+            this.bConsulta.Location = new System.Drawing.Point(888, 353);
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(100, 33);
             this.bConsulta.TabIndex = 33;
@@ -69,7 +72,7 @@
             this.bEliminar.BackColor = System.Drawing.Color.Teal;
             this.bEliminar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEliminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bEliminar.Location = new System.Drawing.Point(390, 174);
+            this.bEliminar.Location = new System.Drawing.Point(394, 290);
             this.bEliminar.Name = "bEliminar";
             this.bEliminar.Size = new System.Drawing.Size(100, 36);
             this.bEliminar.TabIndex = 31;
@@ -82,11 +85,11 @@
             this.bAgregar.BackColor = System.Drawing.Color.Teal;
             this.bAgregar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bAgregar.Location = new System.Drawing.Point(390, 110);
+            this.bAgregar.Location = new System.Drawing.Point(394, 164);
             this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(100, 33);
+            this.bAgregar.Size = new System.Drawing.Size(100, 39);
             this.bAgregar.TabIndex = 30;
-            this.bAgregar.Text = "Agregar";
+            this.bAgregar.Text = "Guardar";
             this.bAgregar.UseVisualStyleBackColor = false;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
@@ -179,9 +182,9 @@
             // 
             this.dGCuentasPagar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGCuentasPagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGCuentasPagar.Location = new System.Drawing.Point(540, 96);
+            this.dGCuentasPagar.Location = new System.Drawing.Point(536, 144);
             this.dGCuentasPagar.Name = "dGCuentasPagar";
-            this.dGCuentasPagar.Size = new System.Drawing.Size(506, 182);
+            this.dGCuentasPagar.Size = new System.Drawing.Size(581, 182);
             this.dGCuentasPagar.TabIndex = 34;
             this.dGCuentasPagar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGCuentasPagar_CellClick);
             // 
@@ -201,9 +204,9 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(947, 301);
+            this.bRegresar.Location = new System.Drawing.Point(1013, 353);
             this.bRegresar.Name = "bRegresar";
-            this.bRegresar.Size = new System.Drawing.Size(80, 30);
+            this.bRegresar.Size = new System.Drawing.Size(90, 33);
             this.bRegresar.TabIndex = 36;
             this.bRegresar.Text = "Regresar";
             this.bRegresar.UseVisualStyleBackColor = false;
@@ -242,20 +245,53 @@
             this.bModificar.BackColor = System.Drawing.Color.Teal;
             this.bModificar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bModificar.Location = new System.Drawing.Point(390, 291);
+            this.bModificar.Location = new System.Drawing.Point(394, 229);
             this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(100, 33);
+            this.bModificar.Size = new System.Drawing.Size(100, 38);
             this.bModificar.TabIndex = 40;
             this.bModificar.Text = "Modificar";
             this.bModificar.UseVisualStyleBackColor = false;
             this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
+            // 
+            // bBuscar
+            // 
+            this.bBuscar.BackColor = System.Drawing.Color.Teal;
+            this.bBuscar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bBuscar.Location = new System.Drawing.Point(998, 99);
+            this.bBuscar.Name = "bBuscar";
+            this.bBuscar.Size = new System.Drawing.Size(79, 32);
+            this.bBuscar.TabIndex = 41;
+            this.bBuscar.Text = "Buscar";
+            this.bBuscar.UseVisualStyleBackColor = false;
+            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(547, 106);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(137, 18);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Búsqueda por nombre";
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Location = new System.Drawing.Point(691, 106);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(288, 20);
+            this.txtBusqueda.TabIndex = 43;
             // 
             // FCuentasPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1058, 353);
+            this.ClientSize = new System.Drawing.Size(1137, 418);
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.bBuscar);
             this.Controls.Add(this.bModificar);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label8);
@@ -309,5 +345,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button bModificar;
+        private System.Windows.Forms.Button bBuscar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtBusqueda;
     }
 }

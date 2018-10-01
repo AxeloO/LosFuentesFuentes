@@ -37,7 +37,7 @@ namespace WFFuentes
                 cbPresentacion.ValueMember = "Value";
                 cbPresentacion.Items.Add(new { Text = "Liquidos", Value = "Liquidos" });
 
-                if (txtNombreDelProducto.Text == "" || txtCantidad.Text == "" || txtCostoUnitario.Text == "" || txtGrupoPerteneciente.Text == "" || txtPorcentajeDeContado.Text == "" || txtPorcentajePrecioCredito.Text == "" || txtPrecioCredito.Text == "" || txtPrecioDeContado.Text == "" || cbPresentacion.Text == "")
+                if (txtNombreDelProducto.Text == "" || txtCantidad.Text == "" || txtCostoUnitario.Text == "" || txtGrupoPerteneciente.Text == "" || txtPrecioCredito.Text == "" || txtPrecioDeContado.Text == "" || cbPresentacion.Text == "")
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -47,8 +47,8 @@ namespace WFFuentes
                     _en.CostoUnitario = int.Parse(txtCostoUnitario.Text);
                     _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
                     _en.NombreProducto = txtNombreDelProducto.Text;
-                    _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
-                    _en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);
+                   // _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
+                    //_en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);
                     _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
                     _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
                     _en.Presentacion = cbPresentacion.Text;
@@ -78,8 +78,8 @@ namespace WFFuentes
              txtCostoUnitario.Text = string.Empty;
              txtGrupoPerteneciente.Text = string.Empty;
              txtNombreDelProducto.Text = string.Empty;
-             txtPorcentajeDeContado.Text = string.Empty;
-             txtPorcentajePrecioCredito.Text = string.Empty;
+             //txtPorcentajeDeContado.Text = string.Empty;
+             //txtPorcentajePrecioCredito.Text = string.Empty;
              txtPrecioCredito.Text = string.Empty;
              txtPrecioDeContado.Text = string.Empty;
              cbPresentacion.Text = string.Empty;
@@ -103,8 +103,8 @@ namespace WFFuentes
                     txtCantidad.Text = Convert.ToString(_en.Cantidad);
                     txtGrupoPerteneciente.Text = _en.GrupoPerteneciente;
                     txtCostoUnitario.Text = Convert.ToString(_en.CostoUnitario);
-                    txtPorcentajeDeContado.Text = Convert.ToString(_en.PorcentajeGananciaContado);
-                    txtPorcentajePrecioCredito.Text = Convert.ToString(_en.PorcentajeGananciaCredito);
+                    //txtPorcentajeDeContado.Text = Convert.ToString(_en.PorcentajeGananciaContado);
+                    //txtPorcentajePrecioCredito.Text = Convert.ToString(_en.PorcentajeGananciaCredito);
                     txtPrecioDeContado.Text = Convert.ToString(_en.PrecioContado);
                     txtPrecioCredito.Text = Convert.ToString(_en.PrecioACredito);
                     cbPresentacion.Text = Convert.ToString(_en.Presentacion);
@@ -173,8 +173,8 @@ namespace WFFuentes
                 _en.IdProducto = long.Parse(txtIdProducto.Text);
                 _en.NombreProducto = txtNombreDelProducto.Text;
                 _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
-                _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
-                _en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);
+                //_en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
+                //_en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);
                 _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
                 _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
                 _en.Cantidad = Int32.Parse(txtCantidad.Text);
@@ -231,13 +231,22 @@ namespace WFFuentes
             txtIdProducto.Text = dgInventario.Rows[e.RowIndex].Cells["IdProducto"].Value.ToString();
             txtNombreDelProducto.Text = dgInventario.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();
             txtGrupoPerteneciente.Text = dgInventario.Rows[e.RowIndex].Cells["GrupoPerteneciente"].Value.ToString();
-            txtPorcentajeDeContado.Text = dgInventario.Rows[e.RowIndex].Cells["PorcentajeGananciaContado"].Value.ToString();
-            txtPorcentajePrecioCredito.Text = dgInventario.Rows[e.RowIndex].Cells["PorcentajeGananciaCredito"].Value.ToString();
+            //txtPorcentajeDeContado.Text = dgInventario.Rows[e.RowIndex].Cells["PorcentajeGananciaContado"].Value.ToString();
+            //txtPorcentajePrecioCredito.Text = dgInventario.Rows[e.RowIndex].Cells["PorcentajeGananciaCredito"].Value.ToString();
             txtPrecioCredito.Text = dgInventario.Rows[e.RowIndex].Cells["PrecioACredito"].Value.ToString();
             txtPrecioDeContado.Text = dgInventario.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();
             txtCantidad.Text = dgInventario.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
             txtCostoUnitario.Text = dgInventario.Rows[e.RowIndex].Cells["CostoUnitario"].Value.ToString();
             cbPresentacion.Text = dgInventario.Rows[e.RowIndex].Cells["Presentacion"].Value.ToString();            
+        }
+
+        private void bBuscar_Click(object sender, EventArgs e)
+        {
+            if (!(txtBusqueda.Text == ""))
+            {
+                _en.NombreProducto = txtBusqueda.Text;
+                dgInventario.DataSource = _inventarioBl.MostrarInventarioPorNombre(_en);
+            }
         }
     }
 }

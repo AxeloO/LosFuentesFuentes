@@ -71,7 +71,7 @@
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(75, 33);
             this.bAgregar.TabIndex = 20;
-            this.bAgregar.Text = "Agregar ";
+            this.bAgregar.Text = "Guardar";
             this.bAgregar.UseVisualStyleBackColor = false;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
@@ -167,7 +167,7 @@
             this.btConsultarUsuarios.Name = "btConsultarUsuarios";
             this.btConsultarUsuarios.Size = new System.Drawing.Size(91, 29);
             this.btConsultarUsuarios.TabIndex = 24;
-            this.btConsultarUsuarios.Text = "Actualizar";
+            this.btConsultarUsuarios.Text = "Mostrar";
             this.btConsultarUsuarios.UseVisualStyleBackColor = false;
             this.btConsultarUsuarios.Click += new System.EventHandler(this.btConsultarUsuarios_Click);
             // 

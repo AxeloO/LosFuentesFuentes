@@ -68,7 +68,7 @@
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(75, 30);
             this.bAgregar.TabIndex = 38;
-            this.bAgregar.Text = "Agregar ";
+            this.bAgregar.Text = "Guardar";
             this.bAgregar.UseVisualStyleBackColor = false;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
@@ -256,7 +256,7 @@
             this.bConsultar.Name = "bConsultar";
             this.bConsultar.Size = new System.Drawing.Size(83, 29);
             this.bConsultar.TabIndex = 45;
-            this.bConsultar.Text = "Actualizar";
+            this.bConsultar.Text = "Mostrar";
             this.bConsultar.UseVisualStyleBackColor = false;
             this.bConsultar.Click += new System.EventHandler(this.bConsultar_Click);
             // 
@@ -308,15 +308,15 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(686, 100);
+            this.label10.Location = new System.Drawing.Point(683, 100);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 18);
+            this.label10.Size = new System.Drawing.Size(137, 18);
             this.label10.TabIndex = 50;
-            this.label10.Text = "Búsqueda";
+            this.label10.Text = "Búsqueda por nombre";
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(773, 100);
+            this.txtBusqueda.Location = new System.Drawing.Point(829, 100);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(343, 20);
             this.txtBusqueda.TabIndex = 51;
@@ -326,7 +326,7 @@
             this.bBusqueda.BackColor = System.Drawing.Color.Teal;
             this.bBusqueda.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBusqueda.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBusqueda.Location = new System.Drawing.Point(1172, 93);
+            this.bBusqueda.Location = new System.Drawing.Point(1228, 93);
             this.bBusqueda.Name = "bBusqueda";
             this.bBusqueda.Size = new System.Drawing.Size(82, 32);
             this.bBusqueda.TabIndex = 52;

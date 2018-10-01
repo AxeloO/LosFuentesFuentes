@@ -58,7 +58,6 @@
             this.bBusqueda = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.dgTotalProductos = new System.Windows.Forms.DataGridView();
-            this.bSeleccionar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -155,9 +154,9 @@
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 352);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 18);
+            this.label9.Size = new System.Drawing.Size(137, 18);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Busqueda por Producto";
+            this.label9.Text = "Búsqueda por nombre";
             // 
             // label10
             // 
@@ -294,6 +293,7 @@
             this.bCancelar.TabIndex = 25;
             this.bCancelar.Text = "Cancelar Venta";
             this.bCancelar.UseVisualStyleBackColor = false;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // bLimpiar
             // 
@@ -352,18 +352,6 @@
             this.dgTotalProductos.Name = "dgTotalProductos";
             this.dgTotalProductos.Size = new System.Drawing.Size(317, 234);
             this.dgTotalProductos.TabIndex = 30;
-            // 
-            // bSeleccionar
-            // 
-            this.bSeleccionar.BackColor = System.Drawing.Color.Teal;
-            this.bSeleccionar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSeleccionar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bSeleccionar.Location = new System.Drawing.Point(440, 530);
-            this.bSeleccionar.Name = "bSeleccionar";
-            this.bSeleccionar.Size = new System.Drawing.Size(100, 33);
-            this.bSeleccionar.TabIndex = 31;
-            this.bSeleccionar.Text = "Seleccionar ";
-            this.bSeleccionar.UseVisualStyleBackColor = false;
             // 
             // txtNombre
             // 
@@ -426,7 +414,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(220, 27);
             this.label16.TabIndex = 36;
-            this.label16.Text = "Busqueda por Producto";
+            this.label16.Text = "Búsqueda por Producto";
             // 
             // FVentas
             // 
@@ -439,7 +427,6 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.bSeleccionar);
             this.Controls.Add(this.dgTotalProductos);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.bBusqueda);
@@ -514,7 +501,6 @@
         private System.Windows.Forms.Button bBusqueda;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dgTotalProductos;
-        private System.Windows.Forms.Button bSeleccionar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;

@@ -47,7 +47,7 @@
             this.bActualizar.Name = "bActualizar";
             this.bActualizar.Size = new System.Drawing.Size(75, 31);
             this.bActualizar.TabIndex = 48;
-            this.bActualizar.Text = "Actualizar";
+            this.bActualizar.Text = "Mostrar";
             this.bActualizar.UseVisualStyleBackColor = false;
             this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
             // 

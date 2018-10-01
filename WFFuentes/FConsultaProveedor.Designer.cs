@@ -54,7 +54,7 @@
             this.bActualizar.Name = "bActualizar";
             this.bActualizar.Size = new System.Drawing.Size(88, 34);
             this.bActualizar.TabIndex = 48;
-            this.bActualizar.Text = "Actualizar";
+            this.bActualizar.Text = "Mostrar";
             this.bActualizar.UseVisualStyleBackColor = false;
             // 
             // lvListaClientes
