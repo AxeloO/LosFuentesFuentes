@@ -21,14 +21,13 @@ namespace DAL
             SqlCommand _comando = new SqlCommand("Agregar_Producto", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@NombreProducto", PEntidad.NombreProducto));
-            _comando.Parameters.Add(new SqlParameter("@GrupoPertenenciente", PEntidad.GrupoPerteneciente));
+            _comando.Parameters.Add(new SqlParameter("@GrupoPertenenciente", PEntidad.GrupoPertenenciente));
             _comando.Parameters.Add(new SqlParameter("@Catidad", PEntidad.Cantidad));
+            _comando.Parameters.Add(new SqlParameter("@Presentacion", PEntidad.Presentacion));
             _comando.Parameters.Add(new SqlParameter("@CostoUnitario", PEntidad.CostoUnitario));
-            _comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaContado",PEntidad.PorcentajeGananciaContado));
             _comando.Parameters.Add(new SqlParameter("@PrecioContado",PEntidad.PrecioContado));
-            _comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaCredito", PEntidad.PorcentajeGananciaCredito));
             _comando.Parameters.Add(new SqlParameter("@PrecioACredito", PEntidad.PrecioACredito));
-            _comando.Parameters.Add(new SqlParameter("@Presentacion", PEntidad.Presentacion));           
+          
                    
             int Resultado = _comando.ExecuteNonQuery();
             _Conexion.Close();
@@ -48,14 +47,12 @@ namespace DAL
                 Inventario _inventario = new Inventario();
                 _inventario.IdProducto = _reader.GetInt64(0);
                 _inventario.NombreProducto = _reader.GetString(1);
-                _inventario.GrupoPerteneciente = _reader.GetString(2);
+                _inventario.GrupoPertenenciente = _reader.GetString(2);
                 _inventario.Cantidad = _reader.GetInt32(3);
                 _inventario.Presentacion = _reader.GetString(4);
                 _inventario.CostoUnitario = _reader.GetDecimal(5);
-                _inventario.PorcentajeGananciaContado = _reader.GetDecimal(6);
-                _inventario.PrecioContado = _reader.GetDecimal(7);
-                _inventario.PorcentajeGananciaCredito = _reader.GetDecimal(8);
-                _inventario.PrecioACredito = _reader.GetDecimal(9);
+                _inventario.PrecioContado = _reader.GetDecimal(6);
+                _inventario.PrecioACredito = _reader.GetDecimal(7);
                 Lista.Add(_inventario);
             }
             _Conexion.Close();
@@ -76,14 +73,12 @@ namespace DAL
                 Inventario _inventario = new Inventario();
                 _inventario.IdProducto = _reader.GetInt64(0);
                 _inventario.NombreProducto = _reader.GetString(1);
-                _inventario.GrupoPerteneciente = _reader.GetString(2);
+                _inventario.GrupoPertenenciente = _reader.GetString(2);
                 _inventario.Cantidad = _reader.GetInt32(3);
                 _inventario.Presentacion = _reader.GetString(4);
                 _inventario.CostoUnitario = _reader.GetDecimal(5);
-                _inventario.PorcentajeGananciaContado = _reader.GetDecimal(6);
-                _inventario.PrecioContado = _reader.GetDecimal(7);
-                _inventario.PorcentajeGananciaCredito = _reader.GetDecimal(8);
-                _inventario.PrecioACredito = _reader.GetDecimal(9);
+                _inventario.PrecioContado = _reader.GetDecimal(6);
+                _inventario.PrecioACredito = _reader.GetDecimal(7);
 
                 Lista.Add(_inventario);
                                 
@@ -91,7 +86,7 @@ namespace DAL
             _Conexion.Close();           
             return Lista;
         }
-        
+
         public int ModificarProducto(Inventario PEntidad)
         {
             IDbConnection _conexion = DBConexion.Conexion();
@@ -100,12 +95,11 @@ namespace DAL
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@IdProducto", PEntidad.IdProducto));
             _comando.Parameters.Add(new SqlParameter("@NombreProducto", PEntidad.NombreProducto));
-            _comando.Parameters.Add(new SqlParameter("@GrupoPerteneciente", PEntidad.GrupoPerteneciente));
-            _comando.Parameters.Add(new SqlParameter("@Cantidad", PEntidad.Cantidad));
-            _comando.Parameters.Add(new SqlParameter("@ConstoUnitario", PEntidad.CostoUnitario));
-            _comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaContado", PEntidad.PorcentajeGananciaContado));
+            _comando.Parameters.Add(new SqlParameter("@GrupoPertenenciente", PEntidad.GrupoPertenenciente));
+            _comando.Parameters.Add(new SqlParameter("@Catidad", PEntidad.Cantidad));
+            _comando.Parameters.Add(new SqlParameter("@Presentacion", PEntidad.Presentacion));
+            _comando.Parameters.Add(new SqlParameter("@CostoUnitario", PEntidad.CostoUnitario));
             _comando.Parameters.Add(new SqlParameter("@PrecioContado", PEntidad.PrecioContado));
-            _comando.Parameters.Add(new SqlParameter("@PorcentajeGanaciaCredito", PEntidad.PorcentajeGananciaCredito));
             _comando.Parameters.Add(new SqlParameter("@PrecioACredito", PEntidad.PrecioACredito));
             int Resultado = _comando.ExecuteNonQuery();
             _conexion.Close();
@@ -113,10 +107,10 @@ namespace DAL
 
         }
 
-        public int EliminarProducto(string strIdProducto)
+        public int EliminarProducto(Inventario PEntidad)
         {
             Inventario _inventario = new Inventario();
-            _inventario.IdProducto = long.Parse(strIdProducto);
+            //_inventario.IdProducto = long.Parse(PEntidad);
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
             SqlCommand _comando = new SqlCommand("Eliminar_Producto", _Conexion as SqlConnection);

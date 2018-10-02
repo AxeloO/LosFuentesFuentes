@@ -77,6 +77,8 @@ namespace WFFuentes
                     if (Resultado == 1)
                     {
                         MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
+                        Limpiar_Venta();
                     }
 
                 }

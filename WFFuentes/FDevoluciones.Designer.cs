@@ -138,7 +138,7 @@
             this.bConsulta.BackColor = System.Drawing.Color.Teal;
             this.bConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsulta.Location = new System.Drawing.Point(475, 185);
+            this.bConsulta.Location = new System.Drawing.Point(943, 313);
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(87, 31);
             this.bConsulta.TabIndex = 9;
@@ -151,7 +151,7 @@
             this.bLimpiar.BackColor = System.Drawing.Color.Teal;
             this.bLimpiar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bLimpiar.Location = new System.Drawing.Point(475, 233);
+            this.bLimpiar.Location = new System.Drawing.Point(475, 191);
             this.bLimpiar.Name = "bLimpiar";
             this.bLimpiar.Size = new System.Drawing.Size(87, 29);
             this.bLimpiar.TabIndex = 10;

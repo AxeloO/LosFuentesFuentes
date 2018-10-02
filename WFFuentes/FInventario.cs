@@ -45,7 +45,7 @@ namespace WFFuentes
                 {
                     _en.Cantidad = int.Parse(txtCantidad.Text);
                     _en.CostoUnitario = int.Parse(txtCostoUnitario.Text);
-                    _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
+                    _en.GrupoPertenenciente = txtGrupoPerteneciente.Text;
                     _en.NombreProducto = txtNombreDelProducto.Text;
                    // _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
                     //_en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);sadas
@@ -101,7 +101,7 @@ namespace WFFuentes
                     // txtNombreDelProducto.Text = dgInventario.DataSource as Inventario;
                     txtNombreDelProducto.Text = _en.NombreProducto;
                     txtCantidad.Text = Convert.ToString(_en.Cantidad);
-                    txtGrupoPerteneciente.Text = _en.GrupoPerteneciente;
+                    txtGrupoPerteneciente.Text = _en.GrupoPertenenciente;
                     txtCostoUnitario.Text = Convert.ToString(_en.CostoUnitario);
                     //txtPorcentajeDeContado.Text = Convert.ToString(_en.PorcentajeGananciaContado);
                     //txtPorcentajePrecioCredito.Text = Convert.ToString(_en.PorcentajeGananciaCredito);
@@ -138,11 +138,11 @@ namespace WFFuentes
 
                     if (r == DialogResult.OK)
                     {
-                        //long longIdProducto = long.Parse(strIdProducto);
+                        long longIdProducto = long.Parse(strIdProducto);
 
-                        //_en.IdProducto = longIdProducto;
+                        _en.IdProducto = longIdProducto;
 
-                        _inventarioBl.EliminarProducto(strIdProducto);
+                        _inventarioBl.EliminarProducto(_en);
                         dgInventario.Refresh();
                         dgInventario.DataSource = _inventarioBl.MostrarInventario();
                     }
@@ -153,7 +153,7 @@ namespace WFFuentes
 
                 }
 
-                if (_inventarioBl.EliminarProducto(strIdProducto) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
+                if (_inventarioBl.EliminarProducto(_en) > 0)//if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
 
                 }
@@ -168,24 +168,23 @@ namespace WFFuentes
 
         private void btModificar_Click(object sender, EventArgs e)
         {
-            if (txtNombreDelProducto.Text != "" && txtGrupoPerteneciente.Text != "")
+            if (txtIdProducto.Text !="" && txtNombreDelProducto.Text != "")
             {
                 _en.IdProducto = long.Parse(txtIdProducto.Text);
                 _en.NombreProducto = txtNombreDelProducto.Text;
-                _en.GrupoPerteneciente = txtGrupoPerteneciente.Text;
-                //_en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);
-                //_en.PorcentajeGananciaCredito = decimal.Parse(txtPorcentajePrecioCredito.Text);
+                _en.GrupoPertenenciente = txtGrupoPerteneciente.Text;
+                _en.Cantidad = Int32.Parse(txtCantidad.Text);
+                _en.Presentacion = cbPresentacion.Text;
+                _en.CostoUnitario = decimal.Parse(txtCostoUnitario.Text);
                 _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
                 _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
-                _en.Cantidad = Int32.Parse(txtCantidad.Text);
-                _en.CostoUnitario = decimal.Parse(txtCostoUnitario.Text);
-                _en.Presentacion = cbPresentacion.Text;
-
+                
                 if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
                     MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    dgInventario.Refresh();
                     dgInventario.DataSource = _inventarioBl.MostrarInventario();
+                    dgInventario.Refresh();
+                   
                 }
 
                 else
@@ -230,7 +229,7 @@ namespace WFFuentes
             
             txtIdProducto.Text = dgInventario.Rows[e.RowIndex].Cells["IdProducto"].Value.ToString();
             txtNombreDelProducto.Text = dgInventario.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();
-            txtGrupoPerteneciente.Text = dgInventario.Rows[e.RowIndex].Cells["GrupoPerteneciente"].Value.ToString();
+            txtGrupoPerteneciente.Text = dgInventario.Rows[e.RowIndex].Cells["GrupoPertenenciente"].Value.ToString();
             //txtPorcentajeDeContado.Text = dgInventario.Rows[e.RowIndex].Cells["PorcentajeGananciaContado"].Value.ToString();
             //txtPorcentajePrecioCredito.Text = dgInventario.Rows[e.RowIndex].Cells["PorcentajeGananciaCredito"].Value.ToString();
             txtPrecioCredito.Text = dgInventario.Rows[e.RowIndex].Cells["PrecioACredito"].Value.ToString();
