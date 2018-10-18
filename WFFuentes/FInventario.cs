@@ -132,6 +132,7 @@ namespace WFFuentes
             try
             {                
                 string strIdProducto = txtIdProducto.Text.ToString().Trim();
+
                 if (strIdProducto != "" && txtNombreDelProducto.Text != "")
                 {
                     DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -145,6 +146,7 @@ namespace WFFuentes
                         _inventarioBl.EliminarProducto(_en);
                         dgInventario.Refresh();
                         dgInventario.DataSource = _inventarioBl.MostrarInventario();
+                        Limpiar();
                     }
                     if (r == DialogResult.Cancel)
                     {

@@ -139,13 +139,55 @@ namespace WFFuentes
             txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();          
             txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta 
             string strPrecio = txtPrecioUnitario.Text.ToString().Trim();
-            
+                        
     
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
         {
-            Limpiar_Venta();
+            try
+            {
+                int intCantidadProducto;
+                double doTotalDelProducto;
+
+                if (!txtNombre.Text.Equals(""))
+                {
+                     
+                    if (txtCantidad.Text.Equals(""))
+                    {
+                        MessageBox.Show("Debe Colocar la cantidad que decea Vender");
+                    }
+                    else {
+
+                        intCantidadProducto = int.Parse(txtCantidad.Text.ToString().Trim());
+
+                        int intProductoUnitario = int.Parse(txtPrecioUnitario.Text.ToString().Trim());
+
+                        doTotalDelProducto = intProductoUnitario * intCantidadProducto;
+
+                        txtImporte.Text = doTotalDelProducto.ToString();
+
+
+                        this.Controls.Add(dgProductos);
+                        DataGridViewTextBoxColumn colTotalProducto = new DataGridViewTextBoxColumn();
+                        colTotalProducto.HeaderText = "Total Productos";
+                        colTotalProducto.Width = 200;
+                        dgProductos.Columns.Add(colTotalProducto);
+                        // dgProductos.Rows.Add(txtImporte.Text.ToString());                  
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un Producto Primero");
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void bCancelar_Click(object sender, EventArgs e)

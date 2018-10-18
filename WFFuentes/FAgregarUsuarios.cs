@@ -107,6 +107,7 @@ namespace WFFuentes
             try
             {
                 string strIdUsuario = txtIdUsuario.Text.ToString().Trim();
+
                 if (strIdUsuario != "" && txtNombreUsuario.Text != "")
                 {
                     DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);

@@ -8,6 +8,7 @@ namespace EN
 {
     public class Inventario
     {
+        
         public long IdProducto { get; set; }
         public string NombreProducto { get; set; }
         public string GrupoPertenenciente { get; set; }
