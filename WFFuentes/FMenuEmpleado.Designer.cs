@@ -51,7 +51,7 @@
             this.pMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pMenu.Location = new System.Drawing.Point(0, 0);
             this.pMenu.Name = "pMenu";
-            this.pMenu.Size = new System.Drawing.Size(200, 560);
+            this.pMenu.Size = new System.Drawing.Size(200, 731);
             this.pMenu.TabIndex = 0;
             // 
             // bConsultaCliente
@@ -59,9 +59,9 @@
             this.bConsultaCliente.BackgroundImage = global::WFFuentes.Properties.Resources.depositphotos_131533544_stock_photo_clients_group_icon_white_square;
             this.bConsultaCliente.FlatAppearance.BorderSize = 0;
             this.bConsultaCliente.Image = global::WFFuentes.Properties.Resources.depositphotos_131533544_stock_photo_clients_group_icon_white_square;
-            this.bConsultaCliente.Location = new System.Drawing.Point(41, 416);
+            this.bConsultaCliente.Location = new System.Drawing.Point(49, 515);
             this.bConsultaCliente.Name = "bConsultaCliente";
-            this.bConsultaCliente.Size = new System.Drawing.Size(100, 104);
+            this.bConsultaCliente.Size = new System.Drawing.Size(115, 120);
             this.bConsultaCliente.TabIndex = 3;
             this.bConsultaCliente.UseVisualStyleBackColor = true;
             this.bConsultaCliente.Click += new System.EventHandler(this.bConsultaCliente_Click);
@@ -70,9 +70,9 @@
             // 
             this.bDevolucion.FlatAppearance.BorderSize = 0;
             this.bDevolucion.Image = global::WFFuentes.Properties.Resources.devolucion;
-            this.bDevolucion.Location = new System.Drawing.Point(41, 287);
+            this.bDevolucion.Location = new System.Drawing.Point(49, 375);
             this.bDevolucion.Name = "bDevolucion";
-            this.bDevolucion.Size = new System.Drawing.Size(100, 95);
+            this.bDevolucion.Size = new System.Drawing.Size(115, 102);
             this.bDevolucion.TabIndex = 2;
             this.bDevolucion.UseVisualStyleBackColor = true;
             this.bDevolucion.Click += new System.EventHandler(this.bDevolucion_Click);
@@ -82,9 +82,9 @@
             this.bConsultaAlmacen.BackgroundImage = global::WFFuentes.Properties.Resources.images;
             this.bConsultaAlmacen.FlatAppearance.BorderSize = 0;
             this.bConsultaAlmacen.Image = global::WFFuentes.Properties.Resources.images;
-            this.bConsultaAlmacen.Location = new System.Drawing.Point(41, 162);
+            this.bConsultaAlmacen.Location = new System.Drawing.Point(49, 225);
             this.bConsultaAlmacen.Name = "bConsultaAlmacen";
-            this.bConsultaAlmacen.Size = new System.Drawing.Size(100, 87);
+            this.bConsultaAlmacen.Size = new System.Drawing.Size(115, 101);
             this.bConsultaAlmacen.TabIndex = 1;
             this.bConsultaAlmacen.UseVisualStyleBackColor = true;
             this.bConsultaAlmacen.Click += new System.EventHandler(this.bConsultaAlmacen_Click);
@@ -93,9 +93,9 @@
             // 
             this.bVentas.FlatAppearance.BorderSize = 0;
             this.bVentas.Image = ((System.Drawing.Image)(resources.GetObject("bVentas.Image")));
-            this.bVentas.Location = new System.Drawing.Point(41, 38);
+            this.bVentas.Location = new System.Drawing.Point(49, 84);
             this.bVentas.Name = "bVentas";
-            this.bVentas.Size = new System.Drawing.Size(100, 87);
+            this.bVentas.Size = new System.Drawing.Size(115, 95);
             this.bVentas.TabIndex = 0;
             this.bVentas.UseVisualStyleBackColor = true;
             this.bVentas.Click += new System.EventHandler(this.bVentas_Click);
@@ -104,11 +104,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(334, 38);
+            this.label1.Location = new System.Drawing.Point(334, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 29);
+            this.label1.Size = new System.Drawing.Size(641, 45);
             this.label1.TabIndex = 5;
             this.label1.Text = "Los Fuentes Fuentes S. P. R. de R. L. ";
             // 
@@ -116,9 +116,9 @@
             // 
             this.pLogo.Image = global::WFFuentes.Properties.Resources.LosFuentes;
             this.pLogo.InitialImage = global::WFFuentes.Properties.Resources.LosFuentes;
-            this.pLogo.Location = new System.Drawing.Point(275, 91);
+            this.pLogo.Location = new System.Drawing.Point(306, 145);
             this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(614, 394);
+            this.pLogo.Size = new System.Drawing.Size(693, 459);
             this.pLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pLogo.TabIndex = 6;
             this.pLogo.TabStop = false;
@@ -126,11 +126,11 @@
             // bSalir
             // 
             this.bSalir.BackColor = System.Drawing.Color.Teal;
-            this.bSalir.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSalir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSalir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bSalir.Location = new System.Drawing.Point(833, 500);
+            this.bSalir.Location = new System.Drawing.Point(920, 661);
             this.bSalir.Name = "bSalir";
-            this.bSalir.Size = new System.Drawing.Size(79, 27);
+            this.bSalir.Size = new System.Drawing.Size(101, 35);
             this.bSalir.TabIndex = 7;
             this.bSalir.Text = "Salir";
             this.bSalir.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 560);
+            this.ClientSize = new System.Drawing.Size(1085, 731);
             this.Controls.Add(this.bSalir);
             this.Controls.Add(this.pLogo);
             this.Controls.Add(this.label1);

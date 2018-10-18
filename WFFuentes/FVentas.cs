@@ -53,7 +53,9 @@ namespace WFFuentes
 
             try
             {
-                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
+                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
+
+                   // if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -67,7 +69,7 @@ namespace WFFuentes
                     _enVentas.fcTelefono = FcTelefono.Text;
                     _enVentas.fcFechaPago = FdFechaPago.Text;
                     _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
-                    _enVentas.fcConcepto = FcConcepto.Text;
+                   // _enVentas.fcConcepto = FcConcepto.Text;
                     _enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
@@ -96,15 +98,15 @@ namespace WFFuentes
         {
             dgProductos.DataSource = _ventasBL.MostrarVentas();
         }
-
-        private void FcConcepto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
        
         private void bBusqueda_Click(object sender, EventArgs e)
         {
-            dgProductos.DataSource = _inventarioBL.MostrarInventario();
+            if (!(FcConcepto.Text == ""))
+            {
+                _enInventario.NombreProducto = FcConcepto.Text;
+                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
+            }
+            //dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
 
         private void Limpiar()
@@ -155,7 +157,7 @@ namespace WFFuentes
                      
                     if (txtCantidad.Text.Equals(""))
                     {
-                        MessageBox.Show("Debe Colocar la cantidad que decea Vender");
+                        MessageBox.Show("Debe Colocar la cantidad que desea Vender");
                     }
                     else {
 
@@ -172,7 +174,7 @@ namespace WFFuentes
                         DataGridViewTextBoxColumn colTotalProducto = new DataGridViewTextBoxColumn();
                         colTotalProducto.HeaderText = "Total Productos";
                         colTotalProducto.Width = 200;
-                        dgProductos.Columns.Add(colTotalProducto);
+                        dgProductos.Columns.Add(colTotalProducto);//Porque se agrega eso en la tabla de buscar productos.!? que no seria en dgTotalProductos donde controla lo de las ventas.!?
                         // dgProductos.Rows.Add(txtImporte.Text.ToString());                  
                     }
 

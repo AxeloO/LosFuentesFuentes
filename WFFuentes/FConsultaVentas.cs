@@ -55,5 +55,6 @@ namespace WFFuentes
         {
             dgVentas.DataSource = _ventasBL.MostrarVentas();
         }
+
     }
 }

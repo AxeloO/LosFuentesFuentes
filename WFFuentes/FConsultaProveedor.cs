@@ -33,5 +33,10 @@ namespace WFFuentes
             _fPrincipal.Show();
             this.Close();
         }
+
+        private void bBusqueda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

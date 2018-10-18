@@ -45,27 +45,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(495, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 27);
+            this.label1.Size = new System.Drawing.Size(82, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ventas";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 87);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 19);
+            this.label2.Size = new System.Drawing.Size(184, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Búsqueda por producto";
+            this.label2.Text = "Búsqueda por producto:";
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(177, 88);
+            this.txtProducto.Location = new System.Drawing.Point(220, 115);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(266, 20);
             this.txtProducto.TabIndex = 2;
@@ -73,11 +73,11 @@
             // bBuscar
             // 
             this.bBuscar.BackColor = System.Drawing.Color.Teal;
-            this.bBuscar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBuscar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bBuscar.Location = new System.Drawing.Point(968, 82);
+            this.bBuscar.Location = new System.Drawing.Point(1011, 109);
             this.bBuscar.Name = "bBuscar";
-            this.bBuscar.Size = new System.Drawing.Size(75, 30);
+            this.bBuscar.Size = new System.Drawing.Size(86, 30);
             this.bBuscar.TabIndex = 3;
             this.bBuscar.Text = "Buscar";
             this.bBuscar.UseVisualStyleBackColor = false;
@@ -87,41 +87,41 @@
             // 
             this.dgVentas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgVentas.Location = new System.Drawing.Point(141, 144);
+            this.dgVentas.Location = new System.Drawing.Point(79, 171);
             this.dgVentas.Name = "dgVentas";
-            this.dgVentas.Size = new System.Drawing.Size(809, 190);
+            this.dgVentas.Size = new System.Drawing.Size(996, 190);
             this.dgVentas.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(468, 87);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(511, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 19);
+            this.label3.Size = new System.Drawing.Size(118, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "Fecha de inicio";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(720, 87);
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(763, 114);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 19);
+            this.label4.Size = new System.Drawing.Size(91, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Fecha final";
             // 
             // txtFechaI
             // 
-            this.txtFechaI.Location = new System.Drawing.Point(596, 86);
+            this.txtFechaI.Location = new System.Drawing.Point(639, 113);
             this.txtFechaI.Name = "txtFechaI";
             this.txtFechaI.Size = new System.Drawing.Size(106, 20);
             this.txtFechaI.TabIndex = 7;
             // 
             // txtFechaF
             // 
-            this.txtFechaF.Location = new System.Drawing.Point(817, 88);
+            this.txtFechaF.Location = new System.Drawing.Point(860, 115);
             this.txtFechaF.Name = "txtFechaF";
             this.txtFechaF.Size = new System.Drawing.Size(92, 20);
             this.txtFechaF.TabIndex = 8;
@@ -129,11 +129,11 @@
             // bRegresar
             // 
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
-            this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bRegresar.Location = new System.Drawing.Point(912, 365);
+            this.bRegresar.Location = new System.Drawing.Point(955, 397);
             this.bRegresar.Name = "bRegresar";
-            this.bRegresar.Size = new System.Drawing.Size(75, 30);
+            this.bRegresar.Size = new System.Drawing.Size(102, 30);
             this.bRegresar.TabIndex = 9;
             this.bRegresar.Text = "Regresar";
             this.bRegresar.UseVisualStyleBackColor = false;
@@ -142,11 +142,11 @@
             // bActualizar
             // 
             this.bActualizar.BackColor = System.Drawing.Color.Teal;
-            this.bActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bActualizar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bActualizar.Location = new System.Drawing.Point(773, 365);
+            this.bActualizar.Location = new System.Drawing.Point(816, 397);
             this.bActualizar.Name = "bActualizar";
-            this.bActualizar.Size = new System.Drawing.Size(90, 30);
+            this.bActualizar.Size = new System.Drawing.Size(101, 30);
             this.bActualizar.TabIndex = 10;
             this.bActualizar.Text = "Mostrar";
             this.bActualizar.UseVisualStyleBackColor = false;
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1085, 423);
+            this.ClientSize = new System.Drawing.Size(1154, 469);
             this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.txtFechaF);

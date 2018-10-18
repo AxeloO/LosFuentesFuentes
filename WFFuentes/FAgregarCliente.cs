@@ -198,6 +198,21 @@ namespace WFFuentes
             txtGarantia.Text = dGClientes.Rows[e.RowIndex].Cells["FcTipoGarantia"].Value.ToString();
             txtLimiteCredito.Text = dGClientes.Rows[e.RowIndex].Cells["FdLimiteCredito"].Value.ToString();            
         }
+
+        private void FAgregarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
         // Programacion OP
     }
 }
