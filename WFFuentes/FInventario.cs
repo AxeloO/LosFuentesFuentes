@@ -13,13 +13,13 @@ using System.Runtime.InteropServices;
 
 namespace WFFuentes
 {
-    public partial class FInventario : Form
+    public partial class bImprimir : Form
     {
         Inventario _en = new Inventario();
         InventarioBL _inventarioBl = new InventarioBL();
 
 
-        public FInventario()
+        public bImprimir()
         {
             InitializeComponent();
         }

@@ -174,7 +174,7 @@
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProductos.Location = new System.Drawing.Point(45, 546);
             this.dgProductos.Name = "dgProductos";
-            this.dgProductos.Size = new System.Drawing.Size(626, 155);
+            this.dgProductos.Size = new System.Drawing.Size(720, 155);
             this.dgProductos.TabIndex = 12;
             this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
             // 
@@ -260,7 +260,7 @@
             this.bPrintVenta.Name = "bPrintVenta";
             this.bPrintVenta.Size = new System.Drawing.Size(99, 31);
             this.bPrintVenta.TabIndex = 24;
-            this.bPrintVenta.Text = "Generar Venta";
+            this.bPrintVenta.Text = "Imprimir";
             this.bPrintVenta.UseVisualStyleBackColor = false;
             this.bPrintVenta.Click += new System.EventHandler(this.bVenta_Click);
             // 
@@ -308,7 +308,7 @@
             this.bBusqueda.BackColor = System.Drawing.Color.Teal;
             this.bBusqueda.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBusqueda.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBusqueda.Location = new System.Drawing.Point(528, 494);
+            this.bBusqueda.Location = new System.Drawing.Point(607, 494);
             this.bBusqueda.Name = "bBusqueda";
             this.bBusqueda.Size = new System.Drawing.Size(94, 32);
             this.bBusqueda.TabIndex = 28;
@@ -412,7 +412,7 @@
             // 
             this.FcConcepto.Location = new System.Drawing.Point(240, 502);
             this.FcConcepto.Name = "FcConcepto";
-            this.FcConcepto.Size = new System.Drawing.Size(248, 20);
+            this.FcConcepto.Size = new System.Drawing.Size(333, 20);
             this.FcConcepto.TabIndex = 38;
             // 
             // FVentas
@@ -420,7 +420,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1629, 752);
+            this.ClientSize = new System.Drawing.Size(1370, 752);
             this.Controls.Add(this.FcConcepto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label16);

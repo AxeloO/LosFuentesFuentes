@@ -56,7 +56,7 @@ namespace WFFuentes
                     if (strTipoUsuario.Equals("Administrador"))
                     {
                         respuestaTipoEmpleado = 420;
-
+           
                         _enUsuario.fiPuestoUsuario = respuestaTipoEmpleado;
 
                         int Resultado = _usuariosBL.AgregarUsuario(_enUsuario);

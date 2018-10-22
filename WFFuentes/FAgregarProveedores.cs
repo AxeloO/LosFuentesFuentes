@@ -69,7 +69,7 @@ namespace WFFuentes
 
                 if (strNombreProveedor.Equals("") || strDomicilio.Equals("") || strTelefono.Equals("") || strRFC.Equals("") || strCuentaBancaria.Equals("") || strProductoSurtir.Equals("") || strLimiteCredito.Equals(""))
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else

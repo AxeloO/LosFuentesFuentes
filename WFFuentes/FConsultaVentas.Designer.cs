@@ -39,6 +39,7 @@
             this.txtFechaF = new System.Windows.Forms.TextBox();
             this.bRegresar = new System.Windows.Forms.Button();
             this.bActualizar = new System.Windows.Forms.Button();
+            this.bImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,12 +153,25 @@
             this.bActualizar.UseVisualStyleBackColor = false;
             this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
             // 
+            // bImprimir
+            // 
+            this.bImprimir.BackColor = System.Drawing.Color.Teal;
+            this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bImprimir.Location = new System.Drawing.Point(673, 396);
+            this.bImprimir.Name = "bImprimir";
+            this.bImprimir.Size = new System.Drawing.Size(102, 31);
+            this.bImprimir.TabIndex = 51;
+            this.bImprimir.Text = "Imprimir";
+            this.bImprimir.UseVisualStyleBackColor = false;
+            // 
             // FConsultaVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1154, 469);
+            this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.txtFechaF);
@@ -193,5 +207,6 @@
         private System.Windows.Forms.TextBox txtFechaF;
         private System.Windows.Forms.Button bRegresar;
         private System.Windows.Forms.Button bActualizar;
+        private System.Windows.Forms.Button bImprimir;
     }
 }

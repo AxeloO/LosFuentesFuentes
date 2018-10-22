@@ -45,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.bImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGDevoluciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,12 +223,25 @@
             this.txtID.Size = new System.Drawing.Size(58, 20);
             this.txtID.TabIndex = 16;
             // 
+            // bImprimir
+            // 
+            this.bImprimir.BackColor = System.Drawing.Color.Teal;
+            this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bImprimir.Location = new System.Drawing.Point(898, 352);
+            this.bImprimir.Name = "bImprimir";
+            this.bImprimir.Size = new System.Drawing.Size(102, 31);
+            this.bImprimir.TabIndex = 51;
+            this.bImprimir.Text = "Imprimir";
+            this.bImprimir.UseVisualStyleBackColor = false;
+            // 
             // FDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1330, 440);
+            this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label6);
@@ -275,5 +289,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button bImprimir;
     }
 }

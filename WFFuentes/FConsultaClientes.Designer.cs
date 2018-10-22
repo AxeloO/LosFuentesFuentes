@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bRegresar = new System.Windows.Forms.Button();
             this.dGClientes = new System.Windows.Forms.DataGridView();
+            this.bImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,12 +115,25 @@
             this.dGClientes.Size = new System.Drawing.Size(1089, 255);
             this.dGClientes.TabIndex = 51;
             // 
+            // bImprimir
+            // 
+            this.bImprimir.BackColor = System.Drawing.Color.Teal;
+            this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bImprimir.Location = new System.Drawing.Point(831, 487);
+            this.bImprimir.Name = "bImprimir";
+            this.bImprimir.Size = new System.Drawing.Size(102, 31);
+            this.bImprimir.TabIndex = 52;
+            this.bImprimir.Text = "Imprimir";
+            this.bImprimir.UseVisualStyleBackColor = false;
+            // 
             // FConsultaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1225, 558);
+            this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.dGClientes);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.label1);
@@ -146,5 +160,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bRegresar;
         private System.Windows.Forms.DataGridView dGClientes;
+        private System.Windows.Forms.Button bImprimir;
     }
 }

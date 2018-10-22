@@ -106,21 +106,21 @@ namespace WFFuentes
 
         private void agregarNuevoRegistroToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form _fAgregar = new FInventario();
+            Form _fAgregar = new bImprimir();
             _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void modificarProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form _fAgregar = new FInventario();
+            Form _fAgregar = new bImprimir();
             _fAgregar.ShowDialog();
             this.Close();
         }
 
         private void eliminarProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form _fAgregar = new FInventario();
+            Form _fAgregar = new bImprimir();
             _fAgregar.ShowDialog();
             this.Close();
         }
@@ -170,7 +170,7 @@ namespace WFFuentes
 
         private void bProductos_Click(object sender, EventArgs e)
         {
-            Form _fAgregar = new FInventario();
+            Form _fAgregar = new bImprimir();
             _fAgregar.ShowDialog();
             this.Close();
         }
