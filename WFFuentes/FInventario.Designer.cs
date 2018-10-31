@@ -65,7 +65,7 @@
             this.button3.BackColor = System.Drawing.Color.Teal;
             this.button3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(701, 270);
+            this.button3.Location = new System.Drawing.Point(335, 396);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 34);
             this.button3.TabIndex = 50;
@@ -78,7 +78,7 @@
             this.btModificar.BackColor = System.Drawing.Color.Teal;
             this.btModificar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btModificar.Location = new System.Drawing.Point(701, 223);
+            this.btModificar.Location = new System.Drawing.Point(201, 396);
             this.btModificar.Name = "btModificar";
             this.btModificar.Size = new System.Drawing.Size(93, 34);
             this.btModificar.TabIndex = 49;
@@ -91,7 +91,7 @@
             this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(701, 172);
+            this.button1.Location = new System.Drawing.Point(77, 396);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 34);
             this.button1.TabIndex = 48;
@@ -242,7 +242,7 @@
             this.btLimpiar.BackColor = System.Drawing.Color.Teal;
             this.btLimpiar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btLimpiar.Location = new System.Drawing.Point(701, 316);
+            this.btLimpiar.Location = new System.Drawing.Point(480, 396);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(93, 34);
             this.btLimpiar.TabIndex = 51;
@@ -255,7 +255,7 @@
             this.btConsulta.BackColor = System.Drawing.Color.Teal;
             this.btConsulta.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btConsulta.Location = new System.Drawing.Point(1309, 402);
+            this.btConsulta.Location = new System.Drawing.Point(1149, 403);
             this.btConsulta.Name = "btConsulta";
             this.btConsulta.Size = new System.Drawing.Size(90, 33);
             this.btConsulta.TabIndex = 52;
@@ -267,7 +267,7 @@
             // 
             this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgInventario.Location = new System.Drawing.Point(861, 172);
+            this.dgInventario.Location = new System.Drawing.Point(713, 173);
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.Size = new System.Drawing.Size(634, 186);
             this.dgInventario.TabIndex = 53;
@@ -279,7 +279,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1406, 402);
+            this.bRegresar.Location = new System.Drawing.Point(1258, 403);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(89, 33);
             this.bRegresar.TabIndex = 54;
@@ -309,7 +309,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(1110, 43);
+            this.label12.Location = new System.Drawing.Point(962, 44);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(96, 30);
             this.label12.TabIndex = 57;
@@ -319,7 +319,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(879, 125);
+            this.label7.Location = new System.Drawing.Point(731, 126);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(169, 23);
             this.label7.TabIndex = 58;
@@ -327,7 +327,7 @@
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(1059, 129);
+            this.txtBusqueda.Location = new System.Drawing.Point(911, 130);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(271, 20);
             this.txtBusqueda.TabIndex = 59;
@@ -337,7 +337,7 @@
             this.bBuscar.BackColor = System.Drawing.Color.Teal;
             this.bBuscar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBuscar.Location = new System.Drawing.Point(1355, 122);
+            this.bBuscar.Location = new System.Drawing.Point(1207, 123);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(89, 33);
             this.bBuscar.TabIndex = 60;
@@ -350,7 +350,7 @@
             this.button2.BackColor = System.Drawing.Color.Teal;
             this.button2.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(1174, 402);
+            this.button2.Location = new System.Drawing.Point(1026, 403);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 31);
             this.button2.TabIndex = 61;

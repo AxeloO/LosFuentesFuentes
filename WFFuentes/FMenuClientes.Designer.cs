@@ -56,7 +56,7 @@
             this.MenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.MenuPrincipal.Name = "MenuPrincipal";
-            this.MenuPrincipal.Size = new System.Drawing.Size(223, 849);
+            this.MenuPrincipal.Size = new System.Drawing.Size(223, 772);
             this.MenuPrincipal.TabIndex = 6;
             this.MenuPrincipal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuPrincipal_MouseDown);
             // 
@@ -159,7 +159,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(223, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 849);
+            this.panel1.Size = new System.Drawing.Size(884, 772);
             this.panel1.TabIndex = 7;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -168,7 +168,7 @@
             this.bSalir.BackColor = System.Drawing.Color.Teal;
             this.bSalir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSalir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bSalir.Location = new System.Drawing.Point(713, 751);
+            this.bSalir.Location = new System.Drawing.Point(713, 705);
             this.bSalir.Name = "bSalir";
             this.bSalir.Size = new System.Drawing.Size(105, 40);
             this.bSalir.TabIndex = 5;
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1107, 849);
+            this.ClientSize = new System.Drawing.Size(1107, 772);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -62,5 +62,10 @@ namespace WFFuentes
         {
 
         }
+
+        private void FConsultaAlmacen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

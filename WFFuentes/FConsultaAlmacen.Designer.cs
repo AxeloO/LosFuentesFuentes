@@ -44,7 +44,7 @@
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
             this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(876, 401);
+            this.bImprimir.Location = new System.Drawing.Point(850, 401);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(90, 34);
             this.bImprimir.TabIndex = 61;
@@ -57,7 +57,7 @@
             this.bActualizar.BackColor = System.Drawing.Color.Teal;
             this.bActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bActualizar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bActualizar.Location = new System.Drawing.Point(767, 401);
+            this.bActualizar.Location = new System.Drawing.Point(741, 401);
             this.bActualizar.Name = "bActualizar";
             this.bActualizar.Size = new System.Drawing.Size(91, 34);
             this.bActualizar.TabIndex = 60;
@@ -67,7 +67,7 @@
             // 
             // txtBusquedaProducto
             // 
-            this.txtBusquedaProducto.Location = new System.Drawing.Point(269, 110);
+            this.txtBusquedaProducto.Location = new System.Drawing.Point(243, 110);
             this.txtBusquedaProducto.Name = "txtBusquedaProducto";
             this.txtBusquedaProducto.Size = new System.Drawing.Size(399, 20);
             this.txtBusquedaProducto.TabIndex = 59;
@@ -76,7 +76,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(99, 107);
+            this.label11.Location = new System.Drawing.Point(73, 107);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(169, 23);
             this.label11.TabIndex = 58;
@@ -87,7 +87,7 @@
             this.bBuscar.BackColor = System.Drawing.Color.Teal;
             this.bBuscar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBuscar.Location = new System.Drawing.Point(701, 105);
+            this.bBuscar.Location = new System.Drawing.Point(675, 105);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(97, 27);
             this.bBuscar.TabIndex = 57;
@@ -99,7 +99,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(389, 41);
+            this.label1.Location = new System.Drawing.Point(363, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 30);
             this.label1.TabIndex = 62;
@@ -110,7 +110,7 @@
             // 
             this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgInventario.Location = new System.Drawing.Point(71, 162);
+            this.dgInventario.Location = new System.Drawing.Point(45, 162);
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.Size = new System.Drawing.Size(898, 205);
             this.dgInventario.TabIndex = 63;
@@ -120,7 +120,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(664, 401);
+            this.bRegresar.Location = new System.Drawing.Point(638, 401);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(91, 34);
             this.bRegresar.TabIndex = 64;
@@ -133,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1037, 457);
+            this.ClientSize = new System.Drawing.Size(987, 457);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.dgInventario);
             this.Controls.Add(this.label1);
@@ -145,6 +145,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FConsultaAlmacen";
             this.Text = "FConsultaAlmacen";
+            this.Load += new System.EventHandler(this.FConsultaAlmacen_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaAlmacen_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.ResumeLayout(false);

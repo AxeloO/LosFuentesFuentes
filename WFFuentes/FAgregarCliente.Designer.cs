@@ -214,7 +214,7 @@
             this.bBack.BackColor = System.Drawing.Color.Teal;
             this.bBack.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBack.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBack.Location = new System.Drawing.Point(1337, 374);
+            this.bBack.Location = new System.Drawing.Point(1239, 384);
             this.bBack.Name = "bBack";
             this.bBack.Size = new System.Drawing.Size(101, 31);
             this.bBack.TabIndex = 42;
@@ -253,7 +253,7 @@
             this.bConsultar.BackColor = System.Drawing.Color.Teal;
             this.bConsultar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsultar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsultar.Location = new System.Drawing.Point(1211, 375);
+            this.bConsultar.Location = new System.Drawing.Point(1113, 385);
             this.bConsultar.Name = "bConsultar";
             this.bConsultar.Size = new System.Drawing.Size(98, 30);
             this.bConsultar.TabIndex = 45;
@@ -267,9 +267,9 @@
             this.dGClientes.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGClientes.GridColor = System.Drawing.Color.DimGray;
-            this.dGClientes.Location = new System.Drawing.Point(736, 135);
+            this.dGClientes.Location = new System.Drawing.Point(709, 145);
             this.dGClientes.Name = "dGClientes";
-            this.dGClientes.Size = new System.Drawing.Size(702, 201);
+            this.dGClientes.Size = new System.Drawing.Size(635, 201);
             this.dGClientes.TabIndex = 46;
             this.dGClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGClientes_CellClick);
             // 
@@ -309,7 +309,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(746, 89);
+            this.label10.Location = new System.Drawing.Point(715, 105);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(169, 23);
             this.label10.TabIndex = 50;
@@ -318,7 +318,7 @@
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(916, 89);
+            this.txtBusqueda.Location = new System.Drawing.Point(885, 105);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(343, 20);
             this.txtBusqueda.TabIndex = 51;
@@ -328,7 +328,7 @@
             this.bBusqueda.BackColor = System.Drawing.Color.Teal;
             this.bBusqueda.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBusqueda.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBusqueda.Location = new System.Drawing.Point(1291, 82);
+            this.bBusqueda.Location = new System.Drawing.Point(1260, 98);
             this.bBusqueda.Name = "bBusqueda";
             this.bBusqueda.Size = new System.Drawing.Size(82, 32);
             this.bBusqueda.TabIndex = 52;
@@ -340,7 +340,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1030, 22);
+            this.label11.Location = new System.Drawing.Point(939, 33);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(183, 30);
             this.label11.TabIndex = 53;
@@ -351,7 +351,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1503, 488);
+            this.ClientSize = new System.Drawing.Size(1370, 488);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bBusqueda);
             this.Controls.Add(this.txtBusqueda);

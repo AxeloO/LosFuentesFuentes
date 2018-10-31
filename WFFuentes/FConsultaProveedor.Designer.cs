@@ -117,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(971, 414);
+            this.ClientSize = new System.Drawing.Size(971, 444);
             this.Controls.Add(this.dgProveedores);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.label1);

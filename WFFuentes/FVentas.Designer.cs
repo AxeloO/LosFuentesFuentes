@@ -297,7 +297,7 @@
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bRegresar.Location = new System.Drawing.Point(1458, 535);
             this.bRegresar.Name = "bRegresar";
-            this.bRegresar.Size = new System.Drawing.Size(83, 31);
+            this.bRegresar.Size = new System.Drawing.Size(98, 31);
             this.bRegresar.TabIndex = 27;
             this.bRegresar.Text = "Regresar";
             this.bRegresar.UseVisualStyleBackColor = false;
@@ -420,7 +420,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1689, 752);
+            this.ClientSize = new System.Drawing.Size(1671, 752);
             this.Controls.Add(this.FcConcepto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label16);
