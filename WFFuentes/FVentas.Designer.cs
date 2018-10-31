@@ -254,7 +254,7 @@
             // bPrintVenta
             // 
             this.bPrintVenta.BackColor = System.Drawing.Color.Teal;
-            this.bPrintVenta.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPrintVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPrintVenta.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bPrintVenta.Location = new System.Drawing.Point(1217, 535);
             this.bPrintVenta.Name = "bPrintVenta";
@@ -267,7 +267,7 @@
             // bCancelar
             // 
             this.bCancelar.BackColor = System.Drawing.Color.Teal;
-            this.bCancelar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bCancelar.Location = new System.Drawing.Point(1340, 535);
             this.bCancelar.Name = "bCancelar";
@@ -280,7 +280,7 @@
             // bLimpiar
             // 
             this.bLimpiar.BackColor = System.Drawing.Color.Teal;
-            this.bLimpiar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bLimpiar.Location = new System.Drawing.Point(445, 371);
             this.bLimpiar.Name = "bLimpiar";
@@ -293,7 +293,7 @@
             // bRegresar
             // 
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
-            this.bRegresar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bRegresar.Location = new System.Drawing.Point(1458, 535);
             this.bRegresar.Name = "bRegresar";
@@ -306,7 +306,7 @@
             // bBusqueda
             // 
             this.bBusqueda.BackColor = System.Drawing.Color.Teal;
-            this.bBusqueda.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBusqueda.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bBusqueda.Location = new System.Drawing.Point(607, 494);
             this.bBusqueda.Name = "bBusqueda";
@@ -378,7 +378,7 @@
             // bAgregar
             // 
             this.bAgregar.BackColor = System.Drawing.Color.Teal;
-            this.bAgregar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bAgregar.Location = new System.Drawing.Point(899, 352);
             this.bAgregar.Name = "bAgregar";
@@ -420,7 +420,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1370, 752);
+            this.ClientSize = new System.Drawing.Size(1689, 752);
             this.Controls.Add(this.FcConcepto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label16);

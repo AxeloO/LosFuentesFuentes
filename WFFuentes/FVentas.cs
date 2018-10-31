@@ -171,11 +171,28 @@ namespace WFFuentes
 
 
                         this.Controls.Add(dgProductos);
+
                         DataGridViewTextBoxColumn colTotalProducto = new DataGridViewTextBoxColumn();
-                        colTotalProducto.HeaderText = "Total Productos";
+                        colTotalProducto.HeaderText = "Precio";
                         colTotalProducto.Width = 200;
-                        dgProductos.Columns.Add(colTotalProducto);//Porque se agrega eso en la tabla de buscar productos.!? que no seria en dgTotalProductos donde controla lo de las ventas.!?
-                        // dgProductos.Rows.Add(txtImporte.Text.ToString());                  
+                        dgTotalProductos.Columns. Add(colTotalProducto);
+
+                        DataGridViewTextBoxColumn colCantidadProducto = new DataGridViewTextBoxColumn();
+                        colCantidadProducto.HeaderText = "Cantidad";
+                        colCantidadProducto.Width = 200;
+                        dgTotalProductos.Columns.Add(colCantidadProducto);
+
+
+                        // Aqui Agrego
+
+                       
+                        
+                        //colCantidadProducto = 
+                        //colCantidadProducto = doTotalDelProducto.ToString();
+
+
+
+
                     }
 
                 }
