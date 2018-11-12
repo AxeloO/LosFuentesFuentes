@@ -18,7 +18,8 @@ namespace WFFuentes
         EnVentas _enVentas = new EnVentas();
         VentasBL _ventasBL = new VentasBL();
         InventarioBL _inventarioBL = new InventarioBL();
-        Inventario _enInventario = new Inventario();        
+        Inventario _enInventario = new Inventario();
+        double douTotalSumaProductos = 0;
 
         public FVentas()
         {
@@ -137,9 +138,12 @@ namespace WFFuentes
 
         private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {//Los campos seran de inventario o de ventas.!?  Creo que eran de inventario asi que fue de Inventario, Será necesario hacer un if para eso de los precios.!?
+            // no se que dices jaja
             string strCantidad = txtCantidad.Text.ToString().Trim();
             txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();          
-            txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta 
+            txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta           
+           // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
+           // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
             string strPrecio = txtPrecioUnitario.Text.ToString().Trim();
                         
     
@@ -149,53 +153,70 @@ namespace WFFuentes
         {
             try
             {
-                int intCantidadProducto;
-                double doTotalDelProducto;
+                              
+                int intCantidadProducto;               
+                double doTotalDelProducto;                              
 
-                if (!txtNombre.Text.Equals(""))
-                {
-                     
-                    if (txtCantidad.Text.Equals(""))
+                    if (!txtNombre.Text.Equals(""))
                     {
-                        MessageBox.Show("Debe Colocar la cantidad que desea Vender");
+
+                        if (txtCantidad.Text.Equals(""))
+                        {
+                            MessageBox.Show("Debe Colocar la cantidad que desea Vender");
+                        }
+                        else
+                        {
+
+                            intCantidadProducto = int.Parse(txtCantidad.Text.ToString().Trim());
+                            int intProductoUnitario = int.Parse(txtPrecioUnitario.Text.ToString().Trim());
+                            doTotalDelProducto = intProductoUnitario * intCantidadProducto;
+                            txtImporte.Text = doTotalDelProducto.ToString();
+                            this.Controls.Add(dgTotalProductos);
+
+
+                        if (dgTotalProductos.Columns.Count == 0)
+                        {
+
+
+
+                            DataGridViewTextBoxColumn colTotalProducto = new DataGridViewTextBoxColumn();
+                            colTotalProducto.HeaderText = "Precio Total Unitario";
+                            colTotalProducto.Width = 200;
+                            dgTotalProductos.Columns.Add(colTotalProducto);
+
+                            DataGridViewTextBoxColumn colCantidadProducto = new DataGridViewTextBoxColumn();
+                            colCantidadProducto.HeaderText = "Cantidad";
+                            colCantidadProducto.Width = 200;
+                            dgTotalProductos.Columns.Add(colCantidadProducto);
+
+                            //DataGridViewTextBoxColumn colTotalProductoContado = new DataGridViewTextBoxColumn();
+                            //colCantidadProducto.HeaderText = "Precio Total al Contado";
+                            //colCantidadProducto.Width = 200;
+                            //dgTotalProductos.Columns.Add(colCantidadProducto);
+
+                            //DataGridViewTextBoxColumn colTotalProductoCredito = new DataGridViewTextBoxColumn();
+                            //colCantidadProducto.HeaderText = "Precio Total a Credito";
+                            //colCantidadProducto.Width = 200;
+                            //dgTotalProductos.Columns.Add(colCantidadProducto);
+
+                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto);
+
+
+                            
+                        }
+                        else {                            
+                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto);
+
+                        }
+
+                        douTotalSumaProductos = douTotalSumaProductos + doTotalDelProducto;
+
+                        FdTotal.Text = douTotalSumaProductos.ToString();
                     }
-                    else {
 
-                        intCantidadProducto = int.Parse(txtCantidad.Text.ToString().Trim());
+                    }                  
 
-                        int intProductoUnitario = int.Parse(txtPrecioUnitario.Text.ToString().Trim());
-
-                        doTotalDelProducto = intProductoUnitario * intCantidadProducto;
-
-                        txtImporte.Text = doTotalDelProducto.ToString();
-
-
-                        this.Controls.Add(dgProductos);
-
-                        DataGridViewTextBoxColumn colTotalProducto = new DataGridViewTextBoxColumn();
-                        colTotalProducto.HeaderText = "Precio";
-                        colTotalProducto.Width = 200;
-                        dgTotalProductos.Columns. Add(colTotalProducto);
-
-                        DataGridViewTextBoxColumn colCantidadProducto = new DataGridViewTextBoxColumn();
-                        colCantidadProducto.HeaderText = "Cantidad";
-                        colCantidadProducto.Width = 200;
-                        dgTotalProductos.Columns.Add(colCantidadProducto);
-
-
-                        // Aqui Agrego
-
-                       
-                        
-                        //colCantidadProducto = 
-                        //colCantidadProducto = doTotalDelProducto.ToString();
-
-
-
-
-                    }
-
-                }
+                
                 else
                 {
                     MessageBox.Show("Debe seleccionar un Producto Primero");
@@ -213,6 +234,18 @@ namespace WFFuentes
         {
             Limpiar();
             Limpiar_Venta();
+        }
+
+       
+
+        private void FdTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
 
 
