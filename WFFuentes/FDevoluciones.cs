@@ -121,5 +121,10 @@ namespace WFFuentes
             txtCausaDevolucion.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcCausaDevolucion"].Value.ToString();
             
         }
+
+        private void bImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
