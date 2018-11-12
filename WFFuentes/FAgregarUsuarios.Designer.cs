@@ -241,12 +241,11 @@
             // 
             // dgUsuarios
             // 
-            this.dgUsuarios.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUsuarios.Location = new System.Drawing.Point(666, 140);
+            this.dgUsuarios.Location = new System.Drawing.Point(665, 140);
             this.dgUsuarios.Name = "dgUsuarios";
-            this.dgUsuarios.Size = new System.Drawing.Size(543, 150);
-            this.dgUsuarios.TabIndex = 64;
+            this.dgUsuarios.Size = new System.Drawing.Size(536, 157);
+            this.dgUsuarios.TabIndex = 31;
             // 
             // FAgregarUsuarios
             // 
