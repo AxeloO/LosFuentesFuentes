@@ -153,6 +153,12 @@
     <Compile Include="FModificarCliente.Designer.cs">
       <DependentUpon>FModificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FNotaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNotaVenta.Designer.cs">
+      <DependentUpon>FNotaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FModificarCliente.resx">
       <DependentUpon>FModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNotaVenta.resx">
+      <DependentUpon>FNotaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FVentas.resx">
       <DependentUpon>FVentas.cs</DependentUpon>
