@@ -42,6 +42,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
@@ -69,7 +70,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -215,6 +215,13 @@
             this.panel3.Size = new System.Drawing.Size(762, 53);
             this.panel3.TabIndex = 6;
             // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(211, 22);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(32, 20);
+            this.textBox14.TabIndex = 11;
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -321,7 +328,7 @@
             this.panel4.Controls.Add(this.textBox5);
             this.panel4.Location = new System.Drawing.Point(26, 293);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(762, 320);
+            this.panel4.Size = new System.Drawing.Size(762, 326);
             this.panel4.TabIndex = 7;
             // 
             // label15
@@ -378,10 +385,10 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(102, 28);
+            this.textBox6.Location = new System.Drawing.Point(98, 28);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(441, 293);
+            this.textBox6.Size = new System.Drawing.Size(452, 293);
             this.textBox6.TabIndex = 1;
             // 
             // textBox5
@@ -443,13 +450,6 @@
             this.label11.Size = new System.Drawing.Size(101, 22);
             this.label11.TabIndex = 13;
             this.label11.Text = "Total        $";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(211, 22);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(32, 20);
-            this.textBox14.TabIndex = 11;
             // 
             // FNotaVenta
             // 
