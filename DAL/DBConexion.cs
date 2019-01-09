@@ -17,11 +17,11 @@ namespace DAL
 
        // public static string CadenaDeConexion = @"Data Source = 192.168.1.82;Initial Catalog=DBFuentes; Persist Security Info=True;User ID = ventas; Password=12345; Context Connection=False";
         //public static string CadenaDeConexion = @"Data Source=192.168.1.88;Initial Catalog=DBFuentes; UserId:Ventas; Password:12345";
-<<<<<<< HEAD
-        public static string CadenaDeConexion = @"Data Source=DESKTOP-QRLGBTN\SQLEXPRESS;Initial Catalog=DBFuentes;Integrated Security=True";
-=======
+//<<<<<<< HEAD
+        //public static string CadenaDeConexion = @"Data Source=DESKTOP-QRLGBTN\SQLEXPRESS;Initial Catalog=DBFuentes;Integrated Security=True";
+//=======
        // public static string CadenaDeConexion = @"Data Source=DESKTOP-QMNNJTQ\SQLEXPRESS;Initial Catalog=DBFuentes;Integrated Security=True";
->>>>>>> 401598836fe5632222278200ac256678bca1c7de
+//>>>>>>> 401598836fe5632222278200ac256678bca1c7de
 
         //public static string CadenaDeConexion = @"Data Source = 192.168.1.82;Initial Catalog=DBFuentes; Persist Security Info=True;User ID = ventas; Password=12345; Context Connection=False";
         //public static string CadenaDeConexion = @"Data Source=192.168.1.88;Initial Catalog=DBFuentes; UserId:Ventas; Password:12345";

@@ -493,7 +493,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1671, 752);
+            this.ClientSize = new System.Drawing.Size(1370, 752);
             this.Controls.Add(this.txtPrecioDeContado);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.txtPrecioACredito);

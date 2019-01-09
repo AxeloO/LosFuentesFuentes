@@ -54,7 +54,7 @@ namespace WFFuentes
 
             try
             {
-                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
+                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioDeContado.Text == "" || txtPrecioACredito.Text==""|| txtImporte.Text == "")
 
                    // if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
                 {
@@ -71,7 +71,7 @@ namespace WFFuentes
                     _enVentas.fcFechaPago = FdFechaPago.Text;
                     _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
                    // _enVentas.fcConcepto = FcConcepto.Text;
-                    _enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
+                    _enVentas.= decimal.Parse(txtPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
                 
