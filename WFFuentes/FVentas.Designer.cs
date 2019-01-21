@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FVentas));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             this.txtImporte = new System.Windows.Forms.TextBox();
             this.FdTotal = new System.Windows.Forms.TextBox();
-            this.bPrintVenta = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
             this.bLimpiar = new System.Windows.Forms.Button();
             this.bRegresar = new System.Windows.Forms.Button();
@@ -71,6 +71,11 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txtPrecioDeContado = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.btnImprimirVenta = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btPrevioImprecion = new System.Windows.Forms.Button();
+            this.PrevioImprecion = new System.Windows.Forms.PrintPreviewDialog();
+            this.ImprecionNota = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).BeginInit();
             this.SuspendLayout();
@@ -134,7 +139,6 @@
             this.label6.Size = new System.Drawing.Size(25, 26);
             this.label6.TabIndex = 5;
             this.label6.Text = "$";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -258,29 +262,15 @@
             this.FdTotal.Name = "FdTotal";
             this.FdTotal.Size = new System.Drawing.Size(100, 20);
             this.FdTotal.TabIndex = 23;
-            this.FdTotal.TextChanged += new System.EventHandler(this.FdTotal_TextChanged);
-            // 
-            // bPrintVenta
-            // 
-            this.bPrintVenta.BackColor = System.Drawing.Color.Teal;
-            this.bPrintVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bPrintVenta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bPrintVenta.Location = new System.Drawing.Point(1137, 576);
-            this.bPrintVenta.Name = "bPrintVenta";
-            this.bPrintVenta.Size = new System.Drawing.Size(99, 31);
-            this.bPrintVenta.TabIndex = 24;
-            this.bPrintVenta.Text = "Imprimir";
-            this.bPrintVenta.UseVisualStyleBackColor = false;
-            this.bPrintVenta.Click += new System.EventHandler(this.bVenta_Click);
             // 
             // bCancelar
             // 
             this.bCancelar.BackColor = System.Drawing.Color.Teal;
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bCancelar.Location = new System.Drawing.Point(1260, 576);
+            this.bCancelar.Location = new System.Drawing.Point(1363, 647);
             this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(91, 31);
+            this.bCancelar.Size = new System.Drawing.Size(113, 31);
             this.bCancelar.TabIndex = 25;
             this.bCancelar.Text = "Cancelar Venta";
             this.bCancelar.UseVisualStyleBackColor = false;
@@ -304,9 +294,9 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1378, 576);
+            this.bRegresar.Location = new System.Drawing.Point(1483, 647);
             this.bRegresar.Name = "bRegresar";
-            this.bRegresar.Size = new System.Drawing.Size(98, 31);
+            this.bRegresar.Size = new System.Drawing.Size(111, 31);
             this.bRegresar.TabIndex = 27;
             this.bRegresar.Text = "Regresar";
             this.bRegresar.UseVisualStyleBackColor = false;
@@ -488,12 +478,67 @@
             this.label20.TabIndex = 44;
             this.label20.Text = "Precio de Contado:";
             // 
+            // btnImprimirVenta
+            // 
+            this.btnImprimirVenta.BackColor = System.Drawing.Color.Teal;
+            this.btnImprimirVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimirVenta.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnImprimirVenta.Location = new System.Drawing.Point(1115, 567);
+            this.btnImprimirVenta.Name = "btnImprimirVenta";
+            this.btnImprimirVenta.Size = new System.Drawing.Size(231, 31);
+            this.btnImprimirVenta.TabIndex = 46;
+            this.btnImprimirVenta.Text = "Imprimir y Pagar Contado";
+            this.btnImprimirVenta.UseVisualStyleBackColor = false;
+            this.btnImprimirVenta.Click += new System.EventHandler(this.btnImprimirVenta_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(1363, 567);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(231, 31);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "Imprimir y Pagar a Credito";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btPrevioImprecion
+            // 
+            this.btPrevioImprecion.BackColor = System.Drawing.Color.Teal;
+            this.btPrevioImprecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPrevioImprecion.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btPrevioImprecion.Location = new System.Drawing.Point(1115, 647);
+            this.btPrevioImprecion.Name = "btPrevioImprecion";
+            this.btPrevioImprecion.Size = new System.Drawing.Size(227, 31);
+            this.btPrevioImprecion.TabIndex = 48;
+            this.btPrevioImprecion.Text = "Preview de Imprecion";
+            this.btPrevioImprecion.UseVisualStyleBackColor = false;
+            this.btPrevioImprecion.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // PrevioImprecion
+            // 
+            this.PrevioImprecion.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.PrevioImprecion.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.PrevioImprecion.ClientSize = new System.Drawing.Size(400, 300);
+            this.PrevioImprecion.Enabled = true;
+            this.PrevioImprecion.Icon = ((System.Drawing.Icon)(resources.GetObject("PrevioImprecion.Icon")));
+            this.PrevioImprecion.Name = "PrevioImprecion";
+            this.PrevioImprecion.Visible = false;
+            // 
+            // ImprecionNota
+            // 
+            this.ImprecionNota.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.ImprecionNota_PrintPage);
+            // 
             // FVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1370, 752);
+            this.ClientSize = new System.Drawing.Size(1629, 752);
+            this.Controls.Add(this.btPrevioImprecion);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnImprimirVenta);
             this.Controls.Add(this.txtPrecioDeContado);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.txtPrecioACredito);
@@ -514,7 +559,6 @@
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.bLimpiar);
             this.Controls.Add(this.bCancelar);
-            this.Controls.Add(this.bPrintVenta);
             this.Controls.Add(this.FdTotal);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.txtPrecioUnitario);
@@ -571,7 +615,6 @@
         private System.Windows.Forms.TextBox txtPrecioUnitario;
         private System.Windows.Forms.TextBox txtImporte;
         private System.Windows.Forms.TextBox FdTotal;
-        private System.Windows.Forms.Button bPrintVenta;
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Button bLimpiar;
         private System.Windows.Forms.Button bRegresar;
@@ -593,5 +636,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtPrecioDeContado;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnImprimirVenta;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btPrevioImprecion;
+        private System.Windows.Forms.PrintPreviewDialog PrevioImprecion;
+        private System.Drawing.Printing.PrintDocument ImprecionNota;
     }
 }

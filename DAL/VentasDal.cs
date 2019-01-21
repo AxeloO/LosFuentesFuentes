@@ -19,7 +19,7 @@ namespace DAL
 
             SqlCommand _comando = new SqlCommand("Agregar_Ventas", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.Add(new SqlParameter("@fiIdVenta", PEntidad.fiIdVenta));
+           // _comando.Parameters.Add(new SqlParameter("@fiIdVenta", PEntidad.fiIdVenta));
             _comando.Parameters.Add(new SqlParameter("@fDtFechaSalida", PEntidad.fDtFechaSalida));
             _comando.Parameters.Add(new SqlParameter("@fcNombreCliente", PEntidad.fcNombreCliente));
             _comando.Parameters.Add(new SqlParameter("@fcDomicilio", PEntidad.fcDomicilio));

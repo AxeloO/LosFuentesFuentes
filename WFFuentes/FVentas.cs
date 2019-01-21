@@ -14,12 +14,14 @@ namespace WFFuentes
 {
     public partial class FVentas : Form
     {
-
+        Bitmap bmp;
+      //  Graphics mg;
         EnVentas _enVentas = new EnVentas();
         VentasBL _ventasBL = new VentasBL();
         InventarioBL _inventarioBL = new InventarioBL();
         Inventario _enInventario = new Inventario();
         double douTotalSumaProductos = 0;
+        double douTotalSumaProductosCredito = 0;
 
         public FVentas()
         {
@@ -71,7 +73,7 @@ namespace WFFuentes
                     _enVentas.fcFechaPago = FdFechaPago.Text;
                     _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
                    // _enVentas.fcConcepto = FcConcepto.Text;
-                    _enVentas.= decimal.Parse(txtPrecioUnitario.Text);
+                    _enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
                 
@@ -141,9 +143,11 @@ namespace WFFuentes
             // no se que dices jaja
             string strCantidad = txtCantidad.Text.ToString().Trim();
             txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();          
-            txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta           
-           // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
-           // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
+            txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["CostoUnitario"].Value.ToString();
+            txtPrecioACredito.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioACredito"].Value.ToString();
+            txtPrecioDeContado.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();
+            // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
+            // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
             string strPrecio = txtPrecioUnitario.Text.ToString().Trim();
                         
     
@@ -153,11 +157,14 @@ namespace WFFuentes
         {
             try
             {
-                              
-                int intCantidadProducto;               
-                double doTotalDelProducto;                              
 
-                    if (!txtNombre.Text.Equals(""))
+                double intCantidadProducto;               
+                double doTotalDelProducto;
+                double doTotalDelProductoCredito;
+                string strNombreProductos;
+            
+
+                if (!txtNombre.Text.Equals(""))
                     {
 
                         if (txtCantidad.Text.Equals(""))
@@ -167,51 +174,55 @@ namespace WFFuentes
                         else
                         {
 
-                            intCantidadProducto = int.Parse(txtCantidad.Text.ToString().Trim());
-                            int intProductoUnitario = int.Parse(txtPrecioUnitario.Text.ToString().Trim());
+                            intCantidadProducto = double.Parse(txtCantidad.Text.ToString().Trim());
+                            double intProductoUnitario = double.Parse(txtPrecioUnitario.Text.ToString().Trim());
+                            double doProductoUnitarioCredito = double.Parse(txtPrecioACredito.Text.ToString().Trim());
                             doTotalDelProducto = intProductoUnitario * intCantidadProducto;
+                            doTotalDelProductoCredito = doProductoUnitarioCredito * intCantidadProducto;
                             txtImporte.Text = doTotalDelProducto.ToString();
                             this.Controls.Add(dgTotalProductos);
+                            strNombreProductos = txtNombre.Text.ToString().Trim();
 
 
                         if (dgTotalProductos.Columns.Count == 0)
                         {
+                            DataGridViewTextBoxColumn colNombreProducto = new DataGridViewTextBoxColumn();
+                            colNombreProducto.HeaderText = "Nombre del Producto";
+                            colNombreProducto.Width = 80;
+                            dgTotalProductos.Columns.Add(colNombreProducto);
 
+                            DataGridViewTextBoxColumn colCantidadProducto = new DataGridViewTextBoxColumn();
+                            colCantidadProducto.HeaderText = "Cantidad";
+                            colCantidadProducto.Width = 80;
+                            dgTotalProductos.Columns.Add(colCantidadProducto);
 
 
                             DataGridViewTextBoxColumn colTotalProducto = new DataGridViewTextBoxColumn();
                             colTotalProducto.HeaderText = "Precio Total Unitario";
-                            colTotalProducto.Width = 200;
+                            colTotalProducto.Width = 80;
                             dgTotalProductos.Columns.Add(colTotalProducto);
 
-                            DataGridViewTextBoxColumn colCantidadProducto = new DataGridViewTextBoxColumn();
-                            colCantidadProducto.HeaderText = "Cantidad";
-                            colCantidadProducto.Width = 200;
-                            dgTotalProductos.Columns.Add(colCantidadProducto);
-
-                            //DataGridViewTextBoxColumn colTotalProductoContado = new DataGridViewTextBoxColumn();
-                            //colCantidadProducto.HeaderText = "Precio Total al Contado";
-                            //colCantidadProducto.Width = 200;
-                            //dgTotalProductos.Columns.Add(colCantidadProducto);
-
-                            //DataGridViewTextBoxColumn colTotalProductoCredito = new DataGridViewTextBoxColumn();
-                            //colCantidadProducto.HeaderText = "Precio Total a Credito";
-                            //colCantidadProducto.Width = 200;
-                            //dgTotalProductos.Columns.Add(colCantidadProducto);
-
-                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto);
-
-
                             
+                            DataGridViewTextBoxColumn colCantidadProductoCredito = new DataGridViewTextBoxColumn();
+                            colCantidadProductoCredito.HeaderText = "Precio Total A Credito";
+                            colCantidadProductoCredito.Width = 80;
+                            dgTotalProductos.Columns.Add(colCantidadProductoCredito);
+                                                       
+
+                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto, doTotalDelProductoCredito, strNombreProductos);
+
+                                                        
                         }
                         else {                            
-                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto);
+                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto, doTotalDelProductoCredito, strNombreProductos);
 
                         }
 
                         douTotalSumaProductos = douTotalSumaProductos + doTotalDelProducto;
-
+                        douTotalSumaProductosCredito = douTotalSumaProductosCredito + doTotalDelProductoCredito;
                         FdTotal.Text = douTotalSumaProductos.ToString();
+                        txtTotalAPagarCredito.Text = douTotalSumaProductosCredito.ToString();
+
                     }
 
                     }                  
@@ -236,34 +247,53 @@ namespace WFFuentes
             Limpiar_Venta();
         }
 
-       
-
-        private void FdTotal_TextChanged(object sender, EventArgs e)
+        private void btnImprimirVenta_Click(object sender, EventArgs e)
         {
+           
+            // AQUI~~~ necesito ayuda!!!!!
 
+            if (!FdFechaPago.Equals(string.Empty) )
+            {
+
+                _enVentas.fDtFechaSalida = FdFechaSalida.Text.ToString();
+                _enVentas.fcNombreCliente = FcNombreCliente.Text.ToString();
+                _enVentas.fcDomicilio = FcDomicilio.Text.ToString();
+                _enVentas.fcCiudad = FcCiudad.Text.ToString();
+                _enVentas.fcTelefono = FcTelefono.Text.ToString();
+                _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
+              //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
+                _enVentas.fiCantidad = 1;
+                _enVentas.fcConcepto = FcConcepto.Text.ToString();
+                _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);                
+                _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
+                _enVentas.fdImporte = decimal.Parse(txtTotalAPagarCredito.Text);
+
+                int RespuestaTipoVenta = _ventasBL.AgregarVenta(_enVentas);
+
+                FNotaVenta _FNotaVenta = new FNotaVenta();
+                _FNotaVenta.Show();
+            }
+            else
+            {
+                MessageBox.Show("favor de llenar todos los campos ");
+            }
+
+           
+            
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+           
+            PrevioImprecion.Document = ImprecionNota;            
+            PrevioImprecion.ShowDialog();
         }
 
-
-        //private void dgProductos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        //{
-        //      string strNombreDeProducto = string.Empty;
-        //        int iCantidad = 0;
-        //          decimal dPrecioUnitario = 0;
-        //            decimal dImporte = 0;
-
-        //if (dgProductos != null)
-        //{
-
-        //  strNombreDeProducto = dgProductos.ro;
-
-        //}
-
-        //  iCantidad = int.Parse(FcCantidad.Text);
-        //}
+        private void ImprecionNota_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            FNotaVenta _FNotaVenta = new FNotaVenta();
+            Image bmp = _FNotaVenta.CaptureScreen();
+            e.Graphics.DrawImage(bmp, 0, 0);
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNotaVenta));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,6 +73,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.ImprimirDocumento = new System.Drawing.Printing.PrintDocument();
+            this.PrevioImprecion = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -136,7 +139,6 @@
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "DIA";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label1
             // 
@@ -483,6 +485,16 @@
             this.label11.TabIndex = 13;
             this.label11.Text = "TOTAL    $";
             // 
+            // PrevioImprecion
+            // 
+            this.PrevioImprecion.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.PrevioImprecion.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.PrevioImprecion.ClientSize = new System.Drawing.Size(400, 300);
+            this.PrevioImprecion.Enabled = true;
+            this.PrevioImprecion.Icon = ((System.Drawing.Icon)(resources.GetObject("PrevioImprecion.Icon")));
+            this.PrevioImprecion.Name = "PrevioImprecion";
+            this.PrevioImprecion.Visible = false;
+            // 
             // FNotaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,5 +577,7 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox16;
+        private System.Drawing.Printing.PrintDocument ImprimirDocumento;
+        private System.Windows.Forms.PrintPreviewDialog PrevioImprecion;
     }
 }

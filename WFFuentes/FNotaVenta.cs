@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 
 namespace WFFuentes
 {
     public partial class FNotaVenta : Form
     {
+        Bitmap bmp;
+
         public FNotaVenta()
         {
             InitializeComponent();
@@ -28,10 +31,20 @@ namespace WFFuentes
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void label4_Click(object sender, EventArgs e)
+
+
+        public Image CaptureScreen()
         {
+            Graphics myGraphics = this.CreateGraphics();
+            bmp = new Bitmap(this.Size.Width, this.Size.Height, myGraphics);
+            Graphics mg = Graphics.FromImage(bmp);
+            mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+           // PrevioImprecion.ShowDialog();
+
+            return bmp;
 
         }
 
+       
     }
 }

@@ -113,7 +113,7 @@ namespace WFFuentes
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 
