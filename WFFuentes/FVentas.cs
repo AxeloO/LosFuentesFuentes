@@ -262,9 +262,20 @@ namespace WFFuentes
                 _enVentas.fcTelefono = FcTelefono.Text.ToString();
                 _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
               //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
-                _enVentas.fiCantidad = 1;
+                _enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
                 _enVentas.fcConcepto = FcConcepto.Text.ToString();
-                _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);                
+                _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
+
+
+
+
+                // aqui ayudame con un if
+
+                if (true) // si preciona el boton de imprimir y contado que le debuelva el objeto de douTotalSumaProductosCredito, en caso de lo contrario que le devuelba el objeto douTotalSumaProductos.. son doubles
+                {
+
+                }
+
                 _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
                 _enVentas.fdImporte = decimal.Parse(txtTotalAPagarCredito.Text);
 
