@@ -33,9 +33,9 @@ namespace WFFuentes
         {
             try
             {
-                cbPresentacion.DisplayMember = "Text";
+              cbPresentacion.DisplayMember = "Text";
                 cbPresentacion.ValueMember = "Value";
-                cbPresentacion.Items.Add(new { Text = "Liquidos", Value = "Liquidos" });
+               // cbPresentacion.Items.Add(new { Text = "Liquidos", Value = "Liquidos" });
 
                 if (txtNombreDelProducto.Text == "" || txtCantidad.Text == "" || txtCostoUnitario.Text == "" || txtGrupoPerteneciente.Text == "" || txtPrecioCredito.Text == "" || txtPrecioDeContado.Text == "" || cbPresentacion.Text == "")
                 {
@@ -67,7 +67,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al agregar el producto", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el producto", "Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }
@@ -247,7 +247,9 @@ namespace WFFuentes
             {
                 _en.NombreProducto = txtBusqueda.Text;
                 dgInventario.DataSource = _inventarioBl.MostrarInventarioPorNombre(_en);
+               
             }
+
         }
     }
 }

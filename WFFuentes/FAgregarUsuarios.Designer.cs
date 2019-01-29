@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bEliminar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
@@ -54,7 +57,7 @@
             this.bEliminar.BackColor = System.Drawing.Color.Teal;
             this.bEliminar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bEliminar.Location = new System.Drawing.Point(478, 215);
+            this.bEliminar.Location = new System.Drawing.Point(477, 201);
             this.bEliminar.Name = "bEliminar";
             this.bEliminar.Size = new System.Drawing.Size(113, 31);
             this.bEliminar.TabIndex = 22;
@@ -211,7 +214,7 @@
             this.bLimpiar.BackColor = System.Drawing.Color.Teal;
             this.bLimpiar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLimpiar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bLimpiar.Location = new System.Drawing.Point(478, 286);
+            this.bLimpiar.Location = new System.Drawing.Point(477, 255);
             this.bLimpiar.Name = "bLimpiar";
             this.bLimpiar.Size = new System.Drawing.Size(113, 33);
             this.bLimpiar.TabIndex = 28;
@@ -241,11 +244,25 @@
             // 
             // dgUsuarios
             // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgUsuarios.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUsuarios.Location = new System.Drawing.Point(665, 140);
+            this.dgUsuarios.Location = new System.Drawing.Point(696, 123);
             this.dgUsuarios.Name = "dgUsuarios";
-            this.dgUsuarios.Size = new System.Drawing.Size(536, 157);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgUsuarios.Size = new System.Drawing.Size(493, 150);
             this.dgUsuarios.TabIndex = 31;
+            this.dgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUsuarios_CellClick);
             // 
             // FAgregarUsuarios
             // 

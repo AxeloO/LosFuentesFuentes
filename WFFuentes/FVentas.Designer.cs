@@ -76,6 +76,8 @@
             this.btPrevioImprecion = new System.Windows.Forms.Button();
             this.PrevioImprecion = new System.Windows.Forms.PrintPreviewDialog();
             this.ImprecionNota = new System.Drawing.Printing.PrintDocument();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).BeginInit();
             this.SuspendLayout();
@@ -530,12 +532,28 @@
             // 
             this.ImprecionNota.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.ImprecionNota_PrintPage);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(667, 123);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(437, 348);
+            this.groupBox1.TabIndex = 49;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(12, 41);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(573, 382);
+            this.groupBox2.TabIndex = 50;
+            this.groupBox2.TabStop = false;
+            // 
             // FVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1629, 752);
+            this.ClientSize = new System.Drawing.Size(1710, 767);
             this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);
@@ -581,6 +599,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FVentas";
             this.Text = "FVentas";
@@ -641,5 +661,7 @@
         private System.Windows.Forms.Button btPrevioImprecion;
         private System.Windows.Forms.PrintPreviewDialog PrevioImprecion;
         private System.Drawing.Printing.PrintDocument ImprecionNota;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

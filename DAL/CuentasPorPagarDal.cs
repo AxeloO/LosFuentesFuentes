@@ -65,7 +65,7 @@ namespace DAL
             _Conexion.Open();
             SqlCommand _comando = new SqlCommand("Consultar_Cuentas_Por_Pagar_Por_Nombre", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.Add(new SqlParameter("@FcNombreProvedor", PEntidad.FcNombreProveedor));
+            _comando.Parameters.Add(new SqlParameter("@FcNombreProveedor", PEntidad.FcNombreProveedor));
             IDataReader _reader = _comando.ExecuteReader();
             List<EnCuentasPorPagar> Lista = new List<EnCuentasPorPagar>();
             while (_reader.Read())

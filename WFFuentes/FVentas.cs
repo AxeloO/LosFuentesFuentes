@@ -33,8 +33,6 @@ namespace WFFuentes
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wnsg, int wparam, int lparam);
 
-
-
         private void bRegresar_Click(object sender, EventArgs e)
         {
             FMenuEmpleado _fPrincipal = new FMenuEmpleado();
@@ -92,7 +90,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Producto", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al Agregar el Producto", "Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
  
         }
@@ -132,7 +130,7 @@ namespace WFFuentes
             txtNombre.Focus();
 
         }
-        private void bLimpiar_Click(object sender, EventArgs e)
+        private void bLimpiar_Click(object sender, EventArgs e) 
         {
             Limpiar();
            
@@ -249,8 +247,12 @@ namespace WFFuentes
 
         private void btnImprimirVenta_Click(object sender, EventArgs e)
         {
-           
+
             // AQUI~~~ necesito ayuda!!!!!
+            double doTotalSumaProductos;
+            double doTotalSumaProductosCredito;
+            double intCantidadProducto;
+
 
             if (!FdFechaPago.Equals(string.Empty) )
             {
@@ -266,13 +268,17 @@ namespace WFFuentes
                 _enVentas.fcConcepto = FcConcepto.Text.ToString();
                 _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
 
-
-
-
                 // aqui ayudame con un if
 
-                if (true) // si preciona el boton de imprimir y contado que le debuelva el objeto de douTotalSumaProductosCredito, en caso de lo contrario que le devuelba el objeto douTotalSumaProductos.. son doubles
+                if (true) // si preciona el boton de imprimir y contado que le debuelva el objeto de douTotalSumaProductosCredito, 
+                    //en caso de lo contrario que le devuelba el objeto douTotalSumaProductos.. son doubles
+                {//Prueba
+                    intCantidadProducto = double.Parse(txtCantidad.Text.ToString().Trim());
+                    doTotalSumaProductosCredito = douTotalSumaProductosCredito + intCantidadProducto;
+                }
+                else
                 {
+                   // doTotalSumaProductos = douTotalSumaProductos + intCantidadProducto;
 
                 }
 

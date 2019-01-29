@@ -18,7 +18,7 @@ namespace WFFuentes
     {
         EnUsuario _enUsuario = new EnUsuario();
         UsuariosBL _usuariosBL = new UsuariosBL();
-  
+
 
         public FAgregarUsuarios()
         {
@@ -40,7 +40,7 @@ namespace WFFuentes
             int respuestaTipoEmpleado = 0;
             try
             {
-                if (txtNombreEmpleado.Text.Trim() == "" || txtNombreUsuario.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || cbTipoUsuario.Text.Trim() == "" )
+                if (txtNombreEmpleado.Text.Trim() == "" || txtNombreUsuario.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || cbTipoUsuario.Text.Trim() == "")
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -56,7 +56,7 @@ namespace WFFuentes
                     if (strTipoUsuario.Equals("Administrador"))
                     {
                         respuestaTipoEmpleado = 420;
-           
+
                         _enUsuario.fiPuestoUsuario = respuestaTipoEmpleado;
 
                         int Resultado = _usuariosBL.AgregarUsuario(_enUsuario);
@@ -67,7 +67,7 @@ namespace WFFuentes
                             Limpiar();
                         }
                     }
-                   else if (strTipoUsuario.Equals("Empleado"))
+                    else if (strTipoUsuario.Equals("Empleado"))
                     {
                         respuestaTipoEmpleado = 720;
 
@@ -84,7 +84,7 @@ namespace WFFuentes
                     else
                     {
                         MessageBox.Show("Hubo un error al agregar el usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                      
+
                     }
 
                 }
@@ -99,7 +99,7 @@ namespace WFFuentes
 
         private void btConsultarUsuarios_Click(object sender, EventArgs e)
         {
-            dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();                      
+            dgUsuarios.DataSource = _usuariosBL.ListaDeUsuarios();
         }
 
         private void bEliminar_Click(object sender, EventArgs e)
@@ -158,7 +158,7 @@ namespace WFFuentes
             txtContraseña.Text = string.Empty;
             cbTipoUsuario.Text = string.Empty;
             txtNombreEmpleado.Focus();
-            
+
         }
 
         private void bLimpiar_Click(object sender, EventArgs e)
@@ -168,7 +168,7 @@ namespace WFFuentes
 
         private void dgUsuarios_SelectionChanged(object sender, EventArgs e)
         {
-           //_enUsuario = dgUsuarios.DataSource as FAgregarCliente;
+            //_enUsuario = dgUsuarios.DataSource as FAgregarCliente;
             if (_enUsuario != null)
             {
                 txtIdUsuario.Text = Convert.ToString(_enUsuario.fiIdUsuario);
@@ -176,7 +176,7 @@ namespace WFFuentes
                 txtNombreUsuario.Text = _enUsuario.fcNombreUsuario;
                 txtContraseña.Text = _enUsuario.fcPassword;
                 cbTipoUsuario.Text = Convert.ToString(_enUsuario.fiPuestoUsuario);
-                               
+
             }
         }
 
@@ -186,7 +186,7 @@ namespace WFFuentes
             txtNombreEmpleado.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcNombreCompleto"].Value.ToString();
             txtNombreUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcNombreUsuario"].Value.ToString();
             txtContraseña.Text = dgUsuarios.Rows[e.RowIndex].Cells["fcPassword"].Value.ToString();
-            cbTipoUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fiPuestoUsuario"].Value.ToString();           
+            cbTipoUsuario.Text = dgUsuarios.Rows[e.RowIndex].Cells["fiPuestoUsuario"].Value.ToString();
         }
     }
 }

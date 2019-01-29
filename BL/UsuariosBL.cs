@@ -44,7 +44,7 @@ namespace BL
         {
             return _dalUsuarios.EliminarUsuario(PEntidad);
         }
-
+      
       
     }
 }

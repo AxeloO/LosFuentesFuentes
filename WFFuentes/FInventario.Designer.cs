@@ -149,8 +149,26 @@
             this.cbPresentacion.Items.AddRange(new object[] {
             "Kilogramos",
             "Litros",
-            "Toneladas",
-            "Bultos"});
+            "Piezas",
+            "Bultos 50 mil Semillas",
+            "Bultos 60 mil Semillas",
+            "Bultos 20 kg",
+            "Bultos 25 kg",
+            "Bultos 40 kg",
+            "Bultos 50 kg",
+            "Cubetas",
+            "Dosis 10 grs ",
+            "Dosis 20 grs",
+            "Dosis 30 grs ",
+            "Dosis 100 grs",
+            "Dosis 100 ml",
+            "Dosis 200 ml",
+            "Dosis 250 ml",
+            "Dosis 800 grs",
+            "Paquetes",
+            "Garrafa 5 Lt",
+            "Garrafa 10 Lt",
+            "Garrafa 20 Lt"});
             this.cbPresentacion.Location = new System.Drawing.Point(218, 240);
             this.cbPresentacion.Name = "cbPresentacion";
             this.cbPresentacion.Size = new System.Drawing.Size(156, 21);
@@ -182,9 +200,9 @@
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(37, 323);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 23);
+            this.label6.Size = new System.Drawing.Size(138, 23);
             this.label6.TabIndex = 33;
-            this.label6.Text = "Costo unitario:";
+            this.label6.Text = "Precio Proveedor:";
             // 
             // label5
             // 
@@ -362,7 +380,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1529, 481);
+            this.ClientSize = new System.Drawing.Size(1378, 481);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bBuscar);
             this.Controls.Add(this.txtBusqueda);
