@@ -89,9 +89,10 @@ namespace DAL
 
         public int ModificarProducto(Inventario PEntidad)
         {
-            IDbConnection _conexion = DBConexion.Conexion();
-            _conexion.Open();
-            SqlCommand _comando = new SqlCommand("Modificar_Producto", _conexion as SqlConnection);
+            IDbConnection _Conexion = DBConexion.Conexion();
+            _Conexion.Open();
+
+            SqlCommand _comando = new SqlCommand("Modificar_Producto", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@IdProducto", PEntidad.IdProducto));
             _comando.Parameters.Add(new SqlParameter("@NombreProducto", PEntidad.NombreProducto));
@@ -101,8 +102,10 @@ namespace DAL
             _comando.Parameters.Add(new SqlParameter("@CostoUnitario", PEntidad.CostoUnitario));
             _comando.Parameters.Add(new SqlParameter("@PrecioContado", PEntidad.PrecioContado));
             _comando.Parameters.Add(new SqlParameter("@PrecioACredito", PEntidad.PrecioACredito));
+
+
             int Resultado = _comando.ExecuteNonQuery();
-            _conexion.Close();
+            _Conexion.Close();
             return Resultado;
 
         }

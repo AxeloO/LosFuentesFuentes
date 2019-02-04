@@ -178,8 +178,9 @@ namespace WFFuentes
                 _en.Cantidad = Int32.Parse(txtCantidad.Text);
                 _en.Presentacion = cbPresentacion.Text;
                 _en.CostoUnitario = decimal.Parse(txtCostoUnitario.Text);
-                _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
                 _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
+                _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
+               
                 
                 if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
