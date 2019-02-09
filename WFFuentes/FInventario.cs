@@ -93,6 +93,10 @@ namespace WFFuentes
 
         private void dgInventario_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+
+            Inventario _en = new Inventario();
+            InventarioBL _inventarioBl = new InventarioBL();
+
             try
             {
                 _en = dgInventario.DataSource as Inventario;
@@ -168,40 +172,7 @@ namespace WFFuentes
             }
         }
 
-        private void btModificar_Click(object sender, EventArgs e)
-        {
-            if (txtIdProducto.Text !="" && txtNombreDelProducto.Text != "")
-            {
-                _en.IdProducto = long.Parse(txtIdProducto.Text);
-                _en.NombreProducto = txtNombreDelProducto.Text;
-                _en.GrupoPertenenciente = txtGrupoPerteneciente.Text;
-                _en.Cantidad = Int32.Parse(txtCantidad.Text);
-                _en.Presentacion = cbPresentacion.Text;
-                _en.CostoUnitario = decimal.Parse(txtCostoUnitario.Text);
-                _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
-                _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
-               
-                
-                if (_inventarioBl.ModificarProducto(_en) > 0)
-                {
-                    MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    dgInventario.DataSource = _inventarioBl.MostrarInventario();
-                    dgInventario.Refresh();
-                   
-                }
-
-                else
-                {
-                    MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-        }
-
+       
         private void FCuentasCobrar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -249,6 +220,42 @@ namespace WFFuentes
                 _en.NombreProducto = txtBusqueda.Text;
                 dgInventario.DataSource = _inventarioBl.MostrarInventarioPorNombre(_en);
                
+            }
+
+        }
+
+        private void btModificar_Click(object sender, EventArgs e)
+        {
+
+            if (txtIdProducto.Text != "" && txtNombreDelProducto.Text != "")
+            {
+                _en.IdProducto = long.Parse(txtIdProducto.Text);
+                _en.NombreProducto = txtNombreDelProducto.Text;
+                _en.GrupoPertenenciente = txtGrupoPerteneciente.Text;
+                _en.Cantidad = Int32.Parse(txtCantidad.Text);
+                _en.Presentacion = cbPresentacion.Text;
+                _en.CostoUnitario = decimal.Parse(txtCostoUnitario.Text);
+                _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
+                _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
+
+
+                if (_inventarioBl.ModificarProducto(_en) > 0)
+                {
+                    MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    dgInventario.DataSource = _inventarioBl.MostrarInventario();
+                    dgInventario.Refresh();
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }
