@@ -112,13 +112,11 @@ namespace DAL
 
         public int EliminarProducto(Inventario PEntidad)
         {
-            Inventario _inventario = new Inventario();
-           // _inventario.IdProducto = PEntidad;
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
             SqlCommand _comando = new SqlCommand("Eliminar_Producto", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.Remove(new SqlParameter("@IdProducto", PEntidad.IdProducto));
+            _comando.Parameters.Add(new SqlParameter("@IdProducto", PEntidad.IdProducto));
             int Resultado = _comando.ExecuteNonQuery();
             _Conexion.Close();
             return Resultado;
