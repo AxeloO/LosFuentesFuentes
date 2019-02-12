@@ -15,13 +15,19 @@ namespace WFFuentes
     public partial class FVentas : Form
     {
         Bitmap bmp;
-      //  Graphics mg;
+        //  Graphics mg;
         EnVentas _enVentas = new EnVentas();
         VentasBL _ventasBL = new VentasBL();
         InventarioBL _inventarioBL = new InventarioBL();
         Inventario _enInventario = new Inventario();
+
+
+        // variables globales
         double douTotalSumaProductos = 0;
         double douTotalSumaProductosCredito = 0;
+        public string strExistenciaProducto = string.Empty;
+        string striDProducto = string.Empty;
+        DataGridViewRow finaldgTotalProductos = new DataGridViewRow();
 
         public FVentas()
         {
@@ -54,9 +60,9 @@ namespace WFFuentes
 
             try
             {
-                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioDeContado.Text == "" || txtPrecioACredito.Text==""|| txtImporte.Text == "")
+                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioDeContado.Text == "" || txtPrecioACredito.Text == "" || txtImporte.Text == "")
 
-                   // if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
+                // if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -70,11 +76,11 @@ namespace WFFuentes
                     _enVentas.fcTelefono = FcTelefono.Text;
                     _enVentas.fcFechaPago = FdFechaPago.Text;
                     _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
-                   // _enVentas.fcConcepto = FcConcepto.Text;
+                    // _enVentas.fcConcepto = FcConcepto.Text;
                     _enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
-                
+
                     int Resultado = _ventasBL.AgregarVenta(_enVentas);
 
                     if (Resultado == 1)
@@ -92,14 +98,14 @@ namespace WFFuentes
 
                 MessageBox.Show("Hubo un error al Agregar el Producto", "Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
- 
+
         }
 
         private void btConsultarVentas_Click(object sender, EventArgs e)
         {
             dgProductos.DataSource = _ventasBL.MostrarVentas();
         }
-       
+
         private void bBusqueda_Click(object sender, EventArgs e)
         {
             if (!(FcConcepto.Text == ""))
@@ -123,32 +129,36 @@ namespace WFFuentes
 
         private void Limpiar_Venta()
         {
+
             txtNombre.Text = string.Empty;
             txtCantidad.Text = string.Empty;
             txtPrecioUnitario.Text = string.Empty;
             txtImporte.Text = string.Empty;
             txtNombre.Focus();
 
+
         }
-        private void bLimpiar_Click(object sender, EventArgs e) 
+        private void bLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
-           
+
         }
 
         private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {//Los campos seran de inventario o de ventas.!?  Creo que eran de inventario asi que fue de Inventario, Será necesario hacer un if para eso de los precios.!?
-            // no se que dices jaja
+        {
+
+            striDProducto = dgProductos.Rows[e.RowIndex].Cells["idProducto"].Value.ToString();
+            strExistenciaProducto = dgProductos.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
             string strCantidad = txtCantidad.Text.ToString().Trim();
-            txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();          
+            txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();
             txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["CostoUnitario"].Value.ToString();
             txtPrecioACredito.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioACredito"].Value.ToString();
             txtPrecioDeContado.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();
             // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
             // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
             string strPrecio = txtPrecioUnitario.Text.ToString().Trim();
-                        
-    
+
+
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -156,30 +166,41 @@ namespace WFFuentes
             try
             {
 
-                double intCantidadProducto;               
+                double intCantidadProducto;
                 double doTotalDelProducto;
                 double doTotalDelProductoCredito;
                 string strNombreProductos;
-            
+
+
+
+                int intCantidadAComprar = int.Parse(txtCantidad.Text);
+                int intCantidadDeProductoExistencia = int.Parse(strExistenciaProducto);
 
                 if (!txtNombre.Text.Equals(""))
+                {
+
+
+                    if (txtCantidad.Text.Equals("") || txtCantidad.Text.Equals(null))
+                    {
+                        MessageBox.Show("Debe Colocar la cantidad que desea Vender");
+                    }
+
+                    if (intCantidadDeProductoExistencia < intCantidadAComprar)
+                    {
+                        MessageBox.Show("No se puede vender mas productos de los que hay en almacen.");
+                    }
+                    else
                     {
 
-                        if (txtCantidad.Text.Equals(""))
-                        {
-                            MessageBox.Show("Debe Colocar la cantidad que desea Vender");
-                        }
-                        else
-                        {
-
-                            intCantidadProducto = double.Parse(txtCantidad.Text.ToString().Trim());
-                            double intProductoUnitario = double.Parse(txtPrecioUnitario.Text.ToString().Trim());
-                            double doProductoUnitarioCredito = double.Parse(txtPrecioACredito.Text.ToString().Trim());
-                            doTotalDelProducto = intProductoUnitario * intCantidadProducto;
-                            doTotalDelProductoCredito = doProductoUnitarioCredito * intCantidadProducto;
-                            txtImporte.Text = doTotalDelProducto.ToString();
-                            this.Controls.Add(dgTotalProductos);
-                            strNombreProductos = txtNombre.Text.ToString().Trim();
+                        int intIdProducto = int.Parse(striDProducto);
+                        intCantidadProducto = double.Parse(txtCantidad.Text.ToString().Trim());
+                        double intProductoUnitario = double.Parse(txtPrecioUnitario.Text.ToString().Trim());
+                        double doProductoUnitarioCredito = double.Parse(txtPrecioACredito.Text.ToString().Trim());
+                        doTotalDelProducto = intProductoUnitario * intCantidadProducto;
+                        doTotalDelProductoCredito = doProductoUnitarioCredito * intCantidadProducto;
+                        txtImporte.Text = doTotalDelProducto.ToString();
+                        this.Controls.Add(dgTotalProductos);
+                        strNombreProductos = txtNombre.Text.ToString().Trim();
 
 
                         if (dgTotalProductos.Columns.Count == 0)
@@ -200,19 +221,25 @@ namespace WFFuentes
                             colTotalProducto.Width = 80;
                             dgTotalProductos.Columns.Add(colTotalProducto);
 
-                            
+
                             DataGridViewTextBoxColumn colCantidadProductoCredito = new DataGridViewTextBoxColumn();
                             colCantidadProductoCredito.HeaderText = "Precio Total A Credito";
                             colCantidadProductoCredito.Width = 80;
                             dgTotalProductos.Columns.Add(colCantidadProductoCredito);
-                                                       
 
-                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto, doTotalDelProductoCredito, strNombreProductos);
+                            DataGridViewTextBoxColumn colIdProducto = new DataGridViewTextBoxColumn();
+                            colIdProducto.HeaderText = "Id Producto";
+                            colIdProducto.Width = 80;
+                            dgTotalProductos.Columns.Add(colIdProducto);
 
-                                                        
+
+                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto, doTotalDelProductoCredito, strNombreProductos, intIdProducto);
+
+
                         }
-                        else {                            
-                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto, doTotalDelProductoCredito, strNombreProductos);
+                        else
+                        {
+                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto, doTotalDelProductoCredito, strNombreProductos, intIdProducto);
 
                         }
 
@@ -223,9 +250,9 @@ namespace WFFuentes
 
                     }
 
-                    }                  
+                }
 
-                
+
                 else
                 {
                     MessageBox.Show("Debe seleccionar un Producto Primero");
@@ -247,62 +274,117 @@ namespace WFFuentes
 
         private void btnImprimirVenta_Click(object sender, EventArgs e)
         {
-
-            // AQUI~~~ necesito ayuda!!!!!
-            double doTotalSumaProductos;
-            double doTotalSumaProductosCredito;
-            double intCantidadProducto;
-
-
-            if (!FdFechaPago.Equals(string.Empty) )
+            try
             {
+                Inventario _en = new Inventario();
+                InventarioBL _inventarioBl = new InventarioBL();
 
-                _enVentas.fDtFechaSalida = FdFechaSalida.Text.ToString();
-                _enVentas.fcNombreCliente = FcNombreCliente.Text.ToString();
-                _enVentas.fcDomicilio = FcDomicilio.Text.ToString();
-                _enVentas.fcCiudad = FcCiudad.Text.ToString();
-                _enVentas.fcTelefono = FcTelefono.Text.ToString();
-                _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
-              //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
-                _enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
-                _enVentas.fcConcepto = FcConcepto.Text.ToString();
-                _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
+                //Variables del Metodo
+                double doTotalSumaProductos;
+                double doTotalSumaProductosCredito;
+                double intCantidadProducto;
+                int intCantidadProductoafectarInventario = 0;
+                string strNombreModificado = string.Empty;
+                string strIdProductoComparar = string.Empty;
+                int intCantidadModificada = 0;
+                int iteracion = 1;
 
-                // aqui ayudame con un if
 
-                if (true) // si preciona el boton de imprimir y contado que le debuelva el objeto de douTotalSumaProductosCredito, 
-                    //en caso de lo contrario que le devuelba el objeto douTotalSumaProductos.. son doubles
-                {//Prueba
-                    intCantidadProducto = double.Parse(txtCantidad.Text.ToString().Trim());
-                    doTotalSumaProductosCredito = douTotalSumaProductosCredito + intCantidadProducto;
+                if (!FdFechaPago.Equals(string.Empty))
+                {
+
+
+                    _enVentas.fDtFechaSalida = FdFechaSalida.Text.ToString();
+                    _enVentas.fcNombreCliente = FcNombreCliente.Text.ToString();
+                    _enVentas.fcDomicilio = FcDomicilio.Text.ToString();
+                    _enVentas.fcCiudad = FcCiudad.Text.ToString();
+                    _enVentas.fcTelefono = FcTelefono.Text.ToString();
+                    _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
+                    //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
+                    _enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
+                    _enVentas.fcConcepto = FcConcepto.Text.ToString();
+                    _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
+
+                    // aqui ayudame con un if
+
+                    if (true) // si preciona el boton de imprimir y contado que le debuelva el objeto de douTotalSumaProductosCredito, 
+                              //en caso de lo contrario que le devuelba el objeto douTotalSumaProductos.. son doubles
+                    {//Prueba
+                        intCantidadProducto = double.Parse(txtCantidad.Text.ToString().Trim());
+                        doTotalSumaProductosCredito = douTotalSumaProductosCredito + intCantidadProducto;
+                    }
+                    else
+                    {
+                        // doTotalSumaProductos = douTotalSumaProductos + intCantidadProducto;
+
+                    }
+
+                    _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
+                    _enVentas.fdImporte = decimal.Parse(txtTotalAPagarCredito.Text);
+
+                    int RespuestaTipoVenta = _ventasBL.AgregarVenta(_enVentas);
+
+                    if (!RespuestaTipoVenta.Equals(null))
+                    {
+
+
+                        foreach (DataGridViewRow producto in dgTotalProductos.Rows)
+                        {                           
+                           
+                            if (iteracion > dgTotalProductos.RowCount)
+                            {
+
+                                strNombreModificado = producto.Cells[3].Value.ToString();
+                                intCantidadModificada = int.Parse(producto.Cells[1].Value.ToString());
+                                strIdProductoComparar = producto.Cells[4].Value.ToString();
+
+                                foreach (var productoInventario in _inventarioBl.MostrarInventario())
+                                {
+                                    _en.IdProducto = productoInventario.IdProducto;
+                                    _en.NombreProducto = productoInventario.NombreProducto;
+                                    _en.GrupoPertenenciente = productoInventario.GrupoPertenenciente;
+                                    _en.Cantidad = productoInventario.Cantidad;
+                                    _en.Presentacion = productoInventario.Presentacion;
+                                    _en.CostoUnitario = productoInventario.CostoUnitario;
+                                    _en.PrecioContado = productoInventario.PrecioContado;
+                                    _en.PrecioACredito = productoInventario.PrecioACredito;
+
+                                    if (strNombreModificado.Equals(_en.NombreProducto.ToString()) && strIdProductoComparar.Equals(_en.IdProducto.ToString()))
+                                    {
+                                        _en.Cantidad = _en.Cantidad - intCantidadModificada;
+                                        _inventarioBl.ModificarProducto(_en);
+                                    }
+
+                                }
+
+                            }
+                            iteracion++;
+                        }
+
+
+                    }
+
+                    MessageBox.Show("Se Realizo la venta Correctamente");
                 }
                 else
                 {
-                   // doTotalSumaProductos = douTotalSumaProductos + intCantidadProducto;
-
+                    MessageBox.Show("favor de llenar todos los campos ");
                 }
 
-                _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
-                _enVentas.fdImporte = decimal.Parse(txtTotalAPagarCredito.Text);
-
-                int RespuestaTipoVenta = _ventasBL.AgregarVenta(_enVentas);
-
-                FNotaVenta _FNotaVenta = new FNotaVenta();
-                _FNotaVenta.Show();
             }
-            else
+
+            catch (Exception ex)
             {
-                MessageBox.Show("favor de llenar todos los campos ");
+
+                throw ex;
             }
 
-           
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-            PrevioImprecion.Document = ImprecionNota;            
+
+            PrevioImprecion.Document = ImprecionNota;
             PrevioImprecion.ShowDialog();
         }
 
