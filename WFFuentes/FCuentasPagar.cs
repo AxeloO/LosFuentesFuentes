@@ -67,13 +67,15 @@ namespace WFFuentes
                 string strFactura = txtNoFactura.Text.ToString().Trim();
                 string strFechaAdquisicion = txtFechaAdquisicion.Text.ToString().Trim();
                 string strProductoAdquirido = txtProductoAdquirido.Text.ToString().Trim();
+                string strCantidad = txtCantidad.Text.ToString().Trim();
                 string strTotalAPagar = txtMontoPagar.Text.ToString().Trim();
-              
+                string strStatus = txtStatus.Text.ToString().Trim();
+                             
 
 
-                if (txtNombreProveedor.Text ==("") || txtNoFactura.Text ==("") || txtFechaAdquisicion.Text ==("") || txtProductoAdquirido.Text == ("") || txtMontoPagar.Text == (""))
+                if (txtNombreProveedor.Text ==("") || txtNoFactura.Text ==("") || txtFechaAdquisicion.Text ==("") || txtProductoAdquirido.Text == ("") || txtCantidad.Text ==("") || txtMontoPagar.Text == ("") || txtStatus.Text == ("") )
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -83,13 +85,15 @@ namespace WFFuentes
                     _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
                     _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
                     _enCuentas.FdTotalAPagar = int.Parse(txtMontoPagar.Text);
+                    _enCuentas.FdCantidad = int.Parse(txtCantidad.Text);
+                    _enCuentas.FcStatus = txtStatus.Text;
                    
 
                     int Resultado = _cuentasBL.AgregarCuentasPorPagar(_enCuentas);
 
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se agrego el nuevo registro correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo registro correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Limpiar();
                     }
 
@@ -99,7 +103,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al agregar el registro", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el registro", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -110,7 +114,7 @@ namespace WFFuentes
                 string strIdCuentas = txtID.Text.ToString().Trim();
                 if (strIdCuentas != "" && txtNombreProveedor.Text != "")
                 {
-                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult r = MessageBox.Show("¿Estas seguro de eliminar este registro?", "¡Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (r == DialogResult.OK)
                     {
@@ -151,7 +155,9 @@ namespace WFFuentes
             txtNombreProveedor.Text = string.Empty;
             txtProductoAdquirido.Text = string.Empty;
             txtFechaAdquisicion.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
             txtMontoPagar.Text = string.Empty;
+            txtStatus.Text =string.Empty;
             txtNombreProveedor.Focus();
         }
 
@@ -162,8 +168,10 @@ namespace WFFuentes
             txtNoFactura.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FiNoFactura"].Value.ToString();
             txtFechaAdquisicion.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FDtFechaAdquisicion"].Value.ToString();
             txtProductoAdquirido.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FcProductoAdquirido"].Value.ToString();
+            txtCantidad.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FdCantidad"].Value.ToString();
             txtMontoPagar.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FdTotalAPagar"].Value.ToString();
-            
+            txtStatus.Text = dGCuentasPagar.Rows[e.RowIndex].Cells["FcStatus"].Value.ToString();
+
         }
 
         private void bModificar_Click(object sender, EventArgs e)
@@ -174,8 +182,10 @@ namespace WFFuentes
             string strNoFactura = txtNoFactura.Text.ToString().Trim();
             string strFechaAdquisicion = txtFechaAdquisicion.Text.ToString().Trim();
             string strProductoAdquirido = txtProductoAdquirido.Text.ToString().Trim();
+            string strCantidad = txtCantidad.Text.ToString().Trim();
             string strMontoPagar = txtMontoPagar.Text.ToString().Trim();
-            
+            string strStatus = txtStatus.Text.ToString().Trim();
+
             if (strIdCuentasPagar !="" && strNombreProveedor !="")
             {
            _enCuentas.FiIdProveedor = long.Parse(txtID.Text);
@@ -183,7 +193,9 @@ namespace WFFuentes
            _enCuentas.FiNoFactura = int.Parse(txtNoFactura.Text);
            _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
            _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
-           _enCuentas.FdTotalAPagar = decimal.Parse(txtMontoPagar.Text);
+           _enCuentas.FdCantidad = decimal.Parse(txtCantidad.Text);
+           _enCuentas.FdTotalAPagar = decimal.Parse(txtCantidad.Text);
+           _enCuentas.FcStatus = txtStatus.Text;
          
 
            if (_cuentasBL.ModificarCuentas(_enCuentas) > 0)
@@ -214,5 +226,7 @@ namespace WFFuentes
                 dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorNombre(_enCuentas);
             }
         }
+
+     
     }
 }

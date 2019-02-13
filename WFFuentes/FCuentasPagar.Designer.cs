@@ -33,7 +33,7 @@
             this.bAgregar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombreProveedor = new System.Windows.Forms.TextBox();
-            this.txtMontoPagar = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtProductoAdquirido = new System.Windows.Forms.TextBox();
             this.txtFechaAdquisicion = new System.Windows.Forms.TextBox();
             this.txtNoFactura = new System.Windows.Forms.TextBox();
@@ -52,6 +52,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bImprimir = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtMontoPagar = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGCuentasPagar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +102,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 168);
+            this.label6.Location = new System.Drawing.Point(38, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(179, 23);
             this.label6.TabIndex = 29;
@@ -106,35 +110,35 @@
             // 
             // txtNombreProveedor
             // 
-            this.txtNombreProveedor.Location = new System.Drawing.Point(244, 168);
+            this.txtNombreProveedor.Location = new System.Drawing.Point(248, 146);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
             this.txtNombreProveedor.Size = new System.Drawing.Size(162, 20);
             this.txtNombreProveedor.TabIndex = 28;
             // 
-            // txtMontoPagar
+            // txtCantidad
             // 
-            this.txtMontoPagar.Location = new System.Drawing.Point(244, 357);
-            this.txtMontoPagar.Name = "txtMontoPagar";
-            this.txtMontoPagar.Size = new System.Drawing.Size(162, 20);
-            this.txtMontoPagar.TabIndex = 24;
+            this.txtCantidad.Location = new System.Drawing.Point(248, 335);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(80, 20);
+            this.txtCantidad.TabIndex = 24;
             // 
             // txtProductoAdquirido
             // 
-            this.txtProductoAdquirido.Location = new System.Drawing.Point(244, 309);
+            this.txtProductoAdquirido.Location = new System.Drawing.Point(248, 287);
             this.txtProductoAdquirido.Name = "txtProductoAdquirido";
             this.txtProductoAdquirido.Size = new System.Drawing.Size(162, 20);
             this.txtProductoAdquirido.TabIndex = 23;
             // 
             // txtFechaAdquisicion
             // 
-            this.txtFechaAdquisicion.Location = new System.Drawing.Point(244, 259);
+            this.txtFechaAdquisicion.Location = new System.Drawing.Point(248, 237);
             this.txtFechaAdquisicion.Name = "txtFechaAdquisicion";
             this.txtFechaAdquisicion.Size = new System.Drawing.Size(162, 20);
             this.txtFechaAdquisicion.TabIndex = 22;
             // 
             // txtNoFactura
             // 
-            this.txtNoFactura.Location = new System.Drawing.Point(244, 215);
+            this.txtNoFactura.Location = new System.Drawing.Point(248, 193);
             this.txtNoFactura.Name = "txtNoFactura";
             this.txtNoFactura.Size = new System.Drawing.Size(80, 20);
             this.txtNoFactura.TabIndex = 21;
@@ -143,7 +147,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 357);
+            this.label4.Location = new System.Drawing.Point(42, 378);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 23);
             this.label4.TabIndex = 20;
@@ -153,7 +157,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 309);
+            this.label3.Location = new System.Drawing.Point(42, 287);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 23);
             this.label3.TabIndex = 19;
@@ -163,7 +167,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 263);
+            this.label2.Location = new System.Drawing.Point(42, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 23);
             this.label2.TabIndex = 18;
@@ -173,7 +177,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 215);
+            this.label1.Location = new System.Drawing.Point(42, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 23);
             this.label1.TabIndex = 17;
@@ -228,7 +232,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(38, 126);
+            this.label8.Location = new System.Drawing.Point(42, 104);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 23);
             this.label8.TabIndex = 38;
@@ -236,7 +240,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(138, 126);
+            this.txtID.Location = new System.Drawing.Point(142, 104);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(61, 20);
             this.txtID.TabIndex = 39;
@@ -296,12 +300,50 @@
             this.bImprimir.Text = "Imprimir";
             this.bImprimir.UseVisualStyleBackColor = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(42, 331);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 23);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Cantidad:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(38, 421);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 23);
+            this.label11.TabIndex = 53;
+            this.label11.Text = "Status de Factura:";
+            // 
+            // txtMontoPagar
+            // 
+            this.txtMontoPagar.Location = new System.Drawing.Point(248, 381);
+            this.txtMontoPagar.Name = "txtMontoPagar";
+            this.txtMontoPagar.Size = new System.Drawing.Size(162, 20);
+            this.txtMontoPagar.TabIndex = 54;
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(248, 425);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(162, 20);
+            this.txtStatus.TabIndex = 55;
+            // 
             // FCuentasPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1317, 509);
+            this.ClientSize = new System.Drawing.Size(1317, 526);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.txtMontoPagar);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.label9);
@@ -318,7 +360,7 @@
             this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNombreProveedor);
-            this.Controls.Add(this.txtMontoPagar);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtProductoAdquirido);
             this.Controls.Add(this.txtFechaAdquisicion);
             this.Controls.Add(this.txtNoFactura);
@@ -344,7 +386,7 @@
         private System.Windows.Forms.Button bAgregar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombreProveedor;
-        private System.Windows.Forms.TextBox txtMontoPagar;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtProductoAdquirido;
         private System.Windows.Forms.TextBox txtFechaAdquisicion;
         private System.Windows.Forms.TextBox txtNoFactura;
@@ -363,5 +405,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button bImprimir;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtMontoPagar;
+        private System.Windows.Forms.TextBox txtStatus;
     }
 }

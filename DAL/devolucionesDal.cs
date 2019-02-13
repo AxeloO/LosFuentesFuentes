@@ -21,9 +21,13 @@ namespace DAL
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@FiFolioVenta", PEntidad.fiFolioVenta));
             //_comando.Parameters.Add(new SqlParameter("@FiIdDevolucion", PEntidad.fiIdDevolucion));
+            _comando.Parameters.Add(new SqlParameter("@FcFechaDevolucion", PEntidad.fcFechaDevolucion));
+            _comando.Parameters.Add(new SqlParameter("@FcNombreDelCliente", PEntidad.fcNombreDelCliente));
             _comando.Parameters.Add(new SqlParameter("@FcNombreProductoDevolucion", PEntidad.fcNombreProductoDevolucion));
             _comando.Parameters.Add(new SqlParameter("@FiCantidadDevolucion", PEntidad.fiCantidadDevolucion));
             _comando.Parameters.Add(new SqlParameter("@FcCausaDevolucion", PEntidad.fcCausaDevolucion));
+            
+            
 
 
             int Resultado = _comando.ExecuteNonQuery();
@@ -46,8 +50,10 @@ namespace DAL
                 _EnDevolucion.fiFolioVenta = _reader.GetInt32(0);
                 _EnDevolucion.fiIdDevolucion = _reader.GetInt64(1);
                 _EnDevolucion.fcNombreProductoDevolucion = _reader.GetString(2);
-                _EnDevolucion.fiCantidadDevolucion = _reader.GetInt32(3);
+                _EnDevolucion.fiCantidadDevolucion = _reader.GetInt32(3);//Al momento de pedir que me muestre la lista me manda este error "System.InvalidCastException: 'La conversión especificada no es válida."
                 _EnDevolucion.fcCausaDevolucion = _reader.GetString(4);
+                _EnDevolucion.fcFechaDevolucion = _reader.GetString(5);
+                _EnDevolucion.fcNombreDelCliente = _reader.GetString(6);
                 
                 Lista.Add(_EnDevolucion);
             }

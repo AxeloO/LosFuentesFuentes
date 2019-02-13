@@ -69,7 +69,7 @@ namespace WFFuentes
 
                 if (strNombreProveedor.Equals("") || strDomicilio.Equals("") || strTelefono.Equals("") || strRFC.Equals("") || strCuentaBancaria.Equals("") || strProductoSurtir.Equals("") || strLimiteCredito.Equals(""))
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -84,7 +84,7 @@ namespace WFFuentes
                     int Resultado = proveedoresBL.AgregarProveedor(_enProveedores);
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se agrego el nuevo proveedor correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo proveedor correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Limpiar();
                     
                     }
@@ -93,7 +93,7 @@ namespace WFFuentes
 
             catch (Exception)
             {
-                MessageBox.Show("Hubo un error al agregar el proveedor", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el proveedor", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -118,7 +118,7 @@ namespace WFFuentes
                 string strIdProveedor = txtID.Text.ToString().Trim();
                 if (strIdProveedor != "" && txtNombreCompleto.Text != "")
                 {
-                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult r = MessageBox.Show("¿Estas seguro de eliminar este registro?", "¡Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (r == DialogResult.OK)
                     {
@@ -189,7 +189,7 @@ namespace WFFuentes
 
                 if (proveedoresBL.ModificarProveedor(_enProveedores) > 0)
                     {
-                        MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         dGProveedores.Refresh();
                         dGProveedores.DataSource = proveedoresBL.MostrarProveedor();
                     Limpiar();
@@ -197,13 +197,13 @@ namespace WFFuentes
 
                     else
                     {
-                        MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ocurrio un problema, no se pudo modificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Seleccione un registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
 

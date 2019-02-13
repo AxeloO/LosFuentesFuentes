@@ -186,7 +186,7 @@
             // 
             this.dgProductos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProductos.Location = new System.Drawing.Point(45, 546);
+            this.dgProductos.Location = new System.Drawing.Point(45, 563);
             this.dgProductos.Name = "dgProductos";
             this.dgProductos.Size = new System.Drawing.Size(720, 155);
             this.dgProductos.TabIndex = 12;
@@ -360,7 +360,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1161, 113);
+            this.label15.Location = new System.Drawing.Point(1237, 113);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(148, 27);
             this.label15.TabIndex = 32;
@@ -411,7 +411,7 @@
             // 
             // FcConcepto
             // 
-            this.FcConcepto.Location = new System.Drawing.Point(240, 502);
+            this.FcConcepto.Location = new System.Drawing.Point(268, 512);
             this.FcConcepto.Name = "FcConcepto";
             this.FcConcepto.Size = new System.Drawing.Size(333, 20);
             this.FcConcepto.TabIndex = 38;
@@ -553,7 +553,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1710, 767);
+            this.ClientSize = new System.Drawing.Size(1378, 768);
             this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);

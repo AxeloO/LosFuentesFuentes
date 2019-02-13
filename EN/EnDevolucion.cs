@@ -13,6 +13,8 @@ namespace EN
         public string fcNombreProductoDevolucion { get; set; }
         public int fiCantidadDevolucion { get; set; }
         public string fcCausaDevolucion { get; set; }
+        public string fcNombreDelCliente { get; set; }
+        public string fcFechaDevolucion { get; set; }
         
     }
 }

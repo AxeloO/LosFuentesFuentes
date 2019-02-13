@@ -54,7 +54,7 @@ namespace WFFuentes
 
                 if (strNombreCliente.Equals("") || strDomicilio.Equals("") || strTelefono.Equals("") || strRFC.Equals("") || strTipoCredito.Equals("") || strGarantia.Equals("") || strLimiteCredito.Equals(""))
                 {
-                    MessageBox.Show("Parece que olvidaste llenar algunos de los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar algunos de los campos", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -71,7 +71,7 @@ namespace WFFuentes
 
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se agrego el nuevo cliente correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo cliente correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Limpiar();
                     } 
 
@@ -81,7 +81,7 @@ namespace WFFuentes
             catch (Exception)
              {
 
-                MessageBox.Show("Hubo un error al agregar el cliente", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el cliente", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
         }
@@ -116,14 +116,13 @@ namespace WFFuentes
                 string strIdCliente = txtID.Text.ToString().Trim();
                 if (strIdCliente != "" && txtNombreCompleto.Text != "")
                 {
-                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult r = MessageBox.Show("¿Estas seguro de eliminar este registro?", "¡Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (r == DialogResult.OK)
                     {
                         long longIdClientes = long.Parse(strIdCliente);
 
                         _enCliente.FiIdCliente = longIdClientes;
-
                         _clientesBL.EliminarCliente(_enCliente);
                         dGClientes.Refresh();
                         dGClientes.DataSource = _clientesBL.MostrarClientes();
@@ -160,7 +159,7 @@ namespace WFFuentes
                 _enCliente.FdLimiteCredito = Convert.ToInt64(txtLimiteCredito.Text);
                 if (_clientesBL.ModificarCliente(_enCliente) > 0)
                 {
-                    MessageBox.Show("El registro se modificó correctamente.!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("¡El registro se modificó correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     dGClientes.Refresh();
                     dGClientes.DataSource = _clientesBL.MostrarClientes();
                     Limpiar();
@@ -168,13 +167,13 @@ namespace WFFuentes
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo realizar la acción solicitada", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("No se pudo realizar la acción solicitada", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 }
             }
                 else
                  {
-                MessageBox.Show("Seleccione un registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Seleccione un registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
         

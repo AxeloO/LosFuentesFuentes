@@ -13,7 +13,8 @@ namespace EN
         public int FiNoFactura { get; set; }
         public string FDtFechaAdquisicion { get; set; }
         public string FcProductoAdquirido { get; set; }
-        public int FiCantidad { get; set; }
-        public decimal FdTotalAPagar { get; set; }        
+        public decimal FdCantidad { get; set; }      
+        public decimal FdTotalAPagar { get; set; }  
+        public string FcStatus { get; set; }
     }
 }

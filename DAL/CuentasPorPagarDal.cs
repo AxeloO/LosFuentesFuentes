@@ -23,10 +23,9 @@ namespace DAL
             _comando.Parameters.Add(new SqlParameter("@FiNoFactura", PEntidad.FiNoFactura));
             _comando.Parameters.Add(new SqlParameter("@FdFechaAdquisicion", PEntidad.FDtFechaAdquisicion));
             _comando.Parameters.Add(new SqlParameter("@FcProductoAdquirido", PEntidad.FcProductoAdquirido));
-            _comando.Parameters.Add(new SqlParameter("@FiCantidad", PEntidad.FiCantidad));
+            _comando.Parameters.Add(new SqlParameter("@FdCantidad", PEntidad.FdCantidad));
             _comando.Parameters.Add(new SqlParameter("@FdTotalAPagar", PEntidad.FdTotalAPagar));
-           
-            //_comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaCredito", PEntidad.FdLimiteCredito));
+           _comando.Parameters.Add(new SqlParameter("@FcStatus", PEntidad.FcStatus));
 
             int Resultado = _comando.ExecuteNonQuery();
 
@@ -50,8 +49,9 @@ namespace DAL
                 _EnCuentas.FiNoFactura = _reader.GetInt32(2);
                 _EnCuentas.FDtFechaAdquisicion = _reader.GetString(3);
                 _EnCuentas.FcProductoAdquirido = _reader.GetString(4);
-                _EnCuentas.FiCantidad = _reader.GetInt32(5);
+                _EnCuentas.FdCantidad = _reader.GetInt64(5);
                 _EnCuentas.FdTotalAPagar = _reader.GetDecimal(6);
+                _EnCuentas.FcStatus = _reader.GetString(7);
 
                 Lista.Add(_EnCuentas);
             }
@@ -77,8 +77,9 @@ namespace DAL
                 _EnCuentas.FiNoFactura = _reader.GetInt32(2);
                 _EnCuentas.FDtFechaAdquisicion = _reader.GetString(3);
                 _EnCuentas.FcProductoAdquirido = _reader.GetString(4);
-                _EnCuentas.FiCantidad = _reader.GetInt32(5);
+                _EnCuentas.FdCantidad = _reader.GetInt64(5);
                 _EnCuentas.FdTotalAPagar = _reader.GetDecimal(6);
+                _EnCuentas.FcStatus = _reader.GetString(7);
 
                 Lista.Add(_EnCuentas);
 
@@ -99,8 +100,9 @@ namespace DAL
             _comando.Parameters.Add(new SqlParameter("@FiNoFactura", PEntidad.FiNoFactura));
             _comando.Parameters.Add(new SqlParameter("@FdFechaAdquisicion", PEntidad.FDtFechaAdquisicion));
             _comando.Parameters.Add(new SqlParameter("@FcProductoAdquirido", PEntidad.FcProductoAdquirido));
-            _comando.Parameters.Add(new SqlParameter("@FiCantidad", PEntidad.FiCantidad));
+            _comando.Parameters.Add(new SqlParameter("@FdCantidad", PEntidad.FdCantidad));
             _comando.Parameters.Add(new SqlParameter("@FdTotalAPagar", PEntidad.FdTotalAPagar));
+            _comando.Parameters.Add(new SqlParameter("@FcStatus", PEntidad.FcStatus));
             
 
             int Resultado = _comando.ExecuteNonQuery();

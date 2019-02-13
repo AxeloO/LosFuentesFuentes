@@ -194,7 +194,7 @@ namespace WFFuentes
 
                         int intIdProducto = int.Parse(striDProducto);
                         intCantidadProducto = double.Parse(txtCantidad.Text.ToString().Trim());
-                        double intProductoUnitario = double.Parse(txtPrecioUnitario.Text.ToString().Trim());
+                        double intProductoUnitario = double.Parse(txtPrecioDeContado.Text.ToString().Trim());
                         double doProductoUnitarioCredito = double.Parse(txtPrecioACredito.Text.ToString().Trim());
                         doTotalDelProducto = intProductoUnitario * intCantidadProducto;
                         doTotalDelProductoCredito = doProductoUnitarioCredito * intCantidadProducto;
@@ -205,6 +205,11 @@ namespace WFFuentes
 
                         if (dgTotalProductos.Columns.Count == 0)
                         {
+                            DataGridViewTextBoxColumn colIdProducto = new DataGridViewTextBoxColumn();
+                            colIdProducto.HeaderText = "Id Producto";
+                            colIdProducto.Width = 80;
+                            dgTotalProductos.Columns.Add(colIdProducto);
+
                             DataGridViewTextBoxColumn colNombreProducto = new DataGridViewTextBoxColumn();
                             colNombreProducto.HeaderText = "Nombre del Producto";
                             colNombreProducto.Width = 80;
@@ -215,31 +220,22 @@ namespace WFFuentes
                             colCantidadProducto.Width = 80;
                             dgTotalProductos.Columns.Add(colCantidadProducto);
 
-
                             DataGridViewTextBoxColumn colTotalProducto = new DataGridViewTextBoxColumn();
                             colTotalProducto.HeaderText = "Precio Total Unitario";
                             colTotalProducto.Width = 80;
                             dgTotalProductos.Columns.Add(colTotalProducto);
-
 
                             DataGridViewTextBoxColumn colCantidadProductoCredito = new DataGridViewTextBoxColumn();
                             colCantidadProductoCredito.HeaderText = "Precio Total A Credito";
                             colCantidadProductoCredito.Width = 80;
                             dgTotalProductos.Columns.Add(colCantidadProductoCredito);
 
-                            DataGridViewTextBoxColumn colIdProducto = new DataGridViewTextBoxColumn();
-                            colIdProducto.HeaderText = "Id Producto";
-                            colIdProducto.Width = 80;
-                            dgTotalProductos.Columns.Add(colIdProducto);
-
-
-                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto, doTotalDelProductoCredito, strNombreProductos, intIdProducto);
-
+                            dgTotalProductos.Rows.Add(intIdProducto, strNombreProductos, intCantidadProducto, doTotalDelProducto, doTotalDelProductoCredito);
 
                         }
                         else
                         {
-                            dgTotalProductos.Rows.Add(doTotalDelProducto, intCantidadProducto, doTotalDelProductoCredito, strNombreProductos, intIdProducto);
+                            dgTotalProductos.Rows.Add(intIdProducto, strNombreProductos, intCantidadProducto, doTotalDelProducto, doTotalDelProductoCredito);
 
                         }
 
@@ -368,7 +364,7 @@ namespace WFFuentes
                 }
                 else
                 {
-                    MessageBox.Show("favor de llenar todos los campos ");
+                    MessageBox.Show("Favor de llenar todos los campos");
                 }
 
             }
@@ -394,5 +390,6 @@ namespace WFFuentes
             Image bmp = _FNotaVenta.CaptureScreen();
             e.Graphics.DrawImage(bmp, 0, 0);
         }
+
     }
 }

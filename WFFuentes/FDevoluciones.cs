@@ -54,6 +54,8 @@ namespace WFFuentes
             txtNombreProducto.Text = string.Empty;
             txtCantidad.Text = string.Empty;
             txtCausaDevolucion.Text = string.Empty;
+            txtFechaDevolucion.Text = string.Empty;
+            txtNombreCliente.Text = string.Empty;
             txtNombreProducto.Focus();
         }
 
@@ -77,9 +79,12 @@ namespace WFFuentes
                 string strNombreProducto = txtNombreProducto.Text.ToString().Trim();
                 string strCantidad = txtCantidad.Text.ToString().Trim();
                 string strCausaD = txtCausaDevolucion.Text.ToString().Trim();
+                string strNombreDelCliente = txtNombreCliente.Text.ToString().Trim();
+                string strFechaDevolucion = txtFechaDevolucion.Text.ToString().Trim();
 
 
-                if (strfolioNota.Equals("") || strNombreProducto.Equals("")  || txtCantidad.Equals("") || strCausaD.Equals(""))
+
+                if (strfolioNota.Equals("") || strNombreProducto.Equals("")  || txtCantidad.Equals("") || strCausaD.Equals("") || strNombreDelCliente.Equals("") || strFechaDevolucion.Equals("") )
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -90,6 +95,8 @@ namespace WFFuentes
                     _enDevolucion.fcNombreProductoDevolucion = txtNombreProducto.Text;
                     _enDevolucion.fiCantidadDevolucion = int.Parse(txtCantidad.Text);
                     _enDevolucion.fcCausaDevolucion = txtCausaDevolucion.Text;
+                    _enDevolucion.fcFechaDevolucion = txtFechaDevolucion.Text;
+                    _enDevolucion.fcNombreDelCliente = txtNombreCliente.Text;
                    
 
                     int Resultado = _bldevolucion.AgregarDevolucion(_enDevolucion);
@@ -116,6 +123,8 @@ namespace WFFuentes
         {
             txtID.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiIdDevolucion"].Value.ToString();
             txtFolioNota.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiFolioVenta"].Value.ToString();
+            txtFechaDevolucion.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcFechaDevolucion"].Value.ToString();
+            txtNombreCliente.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcNombreDelCliente"].Value.ToString();
             txtNombreProducto.Text = dGDevoluciones .Rows[e.RowIndex].Cells["fcNombreProductoDevolucion"].Value.ToString();
             txtCantidad.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiCantidadDevolucion"].Value.ToString();
             txtCausaDevolucion.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcCausaDevolucion"].Value.ToString();
@@ -126,5 +135,7 @@ namespace WFFuentes
         {
 
         }
+
+
     }
 }

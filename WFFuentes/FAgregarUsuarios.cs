@@ -42,7 +42,7 @@ namespace WFFuentes
             {
                 if (txtNombreEmpleado.Text.Trim() == "" || txtNombreUsuario.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || cbTipoUsuario.Text.Trim() == "")
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -63,7 +63,7 @@ namespace WFFuentes
 
                         if (Resultado == 1)
                         {
-                            MessageBox.Show("Se agregó usuario tipo administrador", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            MessageBox.Show("Se agregó usuario tipo administrador", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             Limpiar();
                         }
                     }
@@ -77,13 +77,13 @@ namespace WFFuentes
 
                         if (Resultado == 1)
                         {
-                            MessageBox.Show("Se agregó usuario tipo empleado", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            MessageBox.Show("Se agregó usuario tipo empleado", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             Limpiar();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Hubo un error al agregar el usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Hubo un error al agregar el usuario", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     }
 
@@ -93,7 +93,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al agregar el usuario", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el usuario", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -110,7 +110,7 @@ namespace WFFuentes
 
                 if (strIdUsuario != "" && txtNombreUsuario.Text != "")
                 {
-                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult r = MessageBox.Show("¿Estas seguro de eliminar este registro?", "¡Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (r == DialogResult.OK)
                     {
