@@ -58,7 +58,7 @@ namespace DAL
                 _EnVentas.fiCantidad = _reader.GetInt32(7);
                 _EnVentas.fcConcepto = _reader.GetString(8);
                 _EnVentas.fdPrecioUnitario = _reader.GetDecimal(9);
-                _EnVentas.fdImporte = _reader.GetInt32(10);
+                _EnVentas.fdImporte = _reader.GetDecimal(10);
                 _EnVentas.fdTotal = _reader.GetDecimal(11);
                 Lista.Add(_EnVentas);
             }
