@@ -83,22 +83,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(32, 170);
+            this.label3.Location = new System.Drawing.Point(32, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 21);
+            this.label3.Size = new System.Drawing.Size(108, 21);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Contraseña";
+            this.label3.Text = "Contraseña:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(32, 121);
+            this.label2.Location = new System.Drawing.Point(32, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 21);
+            this.label2.Size = new System.Drawing.Size(167, 21);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Nombre de usuario";
+            this.label2.Text = "Nombre de usuario:";
             // 
             // label1
             // 

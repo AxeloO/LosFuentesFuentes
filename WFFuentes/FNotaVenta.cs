@@ -31,8 +31,6 @@ namespace WFFuentes
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-
-
         public Image CaptureScreen()
         {
             Graphics myGraphics = this.CreateGraphics();
@@ -43,8 +41,6 @@ namespace WFFuentes
 
             return bmp;
 
-        }
-
-       
+        }     
     }
 }

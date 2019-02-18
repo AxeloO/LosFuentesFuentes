@@ -103,7 +103,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al agregar el registro", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -200,7 +200,7 @@ namespace WFFuentes
 
            if (_cuentasBL.ModificarCuentas(_enCuentas) > 0)
                {
-                   MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                   MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                    dGCuentasPagar.Refresh();
                    dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorPagar();
                Limpiar();
@@ -208,13 +208,13 @@ namespace WFFuentes
 
                else
                {
-                   MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   MessageBox.Show("Ocurrio un problema, no se pudo modificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                }
 
            }
            else
            {
-               MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+               MessageBox.Show("Seleccione un registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
            }
         }
 

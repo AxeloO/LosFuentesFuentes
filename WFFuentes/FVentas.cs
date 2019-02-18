@@ -64,7 +64,7 @@ namespace WFFuentes
 
                 // if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 else
@@ -85,7 +85,7 @@ namespace WFFuentes
 
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se Agrego El Nuevo Producto Correctamente", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo producto correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Limpiar();
                         Limpiar_Venta();
                     }
@@ -96,7 +96,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Agregar el Producto", "Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el producto", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }
@@ -182,12 +182,12 @@ namespace WFFuentes
 
                     if (txtCantidad.Text.Equals("") || txtCantidad.Text.Equals(null))
                     {
-                        MessageBox.Show("Debe Colocar la cantidad que desea Vender");
+                        MessageBox.Show("Debe colocar la cantidad que desea vender");
                     }
 
                     if (intCantidadDeProductoExistencia < intCantidadAComprar)
                     {
-                        MessageBox.Show("No se puede vender mas productos de los que hay en almacen.");
+                        MessageBox.Show("No se puede vender más productos de los que hay en almacen");
                     }
                     else
                     {
@@ -251,7 +251,7 @@ namespace WFFuentes
 
                 else
                 {
-                    MessageBox.Show("Debe seleccionar un Producto Primero");
+                    MessageBox.Show("Debe seleccionar un producto primero");
                 }
 
             }
@@ -360,7 +360,7 @@ namespace WFFuentes
 
                     }
 
-                    MessageBox.Show("Se Realizo la venta Correctamente");
+                    MessageBox.Show("¡Se realizó la venta correctamente!");
                 }
                 else
                 {
