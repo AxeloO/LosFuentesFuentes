@@ -13,7 +13,11 @@ namespace DAL
     {
 
        //public static string CadenaDeConexion = @"Data Source = 192.168.1.82;Initial Catalog=DBFuentes; Persist Security Info=True;User ID = ventas; Password=123456; Context Connection=False";
+<<<<<<< HEAD
         public static string CadenaDeConexion = @"Data Source=DESKTOP-QRLGBTN\SQLEXPRESS;Initial Catalog=DBFuentes;Integrated Security=True";
+=======
+
+>>>>>>> cb6ed874b385ee0fd59ecb13b6baf1475f44c57d
         public static IDbConnection Conexion()
         {
             return new SqlConnection(CadenaDeConexion);
