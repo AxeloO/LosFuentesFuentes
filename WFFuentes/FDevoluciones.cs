@@ -74,6 +74,10 @@ namespace WFFuentes
             try
             {//Trim sirve para borrar espacios si es que existen 
 
+                Inventario _en = new Inventario();
+                InventarioBL _inventarioBl = new InventarioBL();
+                int intVerificador = 0;
+
 
                 string strfolioNota = txtFolioNota.Text.ToString().Trim();
                 string strNombreProducto = txtNombreProducto.Text.ToString().Trim();
@@ -81,7 +85,7 @@ namespace WFFuentes
                 string strCausaD = txtCausaDevolucion.Text.ToString().Trim();
                 string strNombreDelCliente = txtNombreCliente.Text.ToString().Trim();
                 string strFechaDevolucion = txtFechaDevolucion.Text.ToString().Trim();
-
+                
 
 
                 if (strfolioNota.Equals("") || strNombreProducto.Equals("")  || txtCantidad.Equals("") || strCausaD.Equals("") || strNombreDelCliente.Equals("") || strFechaDevolucion.Equals("") )
@@ -97,24 +101,46 @@ namespace WFFuentes
                     _enDevolucion.fcCausaDevolucion = txtCausaDevolucion.Text;
                     _enDevolucion.fcFechaDevolucion = txtFechaDevolucion.Text;
                     _enDevolucion.fcNombreDelCliente = txtNombreCliente.Text;
-                   
 
-                    int Resultado = _bldevolucion.AgregarDevolucion(_enDevolucion);
 
-                    if (Resultado == 1)
+                    foreach (var productoInventario in _inventarioBl.MostrarInventario())
                     {
-                        MessageBox.Show("Se agrego el nuevo producto correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        Limpiar();
+                        _en.IdProducto = productoInventario.IdProducto;
+                        _en.NombreProducto = productoInventario.NombreProducto;
+                        _en.GrupoPertenenciente = productoInventario.GrupoPertenenciente;
+                        _en.Cantidad = productoInventario.Cantidad;
+                        _en.Presentacion = productoInventario.Presentacion;
+                        _en.CostoUnitario = productoInventario.CostoUnitario;
+                        _en.PrecioContado = productoInventario.PrecioContado;
+                        _en.PrecioACredito = productoInventario.PrecioACredito;
+
+                        if (_en.NombreProducto.Equals(_enDevolucion.fcNombreProductoDevolucion))
+                        {
+                            _en.Cantidad = _en.Cantidad + _enDevolucion.fiCantidadDevolucion;
+                            _inventarioBl.ModificarProducto(_en);
+                            int Resultado = _bldevolucion.AgregarDevolucion(_enDevolucion);
+                            MessageBox.Show("¡Se realizó la Devolucion Correctamente!");
+                            intVerificador = 1;
+
+                        }
+
+                        
+
+                    }
+                    if (intVerificador != 1)
+                    {
+                        MessageBox.Show("No se Encontro el Producto, Favor de verificar");
 
                     }
 
-                }
+            }
+
             }
 
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al agregar el producto", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al Realizar la devolucio, Favor de validar", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }

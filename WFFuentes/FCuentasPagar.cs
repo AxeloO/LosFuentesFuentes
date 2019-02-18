@@ -62,7 +62,10 @@ namespace WFFuentes
             try
             {//Trim sirve para borrar espacios si es que existen 
 
-       
+                Inventario _en = new Inventario();
+                InventarioBL _inventarioBl = new InventarioBL();
+                int intVerificador = 0;
+
                 string strNombreProveedor = txtNombreProveedor.Text.ToString().Trim();
                 string strFactura = txtNoFactura.Text.ToString().Trim();
                 string strFechaAdquisicion = txtFechaAdquisicion.Text.ToString().Trim();
@@ -85,24 +88,48 @@ namespace WFFuentes
                     _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
                     _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
                     _enCuentas.FdTotalAPagar = int.Parse(txtMontoPagar.Text);
-                    _enCuentas.FdCantidad = int.Parse(txtCantidad.Text);
-                    _enCuentas.FcStatus = txtStatus.Text;
-                   
+                    _enCuentas.FdCantidad = decimal.Parse(txtCantidad.Text);
+                    _enCuentas.FcStatus = txtStatus.Text;                   
 
-                    int Resultado = _cuentasBL.AgregarCuentasPorPagar(_enCuentas);
+                    
 
-                    if (Resultado == 1)
+                    foreach (var productoInventario in _inventarioBl.MostrarInventario())
                     {
-                        MessageBox.Show("Se agrego el nuevo registro correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        Limpiar();
+                        _en.IdProducto = productoInventario.IdProducto;
+                        _en.NombreProducto = productoInventario.NombreProducto;
+                        _en.GrupoPertenenciente = productoInventario.GrupoPertenenciente;
+                        _en.Cantidad = productoInventario.Cantidad;
+                        _en.Presentacion = productoInventario.Presentacion;
+                        _en.CostoUnitario = productoInventario.CostoUnitario;
+                        _en.PrecioContado = productoInventario.PrecioContado;
+                        _en.PrecioACredito = productoInventario.PrecioACredito;
+
+                        if (_en.NombreProducto.Equals(_enCuentas.FcProductoAdquirido))
+                        {
+                            _en.Cantidad = _en.Cantidad + int.Parse(_enCuentas.FdCantidad.ToString());
+                            _inventarioBl.ModificarProducto(_en);
+                            int Resultado = _cuentasBL.AgregarCuentasPorPagar(_enCuentas);
+                            MessageBox.Show("¡Se realizó el Registro Correctamente!");
+                            intVerificador = 1;
+
+                        }
+
+
+
+                    }
+                    if (intVerificador != 1)
+                    {
+                        MessageBox.Show("No se Encontro el Producto, Favor de verificar");
+
                     }
 
+                    
                 }
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                throw ex;
                 MessageBox.Show("Hubo un error al agregar el registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }

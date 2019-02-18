@@ -49,7 +49,7 @@ namespace DAL
                 _EnCuentas.FiNoFactura = _reader.GetInt32(2);
                 _EnCuentas.FDtFechaAdquisicion = _reader.GetString(3);
                 _EnCuentas.FcProductoAdquirido = _reader.GetString(4);
-                _EnCuentas.FdCantidad = _reader.GetInt64(5);
+                _EnCuentas.FdCantidad = _reader.GetDecimal(5);
                 _EnCuentas.FdTotalAPagar = _reader.GetDecimal(6);
                 _EnCuentas.FcStatus = _reader.GetString(7);
 
