@@ -39,7 +39,7 @@ namespace WFFuentes
 
                 if (txtNombreDelProducto.Text == "" || txtCantidad.Text == "" || txtCostoUnitario.Text == "" || txtGrupoPerteneciente.Text == "" || txtPrecioCredito.Text == "" || txtPrecioDeContado.Text == "" || cbPresentacion.Text == "")
                 {
-                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Parece que olvidaste llenar todos los campos", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -57,7 +57,7 @@ namespace WFFuentes
 
                     if (Resultado == 1)
                     {
-                        MessageBox.Show("Se agrego el nuevo producto correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Se agrego el nuevo producto correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         Limpiar();
                     }
 
@@ -67,7 +67,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al agregar el producto", "Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al agregar el producto", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }
@@ -139,7 +139,7 @@ namespace WFFuentes
 
                 if (strIdProducto != "" && txtNombreDelProducto.Text != "")
                 {
-                    DialogResult r = MessageBox.Show("Estas seguro de eliminar este registro?", "Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult r = MessageBox.Show("¿Estas seguro de eliminar este registro?", "¡Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (r == DialogResult.OK)
                     {
@@ -241,7 +241,7 @@ namespace WFFuentes
 
                 if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
-                    MessageBox.Show("Se modificó correctamente", "Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     dgInventario.DataSource = _inventarioBl.MostrarInventario();
                     dgInventario.Refresh();
 
@@ -249,15 +249,16 @@ namespace WFFuentes
 
                 else
                 {
-                    MessageBox.Show("Ocurrio un problema, no se pudo modificar", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ocurrio un problema, no se pudo modificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
             {
-                MessageBox.Show("Seleccione un Registro", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Seleccione un registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }
+
     }
 }

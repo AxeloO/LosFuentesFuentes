@@ -39,18 +39,14 @@ namespace WFFuentes
 
                     List<EnUsuario> ListaDeUsuarios = new List<EnUsuario>();
 
-                   
-
                     foreach (EnUsuario Usuario in _usuarioBl.ListaDeUsuarios())
                     {
                         string strUsuarios = Usuario.fcNombreUsuario.ToString().Trim();
                         string strPassword = Usuario.fcPassword.ToString().Trim();
                         string strPuesto = Usuario.fiPuestoUsuario.ToString();
 
-
                         if (strUsuarios.Equals(strResUsuario) && strPassword.Equals(strResPassword))
                         {
-
 
                             if (strPuesto.Equals("420"))
                             {
@@ -106,7 +102,6 @@ namespace WFFuentes
                 throw;
             }
         }
-
 
         private void BSalir_Click(object sender, EventArgs e)
         {
