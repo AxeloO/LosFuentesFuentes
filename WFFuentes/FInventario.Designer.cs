@@ -160,6 +160,7 @@
             "Dosis 10 grs ",
             "Dosis 20 grs",
             "Dosis 30 grs ",
+            "Dosis 250 grs",
             "Dosis 100 grs",
             "Dosis 100 ml",
             "Dosis 200 ml",

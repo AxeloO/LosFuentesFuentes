@@ -360,7 +360,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1237, 113);
+            this.label15.Location = new System.Drawing.Point(1265, 124);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(148, 27);
             this.label15.TabIndex = 32;
@@ -502,7 +502,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(231, 31);
             this.button1.TabIndex = 47;
-            this.button1.Text = "Imprimir y Pagar a Credito";
+            this.button1.Text = "Imprimir y Pagar a Crédito";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // btPrevioImprecion
@@ -514,7 +514,7 @@
             this.btPrevioImprecion.Name = "btPrevioImprecion";
             this.btPrevioImprecion.Size = new System.Drawing.Size(227, 31);
             this.btPrevioImprecion.TabIndex = 48;
-            this.btPrevioImprecion.Text = "Preview de Imprecion";
+            this.btPrevioImprecion.Text = "Preview de Impresion";
             this.btPrevioImprecion.UseVisualStyleBackColor = false;
             this.btPrevioImprecion.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -553,7 +553,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1627, 768);
+            this.ClientSize = new System.Drawing.Size(1683, 780);
             this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);

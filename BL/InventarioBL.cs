@@ -20,6 +20,10 @@ namespace BL
         {
           return _dal.MostrarInventario();
         }
+        public List<Inventario> MostrarInventarioEmpleado()
+        {
+            return _dal.MostrarInventarioEmpleado();
+        }
         public List<Inventario> MostrarInventarioPorNombre(Inventario PEntidad)
         {
             return _dal.MostrarInventarioPorNombre(PEntidad);

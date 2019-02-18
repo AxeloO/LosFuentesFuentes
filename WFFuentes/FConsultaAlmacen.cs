@@ -54,7 +54,7 @@ namespace WFFuentes
 
         private void bActualizar_Click(object sender, EventArgs e)
         {
-            dgInventario.DataSource = _bl.MostrarInventario();
+            dgInventario.DataSource = _bl.MostrarInventarioEmpleado();
 
         }
 

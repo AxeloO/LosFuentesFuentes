@@ -44,7 +44,7 @@ namespace WFFuentes
                 else
                 {
                     _en.Cantidad = int.Parse(txtCantidad.Text);
-                    _en.CostoUnitario = int.Parse(txtCostoUnitario.Text);
+                    _en.CostoUnitario = decimal.Parse(txtCostoUnitario.Text);//Tipo de variable de int a decimal
                     _en.GrupoPertenenciente = txtGrupoPerteneciente.Text;
                     _en.NombreProducto = txtNombreDelProducto.Text;
                    // _en.PorcentajeGananciaContado = decimal.Parse(txtPorcentajeDeContado.Text);

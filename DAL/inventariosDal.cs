@@ -58,6 +58,30 @@ namespace DAL
             _Conexion.Close();
             return Lista;
         }
+        public List<Inventario> MostrarInventarioEmpleado()//Agregado para inventario en emplado
+        {
+            IDbConnection _Conexion = DBConexion.Conexion();
+            _Conexion.Open();
+            SqlCommand _comando = new SqlCommand("Consultar_Productos", _Conexion as SqlConnection);
+            _comando.CommandType = CommandType.StoredProcedure;
+            IDataReader _reader = _comando.ExecuteReader();
+            List<Inventario> Lista = new List<Inventario>();
+            while (_reader.Read())
+            {
+                Inventario _inventario = new Inventario();
+                _inventario.IdProducto = _reader.GetInt64(0);
+                _inventario.NombreProducto = _reader.GetString(1);
+                _inventario.GrupoPertenenciente = _reader.GetString(2);
+                _inventario.Cantidad = _reader.GetInt32(3);
+                _inventario.Presentacion = _reader.GetString(4);
+               // _inventario.CostoUnitario = _reader.GetDecimal(5);
+                _inventario.PrecioContado = _reader.GetDecimal(6);
+                _inventario.PrecioACredito = _reader.GetDecimal(7);
+                Lista.Add(_inventario);
+            }
+            _Conexion.Close();
+            return Lista;
+        }
 
         public List<Inventario> MostrarInventarioPorNombre(Inventario PEntidad)
         {
@@ -87,6 +111,33 @@ namespace DAL
             return Lista;
         }
 
+        public List<Inventario> MostrarInventarioPorNombreEmpleado(Inventario PEntidad)
+        {
+            IDbConnection _Conexion = DBConexion.Conexion();
+            _Conexion.Open();
+            SqlCommand _comando = new SqlCommand("Consultar_Productos_Por_Nombre", _Conexion as SqlConnection);
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.Add(new SqlParameter("@NombreProducto", PEntidad.NombreProducto));
+            IDataReader _reader = _comando.ExecuteReader();
+            List<Inventario> Lista = new List<Inventario>();
+            while (_reader.Read())
+            {
+                Inventario _inventario = new Inventario();
+                _inventario.IdProducto = _reader.GetInt64(0);
+                _inventario.NombreProducto = _reader.GetString(1);
+                _inventario.GrupoPertenenciente = _reader.GetString(2);
+                _inventario.Cantidad = _reader.GetInt32(3);
+                _inventario.Presentacion = _reader.GetString(4);
+               // _inventario.CostoUnitario = _reader.GetDecimal(5);
+                _inventario.PrecioContado = _reader.GetDecimal(6);
+                _inventario.PrecioACredito = _reader.GetDecimal(7);
+
+                Lista.Add(_inventario);
+
+            }
+            _Conexion.Close();
+            return Lista;
+        }
         public int ModificarProducto(Inventario PEntidad)
         {
             IDbConnection _Conexion = DBConexion.Conexion();
