@@ -119,7 +119,8 @@ namespace WFFuentes
                             _en.Cantidad = _en.Cantidad + _enDevolucion.fiCantidadDevolucion;
                             _inventarioBl.ModificarProducto(_en);
                             int Resultado = _bldevolucion.AgregarDevolucion(_enDevolucion);
-                            MessageBox.Show("¡Se realizó la Devolucion Correctamente!");
+
+                            MessageBox.Show("¡Se realizó la devolución correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             intVerificador = 1;
 
                         }
@@ -129,7 +130,7 @@ namespace WFFuentes
                     }
                     if (intVerificador != 1)
                     {
-                        MessageBox.Show("No se Encontro el Producto, Favor de verificar");
+                        MessageBox.Show("No se encontro el producto. Favor de verificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     }
 
@@ -140,7 +141,7 @@ namespace WFFuentes
             catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error al Realizar la devolucio, Favor de validar", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Hubo un error al realizar la devolución. Favor de validar", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }

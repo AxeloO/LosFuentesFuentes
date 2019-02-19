@@ -203,7 +203,7 @@ namespace WFFuentes
                 }
                 else
                 {
-                    MessageBox.Show("Seleccione un registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Seleccione un registro", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
 

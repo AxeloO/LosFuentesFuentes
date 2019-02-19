@@ -119,7 +119,7 @@ namespace WFFuentes
                     }
                     if (intVerificador != 1)
                     {
-                        MessageBox.Show("No se Encontro el Producto, Favor de verificar");
+                        MessageBox.Show("No se Encontro el producto. Favor de verificar","¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     }
 
@@ -254,6 +254,18 @@ namespace WFFuentes
             }
         }
 
-     
+        private void bLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+           /** txtID.Text = string.Empty;
+            txtNombreProveedor.Text = string.Empty;
+            txtNoFactura.Text = string.Empty;
+            txtFechaAdquisicion.Text = string.Empty;
+            txtProductoAdquirido.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            txtMontoPagar.Text = string.Empty;
+            txtStatus.Text = string.Empty;
+            txtNombreProveedor.Focus();**/
+        }
     }
 }

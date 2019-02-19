@@ -85,12 +85,12 @@ namespace WFFuentes
                     }
                     else
                     {
-                        MessageBox.Show("Usuario o Contraseña Incorrecta");
+                        MessageBox.Show("Usuario o Contraseña Incorrecta" ,"¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Debes llenar todos los campos");
+                    MessageBox.Show("Debes llenar todos los campos", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 }
             }

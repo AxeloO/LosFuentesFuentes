@@ -56,6 +56,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtMontoPagar = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.bLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGCuentasPagar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,37 +111,42 @@
             // 
             // txtNombreProveedor
             // 
+            this.txtNombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProveedor.Location = new System.Drawing.Point(248, 146);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(162, 20);
+            this.txtNombreProveedor.Size = new System.Drawing.Size(162, 22);
             this.txtNombreProveedor.TabIndex = 28;
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(248, 335);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(80, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(80, 22);
             this.txtCantidad.TabIndex = 24;
             // 
             // txtProductoAdquirido
             // 
+            this.txtProductoAdquirido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductoAdquirido.Location = new System.Drawing.Point(248, 287);
             this.txtProductoAdquirido.Name = "txtProductoAdquirido";
-            this.txtProductoAdquirido.Size = new System.Drawing.Size(162, 20);
+            this.txtProductoAdquirido.Size = new System.Drawing.Size(162, 22);
             this.txtProductoAdquirido.TabIndex = 23;
             // 
             // txtFechaAdquisicion
             // 
+            this.txtFechaAdquisicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaAdquisicion.Location = new System.Drawing.Point(248, 237);
             this.txtFechaAdquisicion.Name = "txtFechaAdquisicion";
-            this.txtFechaAdquisicion.Size = new System.Drawing.Size(162, 20);
+            this.txtFechaAdquisicion.Size = new System.Drawing.Size(162, 22);
             this.txtFechaAdquisicion.TabIndex = 22;
             // 
             // txtNoFactura
             // 
+            this.txtNoFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoFactura.Location = new System.Drawing.Point(248, 193);
             this.txtNoFactura.Name = "txtNoFactura";
-            this.txtNoFactura.Size = new System.Drawing.Size(80, 20);
+            this.txtNoFactura.Size = new System.Drawing.Size(80, 22);
             this.txtNoFactura.TabIndex = 21;
             // 
             // label4
@@ -240,9 +246,10 @@
             // 
             // txtID
             // 
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(142, 104);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(61, 20);
+            this.txtID.Size = new System.Drawing.Size(61, 22);
             this.txtID.TabIndex = 39;
             // 
             // bModificar
@@ -322,17 +329,32 @@
             // 
             // txtMontoPagar
             // 
+            this.txtMontoPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMontoPagar.Location = new System.Drawing.Point(248, 381);
             this.txtMontoPagar.Name = "txtMontoPagar";
-            this.txtMontoPagar.Size = new System.Drawing.Size(162, 20);
+            this.txtMontoPagar.Size = new System.Drawing.Size(162, 22);
             this.txtMontoPagar.TabIndex = 54;
             // 
             // txtStatus
             // 
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatus.Location = new System.Drawing.Point(248, 425);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(162, 20);
+            this.txtStatus.Size = new System.Drawing.Size(162, 22);
             this.txtStatus.TabIndex = 55;
+            // 
+            // bLimpiar
+            // 
+            this.bLimpiar.BackColor = System.Drawing.Color.Teal;
+            this.bLimpiar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bLimpiar.Location = new System.Drawing.Point(479, 378);
+            this.bLimpiar.Name = "bLimpiar";
+            this.bLimpiar.Size = new System.Drawing.Size(100, 36);
+            this.bLimpiar.TabIndex = 56;
+            this.bLimpiar.Text = "Limpiar";
+            this.bLimpiar.UseVisualStyleBackColor = false;
+            this.bLimpiar.Click += new System.EventHandler(this.bLimpiar_Click);
             // 
             // FCuentasPagar
             // 
@@ -340,6 +362,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1317, 526);
+            this.Controls.Add(this.bLimpiar);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtMontoPagar);
             this.Controls.Add(this.label11);
@@ -409,5 +432,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMontoPagar;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Button bLimpiar;
     }
 }

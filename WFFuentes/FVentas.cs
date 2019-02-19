@@ -112,6 +112,7 @@ namespace WFFuentes
             {
                 _enInventario.NombreProducto = FcConcepto.Text;
                 dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
+                FcConcepto.Text = string.Empty;
             }
             //dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
@@ -171,23 +172,20 @@ namespace WFFuentes
                 double doTotalDelProductoCredito;
                 string strNombreProductos;
 
-
-
                 int intCantidadAComprar = int.Parse(txtCantidad.Text);
                 int intCantidadDeProductoExistencia = int.Parse(strExistenciaProducto);
 
                 if (!txtNombre.Text.Equals(""))
                 {
 
-
                     if (txtCantidad.Text.Equals("") || txtCantidad.Text.Equals(null))
                     {
-                        MessageBox.Show("Debe colocar la cantidad que desea vender");
+                        MessageBox.Show("Debe colocar la cantidad que desea vender", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
 
                     if (intCantidadDeProductoExistencia < intCantidadAComprar)
                     {
-                        MessageBox.Show("No se puede vender más productos de los que hay en almacen");
+                        MessageBox.Show("No se puede vender más productos de los que hay en almacen", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                     else
                     {
@@ -251,7 +249,7 @@ namespace WFFuentes
 
                 else
                 {
-                    MessageBox.Show("Debe seleccionar un producto primero");
+                    MessageBox.Show("Debe seleccionar un producto primero", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
 
             }
@@ -360,11 +358,11 @@ namespace WFFuentes
 
                     }
 
-                    MessageBox.Show("¡Se realizó la venta correctamente!");
+                    MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 else
                 {
-                    MessageBox.Show("Favor de llenar todos los campos");
+                    MessageBox.Show("Favor de llenar todos los campos", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
 
             }

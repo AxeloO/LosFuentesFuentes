@@ -116,7 +116,7 @@ namespace WFFuentes
                 string strIdCliente = txtID.Text.ToString().Trim();
                 if (strIdCliente != "" && txtNombreCompleto.Text != "")
                 {
-                    DialogResult r = MessageBox.Show("¿Estas seguro de eliminar este registro?", "¡Alerta!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult r = MessageBox.Show("¿Estas seguro de eliminar este registro?", "¡Advertencia!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (r == DialogResult.OK)
                     {
@@ -159,7 +159,7 @@ namespace WFFuentes
                 _enCliente.FdLimiteCredito = Convert.ToInt64(txtLimiteCredito.Text);
                 if (_clientesBL.ModificarCliente(_enCliente) > 0)
                 {
-                    MessageBox.Show("¡El registro se modificó correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     dGClientes.Refresh();
                     dGClientes.DataSource = _clientesBL.MostrarClientes();
                     Limpiar();
