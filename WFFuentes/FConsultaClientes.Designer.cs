@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FConsultaClientes));
             this.bActualizar = new System.Windows.Forms.Button();
             this.bBusqueda = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -36,6 +37,9 @@
             this.bRegresar = new System.Windows.Forms.Button();
             this.dGClientes = new System.Windows.Forms.DataGridView();
             this.bImprimir = new System.Windows.Forms.Button();
+            this.btVistaPrevia = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dGClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,12 +124,40 @@
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
             this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(577, 425);
+            this.bImprimir.Location = new System.Drawing.Point(586, 425);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(102, 30);
             this.bImprimir.TabIndex = 52;
             this.bImprimir.Text = "Imprimir";
             this.bImprimir.UseVisualStyleBackColor = false;
+            this.bImprimir.Click += new System.EventHandler(this.bImprimir_Click);
+            // 
+            // btVistaPrevia
+            // 
+            this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
+            this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btVistaPrevia.Location = new System.Drawing.Point(478, 425);
+            this.btVistaPrevia.Name = "btVistaPrevia";
+            this.btVistaPrevia.Size = new System.Drawing.Size(102, 30);
+            this.btVistaPrevia.TabIndex = 53;
+            this.btVistaPrevia.Text = "VistaPrevia";
+            this.btVistaPrevia.UseVisualStyleBackColor = false;
+            this.btVistaPrevia.Click += new System.EventHandler(this.btVistaPrevia_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // FConsultaClientes
             // 
@@ -133,6 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(952, 490);
+            this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.dGClientes);
             this.Controls.Add(this.bRegresar);
@@ -161,5 +194,8 @@
         private System.Windows.Forms.Button bRegresar;
         private System.Windows.Forms.DataGridView dGClientes;
         private System.Windows.Forms.Button bImprimir;
+        private System.Windows.Forms.Button btVistaPrevia;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

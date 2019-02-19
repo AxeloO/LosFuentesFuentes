@@ -53,5 +53,29 @@ namespace WFFuentes
                 dGClientes.DataSource = _clientesBL.MostrarClientePorNombre(_enCliente);
             }
         }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dGClientes.Width, this.dGClientes.Height);
+            dGClientes.DrawToBitmap(bm, new Rectangle(0, 0, this.dGClientes.Width, this.dGClientes.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+
+        }
+
+        private void btVistaPrevia_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.Show();
+        }
+
+        private void bImprimir_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
     }
 }
