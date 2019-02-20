@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDevoluciones));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +51,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtFechaDevolucion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btVistaPrevia = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dGDevoluciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(60, 143);
+            this.label1.Location = new System.Drawing.Point(60, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 23);
             this.label1.TabIndex = 0;
@@ -69,7 +73,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(60, 278);
+            this.label2.Location = new System.Drawing.Point(60, 245);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 23);
             this.label2.TabIndex = 1;
@@ -80,7 +84,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(60, 325);
+            this.label3.Location = new System.Drawing.Point(60, 292);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 23);
             this.label3.TabIndex = 2;
@@ -91,7 +95,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(60, 364);
+            this.label4.Location = new System.Drawing.Point(60, 331);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(161, 23);
             this.label4.TabIndex = 3;
@@ -99,28 +103,28 @@
             // 
             // txtFolioNota
             // 
-            this.txtFolioNota.Location = new System.Drawing.Point(244, 143);
+            this.txtFolioNota.Location = new System.Drawing.Point(244, 110);
             this.txtFolioNota.Name = "txtFolioNota";
             this.txtFolioNota.Size = new System.Drawing.Size(76, 20);
             this.txtFolioNota.TabIndex = 4;
             // 
             // txtNombreProducto
             // 
-            this.txtNombreProducto.Location = new System.Drawing.Point(244, 278);
+            this.txtNombreProducto.Location = new System.Drawing.Point(244, 245);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(237, 20);
             this.txtNombreProducto.TabIndex = 5;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(244, 325);
+            this.txtCantidad.Location = new System.Drawing.Point(244, 292);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(76, 20);
             this.txtCantidad.TabIndex = 6;
             // 
             // txtCausaDevolucion
             // 
-            this.txtCausaDevolucion.Location = new System.Drawing.Point(244, 363);
+            this.txtCausaDevolucion.Location = new System.Drawing.Point(244, 330);
             this.txtCausaDevolucion.Name = "txtCausaDevolucion";
             this.txtCausaDevolucion.Size = new System.Drawing.Size(237, 20);
             this.txtCausaDevolucion.TabIndex = 7;
@@ -130,7 +134,7 @@
             this.bAgregar.BackColor = System.Drawing.Color.Teal;
             this.bAgregar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bAgregar.Location = new System.Drawing.Point(554, 238);
+            this.bAgregar.Location = new System.Drawing.Point(64, 388);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(87, 30);
             this.bAgregar.TabIndex = 8;
@@ -143,7 +147,7 @@
             this.bConsulta.BackColor = System.Drawing.Color.Teal;
             this.bConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsulta.Location = new System.Drawing.Point(1086, 367);
+            this.bConsulta.Location = new System.Drawing.Point(1065, 369);
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(87, 31);
             this.bConsulta.TabIndex = 9;
@@ -156,7 +160,7 @@
             this.bLimpiar.BackColor = System.Drawing.Color.Teal;
             this.bLimpiar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bLimpiar.Location = new System.Drawing.Point(554, 295);
+            this.bLimpiar.Location = new System.Drawing.Point(184, 388);
             this.bLimpiar.Name = "bLimpiar";
             this.bLimpiar.Size = new System.Drawing.Size(87, 29);
             this.bLimpiar.TabIndex = 10;
@@ -169,9 +173,9 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1200, 365);
+            this.bRegresar.Location = new System.Drawing.Point(1172, 369);
             this.bRegresar.Name = "bRegresar";
-            this.bRegresar.Size = new System.Drawing.Size(85, 35);
+            this.bRegresar.Size = new System.Drawing.Size(84, 31);
             this.bRegresar.TabIndex = 11;
             this.bRegresar.Text = "Regresar";
             this.bRegresar.UseVisualStyleBackColor = false;
@@ -181,9 +185,9 @@
             // 
             this.dGDevoluciones.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dGDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGDevoluciones.Location = new System.Drawing.Point(702, 125);
+            this.dGDevoluciones.Location = new System.Drawing.Point(593, 78);
             this.dGDevoluciones.Name = "dGDevoluciones";
-            this.dGDevoluciones.Size = new System.Drawing.Size(583, 210);
+            this.dGDevoluciones.Size = new System.Drawing.Size(833, 285);
             this.dGDevoluciones.TabIndex = 12;
             this.dGDevoluciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGDevoluciones_CellClick);
             // 
@@ -192,7 +196,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(179, 55);
+            this.label5.Location = new System.Drawing.Point(179, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(264, 29);
             this.label5.TabIndex = 13;
@@ -214,7 +218,7 @@
             this.ID.AutoSize = true;
             this.ID.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ID.Location = new System.Drawing.Point(60, 103);
+            this.ID.Location = new System.Drawing.Point(60, 70);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(36, 23);
             this.ID.TabIndex = 15;
@@ -222,7 +226,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(96, 103);
+            this.txtID.Location = new System.Drawing.Point(96, 70);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(58, 20);
             this.txtID.TabIndex = 16;
@@ -232,7 +236,7 @@
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
             this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(959, 366);
+            this.bImprimir.Location = new System.Drawing.Point(948, 369);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(102, 31);
             this.bImprimir.TabIndex = 51;
@@ -242,7 +246,7 @@
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(244, 235);
+            this.txtNombreCliente.Location = new System.Drawing.Point(244, 202);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(237, 20);
             this.txtNombreCliente.TabIndex = 53;
@@ -252,7 +256,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(60, 235);
+            this.label7.Location = new System.Drawing.Point(60, 202);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(156, 23);
             this.label7.TabIndex = 52;
@@ -260,7 +264,7 @@
             // 
             // txtFechaDevolucion
             // 
-            this.txtFechaDevolucion.Location = new System.Drawing.Point(244, 188);
+            this.txtFechaDevolucion.Location = new System.Drawing.Point(244, 155);
             this.txtFechaDevolucion.Name = "txtFechaDevolucion";
             this.txtFechaDevolucion.Size = new System.Drawing.Size(237, 20);
             this.txtFechaDevolucion.TabIndex = 55;
@@ -270,18 +274,46 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(60, 188);
+            this.label8.Location = new System.Drawing.Point(60, 155);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(159, 23);
             this.label8.TabIndex = 54;
             this.label8.Text = "Fecha de devolución:";
+            // 
+            // btVistaPrevia
+            // 
+            this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
+            this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btVistaPrevia.Location = new System.Drawing.Point(823, 369);
+            this.btVistaPrevia.Name = "btVistaPrevia";
+            this.btVistaPrevia.Size = new System.Drawing.Size(102, 31);
+            this.btVistaPrevia.TabIndex = 56;
+            this.btVistaPrevia.Text = "Vista Previa";
+            this.btVistaPrevia.UseVisualStyleBackColor = false;
+            this.btVistaPrevia.Click += new System.EventHandler(this.btVistaPrevia_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // FDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1330, 440);
+            this.ClientSize = new System.Drawing.Size(1438, 440);
+            this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.txtFechaDevolucion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNombreCliente);
@@ -339,5 +371,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtFechaDevolucion;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btVistaPrevia;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

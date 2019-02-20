@@ -73,10 +73,10 @@ namespace WFFuentes
                 string strCantidad = txtCantidad.Text.ToString().Trim();
                 string strTotalAPagar = txtMontoPagar.Text.ToString().Trim();
                 string strStatus = txtStatus.Text.ToString().Trim();
-                             
 
 
-                if (txtNombreProveedor.Text ==("") || txtNoFactura.Text ==("") || txtFechaAdquisicion.Text ==("") || txtProductoAdquirido.Text == ("") || txtCantidad.Text ==("") || txtMontoPagar.Text == ("") || txtStatus.Text == ("") )
+
+                if (txtNombreProveedor.Text == ("") || txtNoFactura.Text == ("") || txtFechaAdquisicion.Text == ("") || txtProductoAdquirido.Text == ("") || txtCantidad.Text == ("") || txtMontoPagar.Text == ("") || txtStatus.Text == (""))
                 {
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -89,9 +89,9 @@ namespace WFFuentes
                     _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
                     _enCuentas.FdTotalAPagar = int.Parse(txtMontoPagar.Text);
                     _enCuentas.FdCantidad = decimal.Parse(txtCantidad.Text);
-                    _enCuentas.FcStatus = txtStatus.Text;                   
+                    _enCuentas.FcStatus = txtStatus.Text;
 
-                    
+
 
                     foreach (var productoInventario in _inventarioBl.MostrarInventario())
                     {
@@ -119,11 +119,11 @@ namespace WFFuentes
                     }
                     if (intVerificador != 1)
                     {
-                        MessageBox.Show("No se Encontro el producto. Favor de verificar","¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("No se Encontro el producto. Favor de verificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     }
 
-                    
+
                 }
             }
 
@@ -184,7 +184,7 @@ namespace WFFuentes
             txtFechaAdquisicion.Text = string.Empty;
             txtCantidad.Text = string.Empty;
             txtMontoPagar.Text = string.Empty;
-            txtStatus.Text =string.Empty;
+            txtStatus.Text = string.Empty;
             txtNombreProveedor.Focus();
         }
 
@@ -213,36 +213,36 @@ namespace WFFuentes
             string strMontoPagar = txtMontoPagar.Text.ToString().Trim();
             string strStatus = txtStatus.Text.ToString().Trim();
 
-            if (strIdCuentasPagar !="" && strNombreProveedor !="")
+            if (strIdCuentasPagar != "" && strNombreProveedor != "")
             {
-           _enCuentas.FiIdProveedor = long.Parse(txtID.Text);
-           _enCuentas.FcNombreProveedor = txtNombreProveedor.Text;
-           _enCuentas.FiNoFactura = int.Parse(txtNoFactura.Text);
-           _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
-           _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
-           _enCuentas.FdCantidad = decimal.Parse(txtCantidad.Text);
-           _enCuentas.FdTotalAPagar = decimal.Parse(txtCantidad.Text);
-           _enCuentas.FcStatus = txtStatus.Text;
-         
+                _enCuentas.FiIdProveedor = long.Parse(txtID.Text);
+                _enCuentas.FcNombreProveedor = txtNombreProveedor.Text;
+                _enCuentas.FiNoFactura = int.Parse(txtNoFactura.Text);
+                _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
+                _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
+                _enCuentas.FdCantidad = decimal.Parse(txtCantidad.Text);
+                _enCuentas.FdTotalAPagar = decimal.Parse(txtCantidad.Text);
+                _enCuentas.FcStatus = txtStatus.Text;
 
-           if (_cuentasBL.ModificarCuentas(_enCuentas) > 0)
-               {
-                   MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                   dGCuentasPagar.Refresh();
-                   dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorPagar();
-               Limpiar();
-               }
 
-               else
-               {
-                   MessageBox.Show("Ocurrio un problema, no se pudo modificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               }
+                if (_cuentasBL.ModificarCuentas(_enCuentas) > 0)
+                {
+                    MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    dGCuentasPagar.Refresh();
+                    dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorPagar();
+                    Limpiar();
+                }
 
-           }
-           else
-           {
-               MessageBox.Show("Seleccione un registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-           }
+                else
+                {
+                    MessageBox.Show("Ocurrio un problema, no se pudo modificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
 
         private void bBuscar_Click(object sender, EventArgs e)
@@ -257,15 +257,43 @@ namespace WFFuentes
         private void bLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
-           /** txtID.Text = string.Empty;
-            txtNombreProveedor.Text = string.Empty;
-            txtNoFactura.Text = string.Empty;
-            txtFechaAdquisicion.Text = string.Empty;
-            txtProductoAdquirido.Text = string.Empty;
-            txtCantidad.Text = string.Empty;
-            txtMontoPagar.Text = string.Empty;
-            txtStatus.Text = string.Empty;
-            txtNombreProveedor.Focus();**/
+            /** txtID.Text = string.Empty;
+             txtNombreProveedor.Text = string.Empty;
+             txtNoFactura.Text = string.Empty;
+             txtFechaAdquisicion.Text = string.Empty;
+             txtProductoAdquirido.Text = string.Empty;
+             txtCantidad.Text = string.Empty;
+             txtMontoPagar.Text = string.Empty;
+             txtStatus.Text = string.Empty;
+             txtNombreProveedor.Focus();**/
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dGCuentasPagar.Width, this.dGCuentasPagar.Height);
+            dGCuentasPagar.DrawToBitmap(bm, new Rectangle(0, 0, this.dGCuentasPagar.Width, this.dGCuentasPagar.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
+
+        private void btVistaPrevia_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un Error al Imprimir : Favor de Salir e ingresar Nuevamente a la opcion");
+                return;
+            }
+        }
+
+
+        private void bImprimir_Click(object sender, EventArgs e)
+        {
+            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
+            printDocument1.Print();
         }
     }
 }

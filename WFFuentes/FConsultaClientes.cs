@@ -64,18 +64,27 @@ namespace WFFuentes
             Bitmap bm = new Bitmap(this.dGClientes.Width, this.dGClientes.Height);
             dGClientes.DrawToBitmap(bm, new Rectangle(0, 0, this.dGClientes.Width, this.dGClientes.Height));
             e.Graphics.DrawImage(bm, 0, 0);
-
         }
 
         private void btVistaPrevia_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.Show();
+            try
+            {
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un Error al Imprimir : Favor de Salir e ingresar Nuevamente a la opcion");
+                return ;
+            }
         }
 
         private void bImprimir_Click(object sender, EventArgs e)
         {
+            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
             printDocument1.Print();
+            
         }
     }
 }

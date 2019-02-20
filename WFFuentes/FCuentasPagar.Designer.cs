@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCuentasPagar));
             this.bConsulta = new System.Windows.Forms.Button();
             this.bEliminar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
@@ -57,6 +58,9 @@
             this.txtMontoPagar = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.bLimpiar = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.btVistaPrevia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGCuentasPagar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -306,6 +310,7 @@
             this.bImprimir.TabIndex = 51;
             this.bImprimir.Text = "Imprimir";
             this.bImprimir.UseVisualStyleBackColor = false;
+            this.bImprimir.Click += new System.EventHandler(this.bImprimir_Click);
             // 
             // label10
             // 
@@ -356,12 +361,40 @@
             this.bLimpiar.UseVisualStyleBackColor = false;
             this.bLimpiar.Click += new System.EventHandler(this.bLimpiar_Click);
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // btVistaPrevia
+            // 
+            this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
+            this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btVistaPrevia.Location = new System.Drawing.Point(807, 400);
+            this.btVistaPrevia.Name = "btVistaPrevia";
+            this.btVistaPrevia.Size = new System.Drawing.Size(102, 31);
+            this.btVistaPrevia.TabIndex = 57;
+            this.btVistaPrevia.Text = "Vista Previa";
+            this.btVistaPrevia.UseVisualStyleBackColor = false;
+            this.btVistaPrevia.Click += new System.EventHandler(this.btVistaPrevia_Click);
+            // 
             // FCuentasPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1317, 526);
+            this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.bLimpiar);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtMontoPagar);
@@ -433,5 +466,8 @@
         private System.Windows.Forms.TextBox txtMontoPagar;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button bLimpiar;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button btVistaPrevia;
     }
 }

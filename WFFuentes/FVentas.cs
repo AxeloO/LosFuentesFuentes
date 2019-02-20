@@ -378,8 +378,11 @@ namespace WFFuentes
         private void button2_Click(object sender, EventArgs e)
         {
 
-            PrevioImprecion.Document = ImprecionNota;
-            PrevioImprecion.ShowDialog();
+            //PrevioImprecion.Document = ImprecionNota;
+            //PrevioImprecion.ShowDialog();
+
+            FNotaVenta nuevaNota = new FNotaVenta();
+            nuevaNota.ShowDialog();
         }
 
         private void ImprecionNota_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)

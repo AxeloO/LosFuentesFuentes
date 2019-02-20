@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bImprimir));
             this.button3 = new System.Windows.Forms.Button();
             this.btModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,6 +58,9 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bBuscar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btVistaPrevia = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -375,6 +379,34 @@
             this.button2.TabIndex = 61;
             this.button2.Text = "Imprimir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btVistaPrevia
+            // 
+            this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
+            this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btVistaPrevia.Location = new System.Drawing.Point(894, 403);
+            this.btVistaPrevia.Name = "btVistaPrevia";
+            this.btVistaPrevia.Size = new System.Drawing.Size(102, 31);
+            this.btVistaPrevia.TabIndex = 62;
+            this.btVistaPrevia.Text = "Vista Previa";
+            this.btVistaPrevia.UseVisualStyleBackColor = false;
+            this.btVistaPrevia.Click += new System.EventHandler(this.btVistaPrevia_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // bImprimir
             // 
@@ -382,6 +414,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1429, 509);
+            this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bBuscar);
             this.Controls.Add(this.txtBusqueda);
@@ -451,5 +484,8 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btVistaPrevia;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

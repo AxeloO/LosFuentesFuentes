@@ -41,6 +41,33 @@ namespace WFFuentes
 
             return bmp;
 
-        }     
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
+            printDocument1.Print();
+        }
+
+        private void btnVistaPrevia_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un Error al Imprimir : Favor de Salir e ingresar Nuevamente a la opcion");
+                return;
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.panelImprimir.Width, this.panelImprimir.Height);
+            panelImprimir.DrawToBitmap(bm, new Rectangle(0, 0, this.panelImprimir.Width, this.panelImprimir.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
     }
 }
