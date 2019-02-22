@@ -145,7 +145,7 @@ namespace WFFuentes
 
         }
 
-        private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)//Odio lo de sincronizacion -.-"
         {
 
             striDProducto = dgProductos.Rows[e.RowIndex].Cells["idProducto"].Value.ToString();
