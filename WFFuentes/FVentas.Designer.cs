@@ -183,8 +183,10 @@
             // 
             // FdFechaSalida
             // 
+            this.FdFechaSalida.Enabled = false;
             this.FdFechaSalida.Location = new System.Drawing.Point(228, 114);
             this.FdFechaSalida.Name = "FdFechaSalida";
+            this.FdFechaSalida.ReadOnly = true;
             this.FdFechaSalida.Size = new System.Drawing.Size(206, 20);
             this.FdFechaSalida.TabIndex = 13;
             // 
@@ -485,6 +487,7 @@
             this.button1.TabIndex = 47;
             this.button1.Text = "Imprimir y Pagar a Crédito";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btPrevioImprecion
             // 
