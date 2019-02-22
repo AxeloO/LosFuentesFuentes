@@ -75,14 +75,14 @@ namespace WFFuentes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un Error al Imprimir : Favor de Salir e ingresar Nuevamente a la opcion");
+                MessageBox.Show("Ocurrió un error al imprimir. Favor de salir e ingresar nuevamente a la opción", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return ;
             }
         }
 
         private void bImprimir_Click(object sender, EventArgs e)
         {
-            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
+            printDocument1.PrinterSettings.PrinterName = "NPI099E21 (HP Color LaserJet MFPm377dw)";
             printDocument1.Print();
             
         }

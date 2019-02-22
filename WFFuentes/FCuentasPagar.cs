@@ -109,7 +109,7 @@ namespace WFFuentes
                             _en.Cantidad = _en.Cantidad + int.Parse(_enCuentas.FdCantidad.ToString());
                             _inventarioBl.ModificarProducto(_en);
                             int Resultado = _cuentasBL.AgregarCuentasPorPagar(_enCuentas);
-                            MessageBox.Show("¡Se realizó el Registro Correctamente!");
+                            MessageBox.Show("¡Se realizó el registro correctamente!" , "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             intVerificador = 1;
 
                         }
@@ -119,7 +119,7 @@ namespace WFFuentes
                     }
                     if (intVerificador != 1)
                     {
-                        MessageBox.Show("No se Encontro el producto. Favor de verificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("No se encontro el producto. Favor de verificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     }
 
@@ -203,7 +203,6 @@ namespace WFFuentes
 
         private void bModificar_Click(object sender, EventArgs e)
         {
-
             string strIdCuentasPagar = txtID.Text.ToString().Trim();
             string strNombreProveedor = txtNombreProveedor.Text.ToString().Trim();
             string strNoFactura = txtNoFactura.Text.ToString().Trim();
@@ -284,7 +283,7 @@ namespace WFFuentes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un Error al Imprimir : Favor de Salir e ingresar Nuevamente a la opcion");
+                MessageBox.Show("Ocurrió un error al imprimir. Favor de salir e ingresar nuevamente a la opción" , "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }

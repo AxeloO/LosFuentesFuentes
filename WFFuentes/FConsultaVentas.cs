@@ -72,7 +72,7 @@ namespace WFFuentes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un Error al Imprimir : Favor de Salir e ingresar Nuevamente a la opcion");
+                MessageBox.Show("Ocurrio un error al imprimir. Favor de salir e ingresar nuevamente a la opción" , "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }

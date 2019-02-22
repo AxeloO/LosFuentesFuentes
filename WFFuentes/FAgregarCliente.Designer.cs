@@ -74,52 +74,60 @@
             // 
             // txtLimiteCredito
             // 
-            this.txtLimiteCredito.Location = new System.Drawing.Point(171, 396);
+            this.txtLimiteCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLimiteCredito.Location = new System.Drawing.Point(171, 394);
             this.txtLimiteCredito.Name = "txtLimiteCredito";
-            this.txtLimiteCredito.Size = new System.Drawing.Size(219, 20);
+            this.txtLimiteCredito.Size = new System.Drawing.Size(219, 22);
             this.txtLimiteCredito.TabIndex = 35;
             // 
             // txtGarantia
             // 
-            this.txtGarantia.Location = new System.Drawing.Point(171, 351);
+            this.txtGarantia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGarantia.Location = new System.Drawing.Point(171, 349);
             this.txtGarantia.Name = "txtGarantia";
-            this.txtGarantia.Size = new System.Drawing.Size(264, 20);
+            this.txtGarantia.Size = new System.Drawing.Size(264, 22);
             this.txtGarantia.TabIndex = 34;
             // 
             // txtTipoCredito
             // 
-            this.txtTipoCredito.Location = new System.Drawing.Point(171, 306);
+            this.txtTipoCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipoCredito.Location = new System.Drawing.Point(171, 304);
             this.txtTipoCredito.Name = "txtTipoCredito";
-            this.txtTipoCredito.Size = new System.Drawing.Size(264, 20);
+            this.txtTipoCredito.Size = new System.Drawing.Size(264, 22);
             this.txtTipoCredito.TabIndex = 33;
             // 
             // txtRFC
             // 
-            this.txtRFC.Location = new System.Drawing.Point(171, 262);
+            this.txtRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRFC.Location = new System.Drawing.Point(169, 260);
             this.txtRFC.Name = "txtRFC";
-            this.txtRFC.Size = new System.Drawing.Size(319, 20);
+            this.txtRFC.Size = new System.Drawing.Size(319, 22);
             this.txtRFC.TabIndex = 32;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(171, 216);
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(169, 214);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(319, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(319, 22);
             this.txtTelefono.TabIndex = 31;
             // 
             // txtDomicilio
             // 
-            this.txtDomicilio.Location = new System.Drawing.Point(171, 173);
+            this.txtDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDomicilio.Location = new System.Drawing.Point(169, 171);
             this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(319, 20);
+            this.txtDomicilio.Size = new System.Drawing.Size(319, 22);
             this.txtDomicilio.TabIndex = 30;
             // 
             // txtNombreCompleto
             // 
-            this.txtNombreCompleto.Location = new System.Drawing.Point(171, 128);
+            this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCompleto.Location = new System.Drawing.Point(169, 126);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(319, 20);
+            this.txtNombreCompleto.Size = new System.Drawing.Size(319, 22);
             this.txtNombreCompleto.TabIndex = 29;
+            this.txtNombreCompleto.TextChanged += new System.EventHandler(this.txtNombreCompleto_TextChanged);
             // 
             // label7
             // 
@@ -319,9 +327,10 @@
             // 
             // txtBusqueda
             // 
+            this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.Location = new System.Drawing.Point(885, 105);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(343, 20);
+            this.txtBusqueda.Size = new System.Drawing.Size(343, 22);
             this.txtBusqueda.TabIndex = 51;
             // 
             // bBusqueda
@@ -352,7 +361,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1370, 485);
+            this.ClientSize = new System.Drawing.Size(1378, 514);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bBusqueda);
             this.Controls.Add(this.txtBusqueda);

@@ -37,7 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dgProductos = new System.Windows.Forms.DataGridView();
             this.FdFechaSalida = new System.Windows.Forms.TextBox();
@@ -47,7 +46,6 @@
             this.FcTelefono = new System.Windows.Forms.TextBox();
             this.FdFechaPago = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             this.txtImporte = new System.Windows.Forms.TextBox();
             this.FdTotal = new System.Windows.Forms.TextBox();
             this.bCancelar = new System.Windows.Forms.Button();
@@ -80,6 +78,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -156,27 +155,17 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(680, 200);
+            this.label8.Location = new System.Drawing.Point(13, 107);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 23);
             this.label8.TabIndex = 7;
             this.label8.Text = "Cantidad:";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(680, 245);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 23);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Precio Unitario:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(680, 371);
+            this.label11.Location = new System.Drawing.Point(13, 244);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(75, 23);
             this.label11.TabIndex = 10;
@@ -236,18 +225,10 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(864, 200);
+            this.txtCantidad.Location = new System.Drawing.Point(197, 111);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(206, 20);
             this.txtCantidad.TabIndex = 19;
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.Enabled = false;
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(864, 245);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(206, 20);
-            this.txtPrecioUnitario.TabIndex = 21;
             // 
             // txtImporte
             // 
@@ -341,7 +322,7 @@
             this.txtNombre.AcceptsReturn = true;
             this.txtNombre.AcceptsTab = true;
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(864, 161);
+            this.txtNombre.Location = new System.Drawing.Point(197, 70);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(206, 20);
             this.txtNombre.TabIndex = 34;
@@ -350,7 +331,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(680, 161);
+            this.label14.Location = new System.Drawing.Point(13, 66);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(164, 23);
             this.label14.TabIndex = 33;
@@ -381,7 +362,7 @@
             this.bAgregar.BackColor = System.Drawing.Color.Teal;
             this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bAgregar.Location = new System.Drawing.Point(909, 412);
+            this.bAgregar.Location = new System.Drawing.Point(260, 316);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(143, 32);
             this.bAgregar.TabIndex = 35;
@@ -403,7 +384,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(65, 498);
+            this.label9.Location = new System.Drawing.Point(65, 500);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(169, 23);
             this.label9.TabIndex = 37;
@@ -411,7 +392,7 @@
             // 
             // FcConcepto
             // 
-            this.FcConcepto.Location = new System.Drawing.Point(268, 512);
+            this.FcConcepto.Location = new System.Drawing.Point(252, 502);
             this.FcConcepto.Name = "FcConcepto";
             this.FcConcepto.Size = new System.Drawing.Size(333, 20);
             this.FcConcepto.TabIndex = 38;
@@ -456,7 +437,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(680, 326);
+            this.label19.Location = new System.Drawing.Point(13, 199);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(133, 23);
             this.label19.TabIndex = 42;
@@ -465,7 +446,7 @@
             // txtPrecioDeContado
             // 
             this.txtPrecioDeContado.Enabled = false;
-            this.txtPrecioDeContado.Location = new System.Drawing.Point(864, 288);
+            this.txtPrecioDeContado.Location = new System.Drawing.Point(197, 153);
             this.txtPrecioDeContado.Name = "txtPrecioDeContado";
             this.txtPrecioDeContado.Size = new System.Drawing.Size(206, 20);
             this.txtPrecioDeContado.TabIndex = 45;
@@ -474,7 +455,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(680, 288);
+            this.label20.Location = new System.Drawing.Point(13, 149);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(145, 23);
             this.label20.TabIndex = 44;
@@ -514,7 +495,7 @@
             this.btPrevioImprecion.Name = "btPrevioImprecion";
             this.btPrevioImprecion.Size = new System.Drawing.Size(227, 31);
             this.btPrevioImprecion.TabIndex = 48;
-            this.btPrevioImprecion.Text = "Preview de Impresion";
+            this.btPrevioImprecion.Text = "Vista previa de Impresion";
             this.btPrevioImprecion.UseVisualStyleBackColor = false;
             this.btPrevioImprecion.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -534,14 +515,24 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCantidad);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.txtPrecioDeContado);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.bAgregar);
             this.groupBox1.Location = new System.Drawing.Point(667, 123);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(437, 348);
+            this.groupBox1.Size = new System.Drawing.Size(437, 365);
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             // 
             // groupBox2
             // 
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 41);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(573, 382);
@@ -553,23 +544,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1683, 780);
+            this.ClientSize = new System.Drawing.Size(1378, 780);
             this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);
-            this.Controls.Add(this.txtPrecioDeContado);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.txtPrecioACredito);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.txtTotalAPagarCredito);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.FcConcepto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.bAgregar);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dgTotalProductos);
             this.Controls.Add(this.label13);
@@ -579,8 +564,6 @@
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.FdTotal);
             this.Controls.Add(this.txtImporte);
-            this.Controls.Add(this.txtPrecioUnitario);
-            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.FdFechaPago);
             this.Controls.Add(this.FcTelefono);
             this.Controls.Add(this.FcCiudad);
@@ -589,9 +572,6 @@
             this.Controls.Add(this.FdFechaSalida);
             this.Controls.Add(this.dgProductos);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -607,6 +587,8 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FVentas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -622,7 +604,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgProductos;
         private System.Windows.Forms.TextBox FdFechaSalida;
@@ -632,7 +613,6 @@
         private System.Windows.Forms.TextBox FcTelefono;
         private System.Windows.Forms.TextBox FdFechaPago;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.TextBox txtPrecioUnitario;
         private System.Windows.Forms.TextBox txtImporte;
         private System.Windows.Forms.TextBox FdTotal;
         private System.Windows.Forms.Button bCancelar;

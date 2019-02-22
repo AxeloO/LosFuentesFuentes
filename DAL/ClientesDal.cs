@@ -84,9 +84,9 @@ namespace DAL
 
         public int ModificarCliente(EnCliente PEntidad)
         {
-            IDbConnection _conexion = DBConexion.Conexion();
-            _conexion.Open();
-            SqlCommand _comando = new SqlCommand("Modificar_Cliente", _conexion as SqlConnection);
+            IDbConnection _Conexion = DBConexion.Conexion();
+            _Conexion.Open();
+            SqlCommand _comando = new SqlCommand("Modificar_Cliente", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@FiIdCliente", PEntidad.FiIdCliente));
             _comando.Parameters.Add(new SqlParameter("@FcNombreCompleto", PEntidad.FcNombreCompleto));
@@ -95,9 +95,10 @@ namespace DAL
             _comando.Parameters.Add(new SqlParameter("@FcRFC", PEntidad.FcRFC));
             _comando.Parameters.Add(new SqlParameter("@FcTipoCredito", PEntidad.FcTipoCredito));
             _comando.Parameters.Add(new SqlParameter("@FcTipoGarantia", PEntidad.FcTipoGarantia));
-            _comando.Parameters.Add(new SqlParameter("@FdLimiteCredito", PEntidad.FdLimiteCredito));            
+            _comando.Parameters.Add(new SqlParameter("@FdLimiteCredito", PEntidad.FdLimiteCredito));
+            //_comando.Parameters.Add(new SqlParameter("@PorcentajeGananciaCredito", PEntidad.FdLimiteCredito));          
             int Resultado = _comando.ExecuteNonQuery();
-            _conexion.Close();
+            _Conexion.Close();
             return Resultado;
         }
 

@@ -52,17 +52,17 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(495, 24);
+            this.label1.Location = new System.Drawing.Point(460, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 29);
+            this.label1.Size = new System.Drawing.Size(185, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ventas";
+            this.label1.Text = "Consultar Ventas";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 114);
+            this.label2.Location = new System.Drawing.Point(36, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 23);
             this.label2.TabIndex = 1;
@@ -70,9 +70,10 @@
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(220, 115);
+            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(226, 121);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(266, 20);
+            this.txtProducto.Size = new System.Drawing.Size(266, 22);
             this.txtProducto.TabIndex = 2;
             // 
             // bBuscar
@@ -80,7 +81,7 @@
             this.bBuscar.BackColor = System.Drawing.Color.Teal;
             this.bBuscar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bBuscar.Location = new System.Drawing.Point(1011, 109);
+            this.bBuscar.Location = new System.Drawing.Point(1009, 117);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(86, 30);
             this.bBuscar.TabIndex = 3;
@@ -101,7 +102,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(511, 114);
+            this.label3.Location = new System.Drawing.Point(513, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 23);
             this.label3.TabIndex = 5;
@@ -111,7 +112,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(763, 114);
+            this.label4.Location = new System.Drawing.Point(766, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 23);
             this.label4.TabIndex = 6;
@@ -119,16 +120,18 @@
             // 
             // txtFechaI
             // 
-            this.txtFechaI.Location = new System.Drawing.Point(639, 113);
+            this.txtFechaI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaI.Location = new System.Drawing.Point(637, 121);
             this.txtFechaI.Name = "txtFechaI";
-            this.txtFechaI.Size = new System.Drawing.Size(106, 20);
+            this.txtFechaI.Size = new System.Drawing.Size(106, 22);
             this.txtFechaI.TabIndex = 7;
             // 
             // txtFechaF
             // 
-            this.txtFechaF.Location = new System.Drawing.Point(860, 115);
+            this.txtFechaF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaF.Location = new System.Drawing.Point(873, 121);
             this.txtFechaF.Name = "txtFechaF";
-            this.txtFechaF.Size = new System.Drawing.Size(92, 20);
+            this.txtFechaF.Size = new System.Drawing.Size(92, 22);
             this.txtFechaF.TabIndex = 8;
             // 
             // bRegresar
@@ -136,7 +139,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bRegresar.Location = new System.Drawing.Point(955, 397);
+            this.bRegresar.Location = new System.Drawing.Point(1011, 397);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(102, 30);
             this.bRegresar.TabIndex = 9;
@@ -149,7 +152,7 @@
             this.bActualizar.BackColor = System.Drawing.Color.Teal;
             this.bActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bActualizar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bActualizar.Location = new System.Drawing.Point(816, 397);
+            this.bActualizar.Location = new System.Drawing.Point(875, 397);
             this.bActualizar.Name = "bActualizar";
             this.bActualizar.Size = new System.Drawing.Size(101, 30);
             this.bActualizar.TabIndex = 10;
@@ -160,9 +163,9 @@
             // bImprimir
             // 
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
-            this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(673, 396);
+            this.bImprimir.Location = new System.Drawing.Point(744, 396);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(102, 31);
             this.bImprimir.TabIndex = 51;
@@ -173,11 +176,11 @@
             // btVistaPrevia
             // 
             this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
-            this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btVistaPrevia.Location = new System.Drawing.Point(551, 396);
+            this.btVistaPrevia.Location = new System.Drawing.Point(591, 396);
             this.btVistaPrevia.Name = "btVistaPrevia";
-            this.btVistaPrevia.Size = new System.Drawing.Size(102, 31);
+            this.btVistaPrevia.Size = new System.Drawing.Size(121, 31);
             this.btVistaPrevia.TabIndex = 52;
             this.btVistaPrevia.Text = "Vista Previa";
             this.btVistaPrevia.UseVisualStyleBackColor = false;

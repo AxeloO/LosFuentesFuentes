@@ -77,7 +77,7 @@ namespace WFFuentes
                     _enVentas.fcFechaPago = FdFechaPago.Text;
                     _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
                     // _enVentas.fcConcepto = FcConcepto.Text;
-                    _enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
+                    //_enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
 
@@ -133,7 +133,7 @@ namespace WFFuentes
 
             txtNombre.Text = string.Empty;
             txtCantidad.Text = string.Empty;
-            txtPrecioUnitario.Text = string.Empty;
+           // txtPrecioUnitario.Text = string.Empty;
             txtImporte.Text = string.Empty;
             txtNombre.Focus();
 
@@ -152,12 +152,12 @@ namespace WFFuentes
             strExistenciaProducto = dgProductos.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
             string strCantidad = txtCantidad.Text.ToString().Trim();
             txtNombre.Text = dgProductos.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();
-            txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["CostoUnitario"].Value.ToString();
+            //txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["CostoUnitario"].Value.ToString();
             txtPrecioACredito.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioACredito"].Value.ToString();
             txtPrecioDeContado.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();
             // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
             // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
-            string strPrecio = txtPrecioUnitario.Text.ToString().Trim();
+          //  string strPrecio = txtPrecioUnitario.Text.ToString().Trim();
 
 
         }

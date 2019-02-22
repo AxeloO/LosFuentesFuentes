@@ -238,7 +238,6 @@ namespace WFFuentes
                 _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
                 _en.PrecioACredito = decimal.Parse(txtPrecioCredito.Text);
 
-
                 if (_inventarioBl.ModificarProducto(_en) > 0)
                 {
                     MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -269,7 +268,7 @@ namespace WFFuentes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un Error al Imprimir : Favor de Salir e ingresar Nuevamente a la opcion");
+                MessageBox.Show("Ocurrio un error al imprimir. Favor de salir e ingresar nuevamente a la opción", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
         }

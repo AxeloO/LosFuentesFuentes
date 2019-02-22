@@ -12,9 +12,9 @@ namespace DAL
    public static class DBConexion
     {
 
-      // public static string CadenaDeConexion = @"Data Source = 192.168.1.82;Initial Catalog=DBFuentes; Persist Security Info=True;User ID = ventas; Password=123456; Context Connection=False";
+       public static string CadenaDeConexion = @"Data Source = 192.168.1.82;Initial Catalog=DBFuentes; Persist Security Info=True;User ID = ventas; Password=123456; Context Connection=False";
 
-        public static string CadenaDeConexion = @"Data Source=DESKTOP-QRLGBTN\SQLEXPRESS;Initial Catalog=DBFuentes;Integrated Security=True";
+        //public static string CadenaDeConexion = @"Data Source=DESKTOP-QRLGBTN\SQLEXPRESS;Initial Catalog=DBFuentes;Integrated Security=True";
 
         public static IDbConnection Conexion()
         {

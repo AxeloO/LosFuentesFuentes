@@ -80,37 +80,41 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(190, 255);
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Location = new System.Drawing.Point(196, 256);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(216, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(216, 22);
             this.txtContraseña.TabIndex = 19;
             this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // cbTipoUsuario
             // 
             this.cbTipoUsuario.DisplayMember = "Administrador, Empleado";
+            this.cbTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoUsuario.FormattingEnabled = true;
             this.cbTipoUsuario.Items.AddRange(new object[] {
             "Administrador",
             "Empleado"});
-            this.cbTipoUsuario.Location = new System.Drawing.Point(190, 312);
+            this.cbTipoUsuario.Location = new System.Drawing.Point(196, 313);
             this.cbTipoUsuario.Name = "cbTipoUsuario";
-            this.cbTipoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cbTipoUsuario.Size = new System.Drawing.Size(121, 24);
             this.cbTipoUsuario.TabIndex = 18;
             this.cbTipoUsuario.ValueMember = "Administrador, Empleado";
             // 
             // txtNombreUsuario
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(190, 205);
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUsuario.Location = new System.Drawing.Point(196, 206);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(216, 20);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(216, 22);
             this.txtNombreUsuario.TabIndex = 17;
             // 
             // txtNombreEmpleado
             // 
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(190, 148);
+            this.txtNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(196, 149);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.Size = new System.Drawing.Size(216, 20);
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(216, 22);
             this.txtNombreEmpleado.TabIndex = 16;
             // 
             // label4
@@ -177,7 +181,7 @@
             // bRegresar
             // 
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
-            this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.bRegresar.Location = new System.Drawing.Point(1084, 321);
             this.bRegresar.Name = "bRegresar";
@@ -192,7 +196,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(168, 30);
+            this.label5.Location = new System.Drawing.Point(191, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(158, 30);
             this.label5.TabIndex = 26;
@@ -203,7 +207,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(828, 71);
+            this.label6.Location = new System.Drawing.Point(811, 70);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(190, 30);
             this.label6.TabIndex = 27;
@@ -256,11 +260,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUsuarios.Location = new System.Drawing.Point(696, 123);
+            this.dgUsuarios.Location = new System.Drawing.Point(660, 123);
             this.dgUsuarios.Name = "dgUsuarios";
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             this.dgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgUsuarios.Size = new System.Drawing.Size(493, 150);
+            this.dgUsuarios.Size = new System.Drawing.Size(529, 150);
             this.dgUsuarios.TabIndex = 31;
             this.dgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUsuarios_CellClick);
             // 

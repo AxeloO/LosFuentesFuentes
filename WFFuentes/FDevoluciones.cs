@@ -122,6 +122,7 @@ namespace WFFuentes
 
                             MessageBox.Show("¡Se realizó la devolución correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             intVerificador = 1;
+                            Limpiar();
 
                         }
 
@@ -181,7 +182,7 @@ namespace WFFuentes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un Error al Imprimir : Favor de Salir e ingresar Nuevamente a la opcion");
+                MessageBox.Show("Ocurrió un error al imprimir. Favor de salir e ingresar nuevamente a la opción" ,"¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }

@@ -65,7 +65,7 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(166, 45);
+            this.label1.Location = new System.Drawing.Point(208, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 29);
             this.label1.TabIndex = 0;
@@ -143,51 +143,58 @@
             // 
             // txtNombreCompleto
             // 
-            this.txtNombreCompleto.Location = new System.Drawing.Point(196, 161);
+            this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCompleto.Location = new System.Drawing.Point(213, 157);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(337, 20);
+            this.txtNombreCompleto.Size = new System.Drawing.Size(337, 22);
             this.txtNombreCompleto.TabIndex = 8;
             // 
             // txtDomicilio
             // 
-            this.txtDomicilio.Location = new System.Drawing.Point(196, 205);
+            this.txtDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDomicilio.Location = new System.Drawing.Point(213, 204);
             this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(337, 20);
+            this.txtDomicilio.Size = new System.Drawing.Size(337, 22);
             this.txtDomicilio.TabIndex = 9;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(196, 249);
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(213, 250);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(206, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(206, 22);
             this.txtTelefono.TabIndex = 10;
             // 
             // txtRFC
             // 
-            this.txtRFC.Location = new System.Drawing.Point(196, 290);
+            this.txtRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRFC.Location = new System.Drawing.Point(213, 289);
             this.txtRFC.Name = "txtRFC";
-            this.txtRFC.Size = new System.Drawing.Size(206, 20);
+            this.txtRFC.Size = new System.Drawing.Size(206, 22);
             this.txtRFC.TabIndex = 11;
             // 
             // txtCuentaBancaria
             // 
-            this.txtCuentaBancaria.Location = new System.Drawing.Point(196, 335);
+            this.txtCuentaBancaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuentaBancaria.Location = new System.Drawing.Point(213, 336);
             this.txtCuentaBancaria.Name = "txtCuentaBancaria";
-            this.txtCuentaBancaria.Size = new System.Drawing.Size(206, 20);
+            this.txtCuentaBancaria.Size = new System.Drawing.Size(206, 22);
             this.txtCuentaBancaria.TabIndex = 12;
             // 
             // txtProductoSurtir
             // 
-            this.txtProductoSurtir.Location = new System.Drawing.Point(196, 381);
+            this.txtProductoSurtir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductoSurtir.Location = new System.Drawing.Point(213, 380);
             this.txtProductoSurtir.Name = "txtProductoSurtir";
-            this.txtProductoSurtir.Size = new System.Drawing.Size(206, 20);
+            this.txtProductoSurtir.Size = new System.Drawing.Size(206, 22);
             this.txtProductoSurtir.TabIndex = 13;
             // 
             // txtLimiteCredito
             // 
-            this.txtLimiteCredito.Location = new System.Drawing.Point(196, 427);
+            this.txtLimiteCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLimiteCredito.Location = new System.Drawing.Point(211, 422);
             this.txtLimiteCredito.Name = "txtLimiteCredito";
-            this.txtLimiteCredito.Size = new System.Drawing.Size(206, 20);
+            this.txtLimiteCredito.Size = new System.Drawing.Size(206, 22);
             this.txtLimiteCredito.TabIndex = 14;
             // 
             // bGuardar
@@ -278,7 +285,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(911, 72);
+            this.label9.Location = new System.Drawing.Point(887, 63);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(226, 29);
             this.label9.TabIndex = 21;
@@ -324,9 +331,10 @@
             // 
             // txtBusqueda
             // 
+            this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.Location = new System.Drawing.Point(909, 161);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(334, 20);
+            this.txtBusqueda.Size = new System.Drawing.Size(334, 22);
             this.txtBusqueda.TabIndex = 25;
             // 
             // label11

@@ -156,7 +156,7 @@ namespace WFFuentes
                 _enCliente.FcRFC = txtRFC.Text;
                 _enCliente.FcTipoCredito = txtTipoCredito.Text;
                 _enCliente.FcTipoGarantia = txtGarantia.Text;
-                _enCliente.FdLimiteCredito = Convert.ToInt64(txtLimiteCredito.Text);
+                _enCliente.FdLimiteCredito = decimal.Parse(txtLimiteCredito.Text);
                 if (_clientesBL.ModificarCliente(_enCliente) > 0)
                 {
                     MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -213,6 +213,12 @@ namespace WFFuentes
         {
 
         }
+
+        private void txtNombreCompleto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         // Programacion OP
     }
 }
