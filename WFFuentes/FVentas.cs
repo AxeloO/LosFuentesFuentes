@@ -20,7 +20,8 @@ namespace WFFuentes
         VentasBL _ventasBL = new VentasBL();
         InventarioBL _inventarioBL = new InventarioBL();
         Inventario _enInventario = new Inventario();
-
+        
+       
 
         // variables globales
         double douTotalSumaProductos = 0;
@@ -60,6 +61,8 @@ namespace WFFuentes
 
             try
             {
+                
+
                 if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioDeContado.Text == "" || txtPrecioACredito.Text == "" || txtImporte.Text == "")
 
                 // if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
@@ -113,6 +116,7 @@ namespace WFFuentes
                 _enInventario.NombreProducto = FcConcepto.Text;
                 dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
                 FcConcepto.Text = string.Empty;
+                FdFechaSalida.Text = DateTime.Today.ToString();
             }
             //dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
@@ -172,16 +176,20 @@ namespace WFFuentes
                 double doTotalDelProductoCredito;
                 string strNombreProductos;
 
-                int intCantidadAComprar = int.Parse(txtCantidad.Text);
-                int intCantidadDeProductoExistencia = int.Parse(strExistenciaProducto);
+                
+               
 
                 if (!txtNombre.Text.Equals(""))
                 {
+                    int intCantidadDeProductoExistencia = int.Parse(strExistenciaProducto);
 
                     if (txtCantidad.Text.Equals("") || txtCantidad.Text.Equals(null))
                     {
                         MessageBox.Show("Debe colocar la cantidad que desea vender", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        return;
                     }
+
+                    int intCantidadAComprar = int.Parse(txtCantidad.Text);
 
                     if (intCantidadDeProductoExistencia < intCantidadAComprar)
                     {
@@ -325,12 +333,12 @@ namespace WFFuentes
                         foreach (DataGridViewRow producto in dgTotalProductos.Rows)
                         {                           
                            
-                            if (iteracion > dgTotalProductos.RowCount)
+                            if (iteracion < dgTotalProductos.RowCount)
                             {
 
-                                strNombreModificado = producto.Cells[3].Value.ToString();
-                                intCantidadModificada = int.Parse(producto.Cells[1].Value.ToString());
-                                strIdProductoComparar = producto.Cells[4].Value.ToString();
+                                strNombreModificado = producto.Cells[1].Value.ToString();
+                                intCantidadModificada = int.Parse(producto.Cells[2].Value.ToString());
+                                strIdProductoComparar = producto.Cells[0].Value.ToString();
 
                                 foreach (var productoInventario in _inventarioBl.MostrarInventario())
                                 {
@@ -392,5 +400,114 @@ namespace WFFuentes
             e.Graphics.DrawImage(bmp, 0, 0);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Inventario _en = new Inventario();
+                InventarioBL _inventarioBl = new InventarioBL();
+
+                //Variables del Metodo
+                double doTotalSumaProductos;
+                double doTotalSumaProductosCredito;
+                double intCantidadProducto;
+                int intCantidadProductoafectarInventario = 0;
+                string strNombreModificado = string.Empty;
+                string strIdProductoComparar = string.Empty;
+                int intCantidadModificada = 0;
+                int iteracion = 1;
+
+
+                if (!FdFechaPago.Equals(string.Empty))
+                {
+
+
+                    _enVentas.fDtFechaSalida = FdFechaSalida.Text.ToString();
+                    _enVentas.fcNombreCliente = FcNombreCliente.Text.ToString();
+                    _enVentas.fcDomicilio = FcDomicilio.Text.ToString();
+                    _enVentas.fcCiudad = FcCiudad.Text.ToString();
+                    _enVentas.fcTelefono = FcTelefono.Text.ToString();
+                    _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
+                    //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
+                    _enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
+                    _enVentas.fcConcepto = FcConcepto.Text.ToString();
+                    _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
+
+                    // aqui ayudame con un if
+
+                    if (true) // si preciona el boton de imprimir y contado que le debuelva el objeto de douTotalSumaProductosCredito, 
+                              //en caso de lo contrario que le devuelba el objeto douTotalSumaProductos.. son doubles
+                    {//Prueba
+                        intCantidadProducto = double.Parse(txtCantidad.Text.ToString().Trim());
+                        doTotalSumaProductosCredito = douTotalSumaProductosCredito + intCantidadProducto;
+                    }
+                    else
+                    {
+                        // doTotalSumaProductos = douTotalSumaProductos + intCantidadProducto;
+
+                    }
+
+                    _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
+                    _enVentas.fdImporte = decimal.Parse(txtTotalAPagarCredito.Text);
+
+                    int RespuestaTipoVenta = _ventasBL.AgregarVenta(_enVentas);
+
+                    if (!RespuestaTipoVenta.Equals(null))
+                    {
+
+
+                        foreach (DataGridViewRow producto in dgTotalProductos.Rows)
+                        {
+
+                            if (iteracion > dgTotalProductos.RowCount)
+                            {
+
+                                strNombreModificado = producto.Cells[3].Value.ToString();
+                                intCantidadModificada = int.Parse(producto.Cells[1].Value.ToString());
+                                strIdProductoComparar = producto.Cells[4].Value.ToString();
+
+                                foreach (var productoInventario in _inventarioBl.MostrarInventario())
+                                {
+                                    _en.IdProducto = productoInventario.IdProducto;
+                                    _en.NombreProducto = productoInventario.NombreProducto;
+                                    _en.GrupoPertenenciente = productoInventario.GrupoPertenenciente;
+                                    _en.Cantidad = productoInventario.Cantidad;
+                                    _en.Presentacion = productoInventario.Presentacion;
+                                    _en.CostoUnitario = productoInventario.CostoUnitario;
+                                    _en.PrecioContado = productoInventario.PrecioContado;
+                                    _en.PrecioACredito = productoInventario.PrecioACredito;
+
+                                    if (strNombreModificado.Equals(_en.NombreProducto.ToString()) && strIdProductoComparar.Equals(_en.IdProducto.ToString()))
+                                    {
+                                        _en.Cantidad = _en.Cantidad - intCantidadModificada;
+                                        _inventarioBl.ModificarProducto(_en);
+                                    }
+
+                                }
+
+                            }
+                            iteracion++;
+                        }
+
+
+                    }
+
+                    MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Favor de llenar todos los campos", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        
     }
 }
