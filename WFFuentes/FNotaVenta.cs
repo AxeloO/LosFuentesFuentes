@@ -69,5 +69,10 @@ namespace WFFuentes
             panelImprimir.DrawToBitmap(bm, new Rectangle(0, 0, this.panelImprimir.Width, this.panelImprimir.Height));
             e.Graphics.DrawImage(bm, 0, 0);
         }
+
+        private void bSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

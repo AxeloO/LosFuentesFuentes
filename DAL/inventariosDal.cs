@@ -48,7 +48,7 @@ namespace DAL
                 _inventario.IdProducto = _reader.GetInt64(0);
                 _inventario.NombreProducto = _reader.GetString(1);
                 _inventario.GrupoPertenenciente = _reader.GetString(2);
-                _inventario.Cantidad = _reader.GetInt32(3);
+                _inventario.Cantidad = _reader.GetDecimal(3);
                 _inventario.Presentacion = _reader.GetString(4);
                 _inventario.CostoUnitario = _reader.GetDecimal(5);
                 _inventario.PrecioContado = _reader.GetDecimal(6);
@@ -72,7 +72,7 @@ namespace DAL
                 _inventario.IdProducto = _reader.GetInt64(0);
                 _inventario.NombreProducto = _reader.GetString(1);
                 _inventario.GrupoPertenenciente = _reader.GetString(2);
-                _inventario.Cantidad = _reader.GetInt32(3);
+                _inventario.Cantidad = _reader.GetDecimal(3);
                 _inventario.Presentacion = _reader.GetString(4);
                // _inventario.CostoUnitario = _reader.GetDecimal(5);
                 _inventario.PrecioContado = _reader.GetDecimal(6);
@@ -98,7 +98,7 @@ namespace DAL
                 _inventario.IdProducto = _reader.GetInt64(0);
                 _inventario.NombreProducto = _reader.GetString(1);
                 _inventario.GrupoPertenenciente = _reader.GetString(2);
-                _inventario.Cantidad = _reader.GetInt32(3);
+                _inventario.Cantidad = _reader.GetDecimal(3);
                 _inventario.Presentacion = _reader.GetString(4);
                 _inventario.CostoUnitario = _reader.GetDecimal(5);
                 _inventario.PrecioContado = _reader.GetDecimal(6);
@@ -126,7 +126,7 @@ namespace DAL
                 _inventario.IdProducto = _reader.GetInt64(0);
                 _inventario.NombreProducto = _reader.GetString(1);
                 _inventario.GrupoPertenenciente = _reader.GetString(2);
-                _inventario.Cantidad = _reader.GetInt32(3);
+                _inventario.Cantidad = _reader.GetDecimal(3);
                 _inventario.Presentacion = _reader.GetString(4);
                // _inventario.CostoUnitario = _reader.GetDecimal(5);
                 _inventario.PrecioContado = _reader.GetDecimal(6);

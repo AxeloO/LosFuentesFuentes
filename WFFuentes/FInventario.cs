@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,7 @@ namespace WFFuentes
                 }
                 else
                 {
-                    _en.Cantidad = int.Parse(txtCantidad.Text);
+                    _en.Cantidad = decimal.Parse(txtCantidad.Text);
                     _en.CostoUnitario = decimal.Parse(txtCostoUnitario.Text);//Tipo de variable de int a decimal
                     _en.GrupoPertenenciente = txtGrupoPerteneciente.Text;
                     _en.NombreProducto = txtNombreDelProducto.Text;
@@ -219,6 +220,7 @@ namespace WFFuentes
             {
                 _en.NombreProducto = txtBusqueda.Text;
                 dgInventario.DataSource = _inventarioBl.MostrarInventarioPorNombre(_en);
+
                
             }
 
@@ -232,7 +234,7 @@ namespace WFFuentes
                 _en.IdProducto = long.Parse(txtIdProducto.Text);
                 _en.NombreProducto = txtNombreDelProducto.Text;
                 _en.GrupoPertenenciente = txtGrupoPerteneciente.Text;
-                _en.Cantidad = Int32.Parse(txtCantidad.Text);
+                _en.Cantidad = decimal.Parse(txtCantidad.Text);
                 _en.Presentacion = cbPresentacion.Text;
                 _en.CostoUnitario = decimal.Parse(txtCostoUnitario.Text);
                 _en.PrecioContado = decimal.Parse(txtPrecioDeContado.Text);
@@ -275,8 +277,19 @@ namespace WFFuentes
 
         private void button2_Click(object sender, EventArgs e)
         {
-            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
+            PrintDocument printDocument1 = new PrintDocument();
+            //pd.PrintPage += new PrintPageEventHandler(pd.PrintPage);
+            printDocument1.PrinterSettings.PrinterName = "NPI099E21(HP Color LaserJet MFPm377dw)";
             printDocument1.Print();
+            if (printDocument1.PrinterSettings.IsValid)
+            {
+                printDocument1.Print();
+            }
+            else
+            {
+                MessageBox.Show("Impresora invalida");
+            }
+            
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -285,5 +298,7 @@ namespace WFFuentes
             dgInventario.DrawToBitmap(bm, new Rectangle(0, 0, this.dgInventario.Width, this.dgInventario.Height));
             e.Graphics.DrawImage(bm, 0, 0);
         }
+
+
     }
 }

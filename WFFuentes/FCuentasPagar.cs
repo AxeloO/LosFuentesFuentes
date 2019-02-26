@@ -91,8 +91,6 @@ namespace WFFuentes
                     _enCuentas.FdCantidad = decimal.Parse(txtCantidad.Text);
                     _enCuentas.FcStatus = txtStatus.Text;
 
-
-
                     foreach (var productoInventario in _inventarioBl.MostrarInventario())
                     {
                         _en.IdProducto = productoInventario.IdProducto;
@@ -250,6 +248,7 @@ namespace WFFuentes
             {
                 _enCuentas.FcNombreProveedor = txtBusqueda.Text;
                 dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorNombre(_enCuentas);
+                txtFechaAdquisicion.Text = DateTime.Today.ToString();
             }
         }
 

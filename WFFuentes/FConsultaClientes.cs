@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing.Printing;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -82,9 +83,10 @@ namespace WFFuentes
 
         private void bImprimir_Click(object sender, EventArgs e)
         {
-            printDocument1.PrinterSettings.PrinterName = "NPI099E21 (HP Color LaserJet MFPm377dw)";
+            printDocument1.PrinterSettings.PrintFileName = "NPI099E21(HP Color LaserJet MFPm377dw)";
             printDocument1.Print();
             
         }
+
     }
 }

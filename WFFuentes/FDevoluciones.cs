@@ -78,15 +78,13 @@ namespace WFFuentes
                 InventarioBL _inventarioBl = new InventarioBL();
                 int intVerificador = 0;
 
-
                 string strfolioNota = txtFolioNota.Text.ToString().Trim();
                 string strNombreProducto = txtNombreProducto.Text.ToString().Trim();
                 string strCantidad = txtCantidad.Text.ToString().Trim();
                 string strCausaD = txtCausaDevolucion.Text.ToString().Trim();
                 string strNombreDelCliente = txtNombreCliente.Text.ToString().Trim();
-                string strFechaDevolucion = txtFechaDevolucion.Text.ToString().Trim();
+                string strFechaDevolucion = txtFechaDevolucion.Text.ToString().Trim(); //Aqui agregue/cambie.. SE supone que aqui agrego manualmente no.!?
                 
-
 
                 if (strfolioNota.Equals("") || strNombreProducto.Equals("")  || txtCantidad.Equals("") || strCausaD.Equals("") || strNombreDelCliente.Equals("") || strFechaDevolucion.Equals("") )
                 {
@@ -126,15 +124,12 @@ namespace WFFuentes
 
                         }
 
-                        
-
                     }
                     if (intVerificador != 1)
                     {
                         MessageBox.Show("No se encontro el producto. Favor de verificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     }
-
             }
 
             }

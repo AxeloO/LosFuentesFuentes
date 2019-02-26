@@ -176,8 +176,6 @@ namespace WFFuentes
                 double doTotalDelProductoCredito;
                 string strNombreProductos;
 
-                
-               
 
                 if (!txtNombre.Text.Equals(""))
                 {
@@ -367,6 +365,8 @@ namespace WFFuentes
                     }
 
                     MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Limpiar();
+                    Limpiar_Venta();
                 }
                 else
                 {
@@ -493,6 +493,8 @@ namespace WFFuentes
                     }
 
                     MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Limpiar();
+                    Limpiar_Venta();
                 }
                 else
                 {

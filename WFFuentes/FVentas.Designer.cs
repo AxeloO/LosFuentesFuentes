@@ -135,7 +135,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1345, 458);
+            this.label6.Location = new System.Drawing.Point(1416, 480);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(25, 26);
             this.label6.TabIndex = 5;
@@ -175,9 +175,9 @@
             // 
             this.dgProductos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProductos.Location = new System.Drawing.Point(45, 563);
+            this.dgProductos.Location = new System.Drawing.Point(33, 550);
             this.dgProductos.Name = "dgProductos";
-            this.dgProductos.Size = new System.Drawing.Size(720, 155);
+            this.dgProductos.Size = new System.Drawing.Size(780, 220);
             this.dgProductos.TabIndex = 12;
             this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
             // 
@@ -243,7 +243,7 @@
             // FdTotal
             // 
             this.FdTotal.Enabled = false;
-            this.FdTotal.Location = new System.Drawing.Point(1376, 464);
+            this.FdTotal.Location = new System.Drawing.Point(1447, 486);
             this.FdTotal.Name = "FdTotal";
             this.FdTotal.Size = new System.Drawing.Size(100, 20);
             this.FdTotal.TabIndex = 23;
@@ -253,7 +253,7 @@
             this.bCancelar.BackColor = System.Drawing.Color.Teal;
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bCancelar.Location = new System.Drawing.Point(1363, 647);
+            this.bCancelar.Location = new System.Drawing.Point(1363, 690);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(113, 31);
             this.bCancelar.TabIndex = 25;
@@ -279,7 +279,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1483, 647);
+            this.bRegresar.Location = new System.Drawing.Point(1483, 690);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(111, 31);
             this.bRegresar.TabIndex = 27;
@@ -316,7 +316,7 @@
             this.dgTotalProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgTotalProductos.Location = new System.Drawing.Point(1115, 189);
             this.dgTotalProductos.Name = "dgTotalProductos";
-            this.dgTotalProductos.Size = new System.Drawing.Size(496, 234);
+            this.dgTotalProductos.Size = new System.Drawing.Size(521, 258);
             this.dgTotalProductos.TabIndex = 30;
             // 
             // txtNombre
@@ -343,7 +343,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1265, 124);
+            this.label15.Location = new System.Drawing.Point(1307, 123);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(148, 27);
             this.label15.TabIndex = 32;
@@ -353,7 +353,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1110, 458);
+            this.label12.Location = new System.Drawing.Point(1181, 480);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(232, 26);
             this.label12.TabIndex = 11;
@@ -402,7 +402,7 @@
             // txtTotalAPagarCredito
             // 
             this.txtTotalAPagarCredito.Enabled = false;
-            this.txtTotalAPagarCredito.Location = new System.Drawing.Point(1376, 506);
+            this.txtTotalAPagarCredito.Location = new System.Drawing.Point(1447, 528);
             this.txtTotalAPagarCredito.Name = "txtTotalAPagarCredito";
             this.txtTotalAPagarCredito.Size = new System.Drawing.Size(100, 20);
             this.txtTotalAPagarCredito.TabIndex = 41;
@@ -411,7 +411,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1110, 506);
+            this.label17.Location = new System.Drawing.Point(1181, 528);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(214, 26);
             this.label17.TabIndex = 40;
@@ -421,7 +421,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1345, 500);
+            this.label18.Location = new System.Drawing.Point(1416, 522);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(25, 26);
             this.label18.TabIndex = 39;
@@ -468,7 +468,7 @@
             this.btnImprimirVenta.BackColor = System.Drawing.Color.Teal;
             this.btnImprimirVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimirVenta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnImprimirVenta.Location = new System.Drawing.Point(1115, 567);
+            this.btnImprimirVenta.Location = new System.Drawing.Point(1115, 610);
             this.btnImprimirVenta.Name = "btnImprimirVenta";
             this.btnImprimirVenta.Size = new System.Drawing.Size(231, 31);
             this.btnImprimirVenta.TabIndex = 46;
@@ -481,7 +481,7 @@
             this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(1363, 567);
+            this.button1.Location = new System.Drawing.Point(1363, 610);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(231, 31);
             this.button1.TabIndex = 47;
@@ -494,7 +494,7 @@
             this.btPrevioImprecion.BackColor = System.Drawing.Color.Teal;
             this.btPrevioImprecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPrevioImprecion.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btPrevioImprecion.Location = new System.Drawing.Point(1115, 647);
+            this.btPrevioImprecion.Location = new System.Drawing.Point(1115, 690);
             this.btPrevioImprecion.Name = "btPrevioImprecion";
             this.btPrevioImprecion.Size = new System.Drawing.Size(227, 31);
             this.btPrevioImprecion.TabIndex = 48;
@@ -547,7 +547,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1378, 780);
+            this.ClientSize = new System.Drawing.Size(1662, 799);
             this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);
