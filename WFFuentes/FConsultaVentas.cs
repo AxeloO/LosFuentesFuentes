@@ -50,8 +50,8 @@ namespace WFFuentes
             }
             else
             {
-                _enVentas.fcConcepto = txtProducto.Text;
-                dgVentas.DataSource = _ventasBL.MostrarVentasPorDia(_enVentas);
+               // _enVentas.fcConcepto = txtProducto.Text;
+               // dgVentas.DataSource = _ventasBL.MostrarVentasPorDia(_enVentas);
             }
                         
         }

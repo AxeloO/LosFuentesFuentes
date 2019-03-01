@@ -128,6 +128,7 @@ namespace WFFuentes
                     if (intVerificador != 1)
                     {
                         MessageBox.Show("No se encontro el producto. Favor de verificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Limpiar();
 
                     }
             }
