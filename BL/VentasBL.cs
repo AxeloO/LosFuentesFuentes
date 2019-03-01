@@ -24,9 +24,14 @@ namespace BL
             return _ventasDal.MostrarEnVentas();
         }
 
-        public List<EnVentas> MostrarVentasPorDia(EnVentas PEntidad)
+        public List<EnVentas> MostrarVentasPorDiaDeSalida(EnVentas PEntidad)
         {
-            return _ventasDal.MostrarEnVentasPorDia(PEntidad);
+            return _ventasDal.MostrarEnVentasPorDiaDeSalida(PEntidad);
+        }
+
+        public List<EnVentas> MostrarVentasPorDiaDePago(EnVentas PEntidad)
+        {
+            return _ventasDal.MostrarVentasPorDiaDePago(PEntidad);
         }
 
     }

@@ -66,11 +66,11 @@ namespace DAL
             return Lista;
         }
 
-        public List<EnVentas> MostrarEnVentasPorDia(EnVentas PEntidad)
+        public List<EnVentas> MostrarEnVentasPorDiaDeSalida(EnVentas PEntidad)
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-            SqlCommand _comando = new SqlCommand("Consultar_Venta_Por_Dia", _Conexion as SqlConnection);
+            SqlCommand _comando = new SqlCommand("Consultar_Ventas_Por_Dia", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@FDtFechaSalida", PEntidad.fDtFechaSalida));
             IDataReader _reader = _comando.ExecuteReader();
@@ -89,9 +89,8 @@ namespace DAL
                 _EnVentas.fiCantidad = _reader.GetInt32(7);
                 _EnVentas.fcConcepto = _reader.GetString(8);
                 _EnVentas.fdPrecioUnitario = _reader.GetDecimal(9);
-                _EnVentas.fdImporte = _reader.GetInt32(10);
+                _EnVentas.fdImporte = _reader.GetDecimal(10);
                 _EnVentas.fdTotal = _reader.GetDecimal(11);
-
                 Lista.Add(_EnVentas);
 
             }
@@ -99,7 +98,37 @@ namespace DAL
 
             return Lista;
         }
-                
+
+        public List<EnVentas> MostrarVentasPorDiaDePago(EnVentas PEntidad)
+        {
+            IDbConnection _Conexion = DBConexion.Conexion();
+            _Conexion.Open();
+            SqlCommand _comando = new SqlCommand("Consultar_Ventas_Por_Dia_Pago", _Conexion as SqlConnection);
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.Add(new SqlParameter("@FcFechaPago", PEntidad.fcFechaPago));
+            IDataReader _reader = _comando.ExecuteReader();
+            List<EnVentas> Lista = new List<EnVentas>();
+            while (_reader.Read())
+            {
+                EnVentas _EnVentas = new EnVentas();
+                _EnVentas.fiIdVenta = _reader.GetInt64(0);
+                _EnVentas.fDtFechaSalida = _reader.GetString(1);
+                _EnVentas.fcNombreCliente = _reader.GetString(2);
+                _EnVentas.fcDomicilio = _reader.GetString(3);
+                _EnVentas.fcCiudad = _reader.GetString(4);
+                _EnVentas.fcTelefono = _reader.GetString(5);
+                _EnVentas.fcFechaPago = _reader.GetString(6);
+                _EnVentas.fiCantidad = _reader.GetInt32(7);
+                _EnVentas.fcConcepto = _reader.GetString(8);
+                _EnVentas.fdPrecioUnitario = _reader.GetDecimal(9);
+                _EnVentas.fdImporte = _reader.GetDecimal(10);
+                _EnVentas.fdTotal = _reader.GetDecimal(11);
+                Lista.Add(_EnVentas);
+            }
+            _Conexion.Close();
+            return Lista;
+        }
+
     }
 
 }

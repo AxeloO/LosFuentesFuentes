@@ -31,11 +31,29 @@ namespace WFFuentes
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
-            if (!(txtProducto.Text == "" || txtFechaI.Text=="" || txtFechaF.Text==""))
+
+
+            if (!txtFechaI.Text.Equals(""))
             {
-                _enVentas.fcConcepto = txtProducto.Text;
-                dgVentas.DataSource = _ventasBL.MostrarVentasPorDia(_enVentas);
+                _enVentas.fDtFechaSalida = txtFechaI.Text.ToString().Trim();
+                dgVentas.DataSource = _ventasBL.MostrarVentasPorDiaDeSalida(_enVentas);               
             }
+            if (!txtFechaF.Text.Equals("") && txtFechaI.Text.Equals(""))
+            {
+                _enVentas.fcFechaPago = txtFechaF.Text.ToString().Trim();
+                dgVentas.DataSource = _ventasBL.MostrarVentasPorDiaDePago(_enVentas);
+            }
+            if (txtFechaF.Text.Equals("") && txtFechaI.Text.Equals(""))
+            {
+                MessageBox.Show("Debe elegir la opcion a Buscar (Fecha inicio o fecha de pago)", "¡Favor de Verificar!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron resultados para la consulta con esta fecha)", "¡Favor de Verificar!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+                        
         }
 
         private void FConsultaVentas_MouseDown(object sender, MouseEventArgs e)
@@ -72,7 +90,7 @@ namespace WFFuentes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un error al imprimir. Favor de salir e ingresar nuevamente a la opción" , "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ocurrio un error al imprimir. Favor de salir e ingresar nuevamente a la opción", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }
@@ -82,5 +100,7 @@ namespace WFFuentes
             printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
             printDocument1.Print();
         }
+
+
     }
 }
