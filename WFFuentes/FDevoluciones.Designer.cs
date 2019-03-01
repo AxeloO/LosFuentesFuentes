@@ -336,9 +336,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FDevoluciones";
-            this.Text = "FDevoluciones";
             this.Load += new System.EventHandler(this.FDevoluciones_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FDevoluciones_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dGDevoluciones)).EndInit();

@@ -359,7 +359,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1370, 520);
+            this.ClientSize = new System.Drawing.Size(1362, 520);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtBusqueda);
@@ -388,9 +388,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FAgregarProveedores";
-            this.Text = "FAgregarProveedores";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FAgregarProveedores_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dGProveedores)).EndInit();
             this.ResumeLayout(false);

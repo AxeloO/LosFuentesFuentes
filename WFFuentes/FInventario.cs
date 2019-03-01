@@ -55,6 +55,8 @@ namespace WFFuentes
                     _en.Presentacion = cbPresentacion.Text;
 
                     int Resultado = _inventarioBl.AgregarProductos(_en);
+                    dgInventario.Refresh();
+                    dgInventario.DataSource = _inventarioBl.MostrarInventario();
 
                     if (Resultado == 1)
                     {
@@ -220,7 +222,7 @@ namespace WFFuentes
             {
                 _en.NombreProducto = txtBusqueda.Text;
                 dgInventario.DataSource = _inventarioBl.MostrarInventarioPorNombre(_en);
-
+                txtBusqueda.Text = string.Empty;
                
             }
 
@@ -245,7 +247,7 @@ namespace WFFuentes
                     MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     dgInventario.DataSource = _inventarioBl.MostrarInventario();
                     dgInventario.Refresh();
-
+                    Limpiar();
                 }
 
                 else

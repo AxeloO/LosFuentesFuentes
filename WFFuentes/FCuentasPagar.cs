@@ -81,6 +81,7 @@ namespace WFFuentes
                     MessageBox.Show("Parece que olvidaste llenar todos los campos", "¡Cuidado!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
+
                 else
                 {
                     _enCuentas.FcNombreProveedor = txtNombreProveedor.Text;
@@ -107,22 +108,21 @@ namespace WFFuentes
                             _en.Cantidad = _en.Cantidad + int.Parse(_enCuentas.FdCantidad.ToString());
                             _inventarioBl.ModificarProducto(_en);
                             int Resultado = _cuentasBL.AgregarCuentasPorPagar(_enCuentas);
+                            dGCuentasPagar.Refresh();
+                            dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorPagar();
                             MessageBox.Show("¡Se realizó el registro correctamente!" , "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             intVerificador = 1;
-
+                            Limpiar();
                         }
-
-
 
                     }
                     if (intVerificador != 1)
                     {
-                        MessageBox.Show("No se encontro el producto. Favor de verificar", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
+                        MessageBox.Show("No se encontro el producto. Favor de darlo de alta en inventario e intentarlo nuevamente.", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
                     }
 
-
-                }
+                }                 
             }
 
             catch (Exception ex)
@@ -176,8 +176,8 @@ namespace WFFuentes
         public void Limpiar()
         {
             txtID.Text = string.Empty;
-            txtNoFactura.Text = string.Empty;
             txtNombreProveedor.Text = string.Empty;
+            txtNoFactura.Text = string.Empty;
             txtProductoAdquirido.Text = string.Empty;
             txtFechaAdquisicion.Text = string.Empty;
             txtCantidad.Text = string.Empty;
@@ -221,7 +221,6 @@ namespace WFFuentes
                 _enCuentas.FdTotalAPagar = decimal.Parse(txtCantidad.Text);
                 _enCuentas.FcStatus = txtStatus.Text;
 
-
                 if (_cuentasBL.ModificarCuentas(_enCuentas) > 0)
                 {
                     MessageBox.Show("El registro se modificó correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -248,11 +247,12 @@ namespace WFFuentes
             {
                 _enCuentas.FcNombreProveedor = txtBusqueda.Text;
                 dGCuentasPagar.DataSource = _cuentasBL.MostrarCuentasPorNombre(_enCuentas);
-                txtFechaAdquisicion.Text = DateTime.Today.ToString();
+                txtBusqueda.Text = string.Empty;
             }
         }
+    
 
-        private void bLimpiar_Click(object sender, EventArgs e)
+    private void bLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
             /** txtID.Text = string.Empty;

@@ -176,9 +176,7 @@
             this.Controls.Add(this.bBusqueda);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.label8);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FConsultaClientes";
-            this.Text = "FConsultaClientes";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaClientes_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dGClientes)).EndInit();
             this.ResumeLayout(false);

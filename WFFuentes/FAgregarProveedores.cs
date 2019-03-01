@@ -82,6 +82,9 @@ namespace WFFuentes
                     _enProveedores.FcProductosSurtidos = txtProductoSurtir.Text;
                     _enProveedores.FdLimiteCredito = decimal.Parse(txtLimiteCredito.Text);
                     int Resultado = proveedoresBL.AgregarProveedor(_enProveedores);
+                    dGProveedores.Refresh();
+                    dGProveedores.DataSource = proveedoresBL.MostrarProveedor();
+
                     if (Resultado == 1)
                     {
                         MessageBox.Show("Se agrego el nuevo proveedor correctamente", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -108,6 +111,7 @@ namespace WFFuentes
             {
                 _enProveedores.FcNombreProveedor = txtBusqueda.Text;
                 dGProveedores.DataSource = proveedoresBL.MostrarProveedorPorNombre(_enProveedores);
+                txtBusqueda.Text = string.Empty;
             }
         }
 

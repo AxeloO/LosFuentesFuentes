@@ -210,10 +210,8 @@
             this.Controls.Add(this.bBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FConsultaVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FConsultaVentas";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaVentas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgVentas)).EndInit();
             this.ResumeLayout(false);

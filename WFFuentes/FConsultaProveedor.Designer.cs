@@ -49,6 +49,7 @@
             this.bActualizar.TabIndex = 48;
             this.bActualizar.Text = "Mostrar";
             this.bActualizar.UseVisualStyleBackColor = false;
+            this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
             // 
             // bBusqueda
             // 
@@ -126,9 +127,7 @@
             this.Controls.Add(this.bBusqueda);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.label8);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FConsultaProveedor";
-            this.Text = "FConsultaClientes";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaClientes_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgProveedores)).EndInit();
             this.ResumeLayout(false);

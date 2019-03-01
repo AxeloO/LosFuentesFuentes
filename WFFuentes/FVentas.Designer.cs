@@ -175,9 +175,9 @@
             // 
             this.dgProductos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProductos.Location = new System.Drawing.Point(33, 550);
+            this.dgProductos.Location = new System.Drawing.Point(45, 532);
             this.dgProductos.Name = "dgProductos";
-            this.dgProductos.Size = new System.Drawing.Size(780, 220);
+            this.dgProductos.Size = new System.Drawing.Size(780, 197);
             this.dgProductos.TabIndex = 12;
             this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
             // 
@@ -253,7 +253,7 @@
             this.bCancelar.BackColor = System.Drawing.Color.Teal;
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bCancelar.Location = new System.Drawing.Point(1363, 690);
+            this.bCancelar.Location = new System.Drawing.Point(1363, 662);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(113, 31);
             this.bCancelar.TabIndex = 25;
@@ -279,7 +279,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1483, 690);
+            this.bRegresar.Location = new System.Drawing.Point(1483, 662);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(111, 31);
             this.bRegresar.TabIndex = 27;
@@ -314,9 +314,9 @@
             // 
             this.dgTotalProductos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgTotalProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTotalProductos.Location = new System.Drawing.Point(1115, 189);
+            this.dgTotalProductos.Location = new System.Drawing.Point(1126, 189);
             this.dgTotalProductos.Name = "dgTotalProductos";
-            this.dgTotalProductos.Size = new System.Drawing.Size(521, 258);
+            this.dgTotalProductos.Size = new System.Drawing.Size(532, 258);
             this.dgTotalProductos.TabIndex = 30;
             // 
             // txtNombre
@@ -343,7 +343,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1307, 123);
+            this.label15.Location = new System.Drawing.Point(1287, 123);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(148, 27);
             this.label15.TabIndex = 32;
@@ -376,7 +376,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(233, 444);
+            this.label16.Location = new System.Drawing.Point(233, 449);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(182, 27);
             this.label16.TabIndex = 36;
@@ -494,7 +494,7 @@
             this.btPrevioImprecion.BackColor = System.Drawing.Color.Teal;
             this.btPrevioImprecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPrevioImprecion.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btPrevioImprecion.Location = new System.Drawing.Point(1115, 690);
+            this.btPrevioImprecion.Location = new System.Drawing.Point(1115, 662);
             this.btPrevioImprecion.Name = "btPrevioImprecion";
             this.btPrevioImprecion.Size = new System.Drawing.Size(227, 31);
             this.btPrevioImprecion.TabIndex = 48;
@@ -547,7 +547,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1662, 799);
+            this.ClientSize = new System.Drawing.Size(1690, 741);
             this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);
@@ -584,9 +584,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FVentas";
-            this.Text = "FVentas";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FVentas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).EndInit();

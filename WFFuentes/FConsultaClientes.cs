@@ -52,6 +52,7 @@ namespace WFFuentes
             {
                 _enCliente.FcNombreCompleto = txtBusqueda.Text;
                 dGClientes.DataSource = _clientesBL.MostrarClientePorNombre(_enCliente);
+                txtBusqueda.Text = string.Empty;
             }
         }
 

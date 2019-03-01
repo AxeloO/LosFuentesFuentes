@@ -30,7 +30,7 @@ namespace WFFuentes
             {
                 _en.NombreProducto = txtBusquedaProducto.Text;
                 dgInventario.DataSource = _bl.MostrarInventarioPorNombre(_en);
-                
+                txtBusquedaProducto.Text = string.Empty;
                 
             }
         }

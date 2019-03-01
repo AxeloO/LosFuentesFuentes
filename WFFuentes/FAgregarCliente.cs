@@ -68,6 +68,8 @@ namespace WFFuentes
                      _enCliente.FdLimiteCredito = decimal.Parse(txtLimiteCredito.Text);
 
                     int Resultado = _clientesBL.AgregarClientes(_enCliente);
+                    dGClientes.Refresh();
+                    dGClientes.DataSource = _clientesBL.MostrarClientes();
 
                     if (Resultado == 1)
                     {
@@ -107,6 +109,7 @@ namespace WFFuentes
         private void bConsultar_Click(object sender, EventArgs e)
         {
             dGClientes.DataSource = _clientesBL.MostrarClientes();
+           
         }
 
         private void bEliminar_Click(object sender, EventArgs e)
@@ -184,6 +187,7 @@ namespace WFFuentes
                 _enCliente.FcNombreCompleto = txtBusqueda.Text;
                 dGClientes.DataSource = _clientesBL.MostrarClientePorNombre(_enCliente);
             }
+            txtBusqueda.Text = string.Empty;
         }
 
         private void dGClientes_CellClick(object sender, DataGridViewCellEventArgs e)

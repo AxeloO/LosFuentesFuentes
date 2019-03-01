@@ -50,8 +50,8 @@ namespace WFFuentes
             }
             else
             {
-                MessageBox.Show("No se encontraron resultados para la consulta con esta fecha)", "¡Favor de Verificar!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return;
+                _enVentas.fcConcepto = txtProducto.Text;
+                dgVentas.DataSource = _ventasBL.MostrarVentasPorDia(_enVentas);
             }
                         
         }
@@ -97,7 +97,7 @@ namespace WFFuentes
 
         private void bImprimir_Click(object sender, EventArgs e)
         {
-            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
+            printDocument1.PrinterSettings.PrinterName = "NPI";
             printDocument1.Print();
         }
 

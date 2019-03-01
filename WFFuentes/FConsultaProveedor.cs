@@ -38,5 +38,10 @@ namespace WFFuentes
         {
 
         }
+
+        private void bActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -143,9 +143,7 @@
             this.Controls.Add(this.txtBusquedaProducto);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bBuscar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FConsultaAlmacen";
-            this.Text = "FConsultaAlmacen";
             this.Load += new System.EventHandler(this.FConsultaAlmacen_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FConsultaAlmacen_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();

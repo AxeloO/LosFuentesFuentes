@@ -360,8 +360,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1378, 514);
+            this.ClientSize = new System.Drawing.Size(1358, 514);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bBusqueda);
             this.Controls.Add(this.txtBusqueda);
@@ -390,9 +391,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "FAgregarCliente";
-            this.Text = "FAgregarCliente";
             this.Load += new System.EventHandler(this.FAgregarCliente_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FAgregarCliente_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dGClientes)).EndInit();
