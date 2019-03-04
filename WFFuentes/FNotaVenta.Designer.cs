@@ -30,16 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNotaVenta));
             this.panelImprimir = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txbImporte = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -47,7 +55,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbProducto = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -59,7 +67,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtFechaFinal = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,25 +80,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txbFecha = new System.Windows.Forms.TextBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnVistaPrevia = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bSalir = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.panelImprimir.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelImprimir
@@ -104,10 +104,10 @@
             this.panelImprimir.Controls.Add(this.label23);
             this.panelImprimir.Controls.Add(this.pictureBox1);
             this.panelImprimir.Controls.Add(this.label11);
-            this.panelImprimir.Controls.Add(this.textBox4);
-            this.panelImprimir.Controls.Add(this.textBox3);
-            this.panelImprimir.Controls.Add(this.textBox2);
-            this.panelImprimir.Controls.Add(this.textBox1);
+            this.panelImprimir.Controls.Add(this.txtTotal);
+            this.panelImprimir.Controls.Add(this.txtTelefono);
+            this.panelImprimir.Controls.Add(this.txtCiudad);
+            this.panelImprimir.Controls.Add(this.txtDomicilio);
             this.panelImprimir.Controls.Add(this.txtNombre);
             this.panelImprimir.Controls.Add(this.panel5);
             this.panelImprimir.Controls.Add(this.panel4);
@@ -122,6 +122,86 @@
             this.panelImprimir.Size = new System.Drawing.Size(806, 767);
             this.panelImprimir.TabIndex = 0;
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(9, 152);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(256, 16);
+            this.label29.TabIndex = 35;
+            this.label29.Text = "LOS FUENTES FUENTES S.P.R. DE R.L.";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(271, 150);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(277, 20);
+            this.label28.TabIndex = 34;
+            this.label28.Text = "losfuentesfuentessprdrl@hotmail.com";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(315, 120);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(145, 18);
+            this.label27.TabIndex = 33;
+            this.label27.Text = "TEL. (432) 749 40 90";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(315, 97);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(145, 18);
+            this.label26.TabIndex = 31;
+            this.label26.Text = "TEL. (432) 744 06 58";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(253, 73);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(313, 16);
+            this.label25.TabIndex = 32;
+            this.label25.Text = "CARRETERA: MANUEL DOBLADO - LEÓN KM 0.5 ";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(311, 49);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(144, 16);
+            this.label24.TabIndex = 31;
+            this.label24.Text = "R.F.C. FFU050303KBA ";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(288, 27);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(228, 18);
+            this.label23.TabIndex = 30;
+            this.label23.Text = "BODEGA: FUENTES FUENTES ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WFFuentes.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(198, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -132,34 +212,34 @@
             this.label11.TabIndex = 28;
             this.label11.Text = "TOTAL    $";
             // 
-            // textBox4
+            // txtTotal
             // 
-            this.textBox4.Location = new System.Drawing.Point(664, 638);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 28);
-            this.textBox4.TabIndex = 27;
+            this.txtTotal.Location = new System.Drawing.Point(664, 638);
+            this.txtTotal.Multiline = true;
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(120, 28);
+            this.txtTotal.TabIndex = 27;
             // 
-            // textBox3
+            // txtTelefono
             // 
-            this.textBox3.Location = new System.Drawing.Point(554, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(230, 20);
-            this.textBox3.TabIndex = 26;
+            this.txtTelefono.Location = new System.Drawing.Point(554, 230);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(230, 20);
+            this.txtTelefono.TabIndex = 26;
             // 
-            // textBox2
+            // txtCiudad
             // 
-            this.textBox2.Location = new System.Drawing.Point(86, 230);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(395, 20);
-            this.textBox2.TabIndex = 25;
+            this.txtCiudad.Location = new System.Drawing.Point(86, 230);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(395, 20);
+            this.txtCiudad.TabIndex = 25;
             // 
-            // textBox1
+            // txtDomicilio
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 199);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(691, 20);
-            this.textBox1.TabIndex = 24;
+            this.txtDomicilio.Location = new System.Drawing.Point(93, 199);
+            this.txtDomicilio.Name = "txtDomicilio";
+            this.txtDomicilio.Size = new System.Drawing.Size(691, 20);
+            this.txtDomicilio.TabIndex = 24;
             // 
             // txtNombre
             // 
@@ -178,7 +258,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.textBox16);
-            this.panel4.Controls.Add(this.textBox8);
+            this.panel4.Controls.Add(this.txbImporte);
             this.panel4.Controls.Add(this.textBox15);
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.label14);
@@ -186,7 +266,7 @@
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.textBox7);
             this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.txbProducto);
             this.panel4.Location = new System.Drawing.Point(22, 312);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(762, 326);
@@ -200,13 +280,13 @@
             this.textBox16.Size = new System.Drawing.Size(120, 31);
             this.textBox16.TabIndex = 14;
             // 
-            // textBox8
+            // txbImporte
             // 
-            this.textBox8.Location = new System.Drawing.Point(642, 28);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(120, 298);
-            this.textBox8.TabIndex = 9;
+            this.txbImporte.Location = new System.Drawing.Point(642, 28);
+            this.txbImporte.Multiline = true;
+            this.txbImporte.Name = "txbImporte";
+            this.txbImporte.Size = new System.Drawing.Size(120, 298);
+            this.txbImporte.TabIndex = 9;
             // 
             // textBox15
             // 
@@ -272,13 +352,13 @@
             this.textBox6.Size = new System.Drawing.Size(452, 293);
             this.textBox6.TabIndex = 1;
             // 
-            // textBox5
+            // txbProducto
             // 
-            this.textBox5.Location = new System.Drawing.Point(0, 28);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 292);
-            this.textBox5.TabIndex = 0;
+            this.txbProducto.Location = new System.Drawing.Point(0, 28);
+            this.txbProducto.Multiline = true;
+            this.txbProducto.Name = "txbProducto";
+            this.txbProducto.Size = new System.Drawing.Size(100, 292);
+            this.txbProducto.TabIndex = 0;
             // 
             // panel3
             // 
@@ -292,7 +372,7 @@
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.textBox12);
-            this.panel3.Controls.Add(this.textBox11);
+            this.panel3.Controls.Add(this.txtFechaFinal);
             this.panel3.Controls.Add(this.textBox10);
             this.panel3.Location = new System.Drawing.Point(22, 253);
             this.panel3.Name = "panel3";
@@ -388,13 +468,13 @@
             this.textBox12.Size = new System.Drawing.Size(269, 53);
             this.textBox12.TabIndex = 2;
             // 
-            // textBox11
+            // txtFechaFinal
             // 
-            this.textBox11.Location = new System.Drawing.Point(262, 0);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(232, 53);
-            this.textBox11.TabIndex = 1;
+            this.txtFechaFinal.Location = new System.Drawing.Point(262, 0);
+            this.txtFechaFinal.Multiline = true;
+            this.txtFechaFinal.Name = "txtFechaFinal";
+            this.txtFechaFinal.Size = new System.Drawing.Size(232, 53);
+            this.txtFechaFinal.TabIndex = 1;
             // 
             // textBox10
             // 
@@ -452,7 +532,7 @@
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.textBox9);
+            this.panel6.Controls.Add(this.txbFecha);
             this.panel6.Location = new System.Drawing.Point(584, 24);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 141);
@@ -512,13 +592,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "NOTA DE VENTA";
             // 
-            // textBox9
+            // txbFecha
             // 
-            this.textBox9.Location = new System.Drawing.Point(3, 66);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(194, 54);
-            this.textBox9.TabIndex = 6;
+            this.txbFecha.Location = new System.Drawing.Point(3, 66);
+            this.txbFecha.Multiline = true;
+            this.txbFecha.Name = "txbFecha";
+            this.txbFecha.Size = new System.Drawing.Size(194, 54);
+            this.txbFecha.TabIndex = 6;
             // 
             // btnImprimir
             // 
@@ -554,16 +634,6 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WFFuentes.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            // 
             // bSalir
             // 
             this.bSalir.Location = new System.Drawing.Point(824, 426);
@@ -573,76 +643,6 @@
             this.bSalir.Text = "Salir";
             this.bSalir.UseVisualStyleBackColor = true;
             this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(288, 27);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(228, 18);
-            this.label23.TabIndex = 30;
-            this.label23.Text = "BODEGA: FUENTES FUENTES ";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(311, 49);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(144, 16);
-            this.label24.TabIndex = 31;
-            this.label24.Text = "R.F.C. FFU050303KBA ";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(253, 73);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(313, 16);
-            this.label25.TabIndex = 32;
-            this.label25.Text = "CARRETERA: MANUEL DOBLADO - LEÓN KM 0.5 ";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(315, 97);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(145, 18);
-            this.label26.TabIndex = 31;
-            this.label26.Text = "TEL. (432) 744 06 58";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(315, 120);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(145, 18);
-            this.label27.TabIndex = 33;
-            this.label27.Text = "TEL. (432) 749 40 90";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(271, 150);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(277, 20);
-            this.label28.TabIndex = 34;
-            this.label28.Text = "losfuentesfuentessprdrl@hotmail.com";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(9, 152);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(256, 16);
-            this.label29.TabIndex = 35;
-            this.label29.Text = "LOS FUENTES FUENTES S.P.R. DE R.L.";
             // 
             // FNotaVenta
             // 
@@ -661,13 +661,13 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FNotaVenta_MouseDown);
             this.panelImprimir.ResumeLayout(false);
             this.panelImprimir.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -676,15 +676,15 @@
 
         private System.Windows.Forms.Panel panelImprimir;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtCiudad;
+        private System.Windows.Forms.TextBox txtDomicilio;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txbImporte;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -692,7 +692,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbProducto;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label22;
@@ -704,7 +704,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtFechaFinal;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -717,7 +717,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txbFecha;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnVistaPrevia;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;

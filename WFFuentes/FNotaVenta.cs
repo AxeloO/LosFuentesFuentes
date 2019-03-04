@@ -10,11 +10,19 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 
+using EN;
+using BL;
+
 namespace WFFuentes
 {
     public partial class FNotaVenta : Form
     {
         Bitmap bmp;
+        EnVentas _enVentas = new EnVentas();
+        VentasBL _ventasBL = new VentasBL();
+        InventarioBL _inventarioBL = new InventarioBL();
+        Inventario _enInventario = new Inventario();
+
 
         public FNotaVenta()
         {
@@ -73,6 +81,20 @@ namespace WFFuentes
         private void bSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void llenarNota(EnVentas enVentas)
+        {
+            txbFecha.Text = _enVentas.fDtFechaSalida.ToString();
+            txtNombre.Text = _enVentas.fcNombreCliente.ToString();
+            txtDomicilio.Text = _enVentas.fcDomicilio.ToString();
+            txtCiudad.Text = _enVentas.fcCiudad.ToString();
+            txtTelefono.Text = _enVentas.fcTelefono.ToString();
+            txtFechaFinal.Text = _enVentas.fcFechaPago.ToString();
+            //_enVentas.fcConcepto 
+            //txt _enVentas.fdPrecioUnitario 
+            FNotaVenta nuevaNota = new FNotaVenta();
+            nuevaNota.ShowDialog();
         }
     }
 }

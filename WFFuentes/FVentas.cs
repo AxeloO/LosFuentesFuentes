@@ -364,6 +364,11 @@ namespace WFFuentes
 
                     }
 
+
+                    FNotaVenta fNuevaNotaVenta = new FNotaVenta();
+
+                    fNuevaNotaVenta.llenarNota(_enVentas);
+
                     MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Limpiar();
                     Limpiar_Venta();
