@@ -53,7 +53,7 @@ namespace WFFuentes
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
+            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";//Impresora de punto
             printDocument1.Print();
         }
 

@@ -88,7 +88,7 @@ namespace WFFuentes
                     _enCuentas.FiNoFactura = int.Parse(txtNoFactura.Text);
                     _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
                     _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
-                    _enCuentas.FdTotalAPagar = int.Parse(txtMontoPagar.Text);
+                    _enCuentas.FdTotalAPagar = decimal.Parse(txtMontoPagar.Text);
                     _enCuentas.FdCantidad = decimal.Parse(txtCantidad.Text);
                     _enCuentas.FcStatus = txtStatus.Text;
 
@@ -218,7 +218,7 @@ namespace WFFuentes
                 _enCuentas.FDtFechaAdquisicion = txtFechaAdquisicion.Text;
                 _enCuentas.FcProductoAdquirido = txtProductoAdquirido.Text;
                 _enCuentas.FdCantidad = decimal.Parse(txtCantidad.Text);
-                _enCuentas.FdTotalAPagar = decimal.Parse(txtCantidad.Text);
+                _enCuentas.FdTotalAPagar = decimal.Parse(txtMontoPagar.Text);//Cambio por el correcto, modificaba con la cantidad mas no con el monto a pagar
                 _enCuentas.FcStatus = txtStatus.Text;
 
                 if (_cuentasBL.ModificarCuentas(_enCuentas) > 0)
@@ -290,7 +290,7 @@ namespace WFFuentes
 
         private void bImprimir_Click(object sender, EventArgs e)
         {
-            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";
+            printDocument1.PrinterSettings.PrinterName = "NPI099E21 (HP Color LaserJet MFP M377dw)";//Imprimir en impresora en red..
             printDocument1.Print();
         }
     }
