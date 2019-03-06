@@ -79,7 +79,7 @@ namespace WFFuentes
                     _enVentas.fcTelefono = FcTelefono.Text;
                     _enVentas.fcFechaPago = FdFechaPago.Text;
                     _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
-                    // _enVentas.fcConcepto = FcConcepto.Text;
+                    _enVentas.fcConcepto = FcConcepto.Text;//Habilitado para ver que hace..
                     //_enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
@@ -116,7 +116,7 @@ namespace WFFuentes
                 _enInventario.NombreProducto = FcConcepto.Text;
                 dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
                 FcConcepto.Text = string.Empty;
-                FdFechaSalida.Text = DateTime.Today.ToString();
+                FdFechaSalida.Text = DateTime.Now.ToString();
             }
             //dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
@@ -515,6 +515,5 @@ namespace WFFuentes
             }
         }
 
-        
     }
 }

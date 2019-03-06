@@ -44,9 +44,10 @@ namespace WFFuentes
 
         private void FDevoluciones_Load(object sender, EventArgs e)
         {
-
+            txtFechaDevolucion.Text = DateTime.Now.ToString();
+            //txtFechaDevolucion.Text = DateTime.Today.ToString();//Ultimo agregado
         }
-
+        
         private void Limpiar()
         {
             txtID.Text = string.Empty;
@@ -67,6 +68,7 @@ namespace WFFuentes
         private void bConsulta_Click(object sender, EventArgs e)
         {
             dGDevoluciones.DataSource = _bldevolucion.ListaDevoluciones();
+           // txtFechaDevolucion.Text = DateTime.Today.ToString();//Ultimo agregado
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -79,12 +81,12 @@ namespace WFFuentes
                 int intVerificador = 0;
 
                 string strfolioNota = txtFolioNota.Text.ToString().Trim();
+                string strNombreDelCliente = txtNombreCliente.Text.ToString().Trim();
                 string strNombreProducto = txtNombreProducto.Text.ToString().Trim();
                 string strCantidad = txtCantidad.Text.ToString().Trim();
                 string strCausaD = txtCausaDevolucion.Text.ToString().Trim();
-                string strNombreDelCliente = txtNombreCliente.Text.ToString().Trim();
                 string strFechaDevolucion = txtFechaDevolucion.Text.ToString().Trim(); //Aqui agregue/cambie.. SE supone que aqui agrego manualmente no.!?
-                
+
 
                 if (strfolioNota.Equals("") || strNombreProducto.Equals("")  || txtCantidad.Equals("") || strCausaD.Equals("") || strNombreDelCliente.Equals("") || strFechaDevolucion.Equals("") )
                 {
@@ -147,10 +149,10 @@ namespace WFFuentes
         {
             txtID.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiIdDevolucion"].Value.ToString();
             txtFolioNota.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiFolioVenta"].Value.ToString();
-            txtFechaDevolucion.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcFechaDevolucion"].Value.ToString();
             txtNombreCliente.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcNombreDelCliente"].Value.ToString();
-            txtNombreProducto.Text = dGDevoluciones .Rows[e.RowIndex].Cells["fcNombreProductoDevolucion"].Value.ToString();
+            txtNombreProducto.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcNombreProductoDevolucion"].Value.ToString();
             txtCantidad.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fiCantidadDevolucion"].Value.ToString();
+            txtFechaDevolucion.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcFechaDevolucion"].Value.ToString();
             txtCausaDevolucion.Text = dGDevoluciones.Rows[e.RowIndex].Cells["fcCausaDevolucion"].Value.ToString();
             
         }
@@ -182,7 +184,5 @@ namespace WFFuentes
                 return;
             }
         }
-
-
     }
 }

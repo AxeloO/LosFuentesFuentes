@@ -264,8 +264,10 @@
             // 
             // txtFechaDevolucion
             // 
+            this.txtFechaDevolucion.Enabled = false;
             this.txtFechaDevolucion.Location = new System.Drawing.Point(244, 155);
             this.txtFechaDevolucion.Name = "txtFechaDevolucion";
+            this.txtFechaDevolucion.ReadOnly = true;
             this.txtFechaDevolucion.Size = new System.Drawing.Size(237, 20);
             this.txtFechaDevolucion.TabIndex = 55;
             // 
@@ -312,7 +314,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1378, 505);
+            this.ClientSize = new System.Drawing.Size(1362, 505);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.txtFechaDevolucion);
             this.Controls.Add(this.label8);

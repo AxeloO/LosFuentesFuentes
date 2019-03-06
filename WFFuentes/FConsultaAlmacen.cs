@@ -29,7 +29,7 @@ namespace WFFuentes
             if (!(txtBusquedaProducto.Text ==""))
             {
                 _en.NombreProducto = txtBusquedaProducto.Text;
-                dgInventario.DataSource = _bl.MostrarInventarioPorNombre(_en);
+                dgInventario.DataSource = _bl.MostrarInventarioPorNombreEmpleado(_en);
                 txtBusquedaProducto.Text = string.Empty;
                 
             }

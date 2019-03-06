@@ -28,6 +28,10 @@ namespace BL
         {
             return _dal.MostrarInventarioPorNombre(PEntidad);
         }
+        public List<Inventario> MostrarInventarioPorNombreEmpleado(Inventario PEntidad)//Nuevo cambio
+        {
+            return _dal.MostrarInventarioPorNombreEmpleado(PEntidad);
+        }
         public int ModificarProducto(Inventario PEntidad)
         {
             return _dal.ModificarProducto(PEntidad);

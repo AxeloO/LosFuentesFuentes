@@ -115,7 +115,7 @@ namespace DAL
         {
             IDbConnection _Conexion = DBConexion.Conexion();
             _Conexion.Open();
-            SqlCommand _comando = new SqlCommand("Consultar_Productos_Por_Nombre", _Conexion as SqlConnection);
+            SqlCommand _comando = new SqlCommand("Consultar_Productos_Por_Nombre_Empleado", _Conexion as SqlConnection);
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.Add(new SqlParameter("@NombreProducto", PEntidad.NombreProducto));
             IDataReader _reader = _comando.ExecuteReader();
@@ -128,9 +128,9 @@ namespace DAL
                 _inventario.GrupoPertenenciente = _reader.GetString(2);
                 _inventario.Cantidad = _reader.GetDecimal(3);
                 _inventario.Presentacion = _reader.GetString(4);
-               // _inventario.CostoUnitario = _reader.GetDecimal(5);
-                _inventario.PrecioContado = _reader.GetDecimal(6);
-                _inventario.PrecioACredito = _reader.GetDecimal(7);
+              //  _inventario.CostoUnitario = _reader.GetDecimal(5);
+                _inventario.PrecioContado = _reader.GetDecimal(5);
+                _inventario.PrecioACredito = _reader.GetDecimal(6);
 
                 Lista.Add(_inventario);
 
