@@ -83,18 +83,35 @@ namespace WFFuentes
             this.Close();
         }
 
-        public void llenarNota(EnVentas enVentas)
+        public void llenarNota(EnVentas enVentas, DataGridView dgTotalProductos)
         {
-            txbFecha.Text = _enVentas.fDtFechaSalida.ToString();
-            txtNombre.Text = _enVentas.fcNombreCliente.ToString();
-            txtDomicilio.Text = _enVentas.fcDomicilio.ToString();
-            txtCiudad.Text = _enVentas.fcCiudad.ToString();
-            txtTelefono.Text = _enVentas.fcTelefono.ToString();
-            txtFechaFinal.Text = _enVentas.fcFechaPago.ToString();
-            //_enVentas.fcConcepto 
-            //txt _enVentas.fdPrecioUnitario 
-            FNotaVenta nuevaNota = new FNotaVenta();
-            nuevaNota.ShowDialog();
+            int iteracion = 1;
+            string strTodosLosProductos = String.Empty;
+
+            txbFecha.Text = enVentas.fDtFechaSalida.ToString();
+            txtNombre.Text = enVentas.fcNombreCliente.ToString();
+            txtDomicilio.Text = enVentas.fcDomicilio.ToString();
+            txtCiudad.Text = enVentas.fcCiudad.ToString();
+            txtTelefono.Text = enVentas.fcTelefono.ToString();
+            txtFechaFinal.Text = enVentas.fcFechaPago.ToString();
+
+
+            foreach (DataGridViewRow producto in dgTotalProductos.Rows)
+            {
+                if (iteracion < dgTotalProductos.RowCount)
+                {
+
+                    strTodosLosProductos = strTodosLosProductos +"\n"+ producto.Cells[1].Value.ToString();
+
+
+                }
+                iteracion++;
+            }
+
+            txbProducto.Text = strTodosLosProductos;
+            ShowDialog();
         }
+
+        
     }
 }

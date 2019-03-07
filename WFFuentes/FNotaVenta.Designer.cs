@@ -359,6 +359,7 @@
             this.txbProducto.Name = "txbProducto";
             this.txbProducto.Size = new System.Drawing.Size(100, 292);
             this.txbProducto.TabIndex = 0;
+         
             // 
             // panel3
             // 

@@ -179,7 +179,7 @@ namespace WFFuentes
 
                 if (!txtNombre.Text.Equals(""))
                 {
-                    int intCantidadDeProductoExistencia = int.Parse(strExistenciaProducto);
+                    double intCantidadDeProductoExistencia = double.Parse(strExistenciaProducto);
 
                     if (txtCantidad.Text.Equals("") || txtCantidad.Text.Equals(null))
                     {
@@ -290,7 +290,7 @@ namespace WFFuentes
                 int iteracion = 1;
 
 
-                if (!FdFechaPago.Equals(string.Empty))
+                if (!FdFechaPago.Text.Equals(string.Empty) && !FdFechaSalida.Text.Equals(string.Empty) && !FcNombreCliente.Text.Equals(string.Empty) && !FcDomicilio.Text.Equals(string.Empty) && !FcCiudad.Text.Equals(string.Empty) && !FcTelefono.Text.Equals(string.Empty))
                 {
 
 
@@ -367,7 +367,7 @@ namespace WFFuentes
 
                     FNotaVenta fNuevaNotaVenta = new FNotaVenta();
 
-                    fNuevaNotaVenta.llenarNota(_enVentas);
+                    fNuevaNotaVenta.llenarNota(_enVentas, dgTotalProductos);
 
                     MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Limpiar();
@@ -515,5 +515,6 @@ namespace WFFuentes
             }
         }
 
+        
     }
 }
