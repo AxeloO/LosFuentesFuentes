@@ -109,10 +109,13 @@
             // 
             // dgInventario
             // 
+            this.dgInventario.AllowUserToAddRows = false;
+            this.dgInventario.AllowUserToDeleteRows = false;
             this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgInventario.Location = new System.Drawing.Point(45, 162);
             this.dgInventario.Name = "dgInventario";
+            this.dgInventario.ReadOnly = true;
             this.dgInventario.Size = new System.Drawing.Size(898, 506);
             this.dgInventario.TabIndex = 63;
             // 
@@ -134,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(987, 761);
+            this.ClientSize = new System.Drawing.Size(987, 751);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.dgInventario);
             this.Controls.Add(this.label1);

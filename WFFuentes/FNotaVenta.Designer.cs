@@ -359,7 +359,6 @@
             this.txbProducto.Name = "txbProducto";
             this.txbProducto.Size = new System.Drawing.Size(100, 292);
             this.txbProducto.TabIndex = 0;
-         
             // 
             // panel3
             // 
@@ -534,7 +533,7 @@
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.txbFecha);
-            this.panel6.Location = new System.Drawing.Point(584, 24);
+            this.panel6.Location = new System.Drawing.Point(584, 14);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 141);
             this.panel6.TabIndex = 14;
@@ -542,7 +541,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(141, 79);
+            this.label6.Location = new System.Drawing.Point(141, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 5;
@@ -569,7 +568,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 79);
+            this.label5.Location = new System.Drawing.Point(79, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 4;
@@ -578,7 +577,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 79);
+            this.label4.Location = new System.Drawing.Point(23, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 3;
@@ -595,7 +594,7 @@
             // 
             // txbFecha
             // 
-            this.txbFecha.Location = new System.Drawing.Point(3, 66);
+            this.txbFecha.Location = new System.Drawing.Point(3, 82);
             this.txbFecha.Multiline = true;
             this.txbFecha.Name = "txbFecha";
             this.txbFecha.Size = new System.Drawing.Size(194, 54);
@@ -651,7 +650,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(907, 741);
+            this.ClientSize = new System.Drawing.Size(907, 780);
             this.Controls.Add(this.bSalir);
             this.Controls.Add(this.btnVistaPrevia);
             this.Controls.Add(this.btnImprimir);

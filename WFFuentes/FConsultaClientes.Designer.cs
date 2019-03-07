@@ -48,7 +48,7 @@
             this.bActualizar.BackColor = System.Drawing.Color.Teal;
             this.bActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bActualizar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bActualizar.Location = new System.Drawing.Point(1031, 738);
+            this.bActualizar.Location = new System.Drawing.Point(923, 738);
             this.bActualizar.Name = "bActualizar";
             this.bActualizar.Size = new System.Drawing.Size(96, 30);
             this.bActualizar.TabIndex = 48;
@@ -103,7 +103,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(923, 738);
+            this.bRegresar.Location = new System.Drawing.Point(1025, 738);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(102, 30);
             this.bRegresar.TabIndex = 50;
@@ -113,11 +113,13 @@
             // 
             // dGClientes
             // 
-            this.dGClientes.AllowUserToOrderColumns = true;
+            this.dGClientes.AllowUserToAddRows = false;
+            this.dGClientes.AllowUserToDeleteRows = false;
             this.dGClientes.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGClientes.Location = new System.Drawing.Point(43, 151);
             this.dGClientes.Name = "dGClientes";
+            this.dGClientes.ReadOnly = true;
             this.dGClientes.Size = new System.Drawing.Size(1080, 561);
             this.dGClientes.TabIndex = 51;
             // 
@@ -166,7 +168,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1170, 741);
+            this.ClientSize = new System.Drawing.Size(1170, 788);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.dGClientes);

@@ -36,12 +36,14 @@ namespace WFFuentes
             if (!txtFechaI.Text.Equals(""))
             {
                 _enVentas.fDtFechaSalida = txtFechaI.Text.ToString().Trim();
-                dgVentas.DataSource = _ventasBL.MostrarVentasPorDiaDeSalida(_enVentas);               
+                dgVentas.DataSource = _ventasBL.MostrarVentasPorDiaDeSalida(_enVentas);
+                Limpiar();//Limpiar los campos de fecha 7/03/19
             }
             if (!txtFechaF.Text.Equals("") && txtFechaI.Text.Equals(""))
             {
                 _enVentas.fcFechaPago = txtFechaF.Text.ToString().Trim();
                 dgVentas.DataSource = _ventasBL.MostrarVentasPorDiaDePago(_enVentas);
+                Limpiar();//Limpiar los campos de fecha 7/03/19
             }
             if (txtFechaF.Text.Equals("") && txtFechaI.Text.Equals(""))
             {
@@ -101,6 +103,13 @@ namespace WFFuentes
             printDocument1.Print();
         }
 
+        private void Limpiar ()
+        {
+            txtFechaI.Text = string.Empty;
+            txtFechaF.Text = string.Empty;
+            txtFechaI.Focus();
+
+        }
 
     }
 }

@@ -195,11 +195,13 @@
             // 
             // dGCuentasPagar
             // 
-            this.dGCuentasPagar.AllowUserToOrderColumns = true;
+            this.dGCuentasPagar.AllowUserToAddRows = false;
+            this.dGCuentasPagar.AllowUserToDeleteRows = false;
             this.dGCuentasPagar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGCuentasPagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGCuentasPagar.Location = new System.Drawing.Point(620, 178);
             this.dGCuentasPagar.Name = "dGCuentasPagar";
+            this.dGCuentasPagar.ReadOnly = true;
             this.dGCuentasPagar.Size = new System.Drawing.Size(730, 347);
             this.dGCuentasPagar.TabIndex = 34;
             this.dGCuentasPagar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGCuentasPagar_CellClick);
@@ -395,7 +397,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1362, 613);
+            this.ClientSize = new System.Drawing.Size(1381, 613);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.bLimpiar);
             this.Controls.Add(this.txtStatus);

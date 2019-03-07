@@ -76,6 +76,7 @@
             this.ImprecionNota = new System.Drawing.Printing.PrintDocument();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bNuevaVenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -173,13 +174,17 @@
             // 
             // dgProductos
             // 
+            this.dgProductos.AllowUserToAddRows = false;
+            this.dgProductos.AllowUserToDeleteRows = false;
             this.dgProductos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProductos.Location = new System.Drawing.Point(45, 532);
             this.dgProductos.Name = "dgProductos";
+            this.dgProductos.ReadOnly = true;
             this.dgProductos.Size = new System.Drawing.Size(780, 197);
             this.dgProductos.TabIndex = 12;
             this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
+            this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellContentClick);
             // 
             // FdFechaSalida
             // 
@@ -312,10 +317,13 @@
             // 
             // dgTotalProductos
             // 
+            this.dgTotalProductos.AllowUserToAddRows = false;
+            this.dgTotalProductos.AllowUserToDeleteRows = false;
             this.dgTotalProductos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgTotalProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgTotalProductos.Location = new System.Drawing.Point(1126, 189);
             this.dgTotalProductos.Name = "dgTotalProductos";
+            this.dgTotalProductos.ReadOnly = true;
             this.dgTotalProductos.Size = new System.Drawing.Size(532, 258);
             this.dgTotalProductos.TabIndex = 30;
             // 
@@ -542,6 +550,19 @@
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
             // 
+            // bNuevaVenta
+            // 
+            this.bNuevaVenta.BackColor = System.Drawing.Color.Teal;
+            this.bNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNuevaVenta.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bNuevaVenta.Location = new System.Drawing.Point(968, 610);
+            this.bNuevaVenta.Name = "bNuevaVenta";
+            this.bNuevaVenta.Size = new System.Drawing.Size(111, 31);
+            this.bNuevaVenta.TabIndex = 51;
+            this.bNuevaVenta.Text = "Nueva Venta";
+            this.bNuevaVenta.UseVisualStyleBackColor = false;
+            this.bNuevaVenta.Click += new System.EventHandler(this.bNuevaVenta_Click);
+            // 
             // FVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,6 +570,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.bNuevaVenta);
             this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);
@@ -586,6 +608,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "FVentas";
+            this.Load += new System.EventHandler(this.FVentas_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FVentas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).EndInit();
@@ -645,5 +668,6 @@
         private System.Drawing.Printing.PrintDocument ImprecionNota;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button bNuevaVenta;
     }
 }

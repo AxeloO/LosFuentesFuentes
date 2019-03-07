@@ -216,5 +216,17 @@ namespace WFFuentes
             Limpiar();
         }
 
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dGProveedores.Width, this.dGProveedores.Height);
+            dGProveedores.DrawToBitmap(bm, new Rectangle(0, 0, this.dGProveedores.Width, this.dGProveedores.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
+
+        private void bImprimir_Click(object sender, EventArgs e)
+        {
+            printDocument1.PrinterSettings.PrintFileName = "NPI099E21(HP Color LaserJet MFPm377dw)";
+            printDocument1.Print();
+        }
     }
 }

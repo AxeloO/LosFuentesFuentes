@@ -53,7 +53,7 @@ namespace WFFuentes
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            printDocument1.PrinterSettings.PrinterName = "nombreimpresora";//Impresora de punto
+            printDocument1.PrinterSettings.PrinterName = "EPSON LX-350 ESC/P";//Impresora de punto
             printDocument1.Print();
         }
 

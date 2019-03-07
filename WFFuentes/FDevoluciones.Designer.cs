@@ -147,7 +147,7 @@
             this.bConsulta.BackColor = System.Drawing.Color.Teal;
             this.bConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsulta.Location = new System.Drawing.Point(1076, 410);
+            this.bConsulta.Location = new System.Drawing.Point(1078, 410);
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(87, 31);
             this.bConsulta.TabIndex = 9;
@@ -175,7 +175,7 @@
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bRegresar.Location = new System.Drawing.Point(1183, 410);
             this.bRegresar.Name = "bRegresar";
-            this.bRegresar.Size = new System.Drawing.Size(84, 31);
+            this.bRegresar.Size = new System.Drawing.Size(94, 31);
             this.bRegresar.TabIndex = 11;
             this.bRegresar.Text = "Regresar";
             this.bRegresar.UseVisualStyleBackColor = false;
@@ -183,10 +183,13 @@
             // 
             // dGDevoluciones
             // 
+            this.dGDevoluciones.AllowUserToAddRows = false;
+            this.dGDevoluciones.AllowUserToDeleteRows = false;
             this.dGDevoluciones.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dGDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGDevoluciones.Location = new System.Drawing.Point(569, 92);
             this.dGDevoluciones.Name = "dGDevoluciones";
+            this.dGDevoluciones.ReadOnly = true;
             this.dGDevoluciones.Size = new System.Drawing.Size(797, 285);
             this.dGDevoluciones.TabIndex = 12;
             this.dGDevoluciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGDevoluciones_CellClick);
@@ -234,7 +237,7 @@
             // bImprimir
             // 
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
-            this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.bImprimir.Location = new System.Drawing.Point(959, 410);
             this.bImprimir.Name = "bImprimir";
@@ -285,11 +288,11 @@
             // btVistaPrevia
             // 
             this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
-            this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btVistaPrevia.Location = new System.Drawing.Point(834, 410);
+            this.btVistaPrevia.Location = new System.Drawing.Point(811, 410);
             this.btVistaPrevia.Name = "btVistaPrevia";
-            this.btVistaPrevia.Size = new System.Drawing.Size(102, 31);
+            this.btVistaPrevia.Size = new System.Drawing.Size(125, 31);
             this.btVistaPrevia.TabIndex = 56;
             this.btVistaPrevia.Text = "Vista Previa";
             this.btVistaPrevia.UseVisualStyleBackColor = false;
@@ -314,7 +317,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1362, 505);
+            this.ClientSize = new System.Drawing.Size(1413, 505);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.txtFechaDevolucion);
             this.Controls.Add(this.label8);

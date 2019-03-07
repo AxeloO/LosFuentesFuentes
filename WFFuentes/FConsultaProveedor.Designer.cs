@@ -43,7 +43,7 @@
             this.bActualizar.BackColor = System.Drawing.Color.Teal;
             this.bActualizar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bActualizar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bActualizar.Location = new System.Drawing.Point(840, 719);
+            this.bActualizar.Location = new System.Drawing.Point(750, 719);
             this.bActualizar.Name = "bActualizar";
             this.bActualizar.Size = new System.Drawing.Size(88, 34);
             this.bActualizar.TabIndex = 48;
@@ -97,7 +97,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(718, 719);
+            this.bRegresar.Location = new System.Drawing.Point(859, 719);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(88, 34);
             this.bRegresar.TabIndex = 50;
@@ -107,10 +107,13 @@
             // 
             // dgProveedores
             // 
+            this.dgProveedores.AllowUserToAddRows = false;
+            this.dgProveedores.AllowUserToDeleteRows = false;
             this.dgProveedores.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProveedores.Location = new System.Drawing.Point(46, 168);
             this.dgProveedores.Name = "dgProveedores";
+            this.dgProveedores.ReadOnly = true;
             this.dgProveedores.Size = new System.Drawing.Size(882, 520);
             this.dgProveedores.TabIndex = 51;
             // 
@@ -119,7 +122,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(971, 780);
+            this.ClientSize = new System.Drawing.Size(971, 777);
             this.Controls.Add(this.dgProveedores);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.label1);

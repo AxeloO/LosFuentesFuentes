@@ -248,6 +248,8 @@
             // 
             // dgUsuarios
             // 
+            this.dgUsuarios.AllowUserToAddRows = false;
+            this.dgUsuarios.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgUsuarios.BackgroundColor = System.Drawing.SystemColors.ControlLight;
@@ -262,9 +264,10 @@
             this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgUsuarios.Location = new System.Drawing.Point(660, 123);
             this.dgUsuarios.Name = "dgUsuarios";
+            this.dgUsuarios.ReadOnly = true;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             this.dgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgUsuarios.Size = new System.Drawing.Size(529, 150);
+            this.dgUsuarios.Size = new System.Drawing.Size(541, 150);
             this.dgUsuarios.TabIndex = 31;
             this.dgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUsuarios_CellClick);
             // 

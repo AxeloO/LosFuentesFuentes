@@ -56,6 +56,8 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.bBusqueda = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.bImprimir = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dGClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -271,12 +273,14 @@
             // 
             // dGClientes
             // 
-            this.dGClientes.AllowUserToOrderColumns = true;
+            this.dGClientes.AllowUserToAddRows = false;
+            this.dGClientes.AllowUserToDeleteRows = false;
             this.dGClientes.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGClientes.GridColor = System.Drawing.Color.DimGray;
             this.dGClientes.Location = new System.Drawing.Point(709, 145);
             this.dGClientes.Name = "dGClientes";
+            this.dGClientes.ReadOnly = true;
             this.dGClientes.Size = new System.Drawing.Size(635, 201);
             this.dGClientes.TabIndex = 46;
             this.dGClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGClientes_CellClick);
@@ -356,13 +360,31 @@
             this.label11.TabIndex = 53;
             this.label11.Text = "Lista de clientes";
             // 
+            // bImprimir
+            // 
+            this.bImprimir.BackColor = System.Drawing.Color.Teal;
+            this.bImprimir.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bImprimir.Location = new System.Drawing.Point(983, 384);
+            this.bImprimir.Name = "bImprimir";
+            this.bImprimir.Size = new System.Drawing.Size(98, 30);
+            this.bImprimir.TabIndex = 54;
+            this.bImprimir.Text = "Imprimir";
+            this.bImprimir.UseVisualStyleBackColor = false;
+            this.bImprimir.Click += new System.EventHandler(this.bImprimir_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // FAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1358, 514);
+            this.ClientSize = new System.Drawing.Size(1369, 475);
+            this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bBusqueda);
             this.Controls.Add(this.txtBusqueda);
@@ -430,5 +452,7 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button bBusqueda;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button bImprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

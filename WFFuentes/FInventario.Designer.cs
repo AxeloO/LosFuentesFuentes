@@ -69,7 +69,7 @@
             this.button3.BackColor = System.Drawing.Color.Teal;
             this.button3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(359, 473);
+            this.button3.Location = new System.Drawing.Point(359, 488);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 34);
             this.button3.TabIndex = 50;
@@ -82,7 +82,7 @@
             this.btModificar.BackColor = System.Drawing.Color.Teal;
             this.btModificar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btModificar.Location = new System.Drawing.Point(225, 473);
+            this.btModificar.Location = new System.Drawing.Point(225, 488);
             this.btModificar.Name = "btModificar";
             this.btModificar.Size = new System.Drawing.Size(93, 34);
             this.btModificar.TabIndex = 49;
@@ -95,7 +95,7 @@
             this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(101, 473);
+            this.button1.Location = new System.Drawing.Point(101, 488);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 34);
             this.button1.TabIndex = 48;
@@ -270,7 +270,7 @@
             this.btLimpiar.BackColor = System.Drawing.Color.Teal;
             this.btLimpiar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btLimpiar.Location = new System.Drawing.Point(504, 473);
+            this.btLimpiar.Location = new System.Drawing.Point(504, 488);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(93, 34);
             this.btLimpiar.TabIndex = 51;
@@ -293,11 +293,14 @@
             // 
             // dgInventario
             // 
+            this.dgInventario.AllowUserToAddRows = false;
+            this.dgInventario.AllowUserToDeleteRows = false;
             this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgInventario.Location = new System.Drawing.Point(713, 173);
+            this.dgInventario.Location = new System.Drawing.Point(683, 173);
             this.dgInventario.Name = "dgInventario";
-            this.dgInventario.Size = new System.Drawing.Size(634, 418);
+            this.dgInventario.ReadOnly = true;
+            this.dgInventario.Size = new System.Drawing.Size(664, 418);
             this.dgInventario.TabIndex = 53;
             this.dgInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_CellClick);
             this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
@@ -420,7 +423,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1378, 681);
+            this.ClientSize = new System.Drawing.Size(1374, 689);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bBuscar);
