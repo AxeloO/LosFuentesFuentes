@@ -20,7 +20,8 @@ namespace WFFuentes
         VentasBL _ventasBL = new VentasBL();
         InventarioBL _inventarioBL = new InventarioBL();
         Inventario _enInventario = new Inventario();
-       
+
+
 
         // variables globales
         double douTotalSumaProductos = 0;
@@ -60,8 +61,9 @@ namespace WFFuentes
 
             try
             {
-                
-                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioDeContado.Text == "" || txtPrecioACredito.Text == "" || txtImporte.Text == "" || txtNombre.Text == "")
+
+
+                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioDeContado.Text == "" || txtPrecioACredito.Text == "" || txtImporte.Text == "")
 
                 // if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
                 {
@@ -77,7 +79,7 @@ namespace WFFuentes
                     _enVentas.fcTelefono = FcTelefono.Text;
                     _enVentas.fcFechaPago = FdFechaPago.Text;
                     _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
-                    _enVentas.fcConcepto = txtNombre.Text;//Habilitado para ver que hace..
+                    _enVentas.fcConcepto = FcConcepto.Text;//Habilitado para ver que hace..
                     //_enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
@@ -112,9 +114,9 @@ namespace WFFuentes
             if (!(FcConcepto.Text == ""))
             {
                 _enInventario.NombreProducto = FcConcepto.Text;
-                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombreEmpleado(_enInventario); 
+                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
                 FcConcepto.Text = string.Empty;
-                
+                FdFechaSalida.Text = DateTime.Now.ToString();
             }
             //dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
@@ -131,12 +133,11 @@ namespace WFFuentes
         }
 
         private void Limpiar_Venta()
-        {//Limpia todos los campos 
+        {
 
             txtNombre.Text = string.Empty;
             txtCantidad.Text = string.Empty;
-            txtPrecioACredito.Text = string.Empty;
-            txtPrecioDeContado.Text = string.Empty;
+            // txtPrecioUnitario.Text = string.Empty;
             txtImporte.Text = string.Empty;
             txtNombre.Focus();
 
@@ -160,7 +161,7 @@ namespace WFFuentes
             txtPrecioDeContado.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();
             // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
             // txtPrecioUnitario.Text = dgProductos.Rows[e.RowIndex].Cells["PrecioContado"].Value.ToString();//Precio Contado o Precio Credito //Precio depende del tipo de venta      
-          //  string strPrecio = txtPrecioUnitario.Text.ToString().Trim();
+            //  string strPrecio = txtPrecioUnitario.Text.ToString().Trim();
 
 
         }
@@ -298,10 +299,10 @@ namespace WFFuentes
                     _enVentas.fcDomicilio = FcDomicilio.Text.ToString();
                     _enVentas.fcCiudad = FcCiudad.Text.ToString();
                     _enVentas.fcTelefono = FcTelefono.Text.ToString();
-                    _enVentas.fcFechaPago = FdFechaPago.Text.ToString();//Tenia Domicilio
+                    _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
                     //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
                     _enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
-                    _enVentas.fcConcepto = txtNombre.Text.ToString();//Nombre del campo donde se muestra el nombre del producto 07/03/19
+                    _enVentas.fcConcepto = FcConcepto.Text.ToString();
                     _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
 
                     // aqui ayudame con un if
@@ -328,8 +329,8 @@ namespace WFFuentes
 
 
                         foreach (DataGridViewRow producto in dgTotalProductos.Rows)
-                        {                           
-                           
+                        {
+
                             if (iteracion < dgTotalProductos.RowCount)
                             {
 
@@ -389,8 +390,10 @@ namespace WFFuentes
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             //PrevioImprecion.Document = ImprecionNota;
             //PrevioImprecion.ShowDialog();
+
             FNotaVenta nuevaNota = new FNotaVenta();
             nuevaNota.ShowDialog();
         }
@@ -423,15 +426,16 @@ namespace WFFuentes
                 if (!FdFechaPago.Equals(string.Empty))
                 {
 
+
                     _enVentas.fDtFechaSalida = FdFechaSalida.Text.ToString();
                     _enVentas.fcNombreCliente = FcNombreCliente.Text.ToString();
                     _enVentas.fcDomicilio = FcDomicilio.Text.ToString();
                     _enVentas.fcCiudad = FcCiudad.Text.ToString();
                     _enVentas.fcTelefono = FcTelefono.Text.ToString();
-                    _enVentas.fcFechaPago = FdFechaPago.Text.ToString();//Tenia Domicilio en lugar de la fecha
+                    _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
                     //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
                     _enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
-                    _enVentas.fcConcepto = txtNombre.Text.ToString();//Nombre del campo donde aparece el nombre del producto a vender.. 07/03/19
+                    _enVentas.fcConcepto = FcConcepto.Text.ToString();
                     _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
 
                     // aqui ayudame con un if
@@ -447,6 +451,7 @@ namespace WFFuentes
                         // doTotalSumaProductos = douTotalSumaProductos + intCantidadProducto;
 
                     }
+
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
                     _enVentas.fdImporte = decimal.Parse(txtTotalAPagarCredito.Text);
 
@@ -510,21 +515,6 @@ namespace WFFuentes
             }
         }
 
-        private void dgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
-
-        private void FVentas_Load(object sender, EventArgs e)
-        {
-            FdFechaSalida.Text = DateTime.Now.ToString();
-        }
-
-        private void bNuevaVenta_Click(object sender, EventArgs e)//Nuevo boton de prueba.. 07/03/19
-        {
-            Form _fVender = new FVentas();
-            _fVender.Show();
-            this.Close();
-        }
     }
 }
