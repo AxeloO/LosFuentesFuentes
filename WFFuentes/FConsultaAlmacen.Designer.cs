@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FConsultaAlmacen));
             this.bImprimir = new System.Windows.Forms.Button();
             this.bActualizar = new System.Windows.Forms.Button();
             this.txtBusquedaProducto = new System.Windows.Forms.TextBox();
@@ -36,6 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgInventario = new System.Windows.Forms.DataGridView();
             this.bRegresar = new System.Windows.Forms.Button();
+            this.bVistaprevia = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +48,7 @@
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
             this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(867, 699);
+            this.bImprimir.Location = new System.Drawing.Point(648, 699);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(90, 34);
             this.bImprimir.TabIndex = 61;
@@ -124,7 +128,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(655, 699);
+            this.bRegresar.Location = new System.Drawing.Point(873, 699);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(91, 34);
             this.bRegresar.TabIndex = 64;
@@ -132,12 +136,40 @@
             this.bRegresar.UseVisualStyleBackColor = false;
             this.bRegresar.Click += new System.EventHandler(this.bRegresar_Click);
             // 
+            // bVistaprevia
+            // 
+            this.bVistaprevia.BackColor = System.Drawing.Color.Teal;
+            this.bVistaprevia.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bVistaprevia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bVistaprevia.Location = new System.Drawing.Point(507, 699);
+            this.bVistaprevia.Name = "bVistaprevia";
+            this.bVistaprevia.Size = new System.Drawing.Size(121, 34);
+            this.bVistaprevia.TabIndex = 65;
+            this.bVistaprevia.Text = "Vista Previa";
+            this.bVistaprevia.UseVisualStyleBackColor = false;
+            this.bVistaprevia.Click += new System.EventHandler(this.bVistaprevia_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // FConsultaAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(987, 751);
+            this.ClientSize = new System.Drawing.Size(987, 733);
+            this.Controls.Add(this.bVistaprevia);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.dgInventario);
             this.Controls.Add(this.label1);
@@ -165,5 +197,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgInventario;
         private System.Windows.Forms.Button bRegresar;
+        private System.Windows.Forms.Button bVistaprevia;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

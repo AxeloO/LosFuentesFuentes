@@ -168,7 +168,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1170, 788);
+            this.ClientSize = new System.Drawing.Size(1175, 733);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.dGClientes);

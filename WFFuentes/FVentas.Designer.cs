@@ -184,7 +184,6 @@
             this.dgProductos.Size = new System.Drawing.Size(780, 197);
             this.dgProductos.TabIndex = 12;
             this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
-            
             // 
             // FdFechaSalida
             // 
@@ -561,7 +560,7 @@
             this.bNuevaVenta.TabIndex = 51;
             this.bNuevaVenta.Text = "Nueva Venta";
             this.bNuevaVenta.UseVisualStyleBackColor = false;
-       
+            this.bNuevaVenta.Click += new System.EventHandler(this.bNuevaVenta_Click);
             // 
             // FVentas
             // 
@@ -569,7 +568,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.bNuevaVenta);
             this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
@@ -608,7 +607,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "FVentas";
-        
+            this.Load += new System.EventHandler(this.FVentas_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FVentas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTotalProductos)).EndInit();

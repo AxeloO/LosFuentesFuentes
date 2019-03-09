@@ -63,7 +63,7 @@ namespace WFFuentes
             {
 
 
-                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioDeContado.Text == "" || txtPrecioACredito.Text == "" || txtImporte.Text == "")
+                if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || txtPrecioDeContado.Text == "" || txtPrecioACredito.Text == "" || txtImporte.Text == "" || txtNombre.Text =="")
 
                 // if (FdFechaSalida.Text == "" || FcNombreCliente.Text == "" || FcDomicilio.Text == "" || FcCiudad.Text == "" || FcTelefono.Text == "" || FdFechaPago.Text == "" || txtCantidad.Text == "" || FcConcepto.Text == "" || txtPrecioUnitario.Text == "" || txtImporte.Text == "")
                 {
@@ -79,7 +79,7 @@ namespace WFFuentes
                     _enVentas.fcTelefono = FcTelefono.Text;
                     _enVentas.fcFechaPago = FdFechaPago.Text;
                     _enVentas.fiCantidad = int.Parse(txtCantidad.Text);
-                    _enVentas.fcConcepto = FcConcepto.Text;//Habilitado para ver que hace..
+                    _enVentas.fcConcepto = txtNombre.Text;//Cambio de Variable para asignar el nombre del producto 08/03/19
                     //_enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioUnitario.Text);
                     _enVentas.fdImporte = decimal.Parse(txtImporte.Text);
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
@@ -116,7 +116,7 @@ namespace WFFuentes
                 _enInventario.NombreProducto = FcConcepto.Text;
                 dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
                 FcConcepto.Text = string.Empty;
-                FdFechaSalida.Text = DateTime.Now.ToString();
+
             }
             //dgProductos.DataSource = _inventarioBL.MostrarInventario();
         }
@@ -137,7 +137,8 @@ namespace WFFuentes
 
             txtNombre.Text = string.Empty;
             txtCantidad.Text = string.Empty;
-            // txtPrecioUnitario.Text = string.Empty;
+            txtPrecioDeContado.Text = string.Empty;
+            txtPrecioACredito.Text = string.Empty;
             txtImporte.Text = string.Empty;
             txtNombre.Focus();
 
@@ -272,7 +273,7 @@ namespace WFFuentes
             Limpiar_Venta();
         }
 
-        private void btnImprimirVenta_Click(object sender, EventArgs e)
+        private void btnImprimirVenta_Click(object sender, EventArgs e)//Venta de contado 08/03/19
         {
             try
             {
@@ -299,11 +300,11 @@ namespace WFFuentes
                     _enVentas.fcDomicilio = FcDomicilio.Text.ToString();
                     _enVentas.fcCiudad = FcCiudad.Text.ToString();
                     _enVentas.fcTelefono = FcTelefono.Text.ToString();
-                    _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
-                    //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
-                    _enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
-                    _enVentas.fcConcepto = FcConcepto.Text.ToString();
-                    _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
+                    _enVentas.fcFechaPago = FdFechaPago.Text.ToString();//Cambio de Variable a fecha de pago porque guardaba el domicilio 08/03/19
+                    _enVentas.fiCantidad = Int32.Parse(txtCantidad.Text); // Evitar que guarde 1 y guarde la cantidad agregada 08/03/19
+                    //_enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
+                    _enVentas.fcConcepto = txtNombre.Text.ToString();//Campo del nombre del producto 08/03/19
+                    _enVentas.fdPrecioUnitario = decimal.Parse(txtPrecioDeContado.Text);//(FdTotal.Text);//Haber que hace 08/08/19
 
                     // aqui ayudame con un if
 
@@ -320,7 +321,7 @@ namespace WFFuentes
                     }
 
                     _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
-                    _enVentas.fdImporte = decimal.Parse(txtTotalAPagarCredito.Text);
+                    _enVentas.fdImporte = decimal.Parse(txtImporte.Text);//Total a pagar de importe
 
                     int RespuestaTipoVenta = _ventasBL.AgregarVenta(_enVentas);
 
@@ -405,7 +406,7 @@ namespace WFFuentes
             e.Graphics.DrawImage(bmp, 0, 0);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//Venta a credito 08/03/19
         {
             try
             {
@@ -432,11 +433,12 @@ namespace WFFuentes
                     _enVentas.fcDomicilio = FcDomicilio.Text.ToString();
                     _enVentas.fcCiudad = FcCiudad.Text.ToString();
                     _enVentas.fcTelefono = FcTelefono.Text.ToString();
-                    _enVentas.fcFechaPago = FcDomicilio.Text.ToString();
+                    _enVentas.fcFechaPago = FdFechaPago.Text.ToString();//Tenia FcDomicilio cambio de variable 08/03/19
                     //_enVentas.fiCantidad = txtCantidad.Text.ToString(); // de prueba
-                    _enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
-                    _enVentas.fcConcepto = FcConcepto.Text.ToString();
-                    _enVentas.fdPrecioUnitario = decimal.Parse(FdTotal.Text);
+                    _enVentas.fiCantidad = Int32.Parse(txtCantidad.Text);//Agregado para ver si guarda el dato correcto, cambio de variable 08/03/19
+                    //_enVentas.fiCantidad = 1; // cantidad? aqui es un elemento nada mas.. osease lo unico que puedo meter es la cantidad total de articulos adquiridos en conjunto.. no individuales
+                    _enVentas.fcConcepto = txtNombre.Text.ToString();//Obtiene el valor de la venta mas no de la busqueda 08/03/19
+                    _enVentas.fdPrecioUnitario = decimal.Parse(txtTotalAPagarCredito.Text);//Precio por unidad 08/03/19
 
                     // aqui ayudame con un if
 
@@ -452,8 +454,8 @@ namespace WFFuentes
 
                     }
 
-                    _enVentas.fdTotal = decimal.Parse(FdTotal.Text);
-                    _enVentas.fdImporte = decimal.Parse(txtTotalAPagarCredito.Text);
+                    _enVentas.fdTotal = decimal.Parse(FdTotal.Text);//Haber que hace
+                    _enVentas.fdImporte = decimal.Parse(txtImporte.Text);//Haber que hace 09/03/19
 
                     int RespuestaTipoVenta = _ventasBL.AgregarVenta(_enVentas);
 
@@ -515,6 +517,16 @@ namespace WFFuentes
             }
         }
 
+        private void bNuevaVenta_Click(object sender, EventArgs e)//Direccionar al from de ventas para crear una nueva venta.. 08/03/19.
+        {
+            Form _fVender = new FVentas();
+            _fVender.Show();
+            this.Close();
+        }
 
+        private void FVentas_Load(object sender, EventArgs e)//Agregado para poner automaticamente la fecha en cuanto se inicie el from 08/03/19
+        {
+            FdFechaSalida.Text = DateTime.Now.ToString();
+        }
     }
 }

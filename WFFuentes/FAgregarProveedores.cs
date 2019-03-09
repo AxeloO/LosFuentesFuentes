@@ -228,5 +228,19 @@ namespace WFFuentes
             printDocument1.PrinterSettings.PrintFileName = "NPI099E21(HP Color LaserJet MFPm377dw)";
             printDocument1.Print();
         }
+
+        private void bVistaprevia_Click(object sender, EventArgs e)//Agregado para la vista previa 08/03/19
+        {
+            try
+            {
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al imprimir. Favor de salir e ingresar nuevamente a la opción", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
     }
 }

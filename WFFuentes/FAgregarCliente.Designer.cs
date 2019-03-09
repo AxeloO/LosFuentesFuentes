@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAgregarCliente));
             this.bAgregar = new System.Windows.Forms.Button();
             this.txtLimiteCredito = new System.Windows.Forms.TextBox();
             this.txtGarantia = new System.Windows.Forms.TextBox();
@@ -58,6 +59,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.bImprimir = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.bVistaprevia = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dGClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -377,13 +380,37 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // bVistaprevia
+            // 
+            this.bVistaprevia.BackColor = System.Drawing.Color.Teal;
+            this.bVistaprevia.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bVistaprevia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bVistaprevia.Location = new System.Drawing.Point(854, 384);
+            this.bVistaprevia.Name = "bVistaprevia";
+            this.bVistaprevia.Size = new System.Drawing.Size(98, 30);
+            this.bVistaprevia.TabIndex = 55;
+            this.bVistaprevia.Text = "Vista previa";
+            this.bVistaprevia.UseVisualStyleBackColor = false;
+            this.bVistaprevia.Click += new System.EventHandler(this.bVistaprevia_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // FAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1369, 475);
+            this.ClientSize = new System.Drawing.Size(1354, 475);
+            this.Controls.Add(this.bVistaprevia);
             this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bBusqueda);
@@ -454,5 +481,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button bImprimir;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button bVistaprevia;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
