@@ -283,7 +283,7 @@
             this.btConsulta.BackColor = System.Drawing.Color.Teal;
             this.btConsulta.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btConsulta.Location = new System.Drawing.Point(1149, 620);
+            this.btConsulta.Location = new System.Drawing.Point(1203, 670);
             this.btConsulta.Name = "btConsulta";
             this.btConsulta.Size = new System.Drawing.Size(90, 33);
             this.btConsulta.TabIndex = 52;
@@ -297,10 +297,10 @@
             this.dgInventario.AllowUserToDeleteRows = false;
             this.dgInventario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgInventario.Location = new System.Drawing.Point(683, 173);
+            this.dgInventario.Location = new System.Drawing.Point(683, 145);
             this.dgInventario.Name = "dgInventario";
             this.dgInventario.ReadOnly = true;
-            this.dgInventario.Size = new System.Drawing.Size(664, 418);
+            this.dgInventario.Size = new System.Drawing.Size(747, 492);
             this.dgInventario.TabIndex = 53;
             this.dgInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_CellClick);
             this.dgInventario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_RowEnter);
@@ -310,7 +310,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1258, 620);
+            this.bRegresar.Location = new System.Drawing.Point(1312, 670);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(89, 33);
             this.bRegresar.TabIndex = 54;
@@ -351,7 +351,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(709, 128);
+            this.label7.Location = new System.Drawing.Point(709, 100);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(169, 23);
             this.label7.TabIndex = 58;
@@ -360,7 +360,7 @@
             // txtBusqueda
             // 
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(894, 130);
+            this.txtBusqueda.Location = new System.Drawing.Point(894, 102);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(345, 22);
             this.txtBusqueda.TabIndex = 59;
@@ -370,7 +370,7 @@
             this.bBuscar.BackColor = System.Drawing.Color.Teal;
             this.bBuscar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBuscar.Location = new System.Drawing.Point(1258, 124);
+            this.bBuscar.Location = new System.Drawing.Point(1258, 96);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(89, 33);
             this.bBuscar.TabIndex = 60;
@@ -383,7 +383,7 @@
             this.button2.BackColor = System.Drawing.Color.Teal;
             this.button2.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(1026, 620);
+            this.button2.Location = new System.Drawing.Point(1080, 670);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 31);
             this.button2.TabIndex = 61;
@@ -396,7 +396,7 @@
             this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
             this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btVistaPrevia.Location = new System.Drawing.Point(878, 620);
+            this.btVistaPrevia.Location = new System.Drawing.Point(932, 670);
             this.btVistaPrevia.Name = "btVistaPrevia";
             this.btVistaPrevia.Size = new System.Drawing.Size(118, 31);
             this.btVistaPrevia.TabIndex = 62;
@@ -423,7 +423,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1374, 689);
+            this.ClientSize = new System.Drawing.Size(1457, 734);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bBuscar);
@@ -455,6 +455,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "bImprimir";
+            this.Load += new System.EventHandler(this.bImprimir_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FInventario_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.ResumeLayout(false);

@@ -301,6 +301,9 @@ namespace WFFuentes
             e.Graphics.DrawImage(bm, 0, 0);
         }
 
+        private void bImprimir_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

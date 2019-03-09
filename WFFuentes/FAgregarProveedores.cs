@@ -242,5 +242,10 @@ namespace WFFuentes
                 return;
             }
         }
+
+        private void dGProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

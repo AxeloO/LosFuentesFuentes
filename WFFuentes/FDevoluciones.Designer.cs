@@ -134,7 +134,7 @@
             this.bAgregar.BackColor = System.Drawing.Color.Teal;
             this.bAgregar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bAgregar.Location = new System.Drawing.Point(337, 410);
+            this.bAgregar.Location = new System.Drawing.Point(459, 393);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(87, 30);
             this.bAgregar.TabIndex = 8;
@@ -147,7 +147,7 @@
             this.bConsulta.BackColor = System.Drawing.Color.Teal;
             this.bConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsulta.Location = new System.Drawing.Point(1078, 410);
+            this.bConsulta.Location = new System.Drawing.Point(1142, 533);
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(87, 31);
             this.bConsulta.TabIndex = 9;
@@ -160,7 +160,7 @@
             this.bLimpiar.BackColor = System.Drawing.Color.Teal;
             this.bLimpiar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bLimpiar.Location = new System.Drawing.Point(457, 410);
+            this.bLimpiar.Location = new System.Drawing.Point(352, 394);
             this.bLimpiar.Name = "bLimpiar";
             this.bLimpiar.Size = new System.Drawing.Size(87, 29);
             this.bLimpiar.TabIndex = 10;
@@ -173,7 +173,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1183, 410);
+            this.bRegresar.Location = new System.Drawing.Point(1247, 533);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(94, 31);
             this.bRegresar.TabIndex = 11;
@@ -190,7 +190,7 @@
             this.dGDevoluciones.Location = new System.Drawing.Point(569, 92);
             this.dGDevoluciones.Name = "dGDevoluciones";
             this.dGDevoluciones.ReadOnly = true;
-            this.dGDevoluciones.Size = new System.Drawing.Size(797, 285);
+            this.dGDevoluciones.Size = new System.Drawing.Size(816, 412);
             this.dGDevoluciones.TabIndex = 12;
             this.dGDevoluciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGDevoluciones_CellClick);
             // 
@@ -239,7 +239,7 @@
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
             this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(959, 410);
+            this.bImprimir.Location = new System.Drawing.Point(1023, 533);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(102, 31);
             this.bImprimir.TabIndex = 51;
@@ -290,7 +290,7 @@
             this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
             this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btVistaPrevia.Location = new System.Drawing.Point(811, 410);
+            this.btVistaPrevia.Location = new System.Drawing.Point(875, 533);
             this.btVistaPrevia.Name = "btVistaPrevia";
             this.btVistaPrevia.Size = new System.Drawing.Size(125, 31);
             this.btVistaPrevia.TabIndex = 56;
@@ -317,7 +317,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1413, 505);
+            this.ClientSize = new System.Drawing.Size(1413, 587);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.txtFechaDevolucion);
             this.Controls.Add(this.label8);
