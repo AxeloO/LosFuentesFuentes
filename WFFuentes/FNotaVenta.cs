@@ -100,9 +100,7 @@ namespace WFFuentes
             {
                 if (iteracion < dgTotalProductos.RowCount)
                 {
-
                     strTodosLosProductos = strTodosLosProductos +"\n"+ producto.Cells[1].Value.ToString();
-
 
                 }
                 iteracion++;
