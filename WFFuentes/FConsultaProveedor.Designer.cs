@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FConsultaProveedor));
             this.bActualizar = new System.Windows.Forms.Button();
             this.bBusqueda = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -35,6 +36,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bRegresar = new System.Windows.Forms.Button();
             this.dgProveedores = new System.Windows.Forms.DataGridView();
+            this.bVistaprevia = new System.Windows.Forms.Button();
+            this.bImprimir = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgProveedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,12 +122,50 @@
             this.dgProveedores.Size = new System.Drawing.Size(882, 520);
             this.dgProveedores.TabIndex = 51;
             // 
+            // bVistaprevia
+            // 
+            this.bVistaprevia.BackColor = System.Drawing.Color.Teal;
+            this.bVistaprevia.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bVistaprevia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bVistaprevia.Location = new System.Drawing.Point(478, 719);
+            this.bVistaprevia.Name = "bVistaprevia";
+            this.bVistaprevia.Size = new System.Drawing.Size(124, 34);
+            this.bVistaprevia.TabIndex = 52;
+            this.bVistaprevia.Text = "Vista previa";
+            this.bVistaprevia.UseVisualStyleBackColor = false;
+            this.bVistaprevia.Click += new System.EventHandler(this.bVistaprevia_Click);
+            // 
+            // bImprimir
+            // 
+            this.bImprimir.BackColor = System.Drawing.Color.Teal;
+            this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.bImprimir.Location = new System.Drawing.Point(633, 719);
+            this.bImprimir.Name = "bImprimir";
+            this.bImprimir.Size = new System.Drawing.Size(88, 34);
+            this.bImprimir.TabIndex = 53;
+            this.bImprimir.Text = "Imprimir";
+            this.bImprimir.UseVisualStyleBackColor = false;
+            this.bImprimir.Click += new System.EventHandler(this.bImprimir_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // FConsultaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(971, 777);
+            this.Controls.Add(this.bImprimir);
+            this.Controls.Add(this.bVistaprevia);
             this.Controls.Add(this.dgProveedores);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.label1);
@@ -147,5 +190,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bRegresar;
         private System.Windows.Forms.DataGridView dgProveedores;
+        private System.Windows.Forms.Button bVistaprevia;
+        private System.Windows.Forms.Button bImprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

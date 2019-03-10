@@ -293,5 +293,10 @@ namespace WFFuentes
             printDocument1.PrinterSettings.PrinterName = "NPI099E21 (HP Color LaserJet MFP M377dw)";//Imprimir en impresora en red..
             printDocument1.Print();
         }
+
+        private void dGCuentasPagar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -69,7 +69,7 @@
             this.bConsulta.BackColor = System.Drawing.Color.Teal;
             this.bConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsulta.Location = new System.Drawing.Point(1074, 546);
+            this.bConsulta.Location = new System.Drawing.Point(1186, 714);
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(100, 33);
             this.bConsulta.TabIndex = 33;
@@ -199,12 +199,13 @@
             this.dGCuentasPagar.AllowUserToDeleteRows = false;
             this.dGCuentasPagar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGCuentasPagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGCuentasPagar.Location = new System.Drawing.Point(620, 178);
+            this.dGCuentasPagar.Location = new System.Drawing.Point(605, 169);
             this.dGCuentasPagar.Name = "dGCuentasPagar";
             this.dGCuentasPagar.ReadOnly = true;
-            this.dGCuentasPagar.Size = new System.Drawing.Size(730, 347);
+            this.dGCuentasPagar.Size = new System.Drawing.Size(806, 517);
             this.dGCuentasPagar.TabIndex = 34;
             this.dGCuentasPagar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGCuentasPagar_CellClick);
+            this.dGCuentasPagar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGCuentasPagar_CellContentClick);
             // 
             // label5
             // 
@@ -222,7 +223,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1195, 546);
+            this.bRegresar.Location = new System.Drawing.Point(1307, 714);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(100, 33);
             this.bRegresar.TabIndex = 36;
@@ -308,7 +309,7 @@
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
             this.bImprimir.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(947, 546);
+            this.bImprimir.Location = new System.Drawing.Point(1059, 714);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(102, 31);
             this.bImprimir.TabIndex = 51;
@@ -384,7 +385,7 @@
             this.btVistaPrevia.BackColor = System.Drawing.Color.Teal;
             this.btVistaPrevia.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVistaPrevia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btVistaPrevia.Location = new System.Drawing.Point(808, 546);
+            this.btVistaPrevia.Location = new System.Drawing.Point(920, 714);
             this.btVistaPrevia.Name = "btVistaPrevia";
             this.btVistaPrevia.Size = new System.Drawing.Size(110, 31);
             this.btVistaPrevia.TabIndex = 57;
@@ -397,7 +398,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1381, 613);
+            this.ClientSize = new System.Drawing.Size(1444, 782);
             this.Controls.Add(this.btVistaPrevia);
             this.Controls.Add(this.bLimpiar);
             this.Controls.Add(this.txtStatus);

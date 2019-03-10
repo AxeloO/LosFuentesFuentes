@@ -114,7 +114,7 @@ namespace WFFuentes
             if (!(FcConcepto.Text == ""))
             {
                 _enInventario.NombreProducto = FcConcepto.Text;
-                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
+                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombreEmpleado(_enInventario);
                 FcConcepto.Text = string.Empty;
 
             }
@@ -528,5 +528,6 @@ namespace WFFuentes
         {
             FdFechaSalida.Text = DateTime.Now.ToString();
         }
+
     }
 }

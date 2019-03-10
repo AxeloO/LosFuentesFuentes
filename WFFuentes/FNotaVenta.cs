@@ -109,7 +109,5 @@ namespace WFFuentes
             txbProducto.Text = strTodosLosProductos;
             ShowDialog();
         }
-
-        
     }
 }

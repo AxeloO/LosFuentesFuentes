@@ -227,7 +227,7 @@
             this.bBack.BackColor = System.Drawing.Color.Teal;
             this.bBack.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBack.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBack.Location = new System.Drawing.Point(1239, 384);
+            this.bBack.Location = new System.Drawing.Point(1370, 617);
             this.bBack.Name = "bBack";
             this.bBack.Size = new System.Drawing.Size(101, 31);
             this.bBack.TabIndex = 42;
@@ -266,7 +266,7 @@
             this.bConsultar.BackColor = System.Drawing.Color.Teal;
             this.bConsultar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsultar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsultar.Location = new System.Drawing.Point(1113, 385);
+            this.bConsultar.Location = new System.Drawing.Point(1244, 618);
             this.bConsultar.Name = "bConsultar";
             this.bConsultar.Size = new System.Drawing.Size(98, 30);
             this.bConsultar.TabIndex = 45;
@@ -281,10 +281,10 @@
             this.dGClientes.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGClientes.GridColor = System.Drawing.Color.DimGray;
-            this.dGClientes.Location = new System.Drawing.Point(709, 145);
+            this.dGClientes.Location = new System.Drawing.Point(685, 145);
             this.dGClientes.Name = "dGClientes";
             this.dGClientes.ReadOnly = true;
-            this.dGClientes.Size = new System.Drawing.Size(635, 201);
+            this.dGClientes.Size = new System.Drawing.Size(764, 438);
             this.dGClientes.TabIndex = 46;
             this.dGClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGClientes_CellClick);
             this.dGClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGClientes_CellClick);
@@ -368,7 +368,7 @@
             this.bImprimir.BackColor = System.Drawing.Color.Teal;
             this.bImprimir.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(983, 384);
+            this.bImprimir.Location = new System.Drawing.Point(1114, 617);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(98, 30);
             this.bImprimir.TabIndex = 54;
@@ -385,7 +385,7 @@
             this.bVistaprevia.BackColor = System.Drawing.Color.Teal;
             this.bVistaprevia.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bVistaprevia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bVistaprevia.Location = new System.Drawing.Point(854, 384);
+            this.bVistaprevia.Location = new System.Drawing.Point(985, 617);
             this.bVistaprevia.Name = "bVistaprevia";
             this.bVistaprevia.Size = new System.Drawing.Size(98, 30);
             this.bVistaprevia.TabIndex = 55;
@@ -409,7 +409,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1354, 475);
+            this.ClientSize = new System.Drawing.Size(1491, 672);
             this.Controls.Add(this.bVistaprevia);
             this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.label11);

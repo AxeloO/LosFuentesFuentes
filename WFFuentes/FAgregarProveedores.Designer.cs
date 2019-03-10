@@ -222,7 +222,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1248, 442);
+            this.bRegresar.Location = new System.Drawing.Point(1306, 631);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(94, 32);
             this.bRegresar.TabIndex = 16;
@@ -236,12 +236,13 @@
             this.dGProveedores.AllowUserToDeleteRows = false;
             this.dGProveedores.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dGProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGProveedores.Location = new System.Drawing.Point(726, 197);
+            this.dGProveedores.Location = new System.Drawing.Point(710, 158);
             this.dGProveedores.Name = "dGProveedores";
             this.dGProveedores.ReadOnly = true;
-            this.dGProveedores.Size = new System.Drawing.Size(622, 207);
+            this.dGProveedores.Size = new System.Drawing.Size(706, 441);
             this.dGProveedores.TabIndex = 17;
             this.dGProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGProveedores_CellClick);
+            this.dGProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGProveedores_CellContentClick);
             // 
             // bModificar
             // 
@@ -279,7 +280,7 @@
             this.bConsulta.FlatAppearance.BorderSize = 0;
             this.bConsulta.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConsulta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bConsulta.Location = new System.Drawing.Point(1125, 442);
+            this.bConsulta.Location = new System.Drawing.Point(1183, 631);
             this.bConsulta.Margin = new System.Windows.Forms.Padding(0);
             this.bConsulta.Name = "bConsulta";
             this.bConsulta.Size = new System.Drawing.Size(94, 32);
@@ -319,7 +320,7 @@
             this.bBusqueda.BackColor = System.Drawing.Color.DarkCyan;
             this.bBusqueda.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBusqueda.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bBusqueda.Location = new System.Drawing.Point(1255, 157);
+            this.bBusqueda.Location = new System.Drawing.Point(1255, 117);
             this.bBusqueda.Name = "bBusqueda";
             this.bBusqueda.Size = new System.Drawing.Size(75, 27);
             this.bBusqueda.TabIndex = 23;
@@ -331,7 +332,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(733, 157);
+            this.label10.Location = new System.Drawing.Point(733, 117);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(169, 23);
             this.label10.TabIndex = 24;
@@ -340,7 +341,7 @@
             // txtBusqueda
             // 
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(909, 161);
+            this.txtBusqueda.Location = new System.Drawing.Point(909, 121);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(334, 22);
             this.txtBusqueda.TabIndex = 25;
@@ -368,7 +369,7 @@
             this.bImprimir.FlatAppearance.BorderSize = 0;
             this.bImprimir.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bImprimir.Location = new System.Drawing.Point(1004, 442);
+            this.bImprimir.Location = new System.Drawing.Point(1062, 631);
             this.bImprimir.Margin = new System.Windows.Forms.Padding(0);
             this.bImprimir.Name = "bImprimir";
             this.bImprimir.Size = new System.Drawing.Size(94, 32);
@@ -387,7 +388,7 @@
             this.bVistaprevia.FlatAppearance.BorderSize = 0;
             this.bVistaprevia.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bVistaprevia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bVistaprevia.Location = new System.Drawing.Point(870, 442);
+            this.bVistaprevia.Location = new System.Drawing.Point(928, 631);
             this.bVistaprevia.Margin = new System.Windows.Forms.Padding(0);
             this.bVistaprevia.Name = "bVistaprevia";
             this.bVistaprevia.Size = new System.Drawing.Size(94, 32);
@@ -411,7 +412,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1354, 502);
+            this.ClientSize = new System.Drawing.Size(1448, 687);
             this.Controls.Add(this.bVistaprevia);
             this.Controls.Add(this.bImprimir);
             this.Controls.Add(this.txtID);
