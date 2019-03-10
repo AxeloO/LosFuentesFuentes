@@ -83,10 +83,14 @@ namespace WFFuentes
             this.Close();
         }
 
-        public void llenarNota(EnVentas enVentas, DataGridView dgTotalProductos)
+        public void llenarNota(EnVentas enVentas, DataGridView dgTotalProductos, string strTipoDeVenta, string TotalTipo)
         {
-            int iteracion = 1;
-            string strTodosLosProductos = String.Empty;
+            
+            string strTodosLosNombresDeProductos = String.Empty;
+            string strTodosLosPreciosDeProductosContado = String.Empty;
+            string strTodosLosPreciosDeProductosACredito = String.Empty;
+            //string StrTodosLosPreciosDeProductos = String.Empty;
+            string StrTodasLasCantidadesDeProductos = String.Empty;
 
             txbFecha.Text = enVentas.fDtFechaSalida.ToString();
             txtNombre.Text = enVentas.fcNombreCliente.ToString();
@@ -98,16 +102,32 @@ namespace WFFuentes
 
             foreach (DataGridViewRow producto in dgTotalProductos.Rows)
             {
-                if (iteracion < dgTotalProductos.RowCount)
-                {
-                    strTodosLosProductos = strTodosLosProductos +"\n"+ producto.Cells[1].Value.ToString();
 
-                }
-                iteracion++;
+                strTodosLosPreciosDeProductosContado = strTodosLosPreciosDeProductosContado + Environment.NewLine+ producto.Cells[3].Value.ToString();
+                strTodosLosPreciosDeProductosACredito = strTodosLosPreciosDeProductosACredito + Environment.NewLine + producto.Cells[4].Value.ToString();
+                StrTodasLasCantidadesDeProductos = StrTodasLasCantidadesDeProductos + Environment.NewLine + producto.Cells[2].Value.ToString();
+                strTodosLosNombresDeProductos = strTodosLosNombresDeProductos + Environment.NewLine + producto.Cells[1].Value.ToString();
+
             }
 
-            txbProducto.Text = strTodosLosProductos;
+            txbUnidad.Text = StrTodasLasCantidadesDeProductos;
+            txbConcepto.Text = strTodosLosNombresDeProductos;
+            txbCantidad.Text = StrTodasLasCantidadesDeProductos;
+            
+
+            if (strTipoDeVenta.Equals("1"))
+            {
+                txtTotal.Text = TotalTipo.ToString();
+                txbImporte.Text = strTodosLosPreciosDeProductosACredito;
+            }
+            if (strTipoDeVenta.Equals("2"))
+            {
+                txtTotal.Text = TotalTipo.ToString();
+                txbImporte.Text = strTodosLosPreciosDeProductosContado;
+            }
+
             ShowDialog();
         }
+
     }
 }

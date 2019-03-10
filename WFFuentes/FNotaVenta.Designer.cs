@@ -52,9 +52,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.txbProducto = new System.Windows.Forms.TextBox();
+            this.txbCantidad = new System.Windows.Forms.TextBox();
+            this.txbConcepto = new System.Windows.Forms.TextBox();
+            this.txbUnidad = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -255,9 +255,9 @@
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.textBox7);
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.txbProducto);
+            this.panel4.Controls.Add(this.txbCantidad);
+            this.panel4.Controls.Add(this.txbConcepto);
+            this.panel4.Controls.Add(this.txbUnidad);
             this.panel4.Location = new System.Drawing.Point(22, 312);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(762, 455);
@@ -327,29 +327,29 @@
             this.label12.TabIndex = 4;
             this.label12.Text = "UNIDAD";
             // 
-            // textBox7
+            // txbCantidad
             // 
-            this.textBox7.Location = new System.Drawing.Point(545, 28);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(98, 427);
-            this.textBox7.TabIndex = 2;
+            this.txbCantidad.Location = new System.Drawing.Point(545, 28);
+            this.txbCantidad.Multiline = true;
+            this.txbCantidad.Name = "txbCantidad";
+            this.txbCantidad.Size = new System.Drawing.Size(98, 427);
+            this.txbCantidad.TabIndex = 2;
             // 
-            // textBox6
+            // txbConcepto
             // 
-            this.textBox6.Location = new System.Drawing.Point(98, 28);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(452, 427);
-            this.textBox6.TabIndex = 1;
+            this.txbConcepto.Location = new System.Drawing.Point(98, 28);
+            this.txbConcepto.Multiline = true;
+            this.txbConcepto.Name = "txbConcepto";
+            this.txbConcepto.Size = new System.Drawing.Size(452, 427);
+            this.txbConcepto.TabIndex = 1;
             // 
-            // txbProducto
+            // txbUnidad
             // 
-            this.txbProducto.Location = new System.Drawing.Point(0, 28);
-            this.txbProducto.Multiline = true;
-            this.txbProducto.Name = "txbProducto";
-            this.txbProducto.Size = new System.Drawing.Size(100, 426);
-            this.txbProducto.TabIndex = 0;
+            this.txbUnidad.Location = new System.Drawing.Point(0, 28);
+            this.txbUnidad.Multiline = true;
+            this.txbUnidad.Name = "txbUnidad";
+            this.txbUnidad.Size = new System.Drawing.Size(100, 426);
+            this.txbUnidad.TabIndex = 0;
             // 
             // panel3
             // 
@@ -680,9 +680,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox txbProducto;
+        private System.Windows.Forms.TextBox txbCantidad;
+        private System.Windows.Forms.TextBox txbConcepto;
+        private System.Windows.Forms.TextBox txbUnidad;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label22;

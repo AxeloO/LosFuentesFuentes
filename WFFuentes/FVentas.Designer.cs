@@ -71,7 +71,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.btnImprimirVenta = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btPrevioImprecion = new System.Windows.Forms.Button();
             this.PrevioImprecion = new System.Windows.Forms.PrintPreviewDialog();
             this.ImprecionNota = new System.Drawing.Printing.PrintDocument();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -257,7 +256,7 @@
             this.bCancelar.BackColor = System.Drawing.Color.Teal;
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bCancelar.Location = new System.Drawing.Point(1363, 662);
+            this.bCancelar.Location = new System.Drawing.Point(1434, 679);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(113, 31);
             this.bCancelar.TabIndex = 25;
@@ -283,7 +282,7 @@
             this.bRegresar.BackColor = System.Drawing.Color.Teal;
             this.bRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bRegresar.Location = new System.Drawing.Point(1483, 662);
+            this.bRegresar.Location = new System.Drawing.Point(1553, 679);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(111, 31);
             this.bRegresar.TabIndex = 27;
@@ -475,7 +474,7 @@
             this.btnImprimirVenta.BackColor = System.Drawing.Color.Teal;
             this.btnImprimirVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimirVenta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnImprimirVenta.Location = new System.Drawing.Point(1115, 610);
+            this.btnImprimirVenta.Location = new System.Drawing.Point(1208, 642);
             this.btnImprimirVenta.Name = "btnImprimirVenta";
             this.btnImprimirVenta.Size = new System.Drawing.Size(231, 31);
             this.btnImprimirVenta.TabIndex = 46;
@@ -488,26 +487,13 @@
             this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(1363, 610);
+            this.button1.Location = new System.Drawing.Point(1447, 642);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(231, 31);
             this.button1.TabIndex = 47;
             this.button1.Text = "Imprimir y Pagar a Crédito";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btPrevioImprecion
-            // 
-            this.btPrevioImprecion.BackColor = System.Drawing.Color.Teal;
-            this.btPrevioImprecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPrevioImprecion.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btPrevioImprecion.Location = new System.Drawing.Point(1115, 662);
-            this.btPrevioImprecion.Name = "btPrevioImprecion";
-            this.btPrevioImprecion.Size = new System.Drawing.Size(227, 31);
-            this.btPrevioImprecion.TabIndex = 48;
-            this.btPrevioImprecion.Text = "Vista previa de Impresion";
-            this.btPrevioImprecion.UseVisualStyleBackColor = false;
-            this.btPrevioImprecion.Click += new System.EventHandler(this.button2_Click);
             // 
             // PrevioImprecion
             // 
@@ -554,7 +540,7 @@
             this.bNuevaVenta.BackColor = System.Drawing.Color.Teal;
             this.bNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bNuevaVenta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bNuevaVenta.Location = new System.Drawing.Point(968, 610);
+            this.bNuevaVenta.Location = new System.Drawing.Point(1317, 679);
             this.bNuevaVenta.Name = "bNuevaVenta";
             this.bNuevaVenta.Size = new System.Drawing.Size(111, 31);
             this.bNuevaVenta.TabIndex = 51;
@@ -570,7 +556,6 @@
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1686, 772);
             this.Controls.Add(this.bNuevaVenta);
-            this.Controls.Add(this.btPrevioImprecion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);
             this.Controls.Add(this.txtPrecioACredito);
@@ -662,7 +647,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnImprimirVenta;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btPrevioImprecion;
         private System.Windows.Forms.PrintPreviewDialog PrevioImprecion;
         private System.Drawing.Printing.PrintDocument ImprecionNota;
         private System.Windows.Forms.GroupBox groupBox1;

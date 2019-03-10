@@ -24,6 +24,9 @@ namespace WFFuentes
 
 
         // variables globales
+        string strtipoDeVenta = String.Empty;
+        string strTotalAPagarCredito = String.Empty;
+        string strTotalAPagarContado = String.Empty;
         double douTotalSumaProductos = 0;
         double douTotalSumaProductosCredito = 0;
         public string strExistenciaProducto = string.Empty;
@@ -114,7 +117,7 @@ namespace WFFuentes
             if (!(FcConcepto.Text == ""))
             {
                 _enInventario.NombreProducto = FcConcepto.Text;
-                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombreEmpleado(_enInventario);
+                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
                 FcConcepto.Text = string.Empty;
 
             }
@@ -248,6 +251,8 @@ namespace WFFuentes
                         douTotalSumaProductosCredito = douTotalSumaProductosCredito + doTotalDelProductoCredito;
                         FdTotal.Text = douTotalSumaProductos.ToString();
                         txtTotalAPagarCredito.Text = douTotalSumaProductosCredito.ToString();
+                        strTotalAPagarCredito = douTotalSumaProductosCredito.ToString();
+                        strTotalAPagarContado = douTotalSumaProductos.ToString();
 
                     }
 
@@ -277,10 +282,12 @@ namespace WFFuentes
         {
             try
             {
+
                 Inventario _en = new Inventario();
                 InventarioBL _inventarioBl = new InventarioBL();
 
                 //Variables del Metodo
+                strtipoDeVenta = "1";
                 double doTotalSumaProductos;
                 double doTotalSumaProductosCredito;
                 double intCantidadProducto;
@@ -288,7 +295,7 @@ namespace WFFuentes
                 string strNombreModificado = string.Empty;
                 string strIdProductoComparar = string.Empty;
                 int intCantidadModificada = 0;
-                int iteracion = 1;
+         
 
 
                 if (!FdFechaPago.Text.Equals(string.Empty) && !FdFechaSalida.Text.Equals(string.Empty) && !FcNombreCliente.Text.Equals(string.Empty) && !FcDomicilio.Text.Equals(string.Empty) && !FcCiudad.Text.Equals(string.Empty) && !FcTelefono.Text.Equals(string.Empty))
@@ -331,9 +338,7 @@ namespace WFFuentes
 
                         foreach (DataGridViewRow producto in dgTotalProductos.Rows)
                         {
-
-                            if (iteracion < dgTotalProductos.RowCount)
-                            {
+                                                       
 
                                 strNombreModificado = producto.Cells[1].Value.ToString();
                                 intCantidadModificada = int.Parse(producto.Cells[2].Value.ToString());
@@ -359,20 +364,14 @@ namespace WFFuentes
                                 }
 
                             }
-                            iteracion++;
-                        }
-
-
+                        FNotaVenta fNuevaNotaVenta = new FNotaVenta();
+                        fNuevaNotaVenta.llenarNota(_enVentas, dgTotalProductos, strtipoDeVenta, strTotalAPagarCredito);
+                        MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
+                        Limpiar_Venta();
                     }
 
-
-                    FNotaVenta fNuevaNotaVenta = new FNotaVenta();
-
-                    fNuevaNotaVenta.llenarNota(_enVentas, dgTotalProductos);
-
-                    MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Limpiar();
-                    Limpiar_Venta();
+                   
                 }
                 else
                 {
@@ -410,6 +409,7 @@ namespace WFFuentes
         {
             try
             {
+                strtipoDeVenta = "2";
                 Inventario _en = new Inventario();
                 InventarioBL _inventarioBl = new InventarioBL();
 
@@ -465,10 +465,7 @@ namespace WFFuentes
 
                         foreach (DataGridViewRow producto in dgTotalProductos.Rows)
                         {
-
-                            if (iteracion > dgTotalProductos.RowCount)
-                            {
-
+                            
                                 strNombreModificado = producto.Cells[3].Value.ToString();
                                 intCantidadModificada = int.Parse(producto.Cells[1].Value.ToString());
                                 strIdProductoComparar = producto.Cells[4].Value.ToString();
@@ -493,15 +490,14 @@ namespace WFFuentes
                                 }
 
                             }
-                            iteracion++;
-                        }
-
+                        FNotaVenta fNuevaNotaVenta = new FNotaVenta();
+                        fNuevaNotaVenta.llenarNota(_enVentas, dgTotalProductos, strtipoDeVenta, strTotalAPagarContado);
+                        MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        Limpiar();
+                        Limpiar_Venta();
 
                     }
 
-                    MessageBox.Show("¡Se realizó la venta correctamente!", "¡Éxito!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Limpiar();
-                    Limpiar_Venta();
                 }
                 else
                 {
@@ -528,6 +524,5 @@ namespace WFFuentes
         {
             FdFechaSalida.Text = DateTime.Now.ToString();
         }
-
     }
 }
