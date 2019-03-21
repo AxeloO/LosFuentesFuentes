@@ -117,7 +117,7 @@ namespace WFFuentes
             if (!(FcConcepto.Text == ""))
             {
                 _enInventario.NombreProducto = FcConcepto.Text;
-                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombre(_enInventario);
+                dgProductos.DataSource = _inventarioBL.MostrarInventarioPorNombreEmpleado(_enInventario);//Evitamos mostrar el precio unitario ó precio proveedor 21/03/19
                 FcConcepto.Text = string.Empty;
 
             }
@@ -179,6 +179,8 @@ namespace WFFuentes
                 double doTotalDelProducto;
                 double doTotalDelProductoCredito;
                 string strNombreProductos;
+                double doublePrecioContado;//Agregado para guardar el precio de contado por unidad.. 21/03/19
+                double doublePrecioACredito;//Agregado para guardar el prcio de credito por unidad.. 21/03/19
 
 
                 if (!txtNombre.Text.Equals(""))
@@ -209,6 +211,8 @@ namespace WFFuentes
                         txtImporte.Text = doTotalDelProducto.ToString();
                         this.Controls.Add(dgTotalProductos);
                         strNombreProductos = txtNombre.Text.ToString().Trim();
+                        doublePrecioContado = double.Parse(txtPrecioDeContado.Text.ToString().Trim());//Agregado para gaurdar los precios por unidad.. 21/03/19.. Haber que pasa..
+                        doublePrecioACredito = double.Parse(txtPrecioACredito.Text.ToString().Trim());//Agregado para gaurdar los precios por unidad.. 21/03/19.. Haber que pasa..
 
 
                         if (dgTotalProductos.Columns.Count == 0)
@@ -238,12 +242,22 @@ namespace WFFuentes
                             colCantidadProductoCredito.Width = 80;
                             dgTotalProductos.Columns.Add(colCantidadProductoCredito);
 
-                            dgTotalProductos.Rows.Add(intIdProducto, strNombreProductos, intCantidadProducto, doTotalDelProducto, doTotalDelProductoCredito);
+                            DataGridViewTextBoxColumn colPrecioContado = new DataGridViewTextBoxColumn();//Agregado por prueba para poner precio de contado por producto.. 21/03/19
+                            colCantidadProductoCredito.HeaderText = "Precio Unitario de Contado";
+                            colCantidadProductoCredito.Width = 80;
+                            dgTotalProductos.Columns.Add(colPrecioContado);
+
+                            DataGridViewTextBoxColumn colPrecioACredito = new DataGridViewTextBoxColumn();//Agregado por prueba para poner precio a credito por producto.. 21/03/19
+                            colCantidadProductoCredito.HeaderText = "Precio Unitario A Credito";
+                            colCantidadProductoCredito.Width = 80;
+                            dgTotalProductos.Columns.Add(colPrecioACredito);
+
+                            dgTotalProductos.Rows.Add(intIdProducto, strNombreProductos, intCantidadProducto, doTotalDelProducto, doTotalDelProductoCredito,doublePrecioContado,doublePrecioACredito);
 
                         }
                         else
                         {
-                            dgTotalProductos.Rows.Add(intIdProducto, strNombreProductos, intCantidadProducto, doTotalDelProducto, doTotalDelProductoCredito);
+                            dgTotalProductos.Rows.Add(intIdProducto, strNombreProductos, intCantidadProducto, doTotalDelProducto, doTotalDelProductoCredito,doublePrecioContado, doublePrecioACredito);
 
                         }
 
@@ -523,6 +537,11 @@ namespace WFFuentes
         private void FVentas_Load(object sender, EventArgs e)//Agregado para poner automaticamente la fecha en cuanto se inicie el from 08/03/19
         {
             FdFechaSalida.Text = DateTime.Now.ToString();
+        }
+
+        private void dgTotalProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

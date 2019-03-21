@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNotaVenta));
             this.panelImprimir = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -48,37 +40,14 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.txbImporte = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.txbCantidad = new System.Windows.Forms.TextBox();
             this.txbConcepto = new System.Windows.Forms.TextBox();
             this.txbUnidad = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.txtFechaFinal = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txbFecha = new System.Windows.Forms.TextBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnVistaPrevia = new System.Windows.Forms.Button();
@@ -86,7 +55,6 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.bSalir = new System.Windows.Forms.Button();
             this.panelImprimir.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -94,14 +62,6 @@
             // 
             // panelImprimir
             // 
-            this.panelImprimir.Controls.Add(this.label29);
-            this.panelImprimir.Controls.Add(this.label28);
-            this.panelImprimir.Controls.Add(this.label27);
-            this.panelImprimir.Controls.Add(this.label26);
-            this.panelImprimir.Controls.Add(this.label25);
-            this.panelImprimir.Controls.Add(this.label24);
-            this.panelImprimir.Controls.Add(this.label23);
-            this.panelImprimir.Controls.Add(this.pictureBox1);
             this.panelImprimir.Controls.Add(this.label11);
             this.panelImprimir.Controls.Add(this.txtTotal);
             this.panelImprimir.Controls.Add(this.txtTelefono);
@@ -110,95 +70,11 @@
             this.panelImprimir.Controls.Add(this.txtNombre);
             this.panelImprimir.Controls.Add(this.panel4);
             this.panelImprimir.Controls.Add(this.panel3);
-            this.panelImprimir.Controls.Add(this.label10);
-            this.panelImprimir.Controls.Add(this.label9);
-            this.panelImprimir.Controls.Add(this.label8);
-            this.panelImprimir.Controls.Add(this.label7);
             this.panelImprimir.Controls.Add(this.panel6);
             this.panelImprimir.Location = new System.Drawing.Point(12, 12);
             this.panelImprimir.Name = "panelImprimir";
             this.panelImprimir.Size = new System.Drawing.Size(806, 920);
             this.panelImprimir.TabIndex = 0;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(9, 152);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(256, 16);
-            this.label29.TabIndex = 35;
-            this.label29.Text = "LOS FUENTES FUENTES S.P.R. DE R.L.";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(271, 148);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(277, 20);
-            this.label28.TabIndex = 34;
-            this.label28.Text = "losfuentesfuentessprdrl@hotmail.com";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(315, 120);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(145, 18);
-            this.label27.TabIndex = 33;
-            this.label27.Text = "TEL. (432) 749 40 90";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(315, 97);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(145, 18);
-            this.label26.TabIndex = 31;
-            this.label26.Text = "TEL. (432) 744 06 58";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(253, 73);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(313, 16);
-            this.label25.TabIndex = 32;
-            this.label25.Text = "CARRETERA: MANUEL DOBLADO - LEÓN KM 0.5 ";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(311, 49);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(144, 16);
-            this.label24.TabIndex = 31;
-            this.label24.Text = "R.F.C. FFU050303KBA ";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(288, 27);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(228, 18);
-            this.label23.TabIndex = 30;
-            this.label23.Text = "BODEGA: FUENTES FUENTES ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WFFuentes.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
             // 
             // label11
             // 
@@ -220,30 +96,38 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(554, 228);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(230, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(230, 19);
             this.txtTelefono.TabIndex = 26;
             // 
             // txtCiudad
             // 
+            this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.Location = new System.Drawing.Point(86, 228);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(395, 20);
+            this.txtCiudad.Size = new System.Drawing.Size(395, 19);
             this.txtCiudad.TabIndex = 25;
             // 
             // txtDomicilio
             // 
+            this.txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDomicilio.Location = new System.Drawing.Point(93, 197);
             this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(691, 20);
+            this.txtDomicilio.Size = new System.Drawing.Size(691, 19);
             this.txtDomicilio.TabIndex = 24;
             // 
             // txtNombre
             // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(86, 169);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(698, 20);
+            this.txtNombre.Size = new System.Drawing.Size(698, 19);
             this.txtNombre.TabIndex = 23;
             // 
             // panel4
@@ -251,10 +135,6 @@
             this.panel4.Controls.Add(this.textBox16);
             this.panel4.Controls.Add(this.txbImporte);
             this.panel4.Controls.Add(this.textBox15);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.txbCantidad);
             this.panel4.Controls.Add(this.txbConcepto);
             this.panel4.Controls.Add(this.txbUnidad);
@@ -265,6 +145,8 @@
             // 
             // textBox16
             // 
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox16.Location = new System.Drawing.Point(642, 423);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
@@ -273,6 +155,8 @@
             // 
             // txbImporte
             // 
+            this.txbImporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbImporte.Location = new System.Drawing.Point(642, 28);
             this.txbImporte.Multiline = true;
             this.txbImporte.Name = "txbImporte";
@@ -281,54 +165,18 @@
             // 
             // textBox15
             // 
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox15.Location = new System.Drawing.Point(-3, 423);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(646, 31);
             this.textBox15.TabIndex = 8;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(669, 6);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 18);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "IMPORTE";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(566, 6);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 18);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "P. UNIT.";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(271, 6);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 18);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "CONCEPTO";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(13, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 18);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "UNIDAD";
-            // 
             // txbCantidad
             // 
+            this.txbCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCantidad.Location = new System.Drawing.Point(545, 28);
             this.txbCantidad.Multiline = true;
             this.txbCantidad.Name = "txbCantidad";
@@ -337,6 +185,8 @@
             // 
             // txbConcepto
             // 
+            this.txbConcepto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbConcepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbConcepto.Location = new System.Drawing.Point(98, 28);
             this.txbConcepto.Multiline = true;
             this.txbConcepto.Name = "txbConcepto";
@@ -345,6 +195,8 @@
             // 
             // txbUnidad
             // 
+            this.txbUnidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUnidad.Location = new System.Drawing.Point(0, 28);
             this.txbUnidad.Multiline = true;
             this.txbUnidad.Name = "txbUnidad";
@@ -353,15 +205,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox14);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.textBox13);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.textBox12);
             this.panel3.Controls.Add(this.txtFechaFinal);
             this.panel3.Controls.Add(this.textBox10);
@@ -370,89 +213,9 @@
             this.panel3.Size = new System.Drawing.Size(762, 53);
             this.panel3.TabIndex = 20;
             // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(211, 22);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(32, 20);
-            this.textBox14.TabIndex = 11;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(135, 35);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 13);
-            this.label22.TabIndex = 10;
-            this.label22.Text = "CLIENTE";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(130, 20);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(62, 13);
-            this.label21.TabIndex = 9;
-            this.label21.Text = "DOMICILIO";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(56, 22);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(34, 20);
-            this.textBox13.TabIndex = 8;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(1, 24);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(52, 13);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "BODEGA";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(585, 27);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(107, 15);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "PAGUE A TIEMPO";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(569, 10);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(152, 15);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "CONSERVE SU CRÉDITO ";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(68, 3);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(131, 15);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "LUGAR DE ENTREGA ";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(333, 1);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(105, 15);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "FECHA DE PAGO:";
-            // 
             // textBox12
             // 
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Location = new System.Drawing.Point(493, 0);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
@@ -461,6 +224,7 @@
             // 
             // txtFechaFinal
             // 
+            this.txtFechaFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFechaFinal.Location = new System.Drawing.Point(262, 0);
             this.txtFechaFinal.Multiline = true;
             this.txtFechaFinal.Name = "txtFechaFinal";
@@ -469,122 +233,26 @@
             // 
             // textBox10
             // 
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Location = new System.Drawing.Point(0, 0);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(268, 53);
             this.textBox10.TabIndex = 0;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(487, 231);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "TELEFONO:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(24, 228);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 15);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "CIUDAD:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 200);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 15);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "DOMICILIO:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 171);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 15);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "NOMBRE:";
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.txbFecha);
             this.panel6.Location = new System.Drawing.Point(584, 14);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 141);
             this.panel6.TabIndex = 14;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(141, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "AÑO";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "FECHA";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Folio rotulado";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "MES";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "DIA";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NOTA DE VENTA";
-            // 
             // txbFecha
             // 
+            this.txbFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbFecha.Location = new System.Drawing.Point(3, 86);
             this.txbFecha.Multiline = true;
             this.txbFecha.Name = "txbFecha";
@@ -641,7 +309,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(907, 840);
+            this.ClientSize = new System.Drawing.Size(907, 780);
             this.Controls.Add(this.bSalir);
             this.Controls.Add(this.btnVistaPrevia);
             this.Controls.Add(this.btnImprimir);
@@ -652,7 +320,6 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FNotaVenta_MouseDown);
             this.panelImprimir.ResumeLayout(false);
             this.panelImprimir.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -676,50 +343,19 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox txbImporte;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txbCantidad;
         private System.Windows.Forms.TextBox txbConcepto;
         private System.Windows.Forms.TextBox txbUnidad;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox txtFechaFinal;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbFecha;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnVistaPrevia;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bSalir;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
     }
 }

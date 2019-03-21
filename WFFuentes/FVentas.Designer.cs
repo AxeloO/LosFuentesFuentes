@@ -324,6 +324,7 @@
             this.dgTotalProductos.ReadOnly = true;
             this.dgTotalProductos.Size = new System.Drawing.Size(532, 258);
             this.dgTotalProductos.TabIndex = 30;
+            this.dgTotalProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTotalProductos_CellContentClick);
             // 
             // txtNombre
             // 
@@ -554,7 +555,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1686, 772);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.bNuevaVenta);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimirVenta);

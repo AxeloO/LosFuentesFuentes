@@ -91,6 +91,8 @@ namespace WFFuentes
             string strTodosLosPreciosDeProductosACredito = String.Empty;
             //string StrTodosLosPreciosDeProductos = String.Empty;
             string StrTodasLasCantidadesDeProductos = String.Empty;
+            string strTodosLosPreciosUnitariosDeProductosContado = String.Empty;//Agregado para mandar los precios unitarios por producto de contado.. 21/03/19
+            string strTodosLosPreciosUnitariosDeProductosCredito = String.Empty;//Agregado para mandar los precios unitarios por producto de credito.. 21/03/19
 
             txbFecha.Text = enVentas.fDtFechaSalida.ToString();
             txtNombre.Text = enVentas.fcNombreCliente.ToString();
@@ -107,23 +109,27 @@ namespace WFFuentes
                 strTodosLosPreciosDeProductosACredito = strTodosLosPreciosDeProductosACredito + Environment.NewLine + producto.Cells[4].Value.ToString();
                 StrTodasLasCantidadesDeProductos = StrTodasLasCantidadesDeProductos + Environment.NewLine + producto.Cells[2].Value.ToString();
                 strTodosLosNombresDeProductos = strTodosLosNombresDeProductos + Environment.NewLine + producto.Cells[1].Value.ToString();
+                strTodosLosPreciosUnitariosDeProductosContado = strTodosLosPreciosUnitariosDeProductosContado + Environment.NewLine + producto.Cells[5].Value.ToString();//Agregado para guardar los precios por producto de contado.. 21/03/19
+                strTodosLosPreciosUnitariosDeProductosCredito = strTodosLosPreciosUnitariosDeProductosCredito + Environment.NewLine + producto.Cells[6].Value.ToString();//Agregado para mandar los precios unitarios por producto de credito.. 21/03/19
 
             }
 
             txbUnidad.Text = StrTodasLasCantidadesDeProductos;
             txbConcepto.Text = strTodosLosNombresDeProductos;
-            txbCantidad.Text = StrTodasLasCantidadesDeProductos;
+            //txbCantidad.Text = StrTodasLasCantidadesDeProductos;//No es la cantidad nuevamente sino los precios por producto.. 21/03/19..
             
 
-            if (strTipoDeVenta.Equals("1"))
-            {
-                txtTotal.Text = TotalTipo.ToString();
-                txbImporte.Text = strTodosLosPreciosDeProductosACredito;
-            }
-            if (strTipoDeVenta.Equals("2"))
+            if (strTipoDeVenta.Equals("1"))//Venta al contado 21/03/19..
             {
                 txtTotal.Text = TotalTipo.ToString();
                 txbImporte.Text = strTodosLosPreciosDeProductosContado;
+                txbCantidad.Text = strTodosLosPreciosUnitariosDeProductosContado;//Agregado haber que hace 21/03/19..
+            }
+            if (strTipoDeVenta.Equals("2"))//Venta a Credito 21/03/19..
+            {
+                txtTotal.Text = TotalTipo.ToString();
+                txbImporte.Text = strTodosLosPreciosDeProductosACredito;
+                txbCantidad.Text = strTodosLosPreciosUnitariosDeProductosCredito;//Agregado haber que hace 21/03/19..
             }
 
             ShowDialog();
